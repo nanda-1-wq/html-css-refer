@@ -7,10 +7,14 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background: #f0f2f5; padding: 0 20px 40px; }
-        .nav-bar { background: #2c3e50; padding: 12px 20px; position: sticky; top: 0; z-index: 100; text-align: center; margin-bottom: 30px; }
-        .nav-bar a { color: #ecf0f1; text-decoration: none; margin: 0 8px; font-weight: 600; font-size: 0.85em; padding: 4px 8px; border-radius: 4px; }
+        .nav-bar { background: #2c3e50; padding: 12px 20px; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+        .nav-bar a { color: #ecf0f1; text-decoration: none; margin: 0 4px; font-weight: 600; font-size: 0.85em; padding: 4px 8px; border-radius: 4px; }
         .nav-bar a:hover { background: #3498db; }
         .nav-bar a.active { background: #3498db; }
+        .lang-toggle { display: flex; gap: 6px; align-items: center; flex-shrink: 0; margin-left: 16px; }
+        .lang-btn { background: transparent; color: #ecf0f1; border: 1.5px solid rgba(236,240,241,0.5); padding: 4px 12px; border-radius: 4px; font-size: 0.8em; font-weight: 700; cursor: pointer; letter-spacing: 0.5px; }
+        .lang-btn:hover, .lang-btn.active-lang { background: #3498db; border-color: #3498db; }
         h1 { text-align: center; color: #2c3e50; margin: 30px auto 50px; font-size: 2.5em; border-bottom: 4px solid #3498db; padding-bottom: 20px; max-width: 1000px; }
         h2 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; margin-top: 40px; margin-bottom: 20px; border-radius: 5px; font-size: 1.8em; }
         h3 { color: #667eea; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em; border-left: 4px solid #667eea; padding-left: 15px; }
@@ -38,11 +42,17 @@
 <body>
 
 <div class="nav-bar">
-    <a href="1-html-basics.html">1 Basics</a>
-    <a href="2-html-semantics.html" class="active">2 Semantics</a>
-    <a href="3-html-forms-tables.html">3 Forms &amp; Tables</a>
-    <a href="4-html-accessibility.html">4 Accessibility</a>
-    <a href="all-html-reference.html">All-in-One</a>
+    <div class="nav-links">
+        <a href="1-html-basics.html">1 Basics</a>
+        <a href="2-html-semantics.html" class="active">2 Semantics</a>
+        <a href="3-html-forms-tables.html">3 Forms &amp; Tables</a>
+        <a href="4-html-accessibility.html">4 Accessibility</a>
+        <a href="all-html-reference.html">All-in-One</a>
+    </div>
+    <div class="lang-toggle">
+        <button onclick="setLang('en')" id="btn-en" class="lang-btn">EN</button>
+        <button onclick="setLang('ar')" id="btn-ar" class="lang-btn">AR</button>
+    </div>
 </div>
 
 <h1>HTML Semantics Reference</h1>
@@ -760,6 +770,35 @@ function greet(name) {
 &lt;/body&gt;
 &lt;/html&gt;</div>
 </section>
+
+<div id="google_translate_element" style="display:none"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
+}
+function setLang(lang) {
+  var d = document.domain;
+  var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
+  if (lang === 'ar') {
+    document.cookie = 'googtrans=/en/ar; path=/';
+    document.cookie = 'googtrans=/en/ar; path=/; domain=' + d;
+  } else {
+    document.cookie = 'googtrans=; ' + exp + '; path=/';
+    document.cookie = 'googtrans=; ' + exp + '; path=/; domain=' + d;
+  }
+  location.reload();
+}
+(function () {
+  var m = document.cookie.match(/googtrans=\/en\/(\w+)/);
+  var lang = m ? m[1] : 'en';
+  document.getElementById(lang === 'ar' ? 'btn-ar' : 'btn-en').classList.add('active-lang');
+  document.querySelectorAll('.code-example, .element-name, .attribute-name, .tag, code').forEach(function (el) {
+    el.classList.add('notranslate');
+    el.setAttribute('translate', 'no');
+  });
+})();
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
