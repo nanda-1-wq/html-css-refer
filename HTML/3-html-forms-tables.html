@@ -55,24 +55,24 @@
     </div>
 </div>
 
-<h1>HTML Forms &amp; Tables Reference</h1>
+<h1 data-ar="مرجع نماذج وجداول HTML">HTML Forms &amp; Tables Reference</h1>
 
 <!-- ============================================================ -->
 <!-- SECTION 1: FORM ELEMENT -->
 <!-- ============================================================ -->
 <section>
-    <h2>1. The &lt;form&gt; Element</h2>
+    <h2 data-ar="1. عنصر &lt;form&gt;">1. The &lt;form&gt; Element</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;form&gt;</div>
-        <div class="element-description">Creates an HTML form for collecting user input. All form controls go inside this element.</div>
+        <div class="element-description" data-ar="ينشئ نموذج HTML لجمع بيانات المستخدم. توضع جميع عناصر التحكم بالنموذج داخل هذا العنصر.">Creates an HTML form for collecting user input. All form controls go inside this element.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">action</span><div class="attribute-desc">URL where form data is sent on submission. Omit or use "" to send to current page.</div></div>
-            <div class="attribute"><span class="attribute-name">method</span><div class="attribute-desc"><strong>GET</strong> — appends data to URL (bookmarkable, for search/filtering). <strong>POST</strong> — sends data in request body (for sensitive data, file uploads, changes).</div></div>
-            <div class="attribute"><span class="attribute-name">enctype</span><div class="attribute-desc">Encoding type for POST: "application/x-www-form-urlencoded" (default), "multipart/form-data" (required for file uploads), "text/plain"</div></div>
-            <div class="attribute"><span class="attribute-name">autocomplete</span><div class="attribute-desc">"on" (default) or "off" — controls browser autocomplete for the whole form</div></div>
-            <div class="attribute"><span class="attribute-name">novalidate</span><div class="attribute-desc">Boolean: skips browser's built-in validation (useful when doing custom validation)</div></div>
-            <div class="attribute"><span class="attribute-name">target</span><div class="attribute-desc">Where to show the response: "_self" (default), "_blank" (new tab)</div></div>
+            <div class="attribute"><span class="attribute-name">action</span><div class="attribute-desc" data-ar="عنوان URL الذي تُرسل إليه بيانات النموذج عند الإرسال. احذفها أو استخدم &quot;&quot; للإرسال إلى الصفحة الحالية.">URL where form data is sent on submission. Omit or use "" to send to current page.</div></div>
+            <div class="attribute"><span class="attribute-name">method</span><div class="attribute-desc" data-ar="&lt;strong&gt;GET&lt;/strong&gt; — يضيف البيانات إلى عنوان URL (قابل للحفظ كإشارة مرجعية، للبحث والتصفية). &lt;strong&gt;POST&lt;/strong&gt; — يرسل البيانات في جسم الطلب (للبيانات الحساسة ورفع الملفات والتعديلات)."><strong>GET</strong> — appends data to URL (bookmarkable, for search/filtering). <strong>POST</strong> — sends data in request body (for sensitive data, file uploads, changes).</div></div>
+            <div class="attribute"><span class="attribute-name">enctype</span><div class="attribute-desc" data-ar="نوع الترميز لطلبات POST: &quot;application/x-www-form-urlencoded&quot; (الافتراضي)، &quot;multipart/form-data&quot; (مطلوب لرفع الملفات)، &quot;text/plain&quot;">Encoding type for POST: "application/x-www-form-urlencoded" (default), "multipart/form-data" (required for file uploads), "text/plain"</div></div>
+            <div class="attribute"><span class="attribute-name">autocomplete</span><div class="attribute-desc" data-ar="&quot;on&quot; (الافتراضي) أو &quot;off&quot; — يتحكم في الإكمال التلقائي للمتصفح لكامل النموذج.">"on" (default) or "off" — controls browser autocomplete for the whole form</div></div>
+            <div class="attribute"><span class="attribute-name">novalidate</span><div class="attribute-desc" data-ar="قيمة منطقية: يتخطى التحقق المدمج في المتصفح (مفيد عند تنفيذ تحقق مخصص).">Boolean: skips browser's built-in validation (useful when doing custom validation)</div></div>
+            <div class="attribute"><span class="attribute-name">target</span><div class="attribute-desc" data-ar="مكان عرض الاستجابة: &quot;_self&quot; (الافتراضي)، &quot;_blank&quot; (تبويب جديد).">Where to show the response: "_self" (default), "_blank" (new tab)</div></div>
         </div>
         <div class="code-example">&lt;!-- POST form (most common for forms that change data) --&gt;
 &lt;form method="POST" action="/submit"&gt;
@@ -99,39 +99,39 @@
 <!-- SECTION 2: INPUT ELEMENT -->
 <!-- ============================================================ -->
 <section>
-    <h2>2. The &lt;input&gt; Element (Void)</h2>
-    <p style="color:#555; margin-bottom:15px;">The most versatile form element. Its behavior is entirely determined by the <strong>type</strong> attribute. No closing tag.</p>
+    <h2 data-ar="2. عنصر &lt;input&gt; (عنصر فارغ)">2. The &lt;input&gt; Element (Void)</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="أكثر عناصر النموذج تنوعاً. يتحدد سلوكه كلياً بناءً على السمة &lt;strong&gt;type&lt;/strong&gt;. لا يحتوي على وسم إغلاق.">The most versatile form element. Its behavior is entirely determined by the <strong>type</strong> attribute. No closing tag.</p>
 
     <div class="element-box">
         <div class="element-name">&lt;input&gt; — Common Attributes</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc">Determines input behavior (see full list below). Default: "text".</div></div>
-            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc">Unique ID — must match label's <em>for</em> attribute for accessibility.</div></div>
-            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc">Key sent to server with form data (e.g., name="email" → email=value@form). Required for data to be submitted.</div></div>
-            <div class="attribute"><span class="attribute-name">value</span><div class="attribute-desc">Default value, or button label for type="button/submit/reset".</div></div>
-            <div class="attribute"><span class="attribute-name">placeholder</span><div class="attribute-desc">Hint text shown inside empty input (disappears when typing). Not a substitute for &lt;label&gt;.</div></div>
-            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc">Boolean: form cannot be submitted if this field is empty.</div></div>
-            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: input is non-interactive and greyed out. Value is NOT submitted with form.</div></div>
-            <div class="attribute"><span class="attribute-name">readonly</span><div class="attribute-desc">Boolean: user cannot change the value, but it IS submitted with form. Different from disabled.</div></div>
-            <div class="attribute"><span class="attribute-name">checked</span><div class="attribute-desc">Boolean: used with type="checkbox" and type="radio" — checked by default.</div></div>
-            <div class="attribute"><span class="attribute-name">multiple</span><div class="attribute-desc">Boolean: for file inputs (allow multiple files) and email inputs (allow multiple emails, comma-separated).</div></div>
-            <div class="attribute"><span class="attribute-name">autocomplete</span><div class="attribute-desc">Hint to browser: "on", "off", "name", "email", "username", "current-password", "new-password", "tel", "street-address", etc.</div></div>
-            <div class="attribute"><span class="attribute-name">autofocus</span><div class="attribute-desc">Boolean: this input gets focus when the page loads. Use only once per page.</div></div>
-            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc">ID of the &lt;form&gt; this input belongs to — allows placing input outside the &lt;form&gt; element.</div></div>
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc" data-ar="يحدد سلوك حقل الإدخال (انظر القائمة الكاملة أدناه). الافتراضي: &quot;text&quot;.">Determines input behavior (see full list below). Default: "text".</div></div>
+            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc" data-ar="معرّف فريد — يجب أن يطابق سمة &lt;em&gt;for&lt;/em&gt; للتسمية لضمان إمكانية الوصول.">Unique ID — must match label's <em>for</em> attribute for accessibility.</div></div>
+            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc" data-ar="المفتاح الذي يُرسل إلى الخادم مع بيانات النموذج (مثال: name=&quot;email&quot; ← email=value@form). مطلوب لإرسال البيانات.">Key sent to server with form data (e.g., name="email" → email=value@form). Required for data to be submitted.</div></div>
+            <div class="attribute"><span class="attribute-name">value</span><div class="attribute-desc" data-ar="القيمة الافتراضية، أو نص الزر لـ type=&quot;button/submit/reset&quot;.">Default value, or button label for type="button/submit/reset".</div></div>
+            <div class="attribute"><span class="attribute-name">placeholder</span><div class="attribute-desc" data-ar="نص تلميح يظهر داخل الحقل الفارغ (يختفي عند الكتابة). ليس بديلاً عن &lt;label&gt;.">Hint text shown inside empty input (disappears when typing). Not a substitute for &lt;label&gt;.</div></div>
+            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc" data-ar="قيمة منطقية: لا يمكن إرسال النموذج إذا كان هذا الحقل فارغاً.">Boolean: form cannot be submitted if this field is empty.</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc" data-ar="قيمة منطقية: حقل الإدخال غير تفاعلي ويظهر باهتاً. القيمة لا تُرسل مع النموذج.">Boolean: input is non-interactive and greyed out. Value is NOT submitted with form.</div></div>
+            <div class="attribute"><span class="attribute-name">readonly</span><div class="attribute-desc" data-ar="قيمة منطقية: لا يمكن للمستخدم تغيير القيمة، لكنها تُرسل مع النموذج. تختلف عن disabled.">Boolean: user cannot change the value, but it IS submitted with form. Different from disabled.</div></div>
+            <div class="attribute"><span class="attribute-name">checked</span><div class="attribute-desc" data-ar="قيمة منطقية: تُستخدم مع type=&quot;checkbox&quot; و type=&quot;radio&quot; — محدد افتراضياً.">Boolean: used with type="checkbox" and type="radio" — checked by default.</div></div>
+            <div class="attribute"><span class="attribute-name">multiple</span><div class="attribute-desc" data-ar="قيمة منطقية: لحقول الملفات (السماح بملفات متعددة) ولحقول البريد الإلكتروني (السماح ببريد متعدد مفصول بفواصل).">Boolean: for file inputs (allow multiple files) and email inputs (allow multiple emails, comma-separated).</div></div>
+            <div class="attribute"><span class="attribute-name">autocomplete</span><div class="attribute-desc" data-ar="تلميح للمتصفح: &quot;on&quot;, &quot;off&quot;, &quot;name&quot;, &quot;email&quot;, &quot;username&quot;, &quot;current-password&quot;, &quot;new-password&quot;, &quot;tel&quot;, &quot;street-address&quot; وغيرها.">Hint to browser: "on", "off", "name", "email", "username", "current-password", "new-password", "tel", "street-address", etc.</div></div>
+            <div class="attribute"><span class="attribute-name">autofocus</span><div class="attribute-desc" data-ar="قيمة منطقية: يحصل هذا الحقل على التركيز عند تحميل الصفحة. استخدمها مرة واحدة فقط في الصفحة.">Boolean: this input gets focus when the page loads. Use only once per page.</div></div>
+            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc" data-ar="معرّف &lt;form&gt; الذي ينتمي إليه هذا الحقل — يسمح بوضع الحقل خارج عنصر &lt;form&gt;.">ID of the &lt;form&gt; this input belongs to — allows placing input outside the &lt;form&gt; element.</div></div>
         </div>
     </div>
 
-    <h3>Text Validation Attributes</h3>
+    <h3 data-ar="سمات التحقق من النص">Text Validation Attributes</h3>
     <div class="element-box">
         <div class="element-name">Text &amp; Number Constraints</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">minlength</span><div class="attribute-desc">Minimum number of characters. For text, email, password, search, tel, url.</div></div>
-            <div class="attribute"><span class="attribute-name">maxlength</span><div class="attribute-desc">Maximum number of characters allowed.</div></div>
-            <div class="attribute"><span class="attribute-name">min</span><div class="attribute-desc">Minimum value for number, range, date, time, datetime-local, month, week inputs.</div></div>
-            <div class="attribute"><span class="attribute-name">max</span><div class="attribute-desc">Maximum value for numeric/date inputs.</div></div>
-            <div class="attribute"><span class="attribute-name">step</span><div class="attribute-desc">Legal intervals for number/range/date. "any" allows any value.</div></div>
-            <div class="attribute"><span class="attribute-name">size</span><div class="attribute-desc">Visual width in characters (not a validation rule — just affects displayed width).</div></div>
-            <div class="attribute"><span class="attribute-name">pattern</span><div class="attribute-desc">Regular expression the value must match. Add title attribute to explain the pattern.</div></div>
+            <div class="attribute"><span class="attribute-name">minlength</span><div class="attribute-desc" data-ar="الحد الأدنى لعدد الأحرف. لحقول text و email و password و search و tel و url.">Minimum number of characters. For text, email, password, search, tel, url.</div></div>
+            <div class="attribute"><span class="attribute-name">maxlength</span><div class="attribute-desc" data-ar="الحد الأقصى لعدد الأحرف المسموح بها.">Maximum number of characters allowed.</div></div>
+            <div class="attribute"><span class="attribute-name">min</span><div class="attribute-desc" data-ar="القيمة الدنيا لحقول number و range و date و time و datetime-local و month و week.">Minimum value for number, range, date, time, datetime-local, month, week inputs.</div></div>
+            <div class="attribute"><span class="attribute-name">max</span><div class="attribute-desc" data-ar="القيمة القصوى لحقول الأرقام والتواريخ.">Maximum value for numeric/date inputs.</div></div>
+            <div class="attribute"><span class="attribute-name">step</span><div class="attribute-desc" data-ar="الفواصل المسموحة لحقول number/range/date. القيمة &quot;any&quot; تسمح بأي قيمة.">Legal intervals for number/range/date. "any" allows any value.</div></div>
+            <div class="attribute"><span class="attribute-name">size</span><div class="attribute-desc" data-ar="العرض المرئي بعدد الأحرف (ليست قاعدة تحقق — تؤثر فقط على العرض المعروض).">Visual width in characters (not a validation rule — just affects displayed width).</div></div>
+            <div class="attribute"><span class="attribute-name">pattern</span><div class="attribute-desc" data-ar="تعبير منتظم يجب أن تطابقه القيمة. أضف سمة title لشرح النمط.">Regular expression the value must match. Add title attribute to explain the pattern.</div></div>
         </div>
         <div class="code-example">&lt;!-- Text with length limits --&gt;
 &lt;input type="text" name="username" minlength="3" maxlength="20" required&gt;
@@ -157,69 +157,69 @@
 <!-- SECTION 3: INPUT TYPES COMPLETE REFERENCE -->
 <!-- ============================================================ -->
 <section>
-    <h2>3. Input Types — Complete Reference</h2>
+    <h2 data-ar="3. أنواع حقول الإدخال — مرجع كامل">3. Input Types — Complete Reference</h2>
 
-    <h3>Text-Based Inputs</h3>
+    <h3 data-ar="حقول الإدخال النصية">Text-Based Inputs</h3>
     <table class="reference">
-        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Type</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">text</span></td><td>Plain single-line text input</td><td>Default type. Accepts any characters.</td></tr>
-            <tr><td><span class="attribute-value">email</span></td><td>Email address</td><td>Validates email format. Shows numeric keyboard on mobile.</td></tr>
-            <tr><td><span class="attribute-value">password</span></td><td>Masked password field</td><td>Text is hidden as asterisks/dots. Never store in plain text on server.</td></tr>
-            <tr><td><span class="attribute-value">search</span></td><td>Search field</td><td>Styled like text but has clear (×) button in some browsers.</td></tr>
-            <tr><td><span class="attribute-value">url</span></td><td>Web address (URL)</td><td>Validates URL format. Requires http:// or https://.</td></tr>
-            <tr><td><span class="attribute-value">tel</span></td><td>Telephone number</td><td>No strict format validation. Shows numeric keypad on mobile.</td></tr>
+            <tr><td><span class="attribute-value">text</span></td><td data-ar="حقل إدخال نصي بسيط من سطر واحد">Plain single-line text input</td><td data-ar="النوع الافتراضي. يقبل أي أحرف.">Default type. Accepts any characters.</td></tr>
+            <tr><td><span class="attribute-value">email</span></td><td data-ar="عنوان بريد إلكتروني">Email address</td><td data-ar="يتحقق من صيغة البريد الإلكتروني. يعرض لوحة مفاتيح خاصة على الهاتف.">Validates email format. Shows numeric keyboard on mobile.</td></tr>
+            <tr><td><span class="attribute-value">password</span></td><td data-ar="حقل كلمة مرور مخفية">Masked password field</td><td data-ar="يُخفى النص كنقاط أو نجوم. لا تخزّن كلمات المرور كنص صريح في الخادم أبداً.">Text is hidden as asterisks/dots. Never store in plain text on server.</td></tr>
+            <tr><td><span class="attribute-value">search</span></td><td data-ar="حقل بحث">Search field</td><td data-ar="مصمم مثل text لكنه يحتوي على زر مسح (×) في بعض المتصفحات.">Styled like text but has clear (×) button in some browsers.</td></tr>
+            <tr><td><span class="attribute-value">url</span></td><td data-ar="عنوان ويب (URL)">Web address (URL)</td><td data-ar="يتحقق من صيغة عنوان URL. يتطلب http:// أو https://.">Validates URL format. Requires http:// or https://.</td></tr>
+            <tr><td><span class="attribute-value">tel</span></td><td data-ar="رقم هاتف">Telephone number</td><td data-ar="لا يوجد تحقق صارم من الصيغة. يعرض لوحة مفاتيح رقمية على الهاتف.">No strict format validation. Shows numeric keypad on mobile.</td></tr>
         </tbody>
     </table>
 
-    <h3>Numeric Inputs</h3>
+    <h3 data-ar="حقول الإدخال الرقمية">Numeric Inputs</h3>
     <table class="reference">
-        <thead><tr><th>Type</th><th>Purpose</th><th>Key Attributes</th></tr></thead>
+        <thead><tr><th>Type</th><th data-ar="الغرض">Purpose</th><th data-ar="السمات الرئيسية">Key Attributes</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">number</span></td><td>Numeric input with spinner</td><td>min, max, step</td></tr>
-            <tr><td><span class="attribute-value">range</span></td><td>Slider for selecting a range value</td><td>min, max, step. Default: 0–100.</td></tr>
+            <tr><td><span class="attribute-value">number</span></td><td data-ar="حقل إدخال رقمي مع أزرار تكبير وتصغير">Numeric input with spinner</td><td>min, max, step</td></tr>
+            <tr><td><span class="attribute-value">range</span></td><td data-ar="شريط منزلق لاختيار قيمة ضمن نطاق">Slider for selecting a range value</td><td data-ar="min، max، step. الافتراضي: 0–100.">min, max, step. Default: 0–100.</td></tr>
         </tbody>
     </table>
 
-    <h3>Date &amp; Time Inputs</h3>
+    <h3 data-ar="حقول التاريخ والوقت">Date &amp; Time Inputs</h3>
     <table class="reference">
-        <thead><tr><th>Type</th><th>Purpose</th><th>Format</th></tr></thead>
+        <thead><tr><th>Type</th><th data-ar="الغرض">Purpose</th><th data-ar="الصيغة">Format</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">date</span></td><td>Date picker (year, month, day)</td><td>YYYY-MM-DD</td></tr>
-            <tr><td><span class="attribute-value">time</span></td><td>Time picker (hours, minutes)</td><td>HH:MM</td></tr>
-            <tr><td><span class="attribute-value">datetime-local</span></td><td>Date and time together (no timezone)</td><td>YYYY-MM-DDTHH:MM</td></tr>
-            <tr><td><span class="attribute-value">month</span></td><td>Month and year picker</td><td>YYYY-MM</td></tr>
-            <tr><td><span class="attribute-value">week</span></td><td>Week number and year picker</td><td>YYYY-W##</td></tr>
+            <tr><td><span class="attribute-value">date</span></td><td data-ar="منتقي تاريخ (سنة، شهر، يوم)">Date picker (year, month, day)</td><td>YYYY-MM-DD</td></tr>
+            <tr><td><span class="attribute-value">time</span></td><td data-ar="منتقي وقت (ساعات، دقائق)">Time picker (hours, minutes)</td><td>HH:MM</td></tr>
+            <tr><td><span class="attribute-value">datetime-local</span></td><td data-ar="تاريخ ووقت معاً (بدون منطقة زمنية)">Date and time together (no timezone)</td><td>YYYY-MM-DDTHH:MM</td></tr>
+            <tr><td><span class="attribute-value">month</span></td><td data-ar="منتقي شهر وسنة">Month and year picker</td><td>YYYY-MM</td></tr>
+            <tr><td><span class="attribute-value">week</span></td><td data-ar="منتقي رقم الأسبوع والسنة">Week number and year picker</td><td>YYYY-W##</td></tr>
         </tbody>
     </table>
 
-    <h3>Selection Inputs</h3>
+    <h3 data-ar="حقول الاختيار">Selection Inputs</h3>
     <table class="reference">
-        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Type</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">checkbox</span></td><td>Toggle box — can select multiple</td><td>Use checked attribute for default. Same name = grouped checkboxes.</td></tr>
-            <tr><td><span class="attribute-value">radio</span></td><td>Round button — only one per group</td><td>Same name = radio group. Only one can be selected.</td></tr>
-            <tr><td><span class="attribute-value">color</span></td><td>Color picker</td><td>Returns hex value (#rrggbb).</td></tr>
+            <tr><td><span class="attribute-value">checkbox</span></td><td data-ar="مربع تحديد — يمكن اختيار أكثر من واحد">Toggle box — can select multiple</td><td data-ar="استخدم سمة checked لتحديده افتراضياً. نفس الـ name = مجموعة مربعات اختيار.">Use checked attribute for default. Same name = grouped checkboxes.</td></tr>
+            <tr><td><span class="attribute-value">radio</span></td><td data-ar="زر دائري — واحد فقط لكل مجموعة">Round button — only one per group</td><td data-ar="نفس الـ name = مجموعة أزرار اختيار. يمكن اختيار واحد فقط.">Same name = radio group. Only one can be selected.</td></tr>
+            <tr><td><span class="attribute-value">color</span></td><td data-ar="منتقي ألوان">Color picker</td><td data-ar="يعيد قيمة سداسية عشرية (#rrggbb).">Returns hex value (#rrggbb).</td></tr>
         </tbody>
     </table>
 
-    <h3>File &amp; Hidden Inputs</h3>
+    <h3 data-ar="حقول الملفات والحقول المخفية">File &amp; Hidden Inputs</h3>
     <table class="reference">
-        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Type</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">file</span></td><td>File upload picker</td><td>Use accept attribute to filter types: accept="image/*", accept=".pdf,.doc"</td></tr>
-            <tr><td><span class="attribute-value">hidden</span></td><td>Not visible, but submitted with form</td><td>Used to pass data behind the scenes (e.g., CSRF tokens, user IDs).</td></tr>
+            <tr><td><span class="attribute-value">file</span></td><td data-ar="منتقي لرفع الملفات">File upload picker</td><td data-ar="استخدم سمة accept لتصفية الأنواع: accept=&quot;image/*&quot;، accept=&quot;.pdf,.doc&quot;.">Use accept attribute to filter types: accept="image/*", accept=".pdf,.doc"</td></tr>
+            <tr><td><span class="attribute-value">hidden</span></td><td data-ar="غير مرئي، ولكن يُرسل مع النموذج">Not visible, but submitted with form</td><td data-ar="يُستخدم لتمرير البيانات خلف الكواليس (مثل رموز CSRF ومعرفات المستخدمين).">Used to pass data behind the scenes (e.g., CSRF tokens, user IDs).</td></tr>
         </tbody>
     </table>
 
-    <h3>Button Inputs</h3>
+    <h3 data-ar="أزرار الإدخال">Button Inputs</h3>
     <table class="reference">
-        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Type</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">submit</span></td><td>Submits the form</td><td>Use value attribute to set button label.</td></tr>
-            <tr><td><span class="attribute-value">reset</span></td><td>Resets all form fields to default values</td><td>Be careful — users may accidentally click it.</td></tr>
-            <tr><td><span class="attribute-value">button</span></td><td>Generic button with no default behavior</td><td>Requires JavaScript to do anything.</td></tr>
-            <tr><td><span class="attribute-value">image</span></td><td>Submit button displayed as an image</td><td>src and alt attributes required.</td></tr>
+            <tr><td><span class="attribute-value">submit</span></td><td data-ar="يرسل النموذج">Submits the form</td><td data-ar="استخدم سمة value لتعيين نص الزر.">Use value attribute to set button label.</td></tr>
+            <tr><td><span class="attribute-value">reset</span></td><td data-ar="يعيد جميع حقول النموذج إلى قيمها الافتراضية">Resets all form fields to default values</td><td data-ar="كن حذراً — قد ينقر المستخدمون عليه عن طريق الخطأ.">Be careful — users may accidentally click it.</td></tr>
+            <tr><td><span class="attribute-value">button</span></td><td data-ar="زر عام بدون سلوك افتراضي">Generic button with no default behavior</td><td data-ar="يتطلب JavaScript لأداء أي وظيفة.">Requires JavaScript to do anything.</td></tr>
+            <tr><td><span class="attribute-value">image</span></td><td data-ar="زر إرسال يُعرض على شكل صورة">Submit button displayed as an image</td><td data-ar="السمتان src و alt مطلوبتان.">src and alt attributes required.</td></tr>
         </tbody>
     </table>
 
@@ -272,13 +272,13 @@
 <!-- SECTION 4: LABELS -->
 <!-- ============================================================ -->
 <section>
-    <h2>4. Labels — &lt;label&gt;</h2>
+    <h2 data-ar="4. التسميات — &lt;label&gt;">4. Labels — &lt;label&gt;</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;label&gt;</div>
-        <div class="element-description">Associates a text description with a form input. Clicking the label focuses/activates the input. Required for accessibility — screen readers read the label when the input is focused.</div>
+        <div class="element-description" data-ar="يربط وصفاً نصياً بحقل إدخال نموذج. النقر على التسمية يُركّز/يفعّل الحقل. مطلوب لإمكانية الوصول — تقرأ قارئات الشاشة التسمية عند التركيز على الحقل.">Associates a text description with a form input. Clicking the label focuses/activates the input. Required for accessibility — screen readers read the label when the input is focused.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">for</span><div class="attribute-desc">ID of the associated input element (explicit association). Must match input's id attribute.</div></div>
+            <div class="attribute"><span class="attribute-name">for</span><div class="attribute-desc" data-ar="معرّف عنصر الإدخال المرتبط (ربط صريح). يجب أن يطابق سمة id للحقل.">ID of the associated input element (explicit association). Must match input's id attribute.</div></div>
         </div>
     </div>
 
@@ -304,25 +304,25 @@
   &lt;input type="radio" id="contact-phone" name="contact" value="phone"&gt;
   &lt;label for="contact-phone"&gt;Phone&lt;/label&gt;
 &lt;/fieldset&gt;</div>
-    <div class="important">⚠️ <strong>Never skip labels!</strong> Using only placeholder text is not accessible — placeholders disappear when the user starts typing. Always use &lt;label&gt;.</div>
+    <div class="important" data-ar="⚠️ &lt;strong&gt;لا تتجاوز التسميات أبداً!&lt;/strong&gt; استخدام نص placeholder وحده غير متاح لذوي الإعاقة — يختفي placeholder عندما يبدأ المستخدم بالكتابة. استخدم دائماً &lt;label&gt;.">⚠️ <strong>Never skip labels!</strong> Using only placeholder text is not accessible — placeholders disappear when the user starts typing. Always use &lt;label&gt;.</div>
 </section>
 
 <!-- ============================================================ -->
 <!-- SECTION 5: BUTTON ELEMENT -->
 <!-- ============================================================ -->
 <section>
-    <h2>5. Buttons — &lt;button&gt;</h2>
+    <h2 data-ar="5. الأزرار — &lt;button&gt;">5. Buttons — &lt;button&gt;</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;button&gt;</div>
-        <div class="element-description">Creates a clickable button. More flexible than &lt;input type="submit"&gt; because it can contain HTML (text, icons, images). Default type inside a form is "submit" — always specify type explicitly.</div>
+        <div class="element-description" data-ar="ينشئ زراً قابلاً للنقر. أكثر مرونة من &lt;input type=&quot;submit&quot;&gt; لأنه يمكن أن يحتوي على HTML (نص، أيقونات، صور). النوع الافتراضي داخل النموذج هو &quot;submit&quot; — حدّد دائماً النوع بشكل صريح.">Creates a clickable button. More flexible than &lt;input type="submit"&gt; because it can contain HTML (text, icons, images). Default type inside a form is "submit" — always specify type explicitly.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc"><strong>submit</strong> — submits the form (default inside &lt;form&gt;). <strong>reset</strong> — resets all form fields. <strong>button</strong> — no default action; use with JavaScript.</div></div>
-            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: prevents clicking. Visually greyed out.</div></div>
-            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc">ID of the form this button belongs to (allows button outside the &lt;form&gt; element).</div></div>
-            <div class="attribute"><span class="attribute-name">formaction</span><div class="attribute-desc">Overrides the form's action URL for this specific submit button.</div></div>
-            <div class="attribute"><span class="attribute-name">formmethod</span><div class="attribute-desc">Overrides the form's method (GET/POST) for this submit button.</div></div>
-            <div class="attribute"><span class="attribute-name">formnovalidate</span><div class="attribute-desc">Boolean: skips validation when this submit button is clicked (e.g., "Save as Draft").</div></div>
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc" data-ar="&lt;strong&gt;submit&lt;/strong&gt; — يرسل النموذج (الافتراضي داخل &lt;form&gt;). &lt;strong&gt;reset&lt;/strong&gt; — يعيد تعيين جميع حقول النموذج. &lt;strong&gt;button&lt;/strong&gt; — لا يوجد إجراء افتراضي؛ يُستخدم مع JavaScript."><strong>submit</strong> — submits the form (default inside &lt;form&gt;). <strong>reset</strong> — resets all form fields. <strong>button</strong> — no default action; use with JavaScript.</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc" data-ar="قيمة منطقية: يمنع النقر. يظهر باهتاً بصرياً.">Boolean: prevents clicking. Visually greyed out.</div></div>
+            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc" data-ar="معرّف النموذج الذي ينتمي إليه هذا الزر (يسمح بوضع الزر خارج عنصر &lt;form&gt;).">ID of the form this button belongs to (allows button outside the &lt;form&gt; element).</div></div>
+            <div class="attribute"><span class="attribute-name">formaction</span><div class="attribute-desc" data-ar="يتجاوز عنوان action للنموذج بالنسبة لزر الإرسال هذا تحديداً.">Overrides the form's action URL for this specific submit button.</div></div>
+            <div class="attribute"><span class="attribute-name">formmethod</span><div class="attribute-desc" data-ar="يتجاوز method النموذج (GET/POST) لزر الإرسال هذا.">Overrides the form's method (GET/POST) for this submit button.</div></div>
+            <div class="attribute"><span class="attribute-name">formnovalidate</span><div class="attribute-desc" data-ar="قيمة منطقية: يتخطى التحقق عند النقر على زر الإرسال هذا (مثال: &quot;حفظ كمسودة&quot;).">Boolean: skips validation when this submit button is clicked (e.g., "Save as Draft").</div></div>
         </div>
         <div class="code-example">&lt;form method="POST" action="/submit"&gt;
   &lt;input type="email" name="email" required&gt;
@@ -351,22 +351,22 @@
 <!-- SECTION 6: TEXTAREA -->
 <!-- ============================================================ -->
 <section>
-    <h2>6. Textarea — Multi-Line Text</h2>
+    <h2 data-ar="6. منطقة النص — نص متعدد الأسطر">6. Textarea — Multi-Line Text</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;textarea&gt;</div>
-        <div class="element-description">Multi-line text input. Unlike &lt;input&gt;, it has a closing tag and its default value goes between the tags (not in a value attribute). Usually resizable by the user.</div>
+        <div class="element-description" data-ar="حقل إدخال نصي متعدد الأسطر. على عكس &lt;input&gt;، يحتوي على وسم إغلاق وقيمته الافتراضية توضع بين الوسمين (وليس في سمة value). عادةً قابل لتغيير الحجم من قِبل المستخدم.">Multi-line text input. Unlike &lt;input&gt;, it has a closing tag and its default value goes between the tags (not in a value attribute). Usually resizable by the user.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">rows</span><div class="attribute-desc">Visible number of text rows (visual height). Default: 2.</div></div>
-            <div class="attribute"><span class="attribute-name">cols</span><div class="attribute-desc">Visible width in characters. Default: 20. Better controlled with CSS width.</div></div>
-            <div class="attribute"><span class="attribute-name">placeholder</span><div class="attribute-desc">Hint text shown when empty</div></div>
-            <div class="attribute"><span class="attribute-name">maxlength</span><div class="attribute-desc">Maximum character count</div></div>
-            <div class="attribute"><span class="attribute-name">minlength</span><div class="attribute-desc">Minimum character count</div></div>
-            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc">Boolean: must have content before submission</div></div>
-            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: non-interactive, not submitted</div></div>
-            <div class="attribute"><span class="attribute-name">readonly</span><div class="attribute-desc">Boolean: user can read but not edit; value IS submitted</div></div>
-            <div class="attribute"><span class="attribute-name">wrap</span><div class="attribute-desc">"soft" (default: line breaks not sent to server), "hard" (line breaks are sent), "off" (no wrapping)</div></div>
-            <div class="attribute"><span class="attribute-name">spellcheck</span><div class="attribute-desc">"true" or "false"</div></div>
+            <div class="attribute"><span class="attribute-name">rows</span><div class="attribute-desc" data-ar="عدد الأسطر المرئية للنص (الارتفاع المرئي). الافتراضي: 2.">Visible number of text rows (visual height). Default: 2.</div></div>
+            <div class="attribute"><span class="attribute-name">cols</span><div class="attribute-desc" data-ar="العرض المرئي بعدد الأحرف. الافتراضي: 20. من الأفضل التحكم بالعرض عبر CSS.">Visible width in characters. Default: 20. Better controlled with CSS width.</div></div>
+            <div class="attribute"><span class="attribute-name">placeholder</span><div class="attribute-desc" data-ar="نص تلميح يظهر عندما يكون الحقل فارغاً.">Hint text shown when empty</div></div>
+            <div class="attribute"><span class="attribute-name">maxlength</span><div class="attribute-desc" data-ar="الحد الأقصى لعدد الأحرف.">Maximum character count</div></div>
+            <div class="attribute"><span class="attribute-name">minlength</span><div class="attribute-desc" data-ar="الحد الأدنى لعدد الأحرف.">Minimum character count</div></div>
+            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc" data-ar="قيمة منطقية: يجب أن يحتوي على محتوى قبل الإرسال.">Boolean: must have content before submission</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc" data-ar="قيمة منطقية: غير تفاعلي ولا يُرسل.">Boolean: non-interactive, not submitted</div></div>
+            <div class="attribute"><span class="attribute-name">readonly</span><div class="attribute-desc" data-ar="قيمة منطقية: يمكن للمستخدم القراءة لكن لا يمكنه التعديل؛ القيمة تُرسل.">Boolean: user can read but not edit; value IS submitted</div></div>
+            <div class="attribute"><span class="attribute-name">wrap</span><div class="attribute-desc" data-ar="&quot;soft&quot; (الافتراضي: لا تُرسل فواصل الأسطر للخادم)، &quot;hard&quot; (تُرسل فواصل الأسطر)، &quot;off&quot; (بدون التفاف).">"soft" (default: line breaks not sent to server), "hard" (line breaks are sent), "off" (no wrapping)</div></div>
+            <div class="attribute"><span class="attribute-name">spellcheck</span><div class="attribute-desc" data-ar="&quot;true&quot; أو &quot;false&quot; للتحقق الإملائي.">"true" or "false"</div></div>
         </div>
         <div class="code-example">&lt;label for="bio"&gt;Biography:&lt;/label&gt;
 &lt;textarea
@@ -392,22 +392,22 @@
 <!-- SECTION 7: SELECT / DROPDOWN -->
 <!-- ============================================================ -->
 <section>
-    <h2>7. Select &amp; Dropdown — &lt;select&gt;</h2>
+    <h2 data-ar="7. القوائم المنسدلة — &lt;select&gt;">7. Select &amp; Dropdown — &lt;select&gt;</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;select&gt;, &lt;option&gt;, &lt;optgroup&gt;</div>
-        <div class="element-description">Creates a dropdown list of options. &lt;option&gt; defines each choice. &lt;optgroup&gt; groups related options.</div>
+        <div class="element-description" data-ar="ينشئ قائمة منسدلة من الخيارات. &lt;option&gt; يحدد كل خيار. &lt;optgroup&gt; يجمع الخيارات المرتبطة.">Creates a dropdown list of options. &lt;option&gt; defines each choice. &lt;optgroup&gt; groups related options.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc">Key submitted with form (on &lt;select&gt;)</div></div>
-            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc">To associate with &lt;label&gt; (on &lt;select&gt;)</div></div>
-            <div class="attribute"><span class="attribute-name">multiple</span><div class="attribute-desc">Boolean (on &lt;select&gt;): allows selecting multiple options (Ctrl/Cmd+click)</div></div>
-            <div class="attribute"><span class="attribute-name">size</span><div class="attribute-desc">Number of visible options at once (on &lt;select&gt;). With size > 1, renders as a listbox, not dropdown.</div></div>
-            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: disables the entire select</div></div>
-            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc">Boolean: user must select a non-empty option</div></div>
-            <div class="attribute"><span class="attribute-name">value</span><div class="attribute-desc">The value submitted when this option is selected (on &lt;option&gt;). If omitted, the text content is used.</div></div>
-            <div class="attribute"><span class="attribute-name">selected</span><div class="attribute-desc">Boolean (on &lt;option&gt;): this option is selected by default</div></div>
-            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean (on &lt;option&gt;): this option cannot be selected</div></div>
-            <div class="attribute"><span class="attribute-name">label</span><div class="attribute-desc">Short label for &lt;optgroup&gt; — the group heading text</div></div>
+            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc" data-ar="المفتاح المُرسل مع النموذج (على &lt;select&gt;).">Key submitted with form (on &lt;select&gt;)</div></div>
+            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc" data-ar="للربط مع &lt;label&gt; (على &lt;select&gt;).">To associate with &lt;label&gt; (on &lt;select&gt;)</div></div>
+            <div class="attribute"><span class="attribute-name">multiple</span><div class="attribute-desc" data-ar="قيمة منطقية (على &lt;select&gt;): تسمح باختيار عدة خيارات (Ctrl/Cmd+النقر).">Boolean (on &lt;select&gt;): allows selecting multiple options (Ctrl/Cmd+click)</div></div>
+            <div class="attribute"><span class="attribute-name">size</span><div class="attribute-desc" data-ar="عدد الخيارات المرئية دفعة واحدة (على &lt;select&gt;). عندما يكون size أكبر من 1، تُعرض كصندوق قائمة وليس قائمة منسدلة.">Number of visible options at once (on &lt;select&gt;). With size > 1, renders as a listbox, not dropdown.</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc" data-ar="قيمة منطقية: تعطّل القائمة بأكملها.">Boolean: disables the entire select</div></div>
+            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc" data-ar="قيمة منطقية: يجب على المستخدم اختيار خيار غير فارغ.">Boolean: user must select a non-empty option</div></div>
+            <div class="attribute"><span class="attribute-name">value</span><div class="attribute-desc" data-ar="القيمة المُرسلة عند اختيار هذا الخيار (على &lt;option&gt;). إذا حُذفت، يُستخدم النص الظاهر.">The value submitted when this option is selected (on &lt;option&gt;). If omitted, the text content is used.</div></div>
+            <div class="attribute"><span class="attribute-name">selected</span><div class="attribute-desc" data-ar="قيمة منطقية (على &lt;option&gt;): هذا الخيار مُحدد افتراضياً.">Boolean (on &lt;option&gt;): this option is selected by default</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc" data-ar="قيمة منطقية (على &lt;option&gt;): لا يمكن اختيار هذا الخيار.">Boolean (on &lt;option&gt;): this option cannot be selected</div></div>
+            <div class="attribute"><span class="attribute-name">label</span><div class="attribute-desc" data-ar="تسمية قصيرة لـ &lt;optgroup&gt; — نص عنوان المجموعة.">Short label for &lt;optgroup&gt; — the group heading text</div></div>
         </div>
         <div class="code-example">&lt;!-- Basic dropdown --&gt;
 &lt;label for="country"&gt;Country:&lt;/label&gt;
@@ -449,11 +449,11 @@
 <!-- SECTION 8: DATALIST -->
 <!-- ============================================================ -->
 <section>
-    <h2>8. Datalist — Autocomplete Suggestions</h2>
+    <h2 data-ar="8. قائمة البيانات — اقتراحات الإكمال التلقائي">8. Datalist — Autocomplete Suggestions</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;datalist&gt;</div>
-        <div class="element-description">Provides a list of pre-defined autocomplete suggestions for an &lt;input&gt;. Unlike &lt;select&gt;, the user can also type anything — the suggestions are optional. Link with input via <strong>list</strong> attribute.</div>
+        <div class="element-description" data-ar="يوفر قائمة من اقتراحات الإكمال التلقائي المعرّفة مسبقاً لعنصر &lt;input&gt;. على عكس &lt;select&gt;، يمكن للمستخدم كتابة أي شيء — الاقتراحات اختيارية. يرتبط بالحقل عبر سمة &lt;strong&gt;list&lt;/strong&gt;.">Provides a list of pre-defined autocomplete suggestions for an &lt;input&gt;. Unlike &lt;select&gt;, the user can also type anything — the suggestions are optional. Link with input via <strong>list</strong> attribute.</div>
         <div class="code-example">&lt;label for="browser"&gt;Preferred browser:&lt;/label&gt;
 &lt;input type="text" id="browser" name="browser" list="browser-options"&gt;
 &lt;datalist id="browser-options"&gt;
@@ -481,15 +481,15 @@
 <!-- SECTION 9: FIELDSET AND LEGEND -->
 <!-- ============================================================ -->
 <section>
-    <h2>9. Fieldset &amp; Legend</h2>
+    <h2 data-ar="9. مجموعة الحقول والعنوان — Fieldset و Legend">9. Fieldset &amp; Legend</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;fieldset&gt; and &lt;legend&gt;</div>
-        <div class="element-description">&lt;fieldset&gt; groups related form controls with a visible border. &lt;legend&gt; provides a caption/title for the group (must be the first child of fieldset). Essential for accessibility — screen readers announce the legend when entering the group.</div>
+        <div class="element-description" data-ar="يجمع &lt;fieldset&gt; عناصر التحكم المرتبطة بالنموذج ضمن إطار مرئي. يوفر &lt;legend&gt; عنواناً/تسمية للمجموعة (يجب أن يكون أول عنصر فرعي داخل fieldset). أساسي لإمكانية الوصول — تنطق قارئات الشاشة legend عند الدخول إلى المجموعة.">&lt;fieldset&gt; groups related form controls with a visible border. &lt;legend&gt; provides a caption/title for the group (must be the first child of fieldset). Essential for accessibility — screen readers announce the legend when entering the group.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean on &lt;fieldset&gt;: disables all form controls inside the group at once.</div></div>
-            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc">Associates fieldset with a form by its ID</div></div>
-            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc">Name for the fieldset element (for JavaScript use)</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc" data-ar="قيمة منطقية على &lt;fieldset&gt;: تعطّل جميع عناصر التحكم بالنموذج داخل المجموعة دفعة واحدة.">Boolean on &lt;fieldset&gt;: disables all form controls inside the group at once.</div></div>
+            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc" data-ar="تربط fieldset بنموذج عبر معرّفه.">Associates fieldset with a form by its ID</div></div>
+            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc" data-ar="اسم لعنصر fieldset (لاستخدامه في JavaScript).">Name for the fieldset element (for JavaScript use)</div></div>
         </div>
         <div class="code-example">&lt;form method="POST" action="/register"&gt;
 
@@ -537,18 +537,18 @@
 <!-- SECTION 10: FORM STATES -->
 <!-- ============================================================ -->
 <section>
-    <h2>10. Form Input States</h2>
+    <h2 data-ar="10. حالات حقول النموذج">10. Form Input States</h2>
 
     <table class="reference">
-        <thead><tr><th>State/Attribute</th><th>Effect</th><th>Submitted?</th><th>User Interaction</th></tr></thead>
+        <thead><tr><th data-ar="الحالة/السمة">State/Attribute</th><th data-ar="التأثير">Effect</th><th data-ar="هل يُرسل؟">Submitted?</th><th data-ar="تفاعل المستخدم">User Interaction</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-name">disabled</span></td><td>Greyed out, not interactive</td><td>❌ No</td><td>Cannot click, type, or tab to it</td></tr>
-            <tr><td><span class="attribute-name">readonly</span></td><td>Shows value, cannot edit</td><td>✅ Yes</td><td>Can click and tab to it, but not change</td></tr>
-            <tr><td><span class="attribute-name">required</span></td><td>Must be filled to submit</td><td>✅ Yes (if valid)</td><td>Shows error if empty on submit</td></tr>
-            <tr><td><span class="attribute-name">checked</span></td><td>Pre-checked checkbox/radio</td><td>✅ Yes (if checked)</td><td>User can uncheck</td></tr>
-            <tr><td><span class="attribute-name">selected</span></td><td>Pre-selected dropdown option</td><td>✅ Yes</td><td>User can change selection</td></tr>
-            <tr><td><span class="attribute-name">autofocus</span></td><td>Gets focus on page load</td><td>N/A</td><td>Cursor starts here</td></tr>
-            <tr><td><span class="attribute-name">hidden</span></td><td>Invisible to user</td><td>✅ Yes</td><td>Cannot interact with it</td></tr>
+            <tr><td><span class="attribute-name">disabled</span></td><td data-ar="باهت وغير تفاعلي">Greyed out, not interactive</td><td data-ar="❌ لا">❌ No</td><td data-ar="لا يمكن النقر أو الكتابة أو الانتقال إليه بالتاب">Cannot click, type, or tab to it</td></tr>
+            <tr><td><span class="attribute-name">readonly</span></td><td data-ar="يعرض القيمة ولا يمكن تعديلها">Shows value, cannot edit</td><td data-ar="✅ نعم">✅ Yes</td><td data-ar="يمكن النقر والانتقال إليه بالتاب، لكن لا يمكن التغيير">Can click and tab to it, but not change</td></tr>
+            <tr><td><span class="attribute-name">required</span></td><td data-ar="يجب ملؤه للإرسال">Must be filled to submit</td><td data-ar="✅ نعم (إذا كانت القيمة صالحة)">✅ Yes (if valid)</td><td data-ar="يعرض خطأ إذا كان فارغاً عند الإرسال">Shows error if empty on submit</td></tr>
+            <tr><td><span class="attribute-name">checked</span></td><td data-ar="مربع اختيار/زر اختيار محدد مسبقاً">Pre-checked checkbox/radio</td><td data-ar="✅ نعم (إذا كان محدداً)">✅ Yes (if checked)</td><td data-ar="يمكن للمستخدم إلغاء التحديد">User can uncheck</td></tr>
+            <tr><td><span class="attribute-name">selected</span></td><td data-ar="خيار محدد مسبقاً في القائمة المنسدلة">Pre-selected dropdown option</td><td data-ar="✅ نعم">✅ Yes</td><td data-ar="يمكن للمستخدم تغيير الاختيار">User can change selection</td></tr>
+            <tr><td><span class="attribute-name">autofocus</span></td><td data-ar="يحصل على التركيز عند تحميل الصفحة">Gets focus on page load</td><td data-ar="لا ينطبق">N/A</td><td data-ar="يبدأ المؤشر هنا">Cursor starts here</td></tr>
+            <tr><td><span class="attribute-name">hidden</span></td><td data-ar="غير مرئي للمستخدم">Invisible to user</td><td data-ar="✅ نعم">✅ Yes</td><td data-ar="لا يمكن التفاعل معه">Cannot interact with it</td></tr>
         </tbody>
     </table>
 </section>
@@ -557,7 +557,7 @@
 <!-- SECTION 11: COMPLETE FORM EXAMPLE -->
 <!-- ============================================================ -->
 <section>
-    <h2>11. Complete Form Example</h2>
+    <h2 data-ar="11. مثال نموذج كامل">11. Complete Form Example</h2>
 
     <div class="code-example">&lt;form method="POST" action="https://hotel-feedback.freecodecamp.org"&gt;
 
@@ -619,32 +619,32 @@
 <!-- SECTION 12: HTML TABLES -->
 <!-- ============================================================ -->
 <section>
-    <h2>12. HTML Tables</h2>
-    <div class="important">📌 Tables are for <strong>tabular data</strong> — data with rows and columns. Never use tables for page layout.</div>
+    <h2 data-ar="12. جداول HTML">12. HTML Tables</h2>
+    <div class="important" data-ar="📌 الجداول مخصصة لـ &lt;strong&gt;البيانات الجدولية&lt;/strong&gt; — البيانات ذات الصفوف والأعمدة. لا تستخدم الجداول أبداً لتخطيط الصفحات.">📌 Tables are for <strong>tabular data</strong> — data with rows and columns. Never use tables for page layout.</div>
 
-    <h3>Table Structure Elements</h3>
+    <h3 data-ar="عناصر بنية الجدول">Table Structure Elements</h3>
     <table class="reference">
-        <thead><tr><th>Element</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th data-ar="العنصر">Element</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="tag">&lt;table&gt;</span></td><td>Creates the table</td><td>Wrapper for all table elements</td></tr>
-            <tr><td><span class="tag">&lt;caption&gt;</span></td><td>Table title/description</td><td>First child of &lt;table&gt;. Important for accessibility.</td></tr>
-            <tr><td><span class="tag">&lt;thead&gt;</span></td><td>Groups header rows</td><td>Contains column header &lt;tr&gt; rows</td></tr>
-            <tr><td><span class="tag">&lt;tbody&gt;</span></td><td>Groups body rows (the data)</td><td>Main data content. Can have multiple &lt;tbody&gt; elements.</td></tr>
-            <tr><td><span class="tag">&lt;tfoot&gt;</span></td><td>Groups footer rows</td><td>Totals, averages, summaries. Renders last even if placed before &lt;tbody&gt;.</td></tr>
-            <tr><td><span class="tag">&lt;tr&gt;</span></td><td>Table row</td><td>Used inside thead, tbody, or tfoot</td></tr>
-            <tr><td><span class="tag">&lt;th&gt;</span></td><td>Table header cell</td><td>Bold and centered by default. Use for column and row headers.</td></tr>
-            <tr><td><span class="tag">&lt;td&gt;</span></td><td>Table data cell</td><td>Regular table cell with content</td></tr>
-            <tr><td><span class="tag">&lt;colgroup&gt;</span></td><td>Groups columns for styling</td><td>Contains &lt;col&gt; elements</td></tr>
-            <tr><td><span class="tag">&lt;col&gt;</span></td><td>Single column or span of columns</td><td>Void element. Apply styles to columns without repeating on each cell.</td></tr>
+            <tr><td><span class="tag">&lt;table&gt;</span></td><td data-ar="ينشئ الجدول">Creates the table</td><td data-ar="حاوية لجميع عناصر الجدول.">Wrapper for all table elements</td></tr>
+            <tr><td><span class="tag">&lt;caption&gt;</span></td><td data-ar="عنوان/وصف الجدول">Table title/description</td><td data-ar="أول عنصر فرعي داخل &lt;table&gt;. مهم لإمكانية الوصول.">First child of &lt;table&gt;. Important for accessibility.</td></tr>
+            <tr><td><span class="tag">&lt;thead&gt;</span></td><td data-ar="يجمع صفوف العناوين">Groups header rows</td><td data-ar="يحتوي على صفوف &lt;tr&gt; الخاصة بعناوين الأعمدة.">Contains column header &lt;tr&gt; rows</td></tr>
+            <tr><td><span class="tag">&lt;tbody&gt;</span></td><td data-ar="يجمع صفوف الجسم (البيانات)">Groups body rows (the data)</td><td data-ar="المحتوى الرئيسي للبيانات. يمكن وجود عدة &lt;tbody&gt;.">Main data content. Can have multiple &lt;tbody&gt; elements.</td></tr>
+            <tr><td><span class="tag">&lt;tfoot&gt;</span></td><td data-ar="يجمع صفوف التذييل">Groups footer rows</td><td data-ar="المجاميع والمتوسطات والملخصات. يُعرض في الأخير حتى لو وُضع قبل &lt;tbody&gt;.">Totals, averages, summaries. Renders last even if placed before &lt;tbody&gt;.</td></tr>
+            <tr><td><span class="tag">&lt;tr&gt;</span></td><td data-ar="صف الجدول">Table row</td><td data-ar="يُستخدم داخل thead أو tbody أو tfoot.">Used inside thead, tbody, or tfoot</td></tr>
+            <tr><td><span class="tag">&lt;th&gt;</span></td><td data-ar="خلية عنوان الجدول">Table header cell</td><td data-ar="عريضة ومتوسطة افتراضياً. تُستخدم لعناوين الأعمدة والصفوف.">Bold and centered by default. Use for column and row headers.</td></tr>
+            <tr><td><span class="tag">&lt;td&gt;</span></td><td data-ar="خلية بيانات الجدول">Table data cell</td><td data-ar="خلية جدول عادية تحتوي على المحتوى.">Regular table cell with content</td></tr>
+            <tr><td><span class="tag">&lt;colgroup&gt;</span></td><td data-ar="يجمع الأعمدة للتنسيق">Groups columns for styling</td><td data-ar="يحتوي على عناصر &lt;col&gt;.">Contains &lt;col&gt; elements</td></tr>
+            <tr><td><span class="tag">&lt;col&gt;</span></td><td data-ar="عمود واحد أو نطاق من الأعمدة">Single column or span of columns</td><td data-ar="عنصر فارغ. يطبق الأنماط على الأعمدة دون تكرارها على كل خلية.">Void element. Apply styles to columns without repeating on each cell.</td></tr>
         </tbody>
     </table>
 
-    <h3>Cell Spanning Attributes</h3>
+    <h3 data-ar="سمات تمديد الخلايا">Cell Spanning Attributes</h3>
     <div class="element-box">
         <div class="element-name">colspan and rowspan</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">colspan</span><div class="attribute-desc">Number of columns the cell spans (merges cells horizontally). Used on &lt;td&gt; or &lt;th&gt;.</div></div>
-            <div class="attribute"><span class="attribute-name">rowspan</span><div class="attribute-desc">Number of rows the cell spans (merges cells vertically). Used on &lt;td&gt; or &lt;th&gt;.</div></div>
+            <div class="attribute"><span class="attribute-name">colspan</span><div class="attribute-desc" data-ar="عدد الأعمدة التي تمتد عبرها الخلية (دمج الخلايا أفقياً). تُستخدم على &lt;td&gt; أو &lt;th&gt;.">Number of columns the cell spans (merges cells horizontally). Used on &lt;td&gt; or &lt;th&gt;.</div></div>
+            <div class="attribute"><span class="attribute-name">rowspan</span><div class="attribute-desc" data-ar="عدد الصفوف التي تمتد عبرها الخلية (دمج الخلايا رأسياً). تُستخدم على &lt;td&gt; أو &lt;th&gt;.">Number of rows the cell spans (merges cells vertically). Used on &lt;td&gt; or &lt;th&gt;.</div></div>
         </div>
         <div class="code-example">&lt;table&gt;
   &lt;tr&gt;
@@ -659,13 +659,13 @@
 &lt;/table&gt;</div>
     </div>
 
-    <h3>Accessibility Attributes for Tables</h3>
+    <h3 data-ar="سمات إمكانية الوصول للجداول">Accessibility Attributes for Tables</h3>
     <div class="element-box">
         <div class="element-name">scope, headers, id (on &lt;th&gt; and &lt;td&gt;)</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">scope</span><div class="attribute-desc">On &lt;th&gt;: "col" (header for a column), "row" (header for a row), "colgroup", "rowgroup". Helps screen readers associate headers with data cells.</div></div>
-            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc">On &lt;th&gt;: gives the header a unique ID so data cells can reference it with headers attribute.</div></div>
-            <div class="attribute"><span class="attribute-name">headers</span><div class="attribute-desc">On &lt;td&gt;: space-separated list of &lt;th&gt; id values that label this cell. Used in complex tables.</div></div>
+            <div class="attribute"><span class="attribute-name">scope</span><div class="attribute-desc" data-ar="على &lt;th&gt;: &quot;col&quot; (عنوان لعمود)، &quot;row&quot; (عنوان لصف)، &quot;colgroup&quot;، &quot;rowgroup&quot;. تساعد قارئات الشاشة على ربط العناوين بخلايا البيانات.">On &lt;th&gt;: "col" (header for a column), "row" (header for a row), "colgroup", "rowgroup". Helps screen readers associate headers with data cells.</div></div>
+            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc" data-ar="على &lt;th&gt;: يعطي العنوان معرّفاً فريداً حتى تتمكن خلايا البيانات من الإشارة إليه عبر سمة headers.">On &lt;th&gt;: gives the header a unique ID so data cells can reference it with headers attribute.</div></div>
+            <div class="attribute"><span class="attribute-name">headers</span><div class="attribute-desc" data-ar="على &lt;td&gt;: قائمة مفصولة بمسافات لقيم id الخاصة بـ &lt;th&gt; التي تُسمّي هذه الخلية. تُستخدم في الجداول المعقدة.">On &lt;td&gt;: space-separated list of &lt;th&gt; id values that label this cell. Used in complex tables.</div></div>
         </div>
     </div>
 
@@ -723,7 +723,7 @@
   &lt;/tfoot&gt;
 &lt;/table&gt;</div>
 
-    <h3>Table with colspan and rowspan Example</h3>
+    <h3 data-ar="مثال جدول مع colspan و rowspan">Table with colspan and rowspan Example</h3>
     <div class="code-example">&lt;table border="1"&gt;
   &lt;caption&gt;Weekly Schedule&lt;/caption&gt;
   &lt;thead&gt;
@@ -756,34 +756,36 @@
 &lt;/table&gt;</div>
 </section>
 
-<div id="google_translate_element" style="display:none"></div>
 <script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
-}
 function setLang(lang) {
-  var d = document.domain;
-  var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
   if (lang === 'ar') {
-    document.cookie = 'googtrans=/en/ar; path=/';
-    document.cookie = 'googtrans=/en/ar; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (!el.dataset.en) el.dataset.en = el.innerHTML;
+      el.innerHTML = el.dataset.ar;
+    });
+    document.body.setAttribute('dir', 'rtl');
+    document.body.setAttribute('lang', 'ar');
   } else {
-    document.cookie = 'googtrans=; ' + exp + '; path=/';
-    document.cookie = 'googtrans=; ' + exp + '; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (el.dataset.en) el.innerHTML = el.dataset.en;
+    });
+    document.body.setAttribute('dir', 'ltr');
+    document.body.setAttribute('lang', 'en');
   }
-  location.reload();
+  document.getElementById('btn-en').classList.toggle('active-lang', lang === 'en');
+  document.getElementById('btn-ar').classList.toggle('active-lang', lang === 'ar');
+  try { localStorage.setItem('preferredLang', lang); } catch(e) {}
 }
-(function () {
-  var m = document.cookie.match(/googtrans=\/en\/(\w+)/);
-  var lang = m ? m[1] : 'en';
-  document.getElementById(lang === 'ar' ? 'btn-ar' : 'btn-en').classList.add('active-lang');
-  document.querySelectorAll('.code-example, .element-name, .attribute-name, .tag, code').forEach(function (el) {
-    el.classList.add('notranslate');
-    el.setAttribute('translate', 'no');
-  });
+(function() {
+  try {
+    var lang = localStorage.getItem('preferredLang') || 'en';
+    if (lang === 'ar') setLang('ar');
+    else document.getElementById('btn-en').classList.add('active-lang');
+  } catch(e) {
+    document.getElementById('btn-en').classList.add('active-lang');
+  }
 })();
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

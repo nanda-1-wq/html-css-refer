@@ -55,23 +55,23 @@
     </div>
 </div>
 
-<h1>HTML Semantics Reference</h1>
+<h1 data-ar="مرجع دلالات HTML">HTML Semantics Reference</h1>
 
 <!-- ============================================================ -->
 <!-- SECTION 1: WHY SEMANTICS MATTER -->
 <!-- ============================================================ -->
 <section>
-    <h2>1. Why Semantic HTML Matters</h2>
-    <p style="color:#555; margin-bottom:15px;"><strong>Semantic HTML</strong> means using elements that describe the <em>meaning</em> of the content, not just its appearance. A &lt;header&gt; tells browsers, screen readers, and search engines "this is a header" — a &lt;div&gt; tells them nothing.</p>
+    <h2 data-ar="1. لماذا تُعدّ دلالات HTML مهمة">1. Why Semantic HTML Matters</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="<strong>HTML الدلالي</strong> يعني استخدام عناصر تصف <em>معنى</em> المحتوى وليس مجرد مظهره. عنصر &lt;header&gt; يُخبر المتصفحات وقارئات الشاشة ومحركات البحث بأن 'هذا رأس الصفحة' — أما &lt;div&gt; فلا يُخبرها بأي شيء."><strong>Semantic HTML</strong> means using elements that describe the <em>meaning</em> of the content, not just its appearance. A &lt;header&gt; tells browsers, screen readers, and search engines "this is a header" — a &lt;div&gt; tells them nothing.</p>
 
     <table class="reference">
-        <thead><tr><th>Benefit</th><th>Explanation</th></tr></thead>
+        <thead><tr><th data-ar="الفائدة">Benefit</th><th data-ar="الشرح">Explanation</th></tr></thead>
         <tbody>
-            <tr><td><strong>Accessibility</strong></td><td>Screen readers use semantic structure to help blind users navigate pages</td></tr>
-            <tr><td><strong>SEO</strong></td><td>Search engines understand page structure and rank content appropriately</td></tr>
-            <tr><td><strong>Maintainability</strong></td><td>Code is easier to read and understand for other developers</td></tr>
-            <tr><td><strong>Default styles</strong></td><td>Browsers apply appropriate default styles to semantic elements</td></tr>
-            <tr><td><strong>Portability</strong></td><td>Content degrades gracefully in environments without CSS</td></tr>
+            <tr><td data-ar="<strong>إمكانية الوصول</strong>"><strong>Accessibility</strong></td><td data-ar="تستخدم قارئات الشاشة البنية الدلالية لمساعدة المستخدمين المكفوفين على تصفح الصفحات">Screen readers use semantic structure to help blind users navigate pages</td></tr>
+            <tr><td data-ar="<strong>تحسين محركات البحث (SEO)</strong>"><strong>SEO</strong></td><td data-ar="تفهم محركات البحث بنية الصفحة وتُصنّف المحتوى بشكل مناسب">Search engines understand page structure and rank content appropriately</td></tr>
+            <tr><td data-ar="<strong>قابلية الصيانة</strong>"><strong>Maintainability</strong></td><td data-ar="يكون الكود أسهل في القراءة والفهم بالنسبة للمطورين الآخرين">Code is easier to read and understand for other developers</td></tr>
+            <tr><td data-ar="<strong>الأنماط الافتراضية</strong>"><strong>Default styles</strong></td><td data-ar="تُطبّق المتصفحات أنماطاً افتراضية مناسبة على العناصر الدلالية">Browsers apply appropriate default styles to semantic elements</td></tr>
+            <tr><td data-ar="<strong>قابلية النقل</strong>"><strong>Portability</strong></td><td data-ar="يظهر المحتوى بشكل سليم حتى في البيئات التي لا تدعم CSS">Content degrades gracefully in environments without CSS</td></tr>
         </tbody>
     </table>
 
@@ -96,12 +96,12 @@
 <!-- SECTION 2: DOCUMENT LANDMARK ELEMENTS -->
 <!-- ============================================================ -->
 <section>
-    <h2>2. Document Landmark Elements</h2>
-    <p style="color:#555; margin-bottom:15px;">Landmark elements define regions of the page. Screen readers use them as navigation landmarks.</p>
+    <h2 data-ar="2. عناصر معالم المستند">2. Document Landmark Elements</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="عناصر المعالم تُحدّد مناطق الصفحة. تستخدمها قارئات الشاشة كنقاط مرجعية للتنقل.">Landmark elements define regions of the page. Screen readers use them as navigation landmarks.</p>
 
     <div class="element-box">
         <div class="element-name">&lt;header&gt;</div>
-        <div class="element-description">Represents introductory content or a header for its nearest sectioning ancestor. Can appear multiple times (once for page, once inside &lt;article&gt;, etc.). Usually contains: site logo, page title, primary navigation, search.</div>
+        <div class="element-description" data-ar="يُمثّل المحتوى التمهيدي أو رأساً لأقرب عنصر قسم يحتويه. يمكن أن يظهر عدة مرات (مرة للصفحة، ومرة داخل &lt;article&gt;، إلخ). يحتوي عادةً على: شعار الموقع، وعنوان الصفحة، والتنقل الرئيسي، والبحث.">Represents introductory content or a header for its nearest sectioning ancestor. Can appear multiple times (once for page, once inside &lt;article&gt;, etc.). Usually contains: site logo, page title, primary navigation, search.</div>
         <div class="code-example">&lt;!-- Page-level header --&gt;
 &lt;header&gt;
   &lt;h1&gt;My Blog&lt;/h1&gt;
@@ -125,9 +125,9 @@
 
     <div class="element-box">
         <div class="element-name">&lt;nav&gt;</div>
-        <div class="element-description">Represents a section with navigation links. Use for primary navigation, table of contents, breadcrumbs. Not every group of links needs a &lt;nav&gt; — only major navigation blocks.</div>
+        <div class="element-description" data-ar="يُمثّل قسماً يحتوي على روابط تنقل. يُستخدم للتنقل الرئيسي، وجدول المحتويات، ومسار التنقل (breadcrumbs). ليست كل مجموعة روابط تحتاج إلى &lt;nav&gt; — فقط كتل التنقل الرئيسية.">Represents a section with navigation links. Use for primary navigation, table of contents, breadcrumbs. Not every group of links needs a &lt;nav&gt; — only major navigation blocks.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">aria-label</span><div class="attribute-desc">Distinguish multiple nav elements: "Main navigation", "Breadcrumb", "Footer navigation"</div></div>
+            <div class="attribute"><span class="attribute-name">aria-label</span><div class="attribute-desc" data-ar="للتمييز بين عناصر nav المتعددة: 'التنقل الرئيسي'، 'مسار التنقل'، 'تنقل التذييل'">Distinguish multiple nav elements: "Main navigation", "Breadcrumb", "Footer navigation"</div></div>
         </div>
         <div class="code-example">&lt;!-- Primary navigation --&gt;
 &lt;nav aria-label="Main navigation"&gt;
@@ -150,7 +150,7 @@
 
     <div class="element-box">
         <div class="element-name">&lt;main&gt;</div>
-        <div class="element-description">Represents the dominant content of the page — the unique content that differs from page to page. There should be <strong>only one</strong> &lt;main&gt; per page, and it should not be nested inside &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;header&gt;, or &lt;nav&gt;.</div>
+        <div class="element-description" data-ar="يُمثّل المحتوى الرئيسي للصفحة — المحتوى الفريد الذي يختلف من صفحة إلى أخرى. يجب أن يكون هناك <strong>عنصر واحد فقط</strong> &lt;main&gt; لكل صفحة، ويجب ألّا يكون متداخلاً داخل &lt;article&gt; أو &lt;aside&gt; أو &lt;footer&gt; أو &lt;header&gt; أو &lt;nav&gt;.">Represents the dominant content of the page — the unique content that differs from page to page. There should be <strong>only one</strong> &lt;main&gt; per page, and it should not be nested inside &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;header&gt;, or &lt;nav&gt;.</div>
         <div class="code-example">&lt;body&gt;
   &lt;header&gt;...site header...&lt;/header&gt;
   &lt;nav&gt;...navigation...&lt;/nav&gt;
@@ -165,7 +165,7 @@
 
     <div class="element-box">
         <div class="element-name">&lt;article&gt;</div>
-        <div class="element-description">Represents a self-contained, independently distributable piece of content. It makes sense on its own — you could share it without context. Use for: blog posts, news articles, forum posts, product cards, comments, social media posts.</div>
+        <div class="element-description" data-ar="يُمثّل قطعة محتوى مستقلة بذاتها وقابلة للتوزيع باستقلالية. تكون مفهومة بمفردها — يمكنك مشاركتها دون سياق. يُستخدم لـ: تدوينات المدونة، والمقالات الإخبارية، ومنشورات المنتديات، وبطاقات المنتجات، والتعليقات، ومنشورات وسائل التواصل الاجتماعي.">Represents a self-contained, independently distributable piece of content. It makes sense on its own — you could share it without context. Use for: blog posts, news articles, forum posts, product cards, comments, social media posts.</div>
         <div class="code-example">&lt;article&gt;
   &lt;header&gt;
     &lt;h2&gt;10 Tips for Learning HTML&lt;/h2&gt;
@@ -181,7 +181,7 @@
 
     <div class="element-box">
         <div class="element-name">&lt;section&gt;</div>
-        <div class="element-description">Represents a generic thematic section of content. Should have a heading. Use when content is logically grouped but doesn't qualify as an &lt;article&gt; or &lt;aside&gt;. If you'd put a heading on it, it's probably a &lt;section&gt;.</div>
+        <div class="element-description" data-ar="يُمثّل قسماً موضوعياً عاماً من المحتوى. يجب أن يحتوي على عنوان. يُستخدم عندما يكون المحتوى مُجمَّعاً منطقياً ولكنه لا يصلح أن يكون &lt;article&gt; أو &lt;aside&gt;. إذا كنت ستضع له عنواناً، فمن المرجح أنه &lt;section&gt;.">Represents a generic thematic section of content. Should have a heading. Use when content is logically grouped but doesn't qualify as an &lt;article&gt; or &lt;aside&gt;. If you'd put a heading on it, it's probably a &lt;section&gt;.</div>
         <div class="code-example">&lt;main&gt;
   &lt;section&gt;
     &lt;h2&gt;About Me&lt;/h2&gt;
@@ -203,7 +203,7 @@
 
     <div class="element-box">
         <div class="element-name">&lt;aside&gt;</div>
-        <div class="element-description">Represents content that is tangentially related to the main content — a sidebar, pull quote, advertising, related links, author bio. Can appear inside &lt;article&gt; or at page level.</div>
+        <div class="element-description" data-ar="يُمثّل محتوى مرتبطاً بشكل غير مباشر بالمحتوى الرئيسي — شريط جانبي، أو اقتباس مميز، أو إعلان، أو روابط ذات صلة، أو سيرة المؤلف. يمكن أن يظهر داخل &lt;article&gt; أو على مستوى الصفحة.">Represents content that is tangentially related to the main content — a sidebar, pull quote, advertising, related links, author bio. Can appear inside &lt;article&gt; or at page level.</div>
         <div class="code-example">&lt;!-- Page-level sidebar --&gt;
 &lt;aside&gt;
   &lt;h2&gt;Related Articles&lt;/h2&gt;
@@ -224,7 +224,7 @@
 
     <div class="element-box">
         <div class="element-name">&lt;footer&gt;</div>
-        <div class="element-description">Represents the footer for its nearest sectioning ancestor. Can appear multiple times. Usually contains: copyright, contact info, links to terms/privacy, author info, related documents.</div>
+        <div class="element-description" data-ar="يُمثّل التذييل لأقرب عنصر قسم يحتويه. يمكن أن يظهر عدة مرات. يحتوي عادةً على: حقوق النشر، ومعلومات الاتصال، وروابط الشروط/الخصوصية، ومعلومات المؤلف، والمستندات ذات الصلة.">Represents the footer for its nearest sectioning ancestor. Can appear multiple times. Usually contains: copyright, contact info, links to terms/privacy, author info, related documents.</div>
         <div class="code-example">&lt;!-- Page footer --&gt;
 &lt;footer&gt;
   &lt;nav aria-label="Footer navigation"&gt;
@@ -241,7 +241,7 @@
 
     <div class="element-box">
         <div class="element-name">&lt;address&gt;</div>
-        <div class="element-description">Represents contact information for the nearest &lt;article&gt; or &lt;body&gt; ancestor. Can include physical address, email, phone, social links. Does NOT have to be a postal address.</div>
+        <div class="element-description" data-ar="يُمثّل معلومات الاتصال لأقرب عنصر &lt;article&gt; أو &lt;body&gt; يحتويه. يمكن أن يتضمن العنوان الفعلي، والبريد الإلكتروني، والهاتف، وروابط التواصل الاجتماعي. ليس من الضروري أن يكون عنواناً بريدياً.">Represents contact information for the nearest &lt;article&gt; or &lt;body&gt; ancestor. Can include physical address, email, phone, social links. Does NOT have to be a postal address.</div>
         <div class="code-example">&lt;address&gt;
   &lt;p&gt;Written by &lt;a href="/author/jane"&gt;Jane Doe&lt;/a&gt;.&lt;/p&gt;
   &lt;p&gt;Email: &lt;a href="mailto:jane@example.com"&gt;jane@example.com&lt;/a&gt;&lt;/p&gt;
@@ -250,17 +250,17 @@
 &lt;/address&gt;</div>
     </div>
 
-    <h3>Landmark Summary</h3>
+    <h3 data-ar="ملخص المعالم">Landmark Summary</h3>
     <table class="reference">
-        <thead><tr><th>Element</th><th>Landmark Role</th><th>How Many Per Page</th></tr></thead>
+        <thead><tr><th data-ar="العنصر">Element</th><th data-ar="دور المعلم">Landmark Role</th><th data-ar="عدد المرات في الصفحة">How Many Per Page</th></tr></thead>
         <tbody>
-            <tr><td><span class="tag">&lt;header&gt;</span></td><td>banner (when at page level)</td><td>One per page (more inside sections/articles)</td></tr>
-            <tr><td><span class="tag">&lt;nav&gt;</span></td><td>navigation</td><td>Multiple allowed — use aria-label to distinguish</td></tr>
-            <tr><td><span class="tag">&lt;main&gt;</span></td><td>main</td><td><strong>Exactly one</strong> per page</td></tr>
-            <tr><td><span class="tag">&lt;article&gt;</span></td><td>article</td><td>Multiple allowed</td></tr>
-            <tr><td><span class="tag">&lt;section&gt;</span></td><td>region (only with aria-label/aria-labelledby)</td><td>Multiple allowed</td></tr>
-            <tr><td><span class="tag">&lt;aside&gt;</span></td><td>complementary</td><td>Multiple allowed</td></tr>
-            <tr><td><span class="tag">&lt;footer&gt;</span></td><td>contentinfo (when at page level)</td><td>One per page (more inside sections/articles)</td></tr>
+            <tr><td><span class="tag">&lt;header&gt;</span></td><td data-ar="شعار (عندما يكون على مستوى الصفحة)">banner (when at page level)</td><td data-ar="واحد لكل صفحة (مع إمكانية وجود المزيد داخل الأقسام/المقالات)">One per page (more inside sections/articles)</td></tr>
+            <tr><td><span class="tag">&lt;nav&gt;</span></td><td data-ar="تنقل">navigation</td><td data-ar="يُسمح بأكثر من واحد — استخدم aria-label للتمييز">Multiple allowed — use aria-label to distinguish</td></tr>
+            <tr><td><span class="tag">&lt;main&gt;</span></td><td data-ar="رئيسي">main</td><td data-ar="<strong>واحد بالضبط</strong> لكل صفحة"><strong>Exactly one</strong> per page</td></tr>
+            <tr><td><span class="tag">&lt;article&gt;</span></td><td data-ar="مقالة">article</td><td data-ar="يُسمح بأكثر من واحد">Multiple allowed</td></tr>
+            <tr><td><span class="tag">&lt;section&gt;</span></td><td data-ar="منطقة (فقط مع aria-label/aria-labelledby)">region (only with aria-label/aria-labelledby)</td><td data-ar="يُسمح بأكثر من واحد">Multiple allowed</td></tr>
+            <tr><td><span class="tag">&lt;aside&gt;</span></td><td data-ar="تكميلي">complementary</td><td data-ar="يُسمح بأكثر من واحد">Multiple allowed</td></tr>
+            <tr><td><span class="tag">&lt;footer&gt;</span></td><td data-ar="معلومات المحتوى (عندما يكون على مستوى الصفحة)">contentinfo (when at page level)</td><td data-ar="واحد لكل صفحة (مع إمكانية وجود المزيد داخل الأقسام/المقالات)">One per page (more inside sections/articles)</td></tr>
         </tbody>
     </table>
 </section>
@@ -269,28 +269,28 @@
 <!-- SECTION 3: TEXT-LEVEL SEMANTIC ELEMENTS -->
 <!-- ============================================================ -->
 <section>
-    <h2>3. Text-Level Semantic Elements</h2>
+    <h2 data-ar="3. عناصر دلالية على مستوى النص">3. Text-Level Semantic Elements</h2>
 
-    <h3>Emphasis &amp; Importance</h3>
+    <h3 data-ar="التوكيد والأهمية">Emphasis &amp; Importance</h3>
     <table class="reference">
-        <thead><tr><th>Element</th><th>Meaning</th><th>Renders As</th><th>Example</th></tr></thead>
+        <thead><tr><th data-ar="العنصر">Element</th><th data-ar="المعنى">Meaning</th><th data-ar="يُعرض كـ">Renders As</th><th data-ar="مثال">Example</th></tr></thead>
         <tbody>
-            <tr><td><span class="tag">&lt;strong&gt;</span></td><td>Strong importance, seriousness, urgency</td><td>Bold</td><td><code>&lt;strong&gt;Warning:&lt;/strong&gt; Hot surface!</code></td></tr>
-            <tr><td><span class="tag">&lt;em&gt;</span></td><td>Stress emphasis (changes meaning)</td><td>Italic</td><td><code>Never give up on &lt;em&gt;your&lt;/em&gt; dreams</code></td></tr>
-            <tr><td><span class="tag">&lt;b&gt;</span></td><td>Bring attention (no importance)</td><td>Bold</td><td><code>We tested the &lt;b&gt;SuperSound 3000&lt;/b&gt;</code></td></tr>
-            <tr><td><span class="tag">&lt;i&gt;</span></td><td>Alternate voice, idiom, technical term</td><td>Italic</td><td><code>A certain &lt;i lang="fr"&gt;je ne sais quoi&lt;/i&gt;</code></td></tr>
-            <tr><td><span class="tag">&lt;mark&gt;</span></td><td>Relevant/highlighted in current context</td><td>Yellow background</td><td><code>Search matched: &lt;mark&gt;HTML&lt;/mark&gt;</code></td></tr>
-            <tr><td><span class="tag">&lt;small&gt;</span></td><td>Side comments, fine print, legal</td><td>Smaller font</td><td><code>&lt;small&gt;&amp;copy; 2024 All rights reserved&lt;/small&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;strong&gt;</span></td><td data-ar="أهمية قوية أو جدية أو إلحاح">Strong importance, seriousness, urgency</td><td data-ar="غامق">Bold</td><td><code>&lt;strong&gt;Warning:&lt;/strong&gt; Hot surface!</code></td></tr>
+            <tr><td><span class="tag">&lt;em&gt;</span></td><td data-ar="توكيد ضاغط (يُغيّر المعنى)">Stress emphasis (changes meaning)</td><td data-ar="مائل">Italic</td><td><code>Never give up on &lt;em&gt;your&lt;/em&gt; dreams</code></td></tr>
+            <tr><td><span class="tag">&lt;b&gt;</span></td><td data-ar="جذب الانتباه (بدون أهمية)">Bring attention (no importance)</td><td data-ar="غامق">Bold</td><td><code>We tested the &lt;b&gt;SuperSound 3000&lt;/b&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;i&gt;</span></td><td data-ar="صوت بديل، تعبير اصطلاحي، مصطلح تقني">Alternate voice, idiom, technical term</td><td data-ar="مائل">Italic</td><td><code>A certain &lt;i lang="fr"&gt;je ne sais quoi&lt;/i&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;mark&gt;</span></td><td data-ar="ذو صلة/مُميَّز في السياق الحالي">Relevant/highlighted in current context</td><td data-ar="خلفية صفراء">Yellow background</td><td><code>Search matched: &lt;mark&gt;HTML&lt;/mark&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;small&gt;</span></td><td data-ar="تعليقات جانبية، خط دقيق، نص قانوني">Side comments, fine print, legal</td><td data-ar="خط أصغر">Smaller font</td><td><code>&lt;small&gt;&amp;copy; 2024 All rights reserved&lt;/small&gt;</code></td></tr>
         </tbody>
     </table>
 
-    <div class="important">⚠️ <strong>&lt;strong&gt; vs &lt;b&gt;:</strong> Use &lt;strong&gt; for genuinely important content. Use &lt;b&gt; to draw attention without importance (product names, keywords).<br>
+    <div class="important" data-ar="⚠️ <strong>&lt;strong&gt; مقابل &lt;b&gt;:</strong> استخدم &lt;strong&gt; للمحتوى المهم فعلاً. استخدم &lt;b&gt; لجذب الانتباه دون أهمية (أسماء المنتجات، الكلمات المفتاحية).<br><strong>&lt;em&gt; مقابل &lt;i&gt;:</strong> استخدم &lt;em&gt; للتشديد الذي يُغيّر المعنى. استخدم &lt;i&gt; للمصطلحات التقنية، والكلمات الأجنبية، والأفكار، وأسماء السفن.">⚠️ <strong>&lt;strong&gt; vs &lt;b&gt;:</strong> Use &lt;strong&gt; for genuinely important content. Use &lt;b&gt; to draw attention without importance (product names, keywords).<br>
     <strong>&lt;em&gt; vs &lt;i&gt;:</strong> Use &lt;em&gt; for stress that changes meaning. Use &lt;i&gt; for technical terms, foreign words, thoughts, ship names.</div>
 
-    <h3>Inline Edits</h3>
+    <h3 data-ar="التعديلات داخل النص">Inline Edits</h3>
     <div class="element-box">
         <div class="element-name">&lt;del&gt; and &lt;ins&gt;</div>
-        <div class="element-description">&lt;del&gt; marks deleted text. &lt;ins&gt; marks inserted text. Both have <span class="attribute-name">cite</span> (URL explaining the change) and <span class="attribute-name">datetime</span> attributes.</div>
+        <div class="element-description" data-ar="&lt;del&gt; يُحدّد النص المحذوف. &lt;ins&gt; يُحدّد النص المُدرَج. كلاهما يملك سمتي <span class='attribute-name'>cite</span> (رابط يشرح التعديل) و<span class='attribute-name'>datetime</span>.">&lt;del&gt; marks deleted text. &lt;ins&gt; marks inserted text. Both have <span class="attribute-name">cite</span> (URL explaining the change) and <span class="attribute-name">datetime</span> attributes.</div>
         <div class="code-example">&lt;!-- Price edit --&gt;
 &lt;p&gt;&lt;del&gt;$99&lt;/del&gt; &lt;ins&gt;$49&lt;/ins&gt;&lt;/p&gt;
 
@@ -301,15 +301,15 @@
 &lt;/p&gt;</div>
     </div>
 
-    <h3>Code &amp; Technical Text</h3>
+    <h3 data-ar="الكود والنص التقني">Code &amp; Technical Text</h3>
     <table class="reference">
-        <thead><tr><th>Element</th><th>Purpose</th><th>Example</th></tr></thead>
+        <thead><tr><th data-ar="العنصر">Element</th><th data-ar="الغرض">Purpose</th><th data-ar="مثال">Example</th></tr></thead>
         <tbody>
-            <tr><td><span class="tag">&lt;code&gt;</span></td><td>Inline code fragment</td><td>Use <code>&lt;code&gt;color: red;&lt;/code&gt;</code> in CSS</td></tr>
-            <tr><td><span class="tag">&lt;pre&gt;</span></td><td>Preformatted text block (preserves whitespace)</td><td>Used to wrap multi-line &lt;code&gt;</td></tr>
-            <tr><td><span class="tag">&lt;kbd&gt;</span></td><td>Keyboard input by the user</td><td>Press <code>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;</code></td></tr>
-            <tr><td><span class="tag">&lt;samp&gt;</span></td><td>Sample output from a program</td><td><code>&lt;samp&gt;Error: file not found&lt;/samp&gt;</code></td></tr>
-            <tr><td><span class="tag">&lt;var&gt;</span></td><td>Mathematical variable or placeholder</td><td>The variable <code>&lt;var&gt;n&lt;/var&gt;</code> represents count</td></tr>
+            <tr><td><span class="tag">&lt;code&gt;</span></td><td data-ar="جزء من الكود داخل النص">Inline code fragment</td><td data-ar="استخدم <code>&lt;code&gt;color: red;&lt;/code&gt;</code> في CSS">Use <code>&lt;code&gt;color: red;&lt;/code&gt;</code> in CSS</td></tr>
+            <tr><td><span class="tag">&lt;pre&gt;</span></td><td data-ar="كتلة نص مُنسَّق مسبقاً (تحافظ على المسافات البيضاء)">Preformatted text block (preserves whitespace)</td><td data-ar="يُستخدم لتغليف &lt;code&gt; متعدد الأسطر">Used to wrap multi-line &lt;code&gt;</td></tr>
+            <tr><td><span class="tag">&lt;kbd&gt;</span></td><td data-ar="إدخال لوحة المفاتيح من المستخدم">Keyboard input by the user</td><td data-ar="اضغط <code>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;</code>">Press <code>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;samp&gt;</span></td><td data-ar="مخرج عينة من برنامج">Sample output from a program</td><td><code>&lt;samp&gt;Error: file not found&lt;/samp&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;var&gt;</span></td><td data-ar="متغير رياضي أو عنصر نائب">Mathematical variable or placeholder</td><td data-ar="المتغير <code>&lt;var&gt;n&lt;/var&gt;</code> يُمثّل العدد">The variable <code>&lt;var&gt;n&lt;/var&gt;</code> represents count</td></tr>
         </tbody>
     </table>
 
@@ -334,10 +334,10 @@ function greet(name) {
 &lt;!-- Variable --&gt;
 &lt;p&gt;Area = &lt;var&gt;width&lt;/var&gt; × &lt;var&gt;height&lt;/var&gt;&lt;/p&gt;</div>
 
-    <h3>Superscript, Subscript, and Strikethrough</h3>
+    <h3 data-ar="الرفع، والخفض، والشطب">Superscript, Subscript, and Strikethrough</h3>
     <div class="element-box">
         <div class="element-name">&lt;sup&gt; — Superscript</div>
-        <div class="element-description">Raised text. Use for: exponents, footnote markers, ordinal suffixes.</div>
+        <div class="element-description" data-ar="نص مرفوع. يُستخدم لـ: الأُسس، وعلامات الحواشي، ولواحق الأعداد الترتيبية.">Raised text. Use for: exponents, footnote markers, ordinal suffixes.</div>
         <div class="code-example">&lt;p&gt;2&lt;sup&gt;10&lt;/sup&gt; = 1,024&lt;/p&gt;
 &lt;p&gt;Einstein&amp;apos;s equation: E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
 &lt;p&gt;Monseigneur: M&lt;sup&gt;gr&lt;/sup&gt;&lt;/p&gt;
@@ -346,14 +346,14 @@ function greet(name) {
 
     <div class="element-box">
         <div class="element-name">&lt;sub&gt; — Subscript</div>
-        <div class="element-description">Lowered text. Use for: chemical formulas, footnotes, variable subscripts.</div>
+        <div class="element-description" data-ar="نص مخفوض. يُستخدم لـ: الصيغ الكيميائية، والحواشي، وأرقام المتغيرات السفلية.">Lowered text. Use for: chemical formulas, footnotes, variable subscripts.</div>
         <div class="code-example">&lt;p&gt;Water: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
 &lt;p&gt;CO&lt;sub&gt;2&lt;/sub&gt; is carbon dioxide.&lt;/p&gt;</div>
     </div>
 
     <div class="element-box">
         <div class="element-name">&lt;s&gt; — Strikethrough (no longer relevant)</div>
-        <div class="element-description">Text that is no longer accurate or relevant. Use for: old prices, canceled events. Different from &lt;del&gt; which marks edits to a document.</div>
+        <div class="element-description" data-ar="نص لم يعد دقيقاً أو ذا صلة. يُستخدم لـ: الأسعار القديمة، والفعاليات الملغاة. يختلف عن &lt;del&gt; الذي يُحدّد التعديلات على مستند.">Text that is no longer accurate or relevant. Use for: old prices, canceled events. Different from &lt;del&gt; which marks edits to a document.</div>
         <div class="code-example">&lt;p&gt;&lt;s&gt;Tomorrow's hike starts at noon.&lt;/s&gt;&lt;/p&gt;
 &lt;p&gt;The hike has been cancelled due to rain.&lt;/p&gt;
 
@@ -362,7 +362,7 @@ function greet(name) {
 
     <div class="element-box">
         <div class="element-name">&lt;u&gt; — Unarticulated Annotation</div>
-        <div class="element-description">Inline text with a non-textual annotation — rendered as underline. Use for: spell-check errors, Chinese proper nouns. Do NOT use for styling (use CSS instead).</div>
+        <div class="element-description" data-ar="نص داخلي مع تعليق غير نصي — يُعرض كخط تحته. يُستخدم لـ: أخطاء التدقيق الإملائي، وأسماء الأعلام الصينية. لا تستخدمه للتنسيق (استخدم CSS بدلاً من ذلك).">Inline text with a non-textual annotation — rendered as underline. Use for: spell-check errors, Chinese proper nouns. Do NOT use for styling (use CSS instead).</div>
         <div class="code-example">&lt;p&gt;The document has &lt;u&gt;speling&lt;/u&gt; errors.&lt;/p&gt;</div>
     </div>
 </section>
@@ -371,13 +371,13 @@ function greet(name) {
 <!-- SECTION 4: QUOTATIONS AND CITATIONS -->
 <!-- ============================================================ -->
 <section>
-    <h2>4. Quotations &amp; Citations</h2>
+    <h2 data-ar="4. الاقتباسات والمراجع">4. Quotations &amp; Citations</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;blockquote&gt;</div>
-        <div class="element-description">Block-level quotation from another source. Browsers visually indent it. Does NOT add quotation marks automatically.</div>
+        <div class="element-description" data-ar="اقتباس على مستوى الكتلة من مصدر آخر. تقوم المتصفحات بإزاحته بصرياً. لا يُضيف علامات الاقتباس تلقائياً.">Block-level quotation from another source. Browsers visually indent it. Does NOT add quotation marks automatically.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">cite</span><div class="attribute-desc">URL of the source (not visible, used by browsers/search engines)</div></div>
+            <div class="attribute"><span class="attribute-name">cite</span><div class="attribute-desc" data-ar="رابط المصدر (غير مرئي، تستخدمه المتصفحات/محركات البحث)">URL of the source (not visible, used by browsers/search engines)</div></div>
         </div>
         <div class="code-example">&lt;blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/"&gt;
   &lt;p&gt;Can you imagine what it would be like to be a successful developer?&lt;/p&gt;
@@ -388,9 +388,9 @@ function greet(name) {
 
     <div class="element-box">
         <div class="element-name">&lt;q&gt;</div>
-        <div class="element-description">Inline quotation. Browsers add quotation marks automatically (differs by language/locale).</div>
+        <div class="element-description" data-ar="اقتباس داخل النص. تُضيف المتصفحات علامات الاقتباس تلقائياً (تختلف حسب اللغة/الإعدادات المحلية).">Inline quotation. Browsers add quotation marks automatically (differs by language/locale).</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">cite</span><div class="attribute-desc">URL of the source</div></div>
+            <div class="attribute"><span class="attribute-name">cite</span><div class="attribute-desc" data-ar="رابط المصدر">URL of the source</div></div>
         </div>
         <div class="code-example">&lt;p&gt;
   As Quincy Larson said,
@@ -402,13 +402,13 @@ function greet(name) {
 
     <div class="element-box">
         <div class="element-name">&lt;cite&gt;</div>
-        <div class="element-description">Marks the <em>title</em> of a creative work being referenced (book, article, movie, song, painting). Renders as italic. Does NOT mark the author's name — only the title.</div>
+        <div class="element-description" data-ar="يُحدّد <em>عنوان</em> عمل إبداعي تتم الإشارة إليه (كتاب، مقال، فيلم، أغنية، لوحة). يُعرض بشكل مائل. لا يُحدّد اسم المؤلف — فقط العنوان.">Marks the <em>title</em> of a creative work being referenced (book, article, movie, song, painting). Renders as italic. Does NOT mark the author's name — only the title.</div>
         <div class="code-example">&lt;p&gt;I just finished reading &lt;cite&gt;The Pragmatic Programmer&lt;/cite&gt;.&lt;/p&gt;
 
 &lt;p&gt;The quote comes from &lt;cite&gt;How to Learn to Code and Get a Developer Job&lt;/cite&gt; by Quincy Larson.&lt;/p&gt;</div>
     </div>
 
-    <div class="important">📌 <strong>Key distinction:</strong><br>
+    <div class="important" data-ar="📌 <strong>التمييز الأساسي:</strong><br>• &lt;q&gt; يُضيف علامات الاقتباس تلقائياً — يُستخدم للاقتباسات القصيرة داخل النص<br>• &lt;blockquote&gt; يُزيح بصرياً — يُستخدم للاقتباسات الطويلة على شكل كتلة<br>• &lt;cite&gt; مخصص لـ <em>عنوان</em> العمل، وليس اسم المؤلف">📌 <strong>Key distinction:</strong><br>
     • &lt;q&gt; adds quotation marks automatically — use for short inline quotes<br>
     • &lt;blockquote&gt; indents visually — use for longer block quotes<br>
     • &lt;cite&gt; is for the <em>title</em> of the work, not the author's name</div>
@@ -418,11 +418,11 @@ function greet(name) {
 <!-- SECTION 5: DESCRIPTION LISTS -->
 <!-- ============================================================ -->
 <section>
-    <h2>5. Description Lists</h2>
+    <h2 data-ar="5. قوائم الوصف">5. Description Lists</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</div>
-        <div class="element-description">A description list groups term-description pairs. Perfect for: glossaries, metadata, FAQ sections, dictionaries.</div>
+        <div class="element-description" data-ar="قائمة الوصف تُجمِّع أزواج المصطلح والوصف. مثالية لـ: المعاجم، والبيانات الوصفية، وأقسام الأسئلة الشائعة، والقواميس.">A description list groups term-description pairs. Perfect for: glossaries, metadata, FAQ sections, dictionaries.</div>
         <div class="code-example">&lt;!-- Basic description list (glossary) --&gt;
 &lt;dl&gt;
   &lt;dt&gt;HTML&lt;/dt&gt;
@@ -455,13 +455,13 @@ function greet(name) {
 <!-- SECTION 6: TIME AND DATE -->
 <!-- ============================================================ -->
 <section>
-    <h2>6. Time &amp; Date</h2>
+    <h2 data-ar="6. الوقت والتاريخ">6. Time &amp; Date</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;time&gt;</div>
-        <div class="element-description">Represents a specific time (24-hour clock) or date. The <span class="attribute-name">datetime</span> attribute gives a machine-readable format while the content can be human-readable.</div>
+        <div class="element-description" data-ar="يُمثّل وقتاً محدداً (نظام 24 ساعة) أو تاريخاً. سمة <span class='attribute-name'>datetime</span> تُوفّر صيغة يمكن للآلة قراءتها، بينما يمكن أن يكون المحتوى مقروءاً للإنسان.">Represents a specific time (24-hour clock) or date. The <span class="attribute-name">datetime</span> attribute gives a machine-readable format while the content can be human-readable.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">datetime</span><div class="attribute-desc">Machine-readable format. Used by browsers, search engines, and calendar apps.</div></div>
+            <div class="attribute"><span class="attribute-name">datetime</span><div class="attribute-desc" data-ar="صيغة يمكن للآلة قراءتها. تستخدمها المتصفحات ومحركات البحث وتطبيقات التقويم.">Machine-readable format. Used by browsers, search engines, and calendar apps.</div></div>
         </div>
         <div class="code-example">&lt;!-- Date only --&gt;
 &lt;p&gt;Published: &lt;time datetime="2024-03-15"&gt;March 15, 2024&lt;/time&gt;&lt;/p&gt;
@@ -491,13 +491,13 @@ function greet(name) {
 <!-- SECTION 7: ABBREVIATIONS AND DEFINITIONS -->
 <!-- ============================================================ -->
 <section>
-    <h2>7. Abbreviations &amp; Definitions</h2>
+    <h2 data-ar="7. الاختصارات والتعريفات">7. Abbreviations &amp; Definitions</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;abbr&gt;</div>
-        <div class="element-description">Represents an abbreviation or acronym. The <span class="attribute-name">title</span> attribute provides the full expansion, shown as a tooltip.</div>
+        <div class="element-description" data-ar="يُمثّل اختصاراً أو اختصار حروف. سمة <span class='attribute-name'>title</span> تُوفّر الصيغة الكاملة، وتظهر كتلميح.">Represents an abbreviation or acronym. The <span class="attribute-name">title</span> attribute provides the full expansion, shown as a tooltip.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc">The full form of the abbreviation (shown as tooltip)</div></div>
+            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc" data-ar="الصيغة الكاملة للاختصار (تظهر كتلميح)">The full form of the abbreviation (shown as tooltip)</div></div>
         </div>
         <div class="code-example">&lt;p&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; is the foundation of the web.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title="World Wide Web Consortium"&gt;W3C&lt;/abbr&gt; sets web standards.&lt;/p&gt;
@@ -506,7 +506,7 @@ function greet(name) {
 
     <div class="element-box">
         <div class="element-name">&lt;dfn&gt;</div>
-        <div class="element-description">Marks the defining instance of a term — where the term is first defined/explained. Usually the &lt;dfn&gt; is inside a &lt;p&gt; or &lt;dl&gt; that contains the definition.</div>
+        <div class="element-description" data-ar="يُحدّد الموضع الذي يُعرَّف فيه المصطلح لأول مرة — حيث يُشرح المصطلح أو يُعرَّف. عادةً ما يكون &lt;dfn&gt; داخل &lt;p&gt; أو &lt;dl&gt; يحتوي على التعريف.">Marks the defining instance of a term — where the term is first defined/explained. Usually the &lt;dfn&gt; is inside a &lt;p&gt; or &lt;dl&gt; that contains the definition.</div>
         <div class="code-example">&lt;p&gt;
   &lt;dfn&gt;HTML&lt;/dfn&gt; (HyperText Markup Language) is the standard
   language for creating web pages.
@@ -524,12 +524,12 @@ function greet(name) {
 <!-- SECTION 8: RUBY ANNOTATIONS -->
 <!-- ============================================================ -->
 <section>
-    <h2>8. Ruby Annotations</h2>
-    <p style="color:#555; margin-bottom:15px;">Ruby annotations add pronunciation or translation guides above or beside East Asian characters. Also used for educational content.</p>
+    <h2 data-ar="8. تعليقات روبي">8. Ruby Annotations</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="تعليقات روبي تُضيف أدلة النطق أو الترجمة فوق الأحرف الآسيوية الشرقية أو بجانبها. تُستخدم أيضاً للمحتوى التعليمي.">Ruby annotations add pronunciation or translation guides above or beside East Asian characters. Also used for educational content.</p>
 
     <div class="element-box">
         <div class="element-name">&lt;ruby&gt;, &lt;rt&gt;, &lt;rp&gt;</div>
-        <div class="element-description">
+        <div class="element-description" data-ar="<strong>&lt;ruby&gt;</strong> يُغلّف النص الأساسي والتعليق معاً.<br><strong>&lt;rt&gt;</strong> يحتوي على نص روبي (النطق/المعنى) — يُعرض فوقه.<br><strong>&lt;rp&gt;</strong> يُوفّر أقواساً احتياطية للمتصفحات التي لا تدعم روبي.">
             <strong>&lt;ruby&gt;</strong> wraps the base text and annotation together.<br>
             <strong>&lt;rt&gt;</strong> contains the ruby text (pronunciation/meaning) — displayed above.<br>
             <strong>&lt;rp&gt;</strong> provides fallback parentheses for browsers without ruby support.
@@ -553,11 +553,11 @@ function greet(name) {
 <!-- SECTION 9: FIGURE AND FIGCAPTION -->
 <!-- ============================================================ -->
 <section>
-    <h2>9. Figure &amp; Figcaption</h2>
+    <h2 data-ar="9. الشكل والوصف">9. Figure &amp; Figcaption</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;figure&gt; and &lt;figcaption&gt;</div>
-        <div class="element-description">&lt;figure&gt; wraps self-contained content referenced from the main text — not just images! Can hold: images, illustrations, code blocks, poems, quotes, tables, diagrams. &lt;figcaption&gt; labels the figure (first or last child of &lt;figure&gt;).</div>
+        <div class="element-description" data-ar="&lt;figure&gt; يُغلّف محتوى مستقلاً بذاته يُشار إليه من النص الرئيسي — وليس الصور فقط! يمكن أن يحتوي على: صور، ورسوم توضيحية، وكتل كود، وقصائد، واقتباسات، وجداول، ومخططات. &lt;figcaption&gt; يُسمّي الشكل (أول أو آخر عنصر فرعي داخل &lt;figure&gt;).">&lt;figure&gt; wraps self-contained content referenced from the main text — not just images! Can hold: images, illustrations, code blocks, poems, quotes, tables, diagrams. &lt;figcaption&gt; labels the figure (first or last child of &lt;figure&gt;).</div>
         <div class="code-example">&lt;!-- Image figure --&gt;
 &lt;figure&gt;
   &lt;img src="architecture.jpg" alt="Bird's eye view of a modern building"&gt;
@@ -586,13 +586,13 @@ function greet(name) {
 <!-- SECTION 10: INTERACTIVE ELEMENTS -->
 <!-- ============================================================ -->
 <section>
-    <h2>10. Interactive Elements</h2>
+    <h2 data-ar="10. العناصر التفاعلية">10. Interactive Elements</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;details&gt; and &lt;summary&gt;</div>
-        <div class="element-description">&lt;details&gt; creates a collapsible disclosure widget. &lt;summary&gt; is the always-visible label/toggle. When clicked, the rest of &lt;details&gt; expands or collapses. No JavaScript needed.</div>
+        <div class="element-description" data-ar="&lt;details&gt; يُنشئ عنصر إفصاح قابلاً للطي. &lt;summary&gt; هو التسمية/المُبدِّل الذي يكون مرئياً دائماً. عند النقر عليه، يتوسّع باقي محتوى &lt;details&gt; أو يُطوى. لا حاجة إلى JavaScript.">&lt;details&gt; creates a collapsible disclosure widget. &lt;summary&gt; is the always-visible label/toggle. When clicked, the rest of &lt;details&gt; expands or collapses. No JavaScript needed.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">open</span><div class="attribute-desc">Boolean: the details are expanded by default when present</div></div>
+            <div class="attribute"><span class="attribute-name">open</span><div class="attribute-desc" data-ar="قيمة منطقية: التفاصيل تكون موسّعة افتراضياً عند وجودها">Boolean: the details are expanded by default when present</div></div>
         </div>
         <div class="code-example">&lt;details&gt;
   &lt;summary&gt;What is HTML?&lt;/summary&gt;
@@ -612,9 +612,9 @@ function greet(name) {
 
     <div class="element-box">
         <div class="element-name">&lt;dialog&gt;</div>
-        <div class="element-description">Represents a dialog box or modal window. Use JavaScript to open it.</div>
+        <div class="element-description" data-ar="يُمثّل صندوق حوار أو نافذة منبثقة. استخدم JavaScript لفتحه.">Represents a dialog box or modal window. Use JavaScript to open it.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">open</span><div class="attribute-desc">Boolean: dialog is visible</div></div>
+            <div class="attribute"><span class="attribute-name">open</span><div class="attribute-desc" data-ar="قيمة منطقية: مربع الحوار مرئي">Boolean: dialog is visible</div></div>
         </div>
         <div class="code-example">&lt;dialog id="myDialog"&gt;
   &lt;h2&gt;Confirm Action&lt;/h2&gt;
@@ -633,11 +633,11 @@ function greet(name) {
 <!-- SECTION 11: INTERNAL LINKS & SKIP NAVIGATION -->
 <!-- ============================================================ -->
 <section>
-    <h2>11. Internal Links &amp; Page Navigation</h2>
+    <h2 data-ar="11. الروابط الداخلية وتنقل الصفحة">11. Internal Links &amp; Page Navigation</h2>
 
     <div class="element-box">
         <div class="element-name">Anchor Links (Jump-to-Section)</div>
-        <div class="element-description">Link to any element on the page by targeting its <span class="attribute-name">id</span>.</div>
+        <div class="element-description" data-ar="ربط أي عنصر في الصفحة عن طريق استهداف معرّفه <span class='attribute-name'>id</span>.">Link to any element on the page by targeting its <span class="attribute-name">id</span>.</div>
         <div class="code-example">&lt;!-- Table of Contents at top of page --&gt;
 &lt;nav aria-label="Table of contents"&gt;
   &lt;ol&gt;
@@ -662,7 +662,7 @@ function greet(name) {
 
     <div class="element-box">
         <div class="element-name">Skip Navigation Link</div>
-        <div class="element-description">A visually hidden link at the top of the page that lets keyboard/screen reader users skip directly to main content. Essential for accessibility.</div>
+        <div class="element-description" data-ar="رابط مخفي بصرياً في أعلى الصفحة يسمح لمستخدمي لوحة المفاتيح/قارئات الشاشة بالانتقال مباشرةً إلى المحتوى الرئيسي. ضروري لإمكانية الوصول.">A visually hidden link at the top of the page that lets keyboard/screen reader users skip directly to main content. Essential for accessibility.</div>
         <div class="code-example">&lt;!-- Usually hidden with CSS until focused --&gt;
 &lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
 
@@ -692,7 +692,7 @@ function greet(name) {
 <!-- SECTION 12: FULL PAGE STRUCTURE EXAMPLE -->
 <!-- ============================================================ -->
 <section>
-    <h2>12. Complete Semantic Page Structure</h2>
+    <h2 data-ar="12. هيكل صفحة دلالي متكامل">12. Complete Semantic Page Structure</h2>
 
     <div class="code-example">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -771,34 +771,36 @@ function greet(name) {
 &lt;/html&gt;</div>
 </section>
 
-<div id="google_translate_element" style="display:none"></div>
 <script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
-}
 function setLang(lang) {
-  var d = document.domain;
-  var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
   if (lang === 'ar') {
-    document.cookie = 'googtrans=/en/ar; path=/';
-    document.cookie = 'googtrans=/en/ar; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (!el.dataset.en) el.dataset.en = el.innerHTML;
+      el.innerHTML = el.dataset.ar;
+    });
+    document.body.setAttribute('dir', 'rtl');
+    document.body.setAttribute('lang', 'ar');
   } else {
-    document.cookie = 'googtrans=; ' + exp + '; path=/';
-    document.cookie = 'googtrans=; ' + exp + '; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (el.dataset.en) el.innerHTML = el.dataset.en;
+    });
+    document.body.setAttribute('dir', 'ltr');
+    document.body.setAttribute('lang', 'en');
   }
-  location.reload();
+  document.getElementById('btn-en').classList.toggle('active-lang', lang === 'en');
+  document.getElementById('btn-ar').classList.toggle('active-lang', lang === 'ar');
+  try { localStorage.setItem('preferredLang', lang); } catch(e) {}
 }
-(function () {
-  var m = document.cookie.match(/googtrans=\/en\/(\w+)/);
-  var lang = m ? m[1] : 'en';
-  document.getElementById(lang === 'ar' ? 'btn-ar' : 'btn-en').classList.add('active-lang');
-  document.querySelectorAll('.code-example, .element-name, .attribute-name, .tag, code').forEach(function (el) {
-    el.classList.add('notranslate');
-    el.setAttribute('translate', 'no');
-  });
+(function() {
+  try {
+    var lang = localStorage.getItem('preferredLang') || 'en';
+    if (lang === 'ar') setLang('ar');
+    else document.getElementById('btn-en').classList.add('active-lang');
+  } catch(e) {
+    document.getElementById('btn-en').classList.add('active-lang');
+  }
 })();
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

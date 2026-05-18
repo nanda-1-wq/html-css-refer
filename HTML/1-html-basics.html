@@ -55,18 +55,18 @@
     </div>
 </div>
 
-<h1>HTML Basics Reference</h1>
+<h1 data-ar="مرجع أساسيات HTML">HTML Basics Reference</h1>
 
 <!-- ============================================================ -->
 <!-- SECTION 1: WHAT IS HTML -->
 <!-- ============================================================ -->
 <section>
-    <h2>1. What Is HTML?</h2>
-    <p style="color:#555; margin-bottom:15px;">HTML (HyperText Markup Language) defines the <strong>content and structure</strong> of a web page. It is not a programming language — it is a markup language that uses <em>elements</em> (tags) to describe different types of content.</p>
+    <h2 data-ar="1. ما هي HTML؟">1. What Is HTML?</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="HTML (لغة ترميز النص التشعبي) تُحدد محتوى وهيكل صفحة الويب. إنها ليست لغة برمجة — بل لغة ترميز تستخدم العناصر (الوسوم) لوصف الأنواع المختلفة من المحتوى.">HTML (HyperText Markup Language) defines the <strong>content and structure</strong> of a web page. It is not a programming language — it is a markup language that uses <em>elements</em> (tags) to describe different types of content.</p>
 
     <div class="element-box">
         <div class="element-name">HTML Element Syntax</div>
-        <div class="element-description">Most elements have an opening tag, content, and a closing tag.</div>
+        <div class="element-description" data-ar="معظم العناصر لها وسم افتتاحي ومحتوى ووسم ختامي.">Most elements have an opening tag, content, and a closing tag.</div>
         <div class="code-example">&lt;elementName&gt;Content goes here&lt;/elementName&gt;
 
 &lt;p&gt;This is a paragraph.&lt;/p&gt;
@@ -76,7 +76,7 @@
 
     <div class="element-box">
         <div class="element-name">Void Elements (Self-Closing)</div>
-        <div class="element-description">Some elements have no content and no closing tag. They are called <strong>void elements</strong>.</div>
+        <div class="element-description" data-ar="بعض العناصر ليس لها محتوى ولا وسم ختامي. تُسمى العناصر الفارغة (void elements).">Some elements have no content and no closing tag. They are called <strong>void elements</strong>.</div>
         <div class="code-example">&lt;img src="photo.jpg" alt="A photo"&gt;
 &lt;br&gt;
 &lt;hr&gt;
@@ -86,7 +86,7 @@
 
     <div class="element-box">
         <div class="element-name">HTML Comments</div>
-        <div class="element-description">Comments are not displayed in the browser. Used to explain code.</div>
+        <div class="element-description" data-ar="لا تظهر التعليقات في المتصفح. تُستخدم لشرح الكود.">Comments are not displayed in the browser. Used to explain code.</div>
         <div class="code-example">&lt;!-- This is a comment. It won't show in the browser. --&gt;
 
 &lt;!-- Multi-line comment:
@@ -99,8 +99,8 @@
 <!-- SECTION 2: DOCUMENT STRUCTURE -->
 <!-- ============================================================ -->
 <section>
-    <h2>2. Document Structure</h2>
-    <p style="color:#555; margin-bottom:15px;">Every HTML document follows this structure:</p>
+    <h2 data-ar="2. هيكل المستند">2. Document Structure</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="كل مستند HTML يتبع هذا الهيكل:">Every HTML document follows this structure:</p>
 
     <div class="code-example">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -120,31 +120,31 @@
 
     <div class="element-box">
         <div class="element-name">&lt;!DOCTYPE html&gt;</div>
-        <div class="element-description">Tells the browser this is an HTML5 document. Must be the very first line. Not a tag — a declaration.</div>
+        <div class="element-description" data-ar="يُخبر المتصفح أن هذا مستند HTML5. يجب أن يكون السطر الأول تماماً. ليس وسماً — بل إعلاناً.">Tells the browser this is an HTML5 document. Must be the very first line. Not a tag — a declaration.</div>
     </div>
 
     <div class="element-box">
         <div class="element-name">&lt;html&gt;</div>
-        <div class="element-description">The root element. Wraps the entire document.</div>
+        <div class="element-description" data-ar="العنصر الجذر. يُحيط بالمستند بأكمله.">The root element. Wraps the entire document.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">lang</span><div class="attribute-desc">Specifies the language of the page (e.g., "en", "ar", "fr"). Important for accessibility and SEO.</div></div>
-            <div class="attribute"><span class="attribute-name">dir</span><div class="attribute-desc">Text direction: "ltr" (left-to-right) or "rtl" (right-to-left)</div></div>
+            <div class="attribute"><span class="attribute-name">lang</span><div class="attribute-desc" data-ar="يُحدد لغة الصفحة (مثل &quot;en&quot;، &quot;ar&quot;، &quot;fr&quot;). مهم لإمكانية الوصول وتحسين محركات البحث.">Specifies the language of the page (e.g., "en", "ar", "fr"). Important for accessibility and SEO.</div></div>
+            <div class="attribute"><span class="attribute-name">dir</span><div class="attribute-desc" data-ar="اتجاه النص: &quot;ltr&quot; (من اليسار إلى اليمين) أو &quot;rtl&quot; (من اليمين إلى اليسار)">Text direction: "ltr" (left-to-right) or "rtl" (right-to-left)</div></div>
         </div>
     </div>
 
     <div class="element-box">
         <div class="element-name">&lt;head&gt;</div>
-        <div class="element-description">Contains metadata and document settings — not visible content. Holds &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;, &lt;script&gt;, and &lt;style&gt;.</div>
+        <div class="element-description" data-ar="يحتوي على البيانات الوصفية وإعدادات المستند — وليس المحتوى المرئي. يضم &lt;meta&gt; و&lt;title&gt; و&lt;link&gt; و&lt;script&gt; و&lt;style&gt;.">Contains metadata and document settings — not visible content. Holds &lt;meta&gt;, &lt;title&gt;, &lt;link&gt;, &lt;script&gt;, and &lt;style&gt;.</div>
     </div>
 
     <div class="element-box">
         <div class="element-name">&lt;body&gt;</div>
-        <div class="element-description">Contains all visible page content — text, images, links, etc.</div>
+        <div class="element-description" data-ar="يحتوي على كل محتوى الصفحة المرئي — النصوص والصور والروابط وغيرها.">Contains all visible page content — text, images, links, etc.</div>
     </div>
 
     <div class="element-box">
         <div class="element-name">&lt;title&gt;</div>
-        <div class="element-description">Sets the page title shown in the browser tab, bookmarks, and search engine results. There should be exactly one per page.</div>
+        <div class="element-description" data-ar="يُحدد عنوان الصفحة الذي يظهر في تبويب المتصفح والإشارات المرجعية ونتائج محركات البحث. يجب أن يكون هناك عنوان واحد بالضبط لكل صفحة.">Sets the page title shown in the browser tab, bookmarks, and search engine results. There should be exactly one per page.</div>
         <div class="code-example">&lt;title&gt;My Portfolio | Jane Doe&lt;/title&gt;</div>
     </div>
 </section>
@@ -153,17 +153,17 @@
 <!-- SECTION 3: HEAD ELEMENTS -->
 <!-- ============================================================ -->
 <section>
-    <h2>3. Head Elements</h2>
+    <h2 data-ar="3. عناصر الرأس (Head)">3. Head Elements</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;meta&gt;</div>
-        <div class="element-description">Provides metadata about the document. Void element — no closing tag.</div>
+        <div class="element-description" data-ar="يُوفر بيانات وصفية حول المستند. عنصر فارغ — بدون وسم ختامي.">Provides metadata about the document. Void element — no closing tag.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">charset</span><div class="attribute-desc">Character encoding. Always use UTF-8.</div></div>
-            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc">Meta tag type: "viewport", "description", "keywords", "author", "robots"</div></div>
-            <div class="attribute"><span class="attribute-name">content</span><div class="attribute-desc">The value associated with the name or http-equiv attribute</div></div>
-            <div class="attribute"><span class="attribute-name">property</span><div class="attribute-desc">Used for Open Graph (social media) tags: "og:title", "og:description", etc.</div></div>
-            <div class="attribute"><span class="attribute-name">http-equiv</span><div class="attribute-desc">HTTP header simulation: "refresh", "content-type", "X-UA-Compatible"</div></div>
+            <div class="attribute"><span class="attribute-name">charset</span><div class="attribute-desc" data-ar="ترميز الأحرف. استخدم UTF-8 دائماً.">Character encoding. Always use UTF-8.</div></div>
+            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc" data-ar="نوع وسم meta: &quot;viewport&quot;، &quot;description&quot;، &quot;keywords&quot;، &quot;author&quot;، &quot;robots&quot;">Meta tag type: "viewport", "description", "keywords", "author", "robots"</div></div>
+            <div class="attribute"><span class="attribute-name">content</span><div class="attribute-desc" data-ar="القيمة المرتبطة بسمة name أو http-equiv">The value associated with the name or http-equiv attribute</div></div>
+            <div class="attribute"><span class="attribute-name">property</span><div class="attribute-desc" data-ar="تُستخدم لوسوم Open Graph (وسائل التواصل الاجتماعي): &quot;og:title&quot;، &quot;og:description&quot;، إلخ.">Used for Open Graph (social media) tags: "og:title", "og:description", etc.</div></div>
+            <div class="attribute"><span class="attribute-name">http-equiv</span><div class="attribute-desc" data-ar="محاكاة لرأس HTTP: &quot;refresh&quot;، &quot;content-type&quot;، &quot;X-UA-Compatible&quot;">HTTP header simulation: "refresh", "content-type", "X-UA-Compatible"</div></div>
         </div>
         <div class="code-example">&lt;!-- Character encoding (always first) --&gt;
 &lt;meta charset="UTF-8"&gt;
@@ -196,12 +196,12 @@
 
     <div class="element-box">
         <div class="element-name">&lt;link&gt;</div>
-        <div class="element-description">Links to external resources. Most commonly used to link CSS stylesheets. Void element.</div>
+        <div class="element-description" data-ar="يربط بالموارد الخارجية. يُستخدم غالباً لربط أوراق أنماط CSS. عنصر فارغ.">Links to external resources. Most commonly used to link CSS stylesheets. Void element.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">rel</span><div class="attribute-desc">Relationship type: "stylesheet", "icon", "canonical", "preload", "manifest"</div></div>
-            <div class="attribute"><span class="attribute-name">href</span><div class="attribute-desc">URL of the external resource</div></div>
-            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc">MIME type of the linked resource (e.g., "text/css")</div></div>
-            <div class="attribute"><span class="attribute-name">media</span><div class="attribute-desc">Media query for conditional loading (e.g., "print")</div></div>
+            <div class="attribute"><span class="attribute-name">rel</span><div class="attribute-desc" data-ar="نوع العلاقة: &quot;stylesheet&quot;، &quot;icon&quot;، &quot;canonical&quot;، &quot;preload&quot;، &quot;manifest&quot;">Relationship type: "stylesheet", "icon", "canonical", "preload", "manifest"</div></div>
+            <div class="attribute"><span class="attribute-name">href</span><div class="attribute-desc" data-ar="عنوان URL للمورد الخارجي">URL of the external resource</div></div>
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc" data-ar="نوع MIME للمورد المرتبط (مثل &quot;text/css&quot;)">MIME type of the linked resource (e.g., "text/css")</div></div>
+            <div class="attribute"><span class="attribute-name">media</span><div class="attribute-desc" data-ar="استعلام الوسائط للتحميل المشروط (مثل &quot;print&quot;)">Media query for conditional loading (e.g., "print")</div></div>
         </div>
         <div class="code-example">&lt;!-- Link a CSS stylesheet --&gt;
 &lt;link rel="stylesheet" href="style.css"&gt;
@@ -223,12 +223,12 @@
 
     <div class="element-box">
         <div class="element-name">&lt;script&gt;</div>
-        <div class="element-description">Embeds or links to JavaScript. Usually placed at the end of &lt;body&gt; or with defer/async in &lt;head&gt;.</div>
+        <div class="element-description" data-ar="يُضمّن JavaScript أو يربط بها. يوضع عادةً في نهاية &lt;body&gt; أو مع defer/async في &lt;head&gt;.">Embeds or links to JavaScript. Usually placed at the end of &lt;body&gt; or with defer/async in &lt;head&gt;.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">Path to external JS file. If omitted, JS is written inline between the tags.</div></div>
-            <div class="attribute"><span class="attribute-name">defer</span><div class="attribute-desc">Downloads script while HTML parses; executes after HTML is fully parsed. Best for most scripts.</div></div>
-            <div class="attribute"><span class="attribute-name">async</span><div class="attribute-desc">Downloads script in parallel; executes as soon as it's ready (may interrupt HTML parsing).</div></div>
-            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc">MIME type. Default is "text/javascript". Use "module" for ES modules.</div></div>
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc" data-ar="مسار ملف JS الخارجي. إذا أُغفل، يُكتب JS مباشرة بين الوسوم.">Path to external JS file. If omitted, JS is written inline between the tags.</div></div>
+            <div class="attribute"><span class="attribute-name">defer</span><div class="attribute-desc" data-ar="يُنزّل السكربت أثناء تحليل HTML؛ ويُنفّذه بعد اكتمال تحليل HTML. الأفضل لمعظم السكربتات.">Downloads script while HTML parses; executes after HTML is fully parsed. Best for most scripts.</div></div>
+            <div class="attribute"><span class="attribute-name">async</span><div class="attribute-desc" data-ar="يُنزّل السكربت بالتوازي؛ ويُنفّذه فور جاهزيته (قد يُقاطع تحليل HTML).">Downloads script in parallel; executes as soon as it's ready (may interrupt HTML parsing).</div></div>
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc" data-ar="نوع MIME. الافتراضي هو &quot;text/javascript&quot;. استخدم &quot;module&quot; لوحدات ES.">MIME type. Default is "text/javascript". Use "module" for ES modules.</div></div>
         </div>
         <div class="code-example">&lt;!-- External script (best: defer in &lt;head&gt;) --&gt;
 &lt;script src="main.js" defer&gt;&lt;/script&gt;
@@ -247,7 +247,7 @@
 
     <div class="element-box">
         <div class="element-name">&lt;style&gt;</div>
-        <div class="element-description">Embeds CSS directly inside the HTML document. Goes in &lt;head&gt;.</div>
+        <div class="element-description" data-ar="يُضمّن CSS مباشرة داخل مستند HTML. يوضع في &lt;head&gt;.">Embeds CSS directly inside the HTML document. Goes in &lt;head&gt;.</div>
         <div class="code-example">&lt;style&gt;
   body {
     font-family: Arial, sans-serif;
@@ -264,54 +264,54 @@
 <!-- SECTION 4: HEADINGS & PARAGRAPHS -->
 <!-- ============================================================ -->
 <section>
-    <h2>4. Headings &amp; Text Content</h2>
+    <h2 data-ar="4. العناوين والمحتوى النصي">4. Headings &amp; Text Content</h2>
 
-    <h3>Headings</h3>
+    <h3 data-ar="العناوين">Headings</h3>
     <div class="element-box">
         <div class="element-name">&lt;h1&gt; to &lt;h6&gt;</div>
-        <div class="element-description">Six levels of headings. <strong>&lt;h1&gt;</strong> is the most important (main page title — use only one per page). <strong>&lt;h6&gt;</strong> is the least important. Use headings in order without skipping levels.</div>
+        <div class="element-description" data-ar="ستة مستويات من العناوين. &lt;h1&gt; هو الأهم (عنوان الصفحة الرئيسي — استخدم واحداً فقط لكل صفحة). &lt;h6&gt; هو الأقل أهمية. استخدم العناوين بالترتيب دون تخطي المستويات.">Six levels of headings. <strong>&lt;h1&gt;</strong> is the most important (main page title — use only one per page). <strong>&lt;h6&gt;</strong> is the least important. Use headings in order without skipping levels.</div>
         <div class="code-example">&lt;h1&gt;Main Page Title&lt;/h1&gt;
 &lt;h2&gt;Section Title&lt;/h2&gt;
 &lt;h3&gt;Subsection Title&lt;/h3&gt;
 &lt;h4&gt;Sub-subsection&lt;/h4&gt;
 &lt;h5&gt;Minor heading&lt;/h5&gt;
 &lt;h6&gt;Smallest heading&lt;/h6&gt;</div>
-        <div class="important">⚠️ Use headings for document structure, not for visual size. Use CSS to control appearance.</div>
+        <div class="important" data-ar="⚠️ استخدم العناوين لهيكلة المستند، وليس للحجم البصري. استخدم CSS للتحكم بالمظهر.">⚠️ Use headings for document structure, not for visual size. Use CSS to control appearance.</div>
     </div>
 
-    <h3>Block-Level Text Elements</h3>
+    <h3 data-ar="عناصر النص على مستوى الكتلة (Block-Level)">Block-Level Text Elements</h3>
     <table class="reference">
-        <thead><tr><th>Element</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Element</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="tag">&lt;p&gt;</span></td><td>Paragraph of text</td><td>Block element — creates vertical space above and below</td></tr>
-            <tr><td><span class="tag">&lt;div&gt;</span></td><td>Generic block container</td><td>No semantic meaning; for grouping and layout with CSS</td></tr>
-            <tr><td><span class="tag">&lt;br&gt;</span></td><td>Line break (void element)</td><td>Inserts a line break within content; use sparingly</td></tr>
-            <tr><td><span class="tag">&lt;hr&gt;</span></td><td>Horizontal rule (void element)</td><td>Represents a thematic break between content</td></tr>
-            <tr><td><span class="tag">&lt;pre&gt;</span></td><td>Preformatted text</td><td>Preserves whitespace and line breaks; uses monospace font</td></tr>
+            <tr><td><span class="tag">&lt;p&gt;</span></td><td data-ar="فقرة من النص">Paragraph of text</td><td data-ar="عنصر كتلة — يُنشئ مسافة عمودية فوقه وتحته">Block element — creates vertical space above and below</td></tr>
+            <tr><td><span class="tag">&lt;div&gt;</span></td><td data-ar="حاوية كتلة عامة">Generic block container</td><td data-ar="بلا معنى دلالي؛ للتجميع والتخطيط مع CSS">No semantic meaning; for grouping and layout with CSS</td></tr>
+            <tr><td><span class="tag">&lt;br&gt;</span></td><td data-ar="فاصل سطر (عنصر فارغ)">Line break (void element)</td><td data-ar="يُدرج فاصل سطر داخل المحتوى؛ استخدمه باعتدال">Inserts a line break within content; use sparingly</td></tr>
+            <tr><td><span class="tag">&lt;hr&gt;</span></td><td data-ar="خط أفقي (عنصر فارغ)">Horizontal rule (void element)</td><td data-ar="يُمثّل فاصلاً موضوعياً بين المحتوى">Represents a thematic break between content</td></tr>
+            <tr><td><span class="tag">&lt;pre&gt;</span></td><td data-ar="نص مُنسّق مسبقاً">Preformatted text</td><td data-ar="يحافظ على المسافات وفواصل الأسطر؛ يستخدم خطاً ثابت العرض">Preserves whitespace and line breaks; uses monospace font</td></tr>
         </tbody>
     </table>
 
-    <h3>Inline Elements</h3>
+    <h3 data-ar="العناصر المضمّنة (Inline)">Inline Elements</h3>
     <table class="reference">
-        <thead><tr><th>Element</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Element</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="tag">&lt;span&gt;</span></td><td>Generic inline container</td><td>No semantic meaning; for styling with CSS</td></tr>
-            <tr><td><span class="tag">&lt;strong&gt;</span></td><td>Strong importance</td><td>Renders bold; has semantic meaning (important content)</td></tr>
-            <tr><td><span class="tag">&lt;em&gt;</span></td><td>Stress emphasis</td><td>Renders italic; has semantic meaning (stress emphasis)</td></tr>
-            <tr><td><span class="tag">&lt;b&gt;</span></td><td>Bring attention to text</td><td>Renders bold; no strong importance (keywords, product names)</td></tr>
-            <tr><td><span class="tag">&lt;i&gt;</span></td><td>Alternate voice or mood</td><td>Renders italic; for idioms, technical terms, foreign words</td></tr>
-            <tr><td><span class="tag">&lt;mark&gt;</span></td><td>Highlighted/marked text</td><td>Like a yellow highlighter; search result matches</td></tr>
-            <tr><td><span class="tag">&lt;small&gt;</span></td><td>Side comments, fine print</td><td>Legal disclaimers, copyright notices</td></tr>
-            <tr><td><span class="tag">&lt;del&gt;</span></td><td>Deleted text (strikethrough)</td><td>Shows content that was removed; represents an edit</td></tr>
-            <tr><td><span class="tag">&lt;ins&gt;</span></td><td>Inserted text (underline)</td><td>Shows content that was added; represents an edit</td></tr>
-            <tr><td><span class="tag">&lt;sub&gt;</span></td><td>Subscript text</td><td>Chemical formulas: H&lt;sub&gt;2&lt;/sub&gt;O</td></tr>
-            <tr><td><span class="tag">&lt;sup&gt;</span></td><td>Superscript text</td><td>Exponents: x&lt;sup&gt;2&lt;/sup&gt;, footnotes¹</td></tr>
-            <tr><td><span class="tag">&lt;u&gt;</span></td><td>Unarticulated annotation</td><td>Spell-check errors, proper nouns in Chinese. Not for styling.</td></tr>
-            <tr><td><span class="tag">&lt;s&gt;</span></td><td>Strikethrough (no longer relevant)</td><td>Old prices, canceled events. Different from &lt;del&gt; (edits)</td></tr>
-            <tr><td><span class="tag">&lt;code&gt;</span></td><td>Inline code snippet</td><td>Single code terms: Use &lt;code&gt;color: red;&lt;/code&gt;</td></tr>
-            <tr><td><span class="tag">&lt;kbd&gt;</span></td><td>Keyboard input</td><td">Press &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt; to copy</td></tr>
-            <tr><td><span class="tag">&lt;samp&gt;</span></td><td>Sample program output</td><td>Terminal output: &lt;samp&gt;Error: file not found&lt;/samp&gt;</td></tr>
-            <tr><td><span class="tag">&lt;var&gt;</span></td><td>Mathematical variable</td><td>The variable &lt;var&gt;x&lt;/var&gt; represents speed</td></tr>
+            <tr><td><span class="tag">&lt;span&gt;</span></td><td data-ar="حاوية مضمّنة عامة">Generic inline container</td><td data-ar="بلا معنى دلالي؛ لتنسيق التصميم مع CSS">No semantic meaning; for styling with CSS</td></tr>
+            <tr><td><span class="tag">&lt;strong&gt;</span></td><td data-ar="أهمية قوية">Strong importance</td><td data-ar="يُعرض غامقاً؛ له معنى دلالي (محتوى مهم)">Renders bold; has semantic meaning (important content)</td></tr>
+            <tr><td><span class="tag">&lt;em&gt;</span></td><td data-ar="تأكيد بالنبرة">Stress emphasis</td><td data-ar="يُعرض مائلاً؛ له معنى دلالي (تأكيد بالنبرة)">Renders italic; has semantic meaning (stress emphasis)</td></tr>
+            <tr><td><span class="tag">&lt;b&gt;</span></td><td data-ar="لفت الانتباه إلى النص">Bring attention to text</td><td data-ar="يُعرض غامقاً؛ بلا أهمية قوية (كلمات مفتاحية، أسماء منتجات)">Renders bold; no strong importance (keywords, product names)</td></tr>
+            <tr><td><span class="tag">&lt;i&gt;</span></td><td data-ar="صوت أو مزاج بديل">Alternate voice or mood</td><td data-ar="يُعرض مائلاً؛ للتعابير الاصطلاحية والمصطلحات التقنية والكلمات الأجنبية">Renders italic; for idioms, technical terms, foreign words</td></tr>
+            <tr><td><span class="tag">&lt;mark&gt;</span></td><td data-ar="نص مُميّز/مُعلّم">Highlighted/marked text</td><td data-ar="كقلم تمييز أصفر؛ مطابقات نتائج البحث">Like a yellow highlighter; search result matches</td></tr>
+            <tr><td><span class="tag">&lt;small&gt;</span></td><td data-ar="تعليقات جانبية، طباعة بخط صغير">Side comments, fine print</td><td data-ar="إخلاءات المسؤولية القانونية، إشعارات حقوق النشر">Legal disclaimers, copyright notices</td></tr>
+            <tr><td><span class="tag">&lt;del&gt;</span></td><td data-ar="نص محذوف (يتوسطه خط)">Deleted text (strikethrough)</td><td data-ar="يُظهر المحتوى الذي أُزيل؛ يُمثّل تعديلاً">Shows content that was removed; represents an edit</td></tr>
+            <tr><td><span class="tag">&lt;ins&gt;</span></td><td data-ar="نص مُدرج (مُسطّر)">Inserted text (underline)</td><td data-ar="يُظهر المحتوى الذي أُضيف؛ يُمثّل تعديلاً">Shows content that was added; represents an edit</td></tr>
+            <tr><td><span class="tag">&lt;sub&gt;</span></td><td data-ar="نص سُفلي">Subscript text</td><td data-ar="الصيغ الكيميائية: H&lt;sub&gt;2&lt;/sub&gt;O">Chemical formulas: H&lt;sub&gt;2&lt;/sub&gt;O</td></tr>
+            <tr><td><span class="tag">&lt;sup&gt;</span></td><td data-ar="نص علوي">Superscript text</td><td data-ar="الأسس: x&lt;sup&gt;2&lt;/sup&gt;، الحواشي السفلية¹">Exponents: x&lt;sup&gt;2&lt;/sup&gt;, footnotes¹</td></tr>
+            <tr><td><span class="tag">&lt;u&gt;</span></td><td data-ar="تعليق غير منطوق">Unarticulated annotation</td><td data-ar="أخطاء التدقيق الإملائي، الأسماء الصينية المخصصة. ليس للتنسيق.">Spell-check errors, proper nouns in Chinese. Not for styling.</td></tr>
+            <tr><td><span class="tag">&lt;s&gt;</span></td><td data-ar="خط يتوسط النص (لم يعد ملائماً)">Strikethrough (no longer relevant)</td><td data-ar="الأسعار القديمة، الأحداث الملغاة. مختلف عن &lt;del&gt; (للتعديلات)">Old prices, canceled events. Different from &lt;del&gt; (edits)</td></tr>
+            <tr><td><span class="tag">&lt;code&gt;</span></td><td data-ar="مقتطف كود مضمّن">Inline code snippet</td><td data-ar="مصطلحات الكود المفردة: استخدم &lt;code&gt;color: red;&lt;/code&gt;">Single code terms: Use &lt;code&gt;color: red;&lt;/code&gt;</td></tr>
+            <tr><td><span class="tag">&lt;kbd&gt;</span></td><td data-ar="إدخال لوحة المفاتيح">Keyboard input</td><td" data-ar="اضغط &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt; للنسخ">Press &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt; to copy</td></tr>
+            <tr><td><span class="tag">&lt;samp&gt;</span></td><td data-ar="عينة مخرجات برنامج">Sample program output</td><td data-ar="مخرجات الطرفية: &lt;samp&gt;Error: file not found&lt;/samp&gt;">Terminal output: &lt;samp&gt;Error: file not found&lt;/samp&gt;</td></tr>
+            <tr><td><span class="tag">&lt;var&gt;</span></td><td data-ar="متغير رياضي">Mathematical variable</td><td data-ar="المتغير &lt;var&gt;x&lt;/var&gt; يُمثّل السرعة">The variable &lt;var&gt;x&lt;/var&gt; represents speed</td></tr>
         </tbody>
     </table>
 
@@ -339,18 +339,18 @@
 <!-- SECTION 5: LINKS -->
 <!-- ============================================================ -->
 <section>
-    <h2>5. Links — &lt;a&gt; Element</h2>
+    <h2 data-ar="5. الروابط — عنصر &lt;a&gt;">5. Links — &lt;a&gt; Element</h2>
 
     <div class="element-box">
         <div class="element-name">&lt;a&gt; — Anchor Element</div>
-        <div class="element-description">Creates a hyperlink to other pages, resources, email addresses, phone numbers, or sections of the same page.</div>
+        <div class="element-description" data-ar="يُنشئ رابطاً تشعبياً إلى صفحات أخرى أو موارد أو عناوين بريد إلكتروني أو أرقام هواتف أو أقسام في نفس الصفحة.">Creates a hyperlink to other pages, resources, email addresses, phone numbers, or sections of the same page.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">href</span><div class="attribute-desc">The URL or destination. Required for a functional link.</div></div>
-            <div class="attribute"><span class="attribute-name">target</span><div class="attribute-desc">Where to open: <strong>_self</strong> (same tab, default), <strong>_blank</strong> (new tab), <strong>_parent</strong> (parent frame), <strong>_top</strong> (full window)</div></div>
-            <div class="attribute"><span class="attribute-name">rel</span><div class="attribute-desc">Relationship. Use <strong>noopener noreferrer</strong> with target="_blank" for security. Also: "nofollow", "alternate", "author"</div></div>
-            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc">Tooltip text shown on hover</div></div>
-            <div class="attribute"><span class="attribute-name">download</span><div class="attribute-desc">Prompts file download instead of navigation. Can specify filename: download="report.pdf"</div></div>
-            <div class="attribute"><span class="attribute-name">hreflang</span><div class="attribute-desc">Language of the linked document (e.g., "en", "es")</div></div>
+            <div class="attribute"><span class="attribute-name">href</span><div class="attribute-desc" data-ar="عنوان URL أو الوجهة. مطلوب لرابط يعمل.">The URL or destination. Required for a functional link.</div></div>
+            <div class="attribute"><span class="attribute-name">target</span><div class="attribute-desc" data-ar="أين يُفتح: _self (نفس التبويب، الافتراضي)، _blank (تبويب جديد)، _parent (الإطار الأب)، _top (النافذة الكاملة)">Where to open: <strong>_self</strong> (same tab, default), <strong>_blank</strong> (new tab), <strong>_parent</strong> (parent frame), <strong>_top</strong> (full window)</div></div>
+            <div class="attribute"><span class="attribute-name">rel</span><div class="attribute-desc" data-ar="العلاقة. استخدم noopener noreferrer مع target=&quot;_blank&quot; للأمان. أيضاً: &quot;nofollow&quot;، &quot;alternate&quot;، &quot;author&quot;">Relationship. Use <strong>noopener noreferrer</strong> with target="_blank" for security. Also: "nofollow", "alternate", "author"</div></div>
+            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc" data-ar="نص تلميح يظهر عند التمرير">Tooltip text shown on hover</div></div>
+            <div class="attribute"><span class="attribute-name">download</span><div class="attribute-desc" data-ar="يطلب تنزيل الملف بدلاً من التنقل. يمكن تحديد اسم الملف: download=&quot;report.pdf&quot;">Prompts file download instead of navigation. Can specify filename: download="report.pdf"</div></div>
+            <div class="attribute"><span class="attribute-name">hreflang</span><div class="attribute-desc" data-ar="لغة المستند المرتبط (مثل &quot;en&quot;، &quot;es&quot;)">Language of the linked document (e.g., "en", "es")</div></div>
         </div>
         <div class="code-example">&lt;!-- External link (opens in new tab safely) --&gt;
 &lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;
@@ -380,18 +380,18 @@
 &lt;/a&gt;</div>
     </div>
 
-    <h3>Path Types</h3>
+    <h3 data-ar="أنواع المسارات">Path Types</h3>
     <table class="reference">
-        <thead><tr><th>Type</th><th>Example</th><th>Meaning</th></tr></thead>
+        <thead><tr><th data-ar="النوع">Type</th><th data-ar="مثال">Example</th><th data-ar="المعنى">Meaning</th></tr></thead>
         <tbody>
-            <tr><td>Absolute URL</td><td><code>https://example.com/page.html</code></td><td>Full URL including protocol and domain</td></tr>
-            <tr><td>Relative (same folder)</td><td><code>page.html</code></td><td>File in the same folder</td></tr>
-            <tr><td>Relative (subfolder)</td><td><code>pages/about.html</code></td><td>File in a subfolder</td></tr>
-            <tr><td>Parent directory</td><td><code>../index.html</code></td><td>Go up one folder, then find file</td></tr>
-            <tr><td>Root relative</td><td><code>/images/photo.jpg</code></td><td>From the root of the website</td></tr>
-            <tr><td>Anchor (same page)</td><td><code>#section-id</code></td><td>Jump to an element with that id</td></tr>
-            <tr><td>Email</td><td><code>mailto:user@email.com</code></td><td>Opens email client</td></tr>
-            <tr><td>Phone</td><td><code>tel:+15555555555</code></td><td>Initiates a phone call</td></tr>
+            <tr><td data-ar="عنوان URL مطلق">Absolute URL</td><td><code>https://example.com/page.html</code></td><td data-ar="عنوان URL كامل يتضمن البروتوكول والنطاق">Full URL including protocol and domain</td></tr>
+            <tr><td data-ar="نسبي (نفس المجلد)">Relative (same folder)</td><td><code>page.html</code></td><td data-ar="ملف في نفس المجلد">File in the same folder</td></tr>
+            <tr><td data-ar="نسبي (مجلد فرعي)">Relative (subfolder)</td><td><code>pages/about.html</code></td><td data-ar="ملف في مجلد فرعي">File in a subfolder</td></tr>
+            <tr><td data-ar="المجلد الأب">Parent directory</td><td><code>../index.html</code></td><td data-ar="ارتفع مجلداً واحداً، ثم ابحث عن الملف">Go up one folder, then find file</td></tr>
+            <tr><td data-ar="نسبي للجذر">Root relative</td><td><code>/images/photo.jpg</code></td><td data-ar="من جذر الموقع">From the root of the website</td></tr>
+            <tr><td data-ar="مرساة (نفس الصفحة)">Anchor (same page)</td><td><code>#section-id</code></td><td data-ar="القفز إلى عنصر بذلك المعرّف (id)">Jump to an element with that id</td></tr>
+            <tr><td data-ar="بريد إلكتروني">Email</td><td><code>mailto:user@email.com</code></td><td data-ar="يفتح عميل البريد الإلكتروني">Opens email client</td></tr>
+            <tr><td data-ar="هاتف">Phone</td><td><code>tel:+15555555555</code></td><td data-ar="يبدأ مكالمة هاتفية">Initiates a phone call</td></tr>
         </tbody>
     </table>
 </section>
@@ -400,21 +400,21 @@
 <!-- SECTION 6: IMAGES -->
 <!-- ============================================================ -->
 <section>
-    <h2>6. Images &amp; Media</h2>
+    <h2 data-ar="6. الصور والوسائط">6. Images &amp; Media</h2>
 
-    <h3>Images</h3>
+    <h3 data-ar="الصور">Images</h3>
     <div class="element-box">
         <div class="element-name">&lt;img&gt; — Image (void element)</div>
-        <div class="element-description">Embeds an image into the page. Has no closing tag.</div>
+        <div class="element-description" data-ar="يُضمّن صورة في الصفحة. ليس له وسم ختامي.">Embeds an image into the page. Has no closing tag.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">Path to the image file (URL or relative path). Required.</div></div>
-            <div class="attribute"><span class="attribute-name">alt</span><div class="attribute-desc">Alternative text. Required for accessibility. Describe the image content. Use "" (empty) for decorative images.</div></div>
-            <div class="attribute"><span class="attribute-name">width</span><div class="attribute-desc">Width in pixels or percentage (e.g., "300" or "100%"). Helps browser reserve space.</div></div>
-            <div class="attribute"><span class="attribute-name">height</span><div class="attribute-desc">Height in pixels. Set both width and height to prevent layout shift.</div></div>
-            <div class="attribute"><span class="attribute-name">loading</span><div class="attribute-desc">"lazy" defers loading until near viewport (improves performance). "eager" loads immediately.</div></div>
-            <div class="attribute"><span class="attribute-name">srcset</span><div class="attribute-desc">Provides multiple image sources for different screen sizes/resolutions.</div></div>
-            <div class="attribute"><span class="attribute-name">sizes</span><div class="attribute-desc">Defines image display size based on viewport width (used with srcset).</div></div>
-            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc">Tooltip text shown on hover</div></div>
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc" data-ar="مسار ملف الصورة (عنوان URL أو مسار نسبي). مطلوب.">Path to the image file (URL or relative path). Required.</div></div>
+            <div class="attribute"><span class="attribute-name">alt</span><div class="attribute-desc" data-ar="نص بديل. مطلوب لإمكانية الوصول. صِف محتوى الصورة. استخدم &quot;&quot; (فارغ) للصور الزخرفية.">Alternative text. Required for accessibility. Describe the image content. Use "" (empty) for decorative images.</div></div>
+            <div class="attribute"><span class="attribute-name">width</span><div class="attribute-desc" data-ar="العرض بالبكسل أو النسبة المئوية (مثل &quot;300&quot; أو &quot;100%&quot;). يساعد المتصفح على حجز مساحة.">Width in pixels or percentage (e.g., "300" or "100%"). Helps browser reserve space.</div></div>
+            <div class="attribute"><span class="attribute-name">height</span><div class="attribute-desc" data-ar="الارتفاع بالبكسل. اضبط العرض والارتفاع معاً لمنع انزياح التخطيط.">Height in pixels. Set both width and height to prevent layout shift.</div></div>
+            <div class="attribute"><span class="attribute-name">loading</span><div class="attribute-desc" data-ar="&quot;lazy&quot; يؤخر التحميل حتى يقترب من نطاق العرض (يحسّن الأداء). &quot;eager&quot; يُحمّل فوراً.">"lazy" defers loading until near viewport (improves performance). "eager" loads immediately.</div></div>
+            <div class="attribute"><span class="attribute-name">srcset</span><div class="attribute-desc" data-ar="يوفر مصادر صور متعددة لأحجام/دقات شاشات مختلفة.">Provides multiple image sources for different screen sizes/resolutions.</div></div>
+            <div class="attribute"><span class="attribute-name">sizes</span><div class="attribute-desc" data-ar="يُحدد حجم عرض الصورة بناءً على عرض نطاق العرض (يُستخدم مع srcset).">Defines image display size based on viewport width (used with srcset).</div></div>
+            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc" data-ar="نص تلميح يظهر عند التمرير">Tooltip text shown on hover</div></div>
         </div>
         <div class="code-example">&lt;!-- Basic image --&gt;
 &lt;img src="cat.jpg" alt="An orange tabby cat sitting on a windowsill"&gt;
@@ -435,29 +435,29 @@
   sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
   alt="Responsive photo"
 &gt;</div>
-        <div class="important">⚠️ <strong>Good alt text:</strong> Describe what's in the image in context. "Two orange tabby kittens playing with a yarn ball" ✅ | "image" or "photo" ❌</div>
+        <div class="important" data-ar="⚠️ نص alt جيد: صِف ما في الصورة ضمن السياق. &quot;قطتان برتقاليتان صغيرتان تلعبان بكرة خيوط&quot; ✅ | &quot;صورة&quot; أو &quot;photo&quot; ❌">⚠️ <strong>Good alt text:</strong> Describe what's in the image in context. "Two orange tabby kittens playing with a yarn ball" ✅ | "image" or "photo" ❌</div>
     </div>
 
     <div class="element-box">
         <div class="element-name">&lt;figure&gt; and &lt;figcaption&gt;</div>
-        <div class="element-description">&lt;figure&gt; groups self-contained content (image, diagram, code) with its caption. &lt;figcaption&gt; provides the caption.</div>
+        <div class="element-description" data-ar="&lt;figure&gt; يُجمّع محتوى قائماً بذاته (صورة، رسم بياني، كود) مع تسميته التوضيحية. &lt;figcaption&gt; يوفر التسمية التوضيحية.">&lt;figure&gt; groups self-contained content (image, diagram, code) with its caption. &lt;figcaption&gt; provides the caption.</div>
         <div class="code-example">&lt;figure&gt;
   &lt;img src="chart.png" alt="Bar chart showing sales data from 2020–2024"&gt;
   &lt;figcaption&gt;Figure 1: Annual sales growth from 2020 to 2024.&lt;/figcaption&gt;
 &lt;/figure&gt;</div>
     </div>
 
-    <h3>Audio</h3>
+    <h3 data-ar="الصوت">Audio</h3>
     <div class="element-box">
         <div class="element-name">&lt;audio&gt;</div>
-        <div class="element-description">Embeds audio content. Use &lt;source&gt; child elements for multiple formats.</div>
+        <div class="element-description" data-ar="يُضمّن محتوى صوتياً. استخدم عناصر &lt;source&gt; الفرعية لصيغ متعددة.">Embeds audio content. Use &lt;source&gt; child elements for multiple formats.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">Path to audio file (alternative to &lt;source&gt; children)</div></div>
-            <div class="attribute"><span class="attribute-name">controls</span><div class="attribute-desc">Shows play/pause/volume controls. Boolean attribute — just add the word.</div></div>
-            <div class="attribute"><span class="attribute-name">autoplay</span><div class="attribute-desc">Starts playing automatically (often blocked by browsers; use muted with autoplay)</div></div>
-            <div class="attribute"><span class="attribute-name">muted</span><div class="attribute-desc">Mutes audio by default</div></div>
-            <div class="attribute"><span class="attribute-name">loop</span><div class="attribute-desc">Repeats audio when it ends</div></div>
-            <div class="attribute"><span class="attribute-name">preload</span><div class="attribute-desc">"none" (don't preload), "metadata" (load metadata only), "auto" (browser decides)</div></div>
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc" data-ar="مسار ملف الصوت (بديل لعناصر &lt;source&gt; الفرعية)">Path to audio file (alternative to &lt;source&gt; children)</div></div>
+            <div class="attribute"><span class="attribute-name">controls</span><div class="attribute-desc" data-ar="يُظهر أزرار التشغيل/الإيقاف/الصوت. سمة منطقية — فقط أضف الكلمة.">Shows play/pause/volume controls. Boolean attribute — just add the word.</div></div>
+            <div class="attribute"><span class="attribute-name">autoplay</span><div class="attribute-desc" data-ar="يبدأ التشغيل تلقائياً (تحظره المتصفحات غالباً؛ استخدم muted مع autoplay)">Starts playing automatically (often blocked by browsers; use muted with autoplay)</div></div>
+            <div class="attribute"><span class="attribute-name">muted</span><div class="attribute-desc" data-ar="يكتم الصوت افتراضياً">Mutes audio by default</div></div>
+            <div class="attribute"><span class="attribute-name">loop</span><div class="attribute-desc" data-ar="يُعيد تشغيل الصوت عند انتهائه">Repeats audio when it ends</div></div>
+            <div class="attribute"><span class="attribute-name">preload</span><div class="attribute-desc" data-ar="&quot;none&quot; (لا تحميل مسبق)، &quot;metadata&quot; (تحميل البيانات الوصفية فقط)، &quot;auto&quot; (المتصفح يقرر)">"none" (don't preload), "metadata" (load metadata only), "auto" (browser decides)</div></div>
         </div>
         <div class="code-example">&lt;audio controls&gt;
   &lt;source src="audio.mp3" type="audio/mpeg"&gt;
@@ -466,20 +466,20 @@
 &lt;/audio&gt;</div>
     </div>
 
-    <h3>Video</h3>
+    <h3 data-ar="الفيديو">Video</h3>
     <div class="element-box">
         <div class="element-name">&lt;video&gt;</div>
-        <div class="element-description">Embeds video content.</div>
+        <div class="element-description" data-ar="يُضمّن محتوى فيديو.">Embeds video content.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">Path to video file</div></div>
-            <div class="attribute"><span class="attribute-name">controls</span><div class="attribute-desc">Shows playback controls</div></div>
-            <div class="attribute"><span class="attribute-name">width / height</span><div class="attribute-desc">Video dimensions in pixels</div></div>
-            <div class="attribute"><span class="attribute-name">poster</span><div class="attribute-desc">Image to show before video plays (thumbnail)</div></div>
-            <div class="attribute"><span class="attribute-name">autoplay</span><div class="attribute-desc">Auto-play (combine with muted to work in most browsers)</div></div>
-            <div class="attribute"><span class="attribute-name">muted</span><div class="attribute-desc">Starts muted</div></div>
-            <div class="attribute"><span class="attribute-name">loop</span><div class="attribute-desc">Repeats video when it ends</div></div>
-            <div class="attribute"><span class="attribute-name">preload</span><div class="attribute-desc">"none", "metadata", or "auto"</div></div>
-            <div class="attribute"><span class="attribute-name">playsinline</span><div class="attribute-desc">Plays inline on iOS instead of fullscreen</div></div>
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc" data-ar="مسار ملف الفيديو">Path to video file</div></div>
+            <div class="attribute"><span class="attribute-name">controls</span><div class="attribute-desc" data-ar="يُظهر أزرار التحكم بالتشغيل">Shows playback controls</div></div>
+            <div class="attribute"><span class="attribute-name">width / height</span><div class="attribute-desc" data-ar="أبعاد الفيديو بالبكسل">Video dimensions in pixels</div></div>
+            <div class="attribute"><span class="attribute-name">poster</span><div class="attribute-desc" data-ar="صورة تُعرض قبل تشغيل الفيديو (صورة مصغرة)">Image to show before video plays (thumbnail)</div></div>
+            <div class="attribute"><span class="attribute-name">autoplay</span><div class="attribute-desc" data-ar="تشغيل تلقائي (ادمج مع muted ليعمل في معظم المتصفحات)">Auto-play (combine with muted to work in most browsers)</div></div>
+            <div class="attribute"><span class="attribute-name">muted</span><div class="attribute-desc" data-ar="يبدأ مكتوماً">Starts muted</div></div>
+            <div class="attribute"><span class="attribute-name">loop</span><div class="attribute-desc" data-ar="يُعيد تشغيل الفيديو عند انتهائه">Repeats video when it ends</div></div>
+            <div class="attribute"><span class="attribute-name">preload</span><div class="attribute-desc" data-ar="&quot;none&quot;، &quot;metadata&quot;، أو &quot;auto&quot;">"none", "metadata", or "auto"</div></div>
+            <div class="attribute"><span class="attribute-name">playsinline</span><div class="attribute-desc" data-ar="يُشغّل داخل الصفحة على iOS بدلاً من ملء الشاشة">Plays inline on iOS instead of fullscreen</div></div>
         </div>
         <div class="code-example">&lt;video controls width="640" height="360" poster="thumbnail.jpg"&gt;
   &lt;source src="video.mp4" type="video/mp4"&gt;
@@ -492,38 +492,38 @@
 
     <div class="element-box">
         <div class="element-name">&lt;source&gt; (void element)</div>
-        <div class="element-description">Specifies alternative media resources for &lt;audio&gt;, &lt;video&gt;, or &lt;picture&gt;. Browser picks the first supported format.</div>
+        <div class="element-description" data-ar="يُحدد موارد وسائط بديلة لـ &lt;audio&gt; أو &lt;video&gt; أو &lt;picture&gt;. يختار المتصفح أول صيغة مدعومة.">Specifies alternative media resources for &lt;audio&gt;, &lt;video&gt;, or &lt;picture&gt;. Browser picks the first supported format.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">URL of the media file</div></div>
-            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc">MIME type: "video/mp4", "video/webm", "audio/mpeg", "audio/ogg", "image/webp"</div></div>
-            <div class="attribute"><span class="attribute-name">media</span><div class="attribute-desc">Media query (for &lt;picture&gt;)</div></div>
-            <div class="attribute"><span class="attribute-name">srcset</span><div class="attribute-desc">List of image candidates (for &lt;picture&gt;)</div></div>
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc" data-ar="عنوان URL لملف الوسائط">URL of the media file</div></div>
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc" data-ar="نوع MIME: &quot;video/mp4&quot;، &quot;video/webm&quot;، &quot;audio/mpeg&quot;، &quot;audio/ogg&quot;، &quot;image/webp&quot;">MIME type: "video/mp4", "video/webm", "audio/mpeg", "audio/ogg", "image/webp"</div></div>
+            <div class="attribute"><span class="attribute-name">media</span><div class="attribute-desc" data-ar="استعلام وسائط (لـ &lt;picture&gt;)">Media query (for &lt;picture&gt;)</div></div>
+            <div class="attribute"><span class="attribute-name">srcset</span><div class="attribute-desc" data-ar="قائمة بصور مرشحة (لـ &lt;picture&gt;)">List of image candidates (for &lt;picture&gt;)</div></div>
         </div>
     </div>
 
     <div class="element-box">
         <div class="element-name">&lt;track&gt; (void element)</div>
-        <div class="element-description">Provides text tracks (captions, subtitles, descriptions) for &lt;video&gt; and &lt;audio&gt;. Uses WebVTT (.vtt) files.</div>
+        <div class="element-description" data-ar="يوفر مسارات نصية (تعليقات، ترجمات، أوصاف) لـ &lt;video&gt; و&lt;audio&gt;. يستخدم ملفات WebVTT (.vtt).">Provides text tracks (captions, subtitles, descriptions) for &lt;video&gt; and &lt;audio&gt;. Uses WebVTT (.vtt) files.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">kind</span><div class="attribute-desc">"captions" (for deaf/HoH), "subtitles" (translation), "descriptions" (for blind), "chapters", "metadata"</div></div>
-            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">Path to the .vtt file</div></div>
-            <div class="attribute"><span class="attribute-name">srclang</span><div class="attribute-desc">Language of the track (e.g., "en", "es")</div></div>
-            <div class="attribute"><span class="attribute-name">label</span><div class="attribute-desc">Title shown in the player's track selector</div></div>
-            <div class="attribute"><span class="attribute-name">default</span><div class="attribute-desc">Boolean: this track is enabled by default</div></div>
+            <div class="attribute"><span class="attribute-name">kind</span><div class="attribute-desc" data-ar="&quot;captions&quot; (للصم وضعاف السمع)، &quot;subtitles&quot; (ترجمة)، &quot;descriptions&quot; (للمكفوفين)، &quot;chapters&quot;، &quot;metadata&quot;">"captions" (for deaf/HoH), "subtitles" (translation), "descriptions" (for blind), "chapters", "metadata"</div></div>
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc" data-ar="مسار ملف .vtt">Path to the .vtt file</div></div>
+            <div class="attribute"><span class="attribute-name">srclang</span><div class="attribute-desc" data-ar="لغة المسار (مثل &quot;en&quot;، &quot;es&quot;)">Language of the track (e.g., "en", "es")</div></div>
+            <div class="attribute"><span class="attribute-name">label</span><div class="attribute-desc" data-ar="العنوان الذي يظهر في محدد المسارات في المشغّل">Title shown in the player's track selector</div></div>
+            <div class="attribute"><span class="attribute-name">default</span><div class="attribute-desc" data-ar="منطقي: هذا المسار مُفعّل افتراضياً">Boolean: this track is enabled by default</div></div>
         </div>
     </div>
 
-    <h3>Iframe — Embedded Web Pages</h3>
+    <h3 data-ar="Iframe — صفحات ويب مضمّنة">Iframe — Embedded Web Pages</h3>
     <div class="element-box">
         <div class="element-name">&lt;iframe&gt;</div>
-        <div class="element-description">Embeds another web page (YouTube video, map, etc.) inside the current page.</div>
+        <div class="element-description" data-ar="يُضمّن صفحة ويب أخرى (فيديو يوتيوب، خريطة، إلخ.) داخل الصفحة الحالية.">Embeds another web page (YouTube video, map, etc.) inside the current page.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">URL of the page to embed</div></div>
-            <div class="attribute"><span class="attribute-name">width / height</span><div class="attribute-desc">Dimensions in pixels or percentage</div></div>
-            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc">Accessible name for screen readers. Required for accessibility.</div></div>
-            <div class="attribute"><span class="attribute-name">allowfullscreen</span><div class="attribute-desc">Allows fullscreen mode (needed for YouTube)</div></div>
-            <div class="attribute"><span class="attribute-name">loading</span><div class="attribute-desc">"lazy" for deferred loading</div></div>
-            <div class="attribute"><span class="attribute-name">sandbox</span><div class="attribute-desc">Applies restrictions: "allow-scripts", "allow-forms", "allow-same-origin"</div></div>
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc" data-ar="عنوان URL للصفحة المراد تضمينها">URL of the page to embed</div></div>
+            <div class="attribute"><span class="attribute-name">width / height</span><div class="attribute-desc" data-ar="الأبعاد بالبكسل أو النسبة المئوية">Dimensions in pixels or percentage</div></div>
+            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc" data-ar="اسم يمكن الوصول إليه لقارئات الشاشة. مطلوب لإمكانية الوصول.">Accessible name for screen readers. Required for accessibility.</div></div>
+            <div class="attribute"><span class="attribute-name">allowfullscreen</span><div class="attribute-desc" data-ar="يسمح بوضع ملء الشاشة (مطلوب ليوتيوب)">Allows fullscreen mode (needed for YouTube)</div></div>
+            <div class="attribute"><span class="attribute-name">loading</span><div class="attribute-desc" data-ar="&quot;lazy&quot; للتحميل المؤجل">"lazy" for deferred loading</div></div>
+            <div class="attribute"><span class="attribute-name">sandbox</span><div class="attribute-desc" data-ar="يطبّق قيوداً: &quot;allow-scripts&quot;، &quot;allow-forms&quot;، &quot;allow-same-origin&quot;">Applies restrictions: "allow-scripts", "allow-forms", "allow-same-origin"</div></div>
         </div>
         <div class="code-example">&lt;!-- YouTube embed --&gt;
 &lt;iframe
@@ -549,27 +549,27 @@
 <!-- SECTION 7: LISTS -->
 <!-- ============================================================ -->
 <section>
-    <h2>7. Lists</h2>
+    <h2 data-ar="7. القوائم">7. Lists</h2>
 
     <table class="reference">
-        <thead><tr><th>Element</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Element</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="tag">&lt;ul&gt;</span></td><td>Unordered list (bulleted)</td><td>For items with no specific order</td></tr>
-            <tr><td><span class="tag">&lt;ol&gt;</span></td><td>Ordered list (numbered)</td><td>For items in sequence (steps, rankings)</td></tr>
-            <tr><td><span class="tag">&lt;li&gt;</span></td><td>List item</td><td>Used inside &lt;ul&gt; or &lt;ol&gt;</td></tr>
-            <tr><td><span class="tag">&lt;dl&gt;</span></td><td>Description list</td><td>For term-definition pairs (glossary, FAQ)</td></tr>
-            <tr><td><span class="tag">&lt;dt&gt;</span></td><td>Description term</td><td>The term being defined (inside &lt;dl&gt;)</td></tr>
-            <tr><td><span class="tag">&lt;dd&gt;</span></td><td>Description details</td><td>The definition/description (inside &lt;dl&gt;)</td></tr>
+            <tr><td><span class="tag">&lt;ul&gt;</span></td><td data-ar="قائمة غير مرتبة (بنقاط)">Unordered list (bulleted)</td><td data-ar="للعناصر التي ليس لها ترتيب محدد">For items with no specific order</td></tr>
+            <tr><td><span class="tag">&lt;ol&gt;</span></td><td data-ar="قائمة مرتبة (مرقمة)">Ordered list (numbered)</td><td data-ar="للعناصر بترتيب متسلسل (خطوات، تصنيفات)">For items in sequence (steps, rankings)</td></tr>
+            <tr><td><span class="tag">&lt;li&gt;</span></td><td data-ar="عنصر قائمة">List item</td><td data-ar="يُستخدم داخل &lt;ul&gt; أو &lt;ol&gt;">Used inside &lt;ul&gt; or &lt;ol&gt;</td></tr>
+            <tr><td><span class="tag">&lt;dl&gt;</span></td><td data-ar="قائمة وصف">Description list</td><td data-ar="لأزواج المصطلح والتعريف (المسرد، الأسئلة الشائعة)">For term-definition pairs (glossary, FAQ)</td></tr>
+            <tr><td><span class="tag">&lt;dt&gt;</span></td><td data-ar="مصطلح الوصف">Description term</td><td data-ar="المصطلح الذي يجري تعريفه (داخل &lt;dl&gt;)">The term being defined (inside &lt;dl&gt;)</td></tr>
+            <tr><td><span class="tag">&lt;dd&gt;</span></td><td data-ar="تفاصيل الوصف">Description details</td><td data-ar="التعريف/الوصف (داخل &lt;dl&gt;)">The definition/description (inside &lt;dl&gt;)</td></tr>
         </tbody>
     </table>
 
-    <h3>&lt;ol&gt; Attributes</h3>
+    <h3 data-ar="سمات &lt;ol&gt;">&lt;ol&gt; Attributes</h3>
     <div class="element-box">
         <div class="element-name">&lt;ol&gt; Ordered List Attributes</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc">Numbering type: "1" (default), "A" (uppercase), "a" (lowercase), "I" (Roman upper), "i" (Roman lower)</div></div>
-            <div class="attribute"><span class="attribute-name">start</span><div class="attribute-desc">Starting number (e.g., start="5" starts at 5)</div></div>
-            <div class="attribute"><span class="attribute-name">reversed</span><div class="attribute-desc">Boolean: counts down instead of up</div></div>
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc" data-ar="نوع الترقيم: &quot;1&quot; (افتراضي)، &quot;A&quot; (أحرف كبيرة)، &quot;a&quot; (أحرف صغيرة)، &quot;I&quot; (روماني كبير)، &quot;i&quot; (روماني صغير)">Numbering type: "1" (default), "A" (uppercase), "a" (lowercase), "I" (Roman upper), "i" (Roman lower)</div></div>
+            <div class="attribute"><span class="attribute-name">start</span><div class="attribute-desc" data-ar="الرقم البدائي (مثل start=&quot;5&quot; يبدأ من 5)">Starting number (e.g., start="5" starts at 5)</div></div>
+            <div class="attribute"><span class="attribute-name">reversed</span><div class="attribute-desc" data-ar="منطقي: يعد تنازلياً بدلاً من تصاعدياً">Boolean: counts down instead of up</div></div>
         </div>
     </div>
 
@@ -618,26 +618,26 @@
 <!-- SECTION 8: GLOBAL ATTRIBUTES -->
 <!-- ============================================================ -->
 <section>
-    <h2>8. Global Attributes</h2>
-    <p style="color:#555; margin-bottom:15px;">Global attributes can be applied to <strong>any</strong> HTML element.</p>
+    <h2 data-ar="8. السمات العامة (Global Attributes)">8. Global Attributes</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="يمكن تطبيق السمات العامة على أي عنصر HTML.">Global attributes can be applied to <strong>any</strong> HTML element.</p>
 
     <table class="reference">
-        <thead><tr><th>Attribute</th><th>Purpose</th><th>Example</th></tr></thead>
+        <thead><tr><th data-ar="السمة">Attribute</th><th data-ar="الغرض">Purpose</th><th data-ar="مثال">Example</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-name">id</span></td><td>Unique identifier for the element. Must be unique per page. Used for CSS, JS, and anchor links.</td><td><code>id="main-nav"</code></td></tr>
-            <tr><td><span class="attribute-name">class</span></td><td>One or more CSS class names (space-separated). Can be reused across elements.</td><td><code>class="card highlight"</code></td></tr>
-            <tr><td><span class="attribute-name">style</span></td><td>Inline CSS styles. Avoid overusing — prefer external CSS.</td><td><code>style="color: red; font-size: 18px;"</code></td></tr>
-            <tr><td><span class="attribute-name">title</span></td><td>Advisory tooltip text shown on hover.</td><td><code>title="More information"</code></td></tr>
-            <tr><td><span class="attribute-name">lang</span></td><td>Language of the element's content.</td><td><code>lang="fr"</code></td></tr>
-            <tr><td><span class="attribute-name">dir</span></td><td>Text direction: "ltr", "rtl", or "auto".</td><td><code>dir="rtl"</code></td></tr>
-            <tr><td><span class="attribute-name">hidden</span></td><td>Boolean: hides the element (like display:none).</td><td><code>hidden</code></td></tr>
-            <tr><td><span class="attribute-name">tabindex</span></td><td>Keyboard navigation order. Use 0 (natural order) or -1 (not focusable via Tab).</td><td><code>tabindex="0"</code></td></tr>
-            <tr><td><span class="attribute-name">accesskey</span></td><td>Keyboard shortcut for the element.</td><td><code>accesskey="s"</code></td></tr>
-            <tr><td><span class="attribute-name">contenteditable</span></td><td>"true" makes element editable in browser. "false" prevents editing.</td><td><code>contenteditable="true"</code></td></tr>
-            <tr><td><span class="attribute-name">draggable</span></td><td>"true" or "false". Makes element draggable with mouse.</td><td><code>draggable="true"</code></td></tr>
-            <tr><td><span class="attribute-name">spellcheck</span></td><td>"true" or "false". Enables/disables spell check.</td><td><code>spellcheck="false"</code></td></tr>
-            <tr><td><span class="attribute-name">data-*</span></td><td>Custom data attributes. Store extra data in HTML for JavaScript.</td><td><code>data-user-id="42"</code></td></tr>
-            <tr><td><span class="attribute-name">translate</span></td><td>"yes" or "no". Whether content should be translated.</td><td><code>translate="no"</code></td></tr>
+            <tr><td><span class="attribute-name">id</span></td><td data-ar="معرّف فريد للعنصر. يجب أن يكون فريداً في الصفحة. يُستخدم مع CSS وJS وروابط المراسي.">Unique identifier for the element. Must be unique per page. Used for CSS, JS, and anchor links.</td><td><code>id="main-nav"</code></td></tr>
+            <tr><td><span class="attribute-name">class</span></td><td data-ar="اسم فئة CSS أو أكثر (مفصولة بمسافات). يمكن إعادة استخدامها عبر العناصر.">One or more CSS class names (space-separated). Can be reused across elements.</td><td><code>class="card highlight"</code></td></tr>
+            <tr><td><span class="attribute-name">style</span></td><td data-ar="أنماط CSS مضمّنة. تجنب الإفراط في استخدامها — فضّل CSS الخارجي.">Inline CSS styles. Avoid overusing — prefer external CSS.</td><td><code>style="color: red; font-size: 18px;"</code></td></tr>
+            <tr><td><span class="attribute-name">title</span></td><td data-ar="نص تلميح إرشادي يظهر عند التمرير.">Advisory tooltip text shown on hover.</td><td><code>title="More information"</code></td></tr>
+            <tr><td><span class="attribute-name">lang</span></td><td data-ar="لغة محتوى العنصر.">Language of the element's content.</td><td><code>lang="fr"</code></td></tr>
+            <tr><td><span class="attribute-name">dir</span></td><td data-ar="اتجاه النص: &quot;ltr&quot;، &quot;rtl&quot;، أو &quot;auto&quot;.">Text direction: "ltr", "rtl", or "auto".</td><td><code>dir="rtl"</code></td></tr>
+            <tr><td><span class="attribute-name">hidden</span></td><td data-ar="منطقي: يُخفي العنصر (مثل display:none).">Boolean: hides the element (like display:none).</td><td><code>hidden</code></td></tr>
+            <tr><td><span class="attribute-name">tabindex</span></td><td data-ar="ترتيب التنقل بلوحة المفاتيح. استخدم 0 (ترتيب طبيعي) أو -1 (غير قابل للتركيز بزر Tab).">Keyboard navigation order. Use 0 (natural order) or -1 (not focusable via Tab).</td><td><code>tabindex="0"</code></td></tr>
+            <tr><td><span class="attribute-name">accesskey</span></td><td data-ar="اختصار لوحة المفاتيح للعنصر.">Keyboard shortcut for the element.</td><td><code>accesskey="s"</code></td></tr>
+            <tr><td><span class="attribute-name">contenteditable</span></td><td data-ar="&quot;true&quot; يجعل العنصر قابلاً للتحرير في المتصفح. &quot;false&quot; يمنع التحرير.">"true" makes element editable in browser. "false" prevents editing.</td><td><code>contenteditable="true"</code></td></tr>
+            <tr><td><span class="attribute-name">draggable</span></td><td data-ar="&quot;true&quot; أو &quot;false&quot;. يجعل العنصر قابلاً للسحب بالماوس.">"true" or "false". Makes element draggable with mouse.</td><td><code>draggable="true"</code></td></tr>
+            <tr><td><span class="attribute-name">spellcheck</span></td><td data-ar="&quot;true&quot; أو &quot;false&quot;. يفعّل/يعطّل التدقيق الإملائي.">"true" or "false". Enables/disables spell check.</td><td><code>spellcheck="false"</code></td></tr>
+            <tr><td><span class="attribute-name">data-*</span></td><td data-ar="سمات بيانات مخصصة. تخزين بيانات إضافية في HTML لاستخدامها مع JavaScript.">Custom data attributes. Store extra data in HTML for JavaScript.</td><td><code>data-user-id="42"</code></td></tr>
+            <tr><td><span class="attribute-name">translate</span></td><td data-ar="&quot;yes&quot; أو &quot;no&quot;. هل ينبغي ترجمة المحتوى.">"yes" or "no". Whether content should be translated.</td><td><code>translate="no"</code></td></tr>
         </tbody>
     </table>
 

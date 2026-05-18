@@ -55,26 +55,26 @@
     </div>
 </div>
 
-<h1>HTML Accessibility Reference</h1>
+<h1 data-ar="مرجع إمكانية الوصول في HTML">HTML Accessibility Reference</h1>
 
 <!-- ============================================================ -->
 <!-- SECTION 1: WHAT IS ACCESSIBILITY -->
 <!-- ============================================================ -->
 <section>
-    <h2>1. What Is Web Accessibility?</h2>
+    <h2 data-ar="1. ما هي إمكانية الوصول إلى الويب؟">1. What Is Web Accessibility?</h2>
 
-    <p style="color:#555; margin-bottom:15px;"><strong>Web accessibility</strong> means creating websites that everyone can use — including people with disabilities. About 15% of the world's population lives with some form of disability.</p>
+    <p style="color:#555; margin-bottom:15px;" data-ar="<strong>إمكانية الوصول إلى الويب</strong> تعني إنشاء مواقع يمكن للجميع استخدامها — بما في ذلك ذوو الإعاقات. حوالي 15٪ من سكان العالم يعيشون بشكل من أشكال الإعاقة."><strong>Web accessibility</strong> means creating websites that everyone can use — including people with disabilities. About 15% of the world's population lives with some form of disability.</p>
 
-    <h3>Types of Disabilities Affecting Web Use</h3>
+    <h3 data-ar="أنواع الإعاقات التي تؤثر على استخدام الويب">Types of Disabilities Affecting Web Use</h3>
     <table class="reference">
-        <thead><tr><th>Disability Type</th><th>Examples</th><th>Common Assistive Tech</th></tr></thead>
+        <thead><tr><th data-ar="نوع الإعاقة">Disability Type</th><th data-ar="أمثلة">Examples</th><th data-ar="التقنيات المساعدة الشائعة">Common Assistive Tech</th></tr></thead>
         <tbody>
-            <tr><td><strong>Visual</strong></td><td>Blindness, low vision, color blindness</td><td>Screen readers (NVDA, JAWS, VoiceOver), braille displays, magnifiers</td></tr>
-            <tr><td><strong>Auditory</strong></td><td>Deafness, hard of hearing</td><td>Captions, transcripts, visual alerts</td></tr>
-            <tr><td><strong>Motor</strong></td><td>Paralysis, tremors, difficulty using mouse/touchscreen</td><td>Keyboard only, switch access, voice control</td></tr>
-            <tr><td><strong>Cognitive</strong></td><td>Attention disorders, memory issues, learning disabilities</td><td>Clear language, consistent navigation, reduced clutter</td></tr>
-            <tr><td><strong>Speech</strong></td><td>Difficulty speaking</td><td>Alternative input methods</td></tr>
-            <tr><td><strong>Photosensitive</strong></td><td>Sensitivity to flashing lights (seizures)</td><td>Avoiding flashing content (&lt;3Hz)</td></tr>
+            <tr><td data-ar="<strong>بصرية</strong>"><strong>Visual</strong></td><td data-ar="العمى، ضعف البصر، عمى الألوان">Blindness, low vision, color blindness</td><td data-ar="قارئات الشاشة (NVDA، JAWS، VoiceOver)، شاشات برايل، المكبرات">Screen readers (NVDA, JAWS, VoiceOver), braille displays, magnifiers</td></tr>
+            <tr><td data-ar="<strong>سمعية</strong>"><strong>Auditory</strong></td><td data-ar="الصمم، ضعف السمع">Deafness, hard of hearing</td><td data-ar="التسميات التوضيحية، النصوص المكتوبة، التنبيهات البصرية">Captions, transcripts, visual alerts</td></tr>
+            <tr><td data-ar="<strong>حركية</strong>"><strong>Motor</strong></td><td data-ar="الشلل، الرعشات، صعوبة استخدام الفأرة/شاشة اللمس">Paralysis, tremors, difficulty using mouse/touchscreen</td><td data-ar="لوحة المفاتيح فقط، الوصول عبر المفاتيح، التحكم الصوتي">Keyboard only, switch access, voice control</td></tr>
+            <tr><td data-ar="<strong>إدراكية</strong>"><strong>Cognitive</strong></td><td data-ar="اضطرابات الانتباه، مشاكل الذاكرة، صعوبات التعلم">Attention disorders, memory issues, learning disabilities</td><td data-ar="لغة واضحة، ملاحة متسقة، تقليل التشويش">Clear language, consistent navigation, reduced clutter</td></tr>
+            <tr><td data-ar="<strong>نطقية</strong>"><strong>Speech</strong></td><td data-ar="صعوبة في التحدث">Difficulty speaking</td><td data-ar="طرق إدخال بديلة">Alternative input methods</td></tr>
+            <tr><td data-ar="<strong>حساسية ضوئية</strong>"><strong>Photosensitive</strong></td><td data-ar="حساسية للأضواء الوامضة (نوبات الصرع)">Sensitivity to flashing lights (seizures)</td><td data-ar="تجنب المحتوى الوامض (أقل من 3 هرتز)">Avoiding flashing content (&lt;3Hz)</td></tr>
         </tbody>
     </table>
 </section>
@@ -83,14 +83,14 @@
 <!-- SECTION 2: WCAG POUR PRINCIPLES -->
 <!-- ============================================================ -->
 <section>
-    <h2>2. WCAG &amp; POUR Principles</h2>
+    <h2 data-ar="2. مبادئ WCAG و POUR">2. WCAG &amp; POUR Principles</h2>
 
-    <p style="color:#555; margin-bottom:15px;">The <strong>Web Content Accessibility Guidelines (WCAG)</strong> are the international standard for web accessibility. They are organized around four principles, remembered as <strong>POUR</strong>.</p>
+    <p style="color:#555; margin-bottom:15px;" data-ar="<strong>إرشادات إمكانية الوصول إلى محتوى الويب (WCAG)</strong> هي المعيار الدولي لإمكانية الوصول إلى الويب. وهي منظمة حول أربعة مبادئ تُذكر بالاختصار <strong>POUR</strong>.">The <strong>Web Content Accessibility Guidelines (WCAG)</strong> are the international standard for web accessibility. They are organized around four principles, remembered as <strong>POUR</strong>.</p>
 
     <div class="element-box">
         <div class="element-name">P — Perceivable</div>
-        <div class="element-description">Information must be presentable in ways users can perceive. If you can only convey something visually, users who can't see are excluded.</div>
-        <p style="margin-top: 10px; color: #555;">
+        <div class="element-description" data-ar="يجب تقديم المعلومات بطرق يمكن للمستخدمين إدراكها. إذا كنت تنقل شيئاً بصرياً فقط، فإن المستخدمين الذين لا يستطيعون الرؤية مستبعدون.">Information must be presentable in ways users can perceive. If you can only convey something visually, users who can't see are excluded.</div>
+        <p style="margin-top: 10px; color: #555;" data-ar="✓ توفير <strong>نص بديل</strong> لجميع الصور ذات المعنى<br>✓ إضافة <strong>تسميات توضيحية</strong> للفيديوهات و<strong>نصوص مكتوبة</strong> للصوت<br>✓ ضمان <strong>تباين ألوان</strong> كافٍ (4.5:1 للنص العادي، 3:1 للنص الكبير)<br>✓ عدم استخدام اللون وحده لنقل المعلومات<br>✓ يجب أن يكون النص قابلاً للتكبير حتى 200٪ دون فقدان الوظائف">
             ✓ Provide <strong>alt text</strong> for all meaningful images<br>
             ✓ Add <strong>captions</strong> for videos and <strong>transcripts</strong> for audio<br>
             ✓ Ensure sufficient <strong>color contrast</strong> (4.5:1 for normal text, 3:1 for large text)<br>
@@ -101,8 +101,8 @@
 
     <div class="element-box">
         <div class="element-name">O — Operable</div>
-        <div class="element-description">All UI and navigation must be operable. Not all users can use a mouse.</div>
-        <p style="margin-top: 10px; color: #555;">
+        <div class="element-description" data-ar="يجب أن تكون جميع واجهات المستخدم والملاحة قابلة للتشغيل. ليس كل المستخدمين يمكنهم استخدام الفأرة.">All UI and navigation must be operable. Not all users can use a mouse.</div>
+        <p style="margin-top: 10px; color: #555;" data-ar="✓ جميع الوظائف متاحة عبر <strong>لوحة المفاتيح</strong><br>✓ <strong>مؤشرات تركيز</strong> مرئية (لا تزل outline: none دون بديل)<br>✓ يحصل المستخدمون على وقت كافٍ لقراءة المحتوى (لا انتهاء صلاحية تلقائي دون تحذير)<br>✓ لا محتوى يومض أكثر من 3 مرات في الثانية<br>✓ توفير <strong>روابط تخطي الملاحة</strong><br>✓ عناوين صفحات ورؤوس وصفية">
             ✓ All functionality available via <strong>keyboard</strong><br>
             ✓ Visible <strong>focus indicators</strong> (don't remove outline: none without replacement)<br>
             ✓ Users have enough time to read content (no auto-timeouts without warning)<br>
@@ -114,8 +114,8 @@
 
     <div class="element-box">
         <div class="element-name">U — Understandable</div>
-        <div class="element-description">Content and operation must be understandable by users.</div>
-        <p style="margin-top: 10px; color: #555;">
+        <div class="element-description" data-ar="يجب أن يكون المحتوى والتشغيل مفهومين للمستخدمين.">Content and operation must be understandable by users.</div>
+        <p style="margin-top: 10px; color: #555;" data-ar="✓ تعيين <strong>سمة lang</strong> على &lt;html&gt;<br>✓ استخدام لغة واضحة وبسيطة<br>✓ ملاحة متسقة عبر الصفحات<br>✓ ربط <strong>التسميات بعناصر النموذج</strong><br>✓ توفير <strong>رسائل خطأ</strong> توضح ما الذي حدث خطأ<br>✓ استخدام <strong>هيكل عناوين</strong> منطقي وهرمي">
             ✓ Set the <strong>lang attribute</strong> on &lt;html&gt;<br>
             ✓ Use clear, simple language<br>
             ✓ Consistent navigation across pages<br>
@@ -127,8 +127,8 @@
 
     <div class="element-box">
         <div class="element-name">R — Robust</div>
-        <div class="element-description">Content must work with current and future assistive technologies.</div>
-        <p style="margin-top: 10px; color: #555;">
+        <div class="element-description" data-ar="يجب أن يعمل المحتوى مع التقنيات المساعدة الحالية والمستقبلية.">Content must work with current and future assistive technologies.</div>
+        <p style="margin-top: 10px; color: #555;" data-ar="✓ استخدم <strong>HTML صالحاً</strong> (بدون معرفات مكررة، مع تداخل صحيح)<br>✓ استخدم عناصر <strong>HTML الدلالية</strong> حيثما أمكن<br>✓ استخدم ARIA فقط عندما لا يكون HTML الأصلي كافياً<br>✓ تأكد من أن العناصر التفاعلية لها أسماء يمكن الوصول إليها">
             ✓ Use <strong>valid HTML</strong> (no duplicate IDs, proper nesting)<br>
             ✓ Use <strong>semantic HTML</strong> elements where possible<br>
             ✓ Use ARIA only when native HTML isn't sufficient<br>
@@ -136,13 +136,13 @@
         </p>
     </div>
 
-    <h3>WCAG Conformance Levels</h3>
+    <h3 data-ar="مستويات الامتثال لـ WCAG">WCAG Conformance Levels</h3>
     <table class="reference">
-        <thead><tr><th>Level</th><th>Meaning</th><th>Typical Use</th></tr></thead>
+        <thead><tr><th data-ar="المستوى">Level</th><th data-ar="المعنى">Meaning</th><th data-ar="الاستخدام النموذجي">Typical Use</th></tr></thead>
         <tbody>
-            <tr><td><strong>A</strong></td><td>Minimum accessibility. Removes the most critical barriers.</td><td>Baseline — must meet</td></tr>
-            <tr><td><strong>AA</strong></td><td>Addresses most common barriers. The legal standard in most countries.</td><td>Required for most sites</td></tr>
-            <tr><td><strong>AAA</strong></td><td>Highest standard. Not always achievable for all content types.</td><td>Aim for where possible</td></tr>
+            <tr><td><strong>A</strong></td><td data-ar="الحد الأدنى لإمكانية الوصول. يزيل أكثر الحواجز أهمية.">Minimum accessibility. Removes the most critical barriers.</td><td data-ar="الأساس — يجب تحقيقه">Baseline — must meet</td></tr>
+            <tr><td><strong>AA</strong></td><td data-ar="يعالج الحواجز الأكثر شيوعاً. هو المعيار القانوني في معظم الدول.">Addresses most common barriers. The legal standard in most countries.</td><td data-ar="مطلوب لمعظم المواقع">Required for most sites</td></tr>
+            <tr><td><strong>AAA</strong></td><td data-ar="أعلى المعايير. ليس قابلاً للتحقيق دائماً لكل أنواع المحتوى.">Highest standard. Not always achievable for all content types.</td><td data-ar="استهدفه حيثما أمكن">Aim for where possible</td></tr>
         </tbody>
     </table>
 </section>
@@ -151,12 +151,12 @@
 <!-- SECTION 3: HEADING STRUCTURE -->
 <!-- ============================================================ -->
 <section>
-    <h2>3. Heading Structure</h2>
+    <h2 data-ar="3. هيكل العناوين">3. Heading Structure</h2>
 
     <div class="element-box">
         <div class="element-name">Proper Heading Hierarchy</div>
-        <div class="element-description">Screen reader users often navigate pages using headings as a table of contents. Follow these rules:</div>
-        <p style="margin-top: 10px; color: #555;">
+        <div class="element-description" data-ar="غالباً ما يتنقل مستخدمو قارئات الشاشة في الصفحات باستخدام العناوين كجدول محتويات. اتبع هذه القواعد:">Screen reader users often navigate pages using headings as a table of contents. Follow these rules:</div>
+        <p style="margin-top: 10px; color: #555;" data-ar="✓ <strong>عنوان h1 واحد</strong> فقط لكل صفحة (العنوان الرئيسي للصفحة)<br>✓ لا تتخطَّ مستويات العناوين (لا تنتقل من h2 إلى h4)<br>✓ استخدم العناوين لهيكل المستند، لا للتنسيق البصري<br>✓ يجب أن تصف العناوين بوضوح المحتوى الذي يليها">
             ✓ Only <strong>one &lt;h1&gt;</strong> per page (the main page title)<br>
             ✓ Don't skip heading levels (no jumping from h2 to h4)<br>
             ✓ Use headings for document structure, not for visual styling<br>
@@ -181,11 +181,11 @@
 <!-- SECTION 4: ALT TEXT FOR IMAGES -->
 <!-- ============================================================ -->
 <section>
-    <h2>4. Alt Text for Images</h2>
+    <h2 data-ar="4. النص البديل للصور">4. Alt Text for Images</h2>
 
     <div class="element-box">
         <div class="element-name">alt attribute on &lt;img&gt;</div>
-        <div class="element-description">Screen readers read alt text aloud. Search engines use it for indexing. It also appears when images fail to load.</div>
+        <div class="element-description" data-ar="تقرأ قارئات الشاشة النص البديل بصوت عالٍ. تستخدمه محركات البحث للفهرسة. كما يظهر عندما تفشل الصور في التحميل.">Screen readers read alt text aloud. Search engines use it for indexing. It also appears when images fail to load.</div>
         <div class="code-example">&lt;!-- ✅ Good: descriptive, meaningful --&gt;
 &lt;img src="cats.jpg" alt="Two orange tabby kittens sleeping together on a gray couch"&gt;
 
@@ -209,7 +209,7 @@
 &lt;img src="cat.jpg" alt="Image of a cat sitting on a mat"&gt;
 &lt;!-- ✅ Better --&gt;
 &lt;img src="cat.jpg" alt="A fluffy white cat sitting on a red mat"&gt;</div>
-        <div class="important">⚠️ <strong>Rule of thumb:</strong> Describe what the image shows AND why it matters in context. For decorative images, use alt="" (empty string) — NOT alt="decorative" or omitting alt entirely (missing alt is an error).</div>
+        <div class="important" data-ar="⚠️ <strong>قاعدة عامة:</strong> صف ما تُظهره الصورة ولماذا تهم في السياق. للصور الزخرفية، استخدم alt=&quot;&quot; (سلسلة فارغة) — وليس alt=&quot;decorative&quot; أو حذف alt كلياً (حذف alt يُعد خطأً).">⚠️ <strong>Rule of thumb:</strong> Describe what the image shows AND why it matters in context. For decorative images, use alt="" (empty string) — NOT alt="decorative" or omitting alt entirely (missing alt is an error).</div>
     </div>
 </section>
 
@@ -217,11 +217,11 @@
 <!-- SECTION 5: DESCRIPTIVE LINK TEXT -->
 <!-- ============================================================ -->
 <section>
-    <h2>5. Descriptive Link Text</h2>
+    <h2 data-ar="5. نص الروابط الوصفي">5. Descriptive Link Text</h2>
 
     <div class="element-box">
         <div class="element-name">Meaningful Anchor Text</div>
-        <div class="element-description">Screen reader users often tab through links in isolation. Link text must make sense without surrounding context.</div>
+        <div class="element-description" data-ar="يتنقل مستخدمو قارئات الشاشة عبر الروابط بشكل منعزل في كثير من الأحيان. يجب أن يكون نص الرابط مفهوماً بدون السياق المحيط.">Screen reader users often tab through links in isolation. Link text must make sense without surrounding context.</div>
         <div class="code-example">&lt;!-- ✅ Good: describes destination clearly --&gt;
 &lt;a href="https://www.freecodecamp.org"&gt;Learn to code for free on freeCodeCamp&lt;/a&gt;
 
@@ -248,11 +248,11 @@
 <!-- SECTION 6: FORM ACCESSIBILITY -->
 <!-- ============================================================ -->
 <section>
-    <h2>6. Form Accessibility</h2>
+    <h2 data-ar="6. إمكانية الوصول في النماذج">6. Form Accessibility</h2>
 
     <div class="element-box">
         <div class="element-name">Always Associate Labels with Inputs</div>
-        <div class="element-description">When a screen reader focuses an input, it reads the associated label. Without a label, the user doesn't know what to enter.</div>
+        <div class="element-description" data-ar="عندما تركز قارئة الشاشة على حقل إدخال، تقرأ التسمية المرتبطة به. بدون تسمية، لا يعرف المستخدم ماذا يدخل.">When a screen reader focuses an input, it reads the associated label. Without a label, the user doesn't know what to enter.</div>
         <div class="code-example">&lt;!-- ✅ Explicit association (recommended) --&gt;
 &lt;label for="user-email"&gt;Email Address:&lt;/label&gt;
 &lt;input type="email" id="user-email" name="email" required&gt;
@@ -293,7 +293,7 @@
 
     <div class="element-box">
         <div class="element-name">Table Accessibility in Forms</div>
-        <div class="element-description">When displaying form data or results in a table, always use caption, scope on th elements, and proper thead/tbody/tfoot.</div>
+        <div class="element-description" data-ar="عند عرض بيانات نموذج أو نتائج في جدول، استخدم دائماً caption، وسمة scope على عناصر th، وعناصر thead/tbody/tfoot بشكل صحيح.">When displaying form data or results in a table, always use caption, scope on th elements, and proper thead/tbody/tfoot.</div>
         <div class="code-example">&lt;table&gt;
   &lt;caption&gt;Employee Salary Information&lt;/caption&gt;
   &lt;thead&gt;
@@ -318,11 +318,11 @@
 <!-- SECTION 7: AUDIO & VIDEO ACCESSIBILITY -->
 <!-- ============================================================ -->
 <section>
-    <h2>7. Audio &amp; Video Accessibility</h2>
+    <h2 data-ar="7. إمكانية الوصول للصوت والفيديو">7. Audio &amp; Video Accessibility</h2>
 
     <div class="element-box">
         <div class="element-name">Captions, Subtitles &amp; Transcripts</div>
-        <div class="element-description">
+        <div class="element-description" data-ar="<strong>التسميات التوضيحية (Captions):</strong> نص متزامن مع الوقت لكل الصوت (الكلام + المؤثرات الصوتية) للصم وضعاف السمع.<br><strong>الترجمات (Subtitles):</strong> ترجمة الكلام إلى لغة أخرى.<br><strong>النصوص المكتوبة (Transcripts):</strong> نسخة نصية كاملة من الصوت/الفيديو (يمكن قراءتها بالسرعة الخاصة).">
             <strong>Captions:</strong> Time-synced text of all audio (speech + sound effects) for deaf/HoH users.<br>
             <strong>Subtitles:</strong> Translation of speech into another language.<br>
             <strong>Transcripts:</strong> Full text version of audio/video (can be read at own pace).
@@ -354,7 +354,7 @@
 &lt;/details&gt;</div>
     </div>
 
-    <h3>WebVTT Caption File Format</h3>
+    <h3 data-ar="تنسيق ملف التسميات التوضيحية WebVTT">WebVTT Caption File Format</h3>
     <div class="code-example">&lt;!-- captions-en.vtt --&gt;
 WEBVTT
 
@@ -373,15 +373,15 @@ Let's start by looking at the code.</div>
 <!-- SECTION 8: KEYBOARD NAVIGATION -->
 <!-- ============================================================ -->
 <section>
-    <h2>8. Keyboard Navigation</h2>
+    <h2 data-ar="8. الملاحة عبر لوحة المفاتيح">8. Keyboard Navigation</h2>
 
     <div class="element-box">
         <div class="element-name">tabindex</div>
-        <div class="element-description">Controls whether and how an element participates in keyboard (Tab key) navigation.</div>
+        <div class="element-description" data-ar="يتحكم في ما إذا كان العنصر يشارك في الملاحة عبر لوحة المفاتيح (مفتاح Tab) وكيف يشارك.">Controls whether and how an element participates in keyboard (Tab key) navigation.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">tabindex="0"</span><div class="attribute-desc">Makes element focusable in its natural document order. Use to make non-interactive elements (div, span) keyboard-accessible.</div></div>
-            <div class="attribute"><span class="attribute-name">tabindex="-1"</span><div class="attribute-desc">Removes element from tab order, but allows JavaScript to focus it programmatically with .focus().</div></div>
-            <div class="attribute"><span class="attribute-name">tabindex="1+" (AVOID)</span><div class="attribute-desc">Positive values override natural tab order. Creates confusing navigation. Never use values greater than 0.</div></div>
+            <div class="attribute"><span class="attribute-name">tabindex="0"</span><div class="attribute-desc" data-ar="يجعل العنصر قابلاً للتركيز عليه ضمن ترتيب المستند الطبيعي. استخدمه لجعل العناصر غير التفاعلية (div، span) متاحة عبر لوحة المفاتيح.">Makes element focusable in its natural document order. Use to make non-interactive elements (div, span) keyboard-accessible.</div></div>
+            <div class="attribute"><span class="attribute-name">tabindex="-1"</span><div class="attribute-desc" data-ar="يزيل العنصر من ترتيب Tab، ولكنه يسمح لـ JavaScript بتركيزه برمجياً باستخدام .focus().">Removes element from tab order, but allows JavaScript to focus it programmatically with .focus().</div></div>
+            <div class="attribute"><span class="attribute-name">tabindex="1+" (AVOID)</span><div class="attribute-desc" data-ar="القيم الموجبة تتجاوز ترتيب Tab الطبيعي. تخلق ملاحة مربكة. لا تستخدم أبداً قيماً أكبر من 0.">Positive values override natural tab order. Creates confusing navigation. Never use values greater than 0.</div></div>
         </div>
         <div class="code-example">&lt;!-- Naturally focusable (no tabindex needed): --&gt;
 &lt;!-- a, button, input, select, textarea, details --&gt;
@@ -400,14 +400,14 @@ Let's start by looking at the code.</div>
 
 &lt;!-- ❌ Never use positive tabindex --&gt;
 &lt;button tabindex="3"&gt;This breaks tab order&lt;/button&gt;</div>
-        <div class="important">⚠️ The default Tab order follows document order. Design your HTML so the natural reading order matches the logical flow of the page.</div>
+        <div class="important" data-ar="⚠️ ترتيب Tab الافتراضي يتبع ترتيب المستند. صمم HTML بحيث يتطابق ترتيب القراءة الطبيعي مع التدفق المنطقي للصفحة.">⚠️ The default Tab order follows document order. Design your HTML so the natural reading order matches the logical flow of the page.</div>
     </div>
 
     <div class="element-box">
         <div class="element-name">accesskey</div>
-        <div class="element-description">Defines a keyboard shortcut to activate or focus an element. The shortcut is the specified key combined with a modifier key that varies by OS and browser.</div>
+        <div class="element-description" data-ar="يحدد اختصار لوحة مفاتيح لتفعيل عنصر أو التركيز عليه. الاختصار هو المفتاح المحدد مع مفتاح تعديل يختلف حسب نظام التشغيل والمتصفح.">Defines a keyboard shortcut to activate or focus an element. The shortcut is the specified key combined with a modifier key that varies by OS and browser.</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">accesskey="letter"</span><div class="attribute-desc">Single character shortcut. Activation: Alt+key (Windows/Linux), Control+Option+key (Mac).</div></div>
+            <div class="attribute"><span class="attribute-name">accesskey="letter"</span><div class="attribute-desc" data-ar="اختصار من حرف واحد. التفعيل: Alt+المفتاح (Windows/Linux)، Control+Option+المفتاح (Mac).">Single character shortcut. Activation: Alt+key (Windows/Linux), Control+Option+key (Mac).</div></div>
         </div>
         <div class="code-example">&lt;button type="submit" accesskey="s"&gt;Save (Alt+S / Ctrl+Opt+S)&lt;/button&gt;
 &lt;button type="reset" accesskey="c"&gt;Cancel (Alt+C)&lt;/button&gt;
@@ -415,13 +415,13 @@ Let's start by looking at the code.</div>
 
 &lt;!-- Always document the shortcuts visibly for users! --&gt;
 &lt;p&gt;Keyboard shortcuts: &lt;kbd&gt;Alt+S&lt;/kbd&gt; to save, &lt;kbd&gt;Alt+C&lt;/kbd&gt; to cancel.&lt;/p&gt;</div>
-        <div class="important">⚠️ <strong>Use sparingly.</strong> Accesskeys can conflict with browser or OS shortcuts. Document them prominently. Don't rely on them as the only way to perform actions.</div>
+        <div class="important" data-ar="⚠️ <strong>استخدمها باعتدال.</strong> يمكن أن تتعارض مفاتيح الوصول مع اختصارات المتصفح أو نظام التشغيل. وثقها بشكل واضح. لا تعتمد عليها كطريقة وحيدة لتنفيذ الإجراءات.">⚠️ <strong>Use sparingly.</strong> Accesskeys can conflict with browser or OS shortcuts. Document them prominently. Don't rely on them as the only way to perform actions.</div>
     </div>
 
-    <h3>Skip Navigation Links</h3>
+    <h3 data-ar="روابط تخطي الملاحة">Skip Navigation Links</h3>
     <div class="element-box">
         <div class="element-name">Skip to Main Content</div>
-        <div class="element-description">A link at the top of the page (often visually hidden until focused) that allows keyboard users to jump past repetitive navigation to the main content. Critical for pages with long navbars.</div>
+        <div class="element-description" data-ar="رابط في أعلى الصفحة (غالباً مخفي بصرياً حتى يتم التركيز عليه) يتيح لمستخدمي لوحة المفاتيح تخطي الملاحة المتكررة والوصول مباشرة إلى المحتوى الرئيسي. ضروري للصفحات ذات أشرطة الملاحة الطويلة.">A link at the top of the page (often visually hidden until focused) that allows keyboard users to jump past repetitive navigation to the main content. Critical for pages with long navbars.</div>
         <div class="code-example">&lt;!-- First element in &lt;body&gt; --&gt;
 &lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
 
@@ -458,12 +458,12 @@ Let's start by looking at the code.</div>
 <!-- SECTION 9: ARIA ATTRIBUTES -->
 <!-- ============================================================ -->
 <section>
-    <h2>9. ARIA Attributes</h2>
-    <p style="color:#555; margin-bottom:15px;"><strong>ARIA (Accessible Rich Internet Applications)</strong> attributes add accessibility information that HTML alone can't provide. The first rule of ARIA: <em>use native HTML elements instead whenever possible.</em></p>
+    <h2 data-ar="9. سمات ARIA">9. ARIA Attributes</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="سمات <strong>ARIA (تطبيقات الإنترنت الغنية القابلة للوصول)</strong> تضيف معلومات إمكانية الوصول التي لا يمكن لـ HTML وحده توفيرها. القاعدة الأولى لـ ARIA: <em>استخدم عناصر HTML الأصلية كلما أمكن بدلاً منها.</em>"><strong>ARIA (Accessible Rich Internet Applications)</strong> attributes add accessibility information that HTML alone can't provide. The first rule of ARIA: <em>use native HTML elements instead whenever possible.</em></p>
 
     <div class="element-box">
         <div class="element-name">aria-label</div>
-        <div class="element-description">Provides an accessible name for an element that has no visible text label. The value is announced by screen readers instead of any visual content.</div>
+        <div class="element-description" data-ar="توفر اسماً يمكن الوصول إليه لعنصر ليس لديه تسمية نصية مرئية. يتم نطق القيمة بواسطة قارئات الشاشة بدلاً من أي محتوى مرئي.">Provides an accessible name for an element that has no visible text label. The value is announced by screen readers instead of any visual content.</div>
         <div class="code-example">&lt;!-- Icon-only button --&gt;
 &lt;button aria-label="Search the website"&gt;
   🔍
@@ -482,7 +482,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">aria-labelledby</div>
-        <div class="element-description">Associates an element with visible text elsewhere on the page (by ID). The referenced element's text becomes the accessible name. More robust than aria-label because it reuses existing visible text.</div>
+        <div class="element-description" data-ar="تربط عنصراً بنص مرئي في مكان آخر من الصفحة (عبر المعرف ID). يصبح نص العنصر المُشار إليه هو الاسم القابل للوصول. أكثر متانة من aria-label لأنها تعيد استخدام نص مرئي موجود.">Associates an element with visible text elsewhere on the page (by ID). The referenced element's text becomes the accessible name. More robust than aria-label because it reuses existing visible text.</div>
         <div class="code-example">&lt;!-- Input labeled by existing text --&gt;
 &lt;label id="search-label"&gt;Search Products:&lt;/label&gt;
 &lt;input type="text" aria-labelledby="search-label"&gt;
@@ -501,7 +501,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">aria-describedby</div>
-        <div class="element-description">Links an element to additional descriptive text (by ID). The description is read after the element's label. Use for instructions, hints, error messages, or additional context.</div>
+        <div class="element-description" data-ar="تربط عنصراً بنص وصفي إضافي (عبر المعرف ID). يُقرأ الوصف بعد تسمية العنصر. تُستخدم للتعليمات والتلميحات ورسائل الخطأ أو السياق الإضافي.">Links an element to additional descriptive text (by ID). The description is read after the element's label. Use for instructions, hints, error messages, or additional context.</div>
         <div class="code-example">&lt;!-- Password with requirements --&gt;
 &lt;label for="password"&gt;Password:&lt;/label&gt;
 &lt;input type="password" id="password" name="password"
@@ -520,7 +520,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">aria-hidden</div>
-        <div class="element-description">When "true", removes an element from the accessibility tree — screen readers skip it completely. Use for decorative icons, emojis, and visually redundant content.</div>
+        <div class="element-description" data-ar="عندما تكون &quot;true&quot;، تزيل العنصر من شجرة إمكانية الوصول — تتجاهله قارئات الشاشة تماماً. تُستخدم للأيقونات الزخرفية والإيموجي والمحتوى المتكرر بصرياً.">When "true", removes an element from the accessibility tree — screen readers skip it completely. Use for decorative icons, emojis, and visually redundant content.</div>
         <div class="code-example">&lt;!-- Decorative icon + visible text --&gt;
 &lt;button&gt;
   &lt;span aria-hidden="true"&gt;⚙️&lt;/span&gt;
@@ -538,11 +538,11 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">aria-live</div>
-        <div class="element-description">Marks a region as a "live region" — screen readers automatically announce content changes without user action. Essential for dynamic content (notifications, search results, chat).</div>
+        <div class="element-description" data-ar="تُحدد منطقة كـ &quot;منطقة مباشرة&quot; — تنطق قارئات الشاشة تلقائياً التغييرات في المحتوى دون تدخل المستخدم. ضرورية للمحتوى الديناميكي (الإشعارات، نتائج البحث، الدردشة).">Marks a region as a "live region" — screen readers automatically announce content changes without user action. Essential for dynamic content (notifications, search results, chat).</div>
         <div class="attributes">
-            <div class="attribute"><span class="attribute-name">"off"</span><div class="attribute-desc">Default. Changes are not announced.</div></div>
-            <div class="attribute"><span class="attribute-name">"polite"</span><div class="attribute-desc">Announced when the user is idle. Non-urgent updates (search results, status messages).</div></div>
-            <div class="attribute"><span class="attribute-name">"assertive"</span><div class="attribute-desc">Announced immediately, interrupting current speech. Use sparingly for urgent errors only.</div></div>
+            <div class="attribute"><span class="attribute-name">"off"</span><div class="attribute-desc" data-ar="الافتراضي. لا يتم الإعلان عن التغييرات.">Default. Changes are not announced.</div></div>
+            <div class="attribute"><span class="attribute-name">"polite"</span><div class="attribute-desc" data-ar="يتم الإعلان عند خمول المستخدم. تحديثات غير عاجلة (نتائج البحث، رسائل الحالة).">Announced when the user is idle. Non-urgent updates (search results, status messages).</div></div>
+            <div class="attribute"><span class="attribute-name">"assertive"</span><div class="attribute-desc" data-ar="يتم الإعلان فوراً، مع مقاطعة الكلام الحالي. استخدمها باعتدال للأخطاء العاجلة فقط.">Announced immediately, interrupting current speech. Use sparingly for urgent errors only.</div></div>
         </div>
         <div class="code-example">&lt;!-- Status messages (non-urgent) --&gt;
 &lt;div aria-live="polite" aria-atomic="true"&gt;
@@ -562,7 +562,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">aria-expanded, aria-checked, aria-selected</div>
-        <div class="element-description">Communicate interactive state to screen readers.</div>
+        <div class="element-description" data-ar="تنقل الحالة التفاعلية إلى قارئات الشاشة.">Communicate interactive state to screen readers.</div>
         <div class="code-example">&lt;!-- Expand/collapse button --&gt;
 &lt;button aria-expanded="false" aria-controls="menu"
         onclick="toggleMenu()"&gt;
@@ -584,7 +584,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">aria-required, aria-invalid, aria-disabled</div>
-        <div class="element-description">Communicate form validation states to assistive technologies.</div>
+        <div class="element-description" data-ar="تنقل حالات التحقق من النموذج إلى التقنيات المساعدة.">Communicate form validation states to assistive technologies.</div>
         <div class="code-example">&lt;!-- Required field --&gt;
 &lt;input type="text" aria-required="true" required&gt;
 
@@ -599,7 +599,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">aria-current</div>
-        <div class="element-description">Indicates the current item within a set — current page in navigation, current step in a wizard, current date in a calendar.</div>
+        <div class="element-description" data-ar="تشير إلى العنصر الحالي ضمن مجموعة — الصفحة الحالية في الملاحة، الخطوة الحالية في المعالج، التاريخ الحالي في التقويم.">Indicates the current item within a set — current page in navigation, current step in a wizard, current date in a calendar.</div>
         <div class="code-example">&lt;!-- Current page in navigation --&gt;
 &lt;nav&gt;
   &lt;ul&gt;
@@ -617,44 +617,44 @@ Let's start by looking at the code.</div>
 <!-- SECTION 10: ARIA ROLES -->
 <!-- ============================================================ -->
 <section>
-    <h2>10. ARIA Roles</h2>
-    <p style="color:#555; margin-bottom:15px;">The <strong>role</strong> attribute tells assistive technologies what an element IS. Prefer native semantic HTML elements. Only use roles when HTML alone doesn't describe the element's purpose.</p>
+    <h2 data-ar="10. أدوار ARIA">10. ARIA Roles</h2>
+    <p style="color:#555; margin-bottom:15px;" data-ar="سمة <strong>role</strong> تخبر التقنيات المساعدة بما يمثله العنصر. يُفضل استخدام عناصر HTML الدلالية الأصلية. استخدم الأدوار فقط عندما لا يصف HTML وحده الغرض من العنصر.">The <strong>role</strong> attribute tells assistive technologies what an element IS. Prefer native semantic HTML elements. Only use roles when HTML alone doesn't describe the element's purpose.</p>
 
-    <h3>Landmark Roles (Match Semantic Elements)</h3>
+    <h3 data-ar="أدوار المعالم (تطابق العناصر الدلالية)">Landmark Roles (Match Semantic Elements)</h3>
     <table class="reference">
-        <thead><tr><th>ARIA Role</th><th>Native HTML Equivalent</th><th>Use When</th></tr></thead>
+        <thead><tr><th data-ar="دور ARIA">ARIA Role</th><th data-ar="مكافئ HTML الأصلي">Native HTML Equivalent</th><th data-ar="يُستخدم عند">Use When</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">role="banner"</span></td><td><span class="tag">&lt;header&gt;</span> (at page level)</td><td>Page-level header with logo/navigation</td></tr>
-            <tr><td><span class="attribute-value">role="navigation"</span></td><td><span class="tag">&lt;nav&gt;</span></td><td>Navigation links</td></tr>
-            <tr><td><span class="attribute-value">role="main"</span></td><td><span class="tag">&lt;main&gt;</span></td><td>Primary page content</td></tr>
-            <tr><td><span class="attribute-value">role="complementary"</span></td><td><span class="tag">&lt;aside&gt;</span></td><td>Sidebar, related content</td></tr>
-            <tr><td><span class="attribute-value">role="contentinfo"</span></td><td><span class="tag">&lt;footer&gt;</span> (at page level)</td><td>Footer with copyright, legal links</td></tr>
-            <tr><td><span class="attribute-value">role="search"</span></td><td>(No native equivalent)</td><td>Search form/region</td></tr>
-            <tr><td><span class="attribute-value">role="form"</span></td><td><span class="tag">&lt;form&gt;</span> (with aria-label/labelledby)</td><td>Important form not labeled by heading</td></tr>
-            <tr><td><span class="attribute-value">role="region"</span></td><td><span class="tag">&lt;section&gt;</span></td><td>Significant section — must have aria-label</td></tr>
+            <tr><td><span class="attribute-value">role="banner"</span></td><td><span class="tag">&lt;header&gt;</span><span data-ar=" (على مستوى الصفحة)"> (at page level)</span></td><td data-ar="رأس على مستوى الصفحة يحتوي على شعار/ملاحة">Page-level header with logo/navigation</td></tr>
+            <tr><td><span class="attribute-value">role="navigation"</span></td><td><span class="tag">&lt;nav&gt;</span></td><td data-ar="روابط الملاحة">Navigation links</td></tr>
+            <tr><td><span class="attribute-value">role="main"</span></td><td><span class="tag">&lt;main&gt;</span></td><td data-ar="المحتوى الرئيسي للصفحة">Primary page content</td></tr>
+            <tr><td><span class="attribute-value">role="complementary"</span></td><td><span class="tag">&lt;aside&gt;</span></td><td data-ar="الشريط الجانبي، المحتوى ذو الصلة">Sidebar, related content</td></tr>
+            <tr><td><span class="attribute-value">role="contentinfo"</span></td><td><span class="tag">&lt;footer&gt;</span><span data-ar=" (على مستوى الصفحة)"> (at page level)</span></td><td data-ar="تذييل يحتوي على حقوق النشر والروابط القانونية">Footer with copyright, legal links</td></tr>
+            <tr><td><span class="attribute-value">role="search"</span></td><td data-ar="(لا يوجد مكافئ أصلي)">(No native equivalent)</td><td data-ar="نموذج/منطقة بحث">Search form/region</td></tr>
+            <tr><td><span class="attribute-value">role="form"</span></td><td><span class="tag">&lt;form&gt;</span><span data-ar=" (مع aria-label/labelledby)"> (with aria-label/labelledby)</span></td><td data-ar="نموذج مهم غير معنون برأس">Important form not labeled by heading</td></tr>
+            <tr><td><span class="attribute-value">role="region"</span></td><td><span class="tag">&lt;section&gt;</span></td><td data-ar="قسم مهم — يجب أن يحتوي على aria-label">Significant section — must have aria-label</td></tr>
         </tbody>
     </table>
 
-    <h3>Common Widget &amp; Document Roles</h3>
+    <h3 data-ar="أدوار العناصر التفاعلية والمستندات الشائعة">Common Widget &amp; Document Roles</h3>
     <table class="reference">
-        <thead><tr><th>Role</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <thead><tr><th data-ar="الدور">Role</th><th data-ar="الغرض">Purpose</th><th data-ar="ملاحظات">Notes</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">role="button"</span></td><td>Interactive button</td><td>Prefer &lt;button&gt; element instead</td></tr>
-            <tr><td><span class="attribute-value">role="link"</span></td><td>Navigable link</td><td>Prefer &lt;a href&gt; instead</td></tr>
-            <tr><td><span class="attribute-value">role="checkbox"</span></td><td>Two-state toggle control</td><td>Prefer &lt;input type="checkbox"&gt; instead</td></tr>
-            <tr><td><span class="attribute-value">role="radio"</span></td><td>Radio button in a group</td><td>Prefer &lt;input type="radio"&gt; instead</td></tr>
-            <tr><td><span class="attribute-value">role="alert"</span></td><td>Important time-sensitive message</td><td>Implies aria-live="assertive"</td></tr>
-            <tr><td><span class="attribute-value">role="status"</span></td><td>Non-urgent advisory message</td><td>Implies aria-live="polite"</td></tr>
-            <tr><td><span class="attribute-value">role="dialog"</span></td><td>Modal or non-modal dialog box</td><td>Add aria-labelledby and aria-modal="true"</td></tr>
-            <tr><td><span class="attribute-value">role="tooltip"</span></td><td>Contextual popup description</td><td>Link with aria-describedby</td></tr>
-            <tr><td><span class="attribute-value">role="tab"</span></td><td>Tab in a tablist</td><td>Use with role="tablist" and role="tabpanel"</td></tr>
-            <tr><td><span class="attribute-value">role="tablist"</span></td><td>Container for tabs</td><td>Parent of role="tab" elements</td></tr>
-            <tr><td><span class="attribute-value">role="tabpanel"</span></td><td>Panel associated with a tab</td><td>Linked to tab via aria-controls/aria-labelledby</td></tr>
-            <tr><td><span class="attribute-value">role="menu"</span></td><td>Menu of choices (like OS menu)</td><td>NOT for site navigation menus</td></tr>
-            <tr><td><span class="attribute-value">role="menuitem"</span></td><td>Item inside a role="menu"</td><td>Use inside role="menu" or role="menubar"</td></tr>
-            <tr><td><span class="attribute-value">role="progressbar"</span></td><td>Progress indicator</td><td>Use with aria-valuenow, aria-valuemin, aria-valuemax</td></tr>
-            <tr><td><span class="attribute-value">role="img"</span></td><td>Composite image (SVG, group of elements)</td><td>Add aria-label to describe the image</td></tr>
-            <tr><td><span class="attribute-value">role="presentation"</span></td><td>Removes semantic meaning</td><td>For decorative elements; like aria-hidden</td></tr>
+            <tr><td><span class="attribute-value">role="button"</span></td><td data-ar="زر تفاعلي">Interactive button</td><td data-ar="يُفضل عنصر &lt;button&gt; بدلاً منه">Prefer &lt;button&gt; element instead</td></tr>
+            <tr><td><span class="attribute-value">role="link"</span></td><td data-ar="رابط قابل للتنقل">Navigable link</td><td data-ar="يُفضل &lt;a href&gt; بدلاً منه">Prefer &lt;a href&gt; instead</td></tr>
+            <tr><td><span class="attribute-value">role="checkbox"</span></td><td data-ar="عنصر تبديل بحالتين">Two-state toggle control</td><td data-ar="يُفضل &lt;input type=&quot;checkbox&quot;&gt; بدلاً منه">Prefer &lt;input type="checkbox"&gt; instead</td></tr>
+            <tr><td><span class="attribute-value">role="radio"</span></td><td data-ar="زر اختيار في مجموعة">Radio button in a group</td><td data-ar="يُفضل &lt;input type=&quot;radio&quot;&gt; بدلاً منه">Prefer &lt;input type="radio"&gt; instead</td></tr>
+            <tr><td><span class="attribute-value">role="alert"</span></td><td data-ar="رسالة مهمة وحساسة للوقت">Important time-sensitive message</td><td data-ar="يستلزم aria-live=&quot;assertive&quot;">Implies aria-live="assertive"</td></tr>
+            <tr><td><span class="attribute-value">role="status"</span></td><td data-ar="رسالة تنبيهية غير عاجلة">Non-urgent advisory message</td><td data-ar="يستلزم aria-live=&quot;polite&quot;">Implies aria-live="polite"</td></tr>
+            <tr><td><span class="attribute-value">role="dialog"</span></td><td data-ar="مربع حوار مشروط أو غير مشروط">Modal or non-modal dialog box</td><td data-ar="أضف aria-labelledby و aria-modal=&quot;true&quot;">Add aria-labelledby and aria-modal="true"</td></tr>
+            <tr><td><span class="attribute-value">role="tooltip"</span></td><td data-ar="وصف منبثق سياقي">Contextual popup description</td><td data-ar="اربطه بـ aria-describedby">Link with aria-describedby</td></tr>
+            <tr><td><span class="attribute-value">role="tab"</span></td><td data-ar="علامة تبويب في قائمة تبويبات">Tab in a tablist</td><td data-ar="استخدمها مع role=&quot;tablist&quot; و role=&quot;tabpanel&quot;">Use with role="tablist" and role="tabpanel"</td></tr>
+            <tr><td><span class="attribute-value">role="tablist"</span></td><td data-ar="حاوية للتبويبات">Container for tabs</td><td data-ar="عنصر أب لعناصر role=&quot;tab&quot;">Parent of role="tab" elements</td></tr>
+            <tr><td><span class="attribute-value">role="tabpanel"</span></td><td data-ar="لوحة مرتبطة بتبويب">Panel associated with a tab</td><td data-ar="مرتبطة بالتبويب عبر aria-controls/aria-labelledby">Linked to tab via aria-controls/aria-labelledby</td></tr>
+            <tr><td><span class="attribute-value">role="menu"</span></td><td data-ar="قائمة خيارات (مثل قائمة نظام التشغيل)">Menu of choices (like OS menu)</td><td data-ar="ليست لقوائم ملاحة الموقع">NOT for site navigation menus</td></tr>
+            <tr><td><span class="attribute-value">role="menuitem"</span></td><td data-ar="عنصر داخل role=&quot;menu&quot;">Item inside a role="menu"</td><td data-ar="استخدمها داخل role=&quot;menu&quot; أو role=&quot;menubar&quot;">Use inside role="menu" or role="menubar"</td></tr>
+            <tr><td><span class="attribute-value">role="progressbar"</span></td><td data-ar="مؤشر تقدم">Progress indicator</td><td data-ar="استخدمها مع aria-valuenow و aria-valuemin و aria-valuemax">Use with aria-valuenow, aria-valuemin, aria-valuemax</td></tr>
+            <tr><td><span class="attribute-value">role="img"</span></td><td data-ar="صورة مركبة (SVG، مجموعة عناصر)">Composite image (SVG, group of elements)</td><td data-ar="أضف aria-label لوصف الصورة">Add aria-label to describe the image</td></tr>
+            <tr><td><span class="attribute-value">role="presentation"</span></td><td data-ar="يزيل المعنى الدلالي">Removes semantic meaning</td><td data-ar="للعناصر الزخرفية؛ مثل aria-hidden">For decorative elements; like aria-hidden</td></tr>
         </tbody>
     </table>
 
@@ -690,11 +690,11 @@ Let's start by looking at the code.</div>
 <!-- SECTION 11: LANGUAGE ATTRIBUTE -->
 <!-- ============================================================ -->
 <section>
-    <h2>11. Language Attribute</h2>
+    <h2 data-ar="11. سمة اللغة">11. Language Attribute</h2>
 
     <div class="element-box">
         <div class="element-name">lang attribute</div>
-        <div class="element-description">Tells screen readers what language to use for pronunciation. Also affects browser spell-check and translation tools. Required on &lt;html&gt; for accessibility compliance.</div>
+        <div class="element-description" data-ar="تخبر قارئات الشاشة بأي لغة تستخدم للنطق. تؤثر أيضاً على التدقيق الإملائي وأدوات الترجمة في المتصفح. مطلوبة على &lt;html&gt; للامتثال لإمكانية الوصول.">Tells screen readers what language to use for pronunciation. Also affects browser spell-check and translation tools. Required on &lt;html&gt; for accessibility compliance.</div>
         <div class="code-example">&lt;!-- Set page language --&gt;
 &lt;html lang="en"&gt;  &lt;!-- English --&gt;
 &lt;html lang="ar"&gt;  &lt;!-- Arabic --&gt;
@@ -720,11 +720,11 @@ Let's start by looking at the code.</div>
 <!-- SECTION 12: FOCUS MANAGEMENT & VISIBLE FOCUS -->
 <!-- ============================================================ -->
 <section>
-    <h2>12. Focus Management &amp; Visible Focus</h2>
+    <h2 data-ar="12. إدارة التركيز والتركيز المرئي">12. Focus Management &amp; Visible Focus</h2>
 
     <div class="element-box">
         <div class="element-name">Visible Focus Indicators</div>
-        <div class="element-description">Keyboard users need to see which element is focused. Never remove focus outlines without replacing them with a better alternative.</div>
+        <div class="element-description" data-ar="يحتاج مستخدمو لوحة المفاتيح إلى رؤية العنصر الذي تم التركيز عليه. لا تزل أبداً مخططات التركيز دون استبدالها ببديل أفضل.">Keyboard users need to see which element is focused. Never remove focus outlines without replacing them with a better alternative.</div>
         <div class="code-example">&lt;!-- ❌ Never do this --&gt;
 &lt;style&gt;
   * { outline: none; }        /* removes all focus indicators */
@@ -749,7 +749,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">Focus Trapping in Modals</div>
-        <div class="element-description">When a modal dialog opens, Tab should cycle through modal elements only — not go to the background page. Focus should return to the trigger element when the modal closes.</div>
+        <div class="element-description" data-ar="عند فتح مربع حوار مشروط (modal)، يجب أن يدور Tab بين عناصر المربع فقط — لا أن ينتقل إلى صفحة الخلفية. يجب أن يعود التركيز إلى العنصر المُشغل عند إغلاق المربع.">When a modal dialog opens, Tab should cycle through modal elements only — not go to the background page. Focus should return to the trigger element when the modal closes.</div>
         <div class="code-example">&lt;!-- When modal opens: --&gt;
 &lt;!-- 1. Move focus to first focusable element in modal --&gt;
 &lt;!-- 2. Trap Tab/Shift+Tab within modal --&gt;
@@ -775,18 +775,18 @@ Let's start by looking at the code.</div>
 <!-- SECTION 13: COLOR AND CONTRAST -->
 <!-- ============================================================ -->
 <section>
-    <h2>13. Color Contrast</h2>
+    <h2 data-ar="13. تباين الألوان">13. Color Contrast</h2>
 
     <div class="element-box">
         <div class="element-name">Color Contrast Ratios (WCAG AA)</div>
-        <div class="element-description">Sufficient contrast ensures text is readable for users with low vision or color blindness.</div>
+        <div class="element-description" data-ar="التباين الكافي يضمن أن النص قابل للقراءة للمستخدمين ذوي ضعف البصر أو عمى الألوان.">Sufficient contrast ensures text is readable for users with low vision or color blindness.</div>
         <table class="reference">
-            <thead><tr><th>Text Type</th><th>Minimum Ratio (AA)</th><th>Enhanced Ratio (AAA)</th></tr></thead>
+            <thead><tr><th data-ar="نوع النص">Text Type</th><th data-ar="الحد الأدنى للنسبة (AA)">Minimum Ratio (AA)</th><th data-ar="النسبة المحسّنة (AAA)">Enhanced Ratio (AAA)</th></tr></thead>
             <tbody>
-                <tr><td>Normal text (under 18pt / 14pt bold)</td><td>4.5:1</td><td>7:1</td></tr>
-                <tr><td>Large text (18pt+ / 14pt+ bold)</td><td>3:1</td><td>4.5:1</td></tr>
-                <tr><td>UI components (buttons, inputs, focus outlines)</td><td>3:1</td><td>—</td></tr>
-                <tr><td>Decorative text / inactive components</td><td>No requirement</td><td>—</td></tr>
+                <tr><td data-ar="نص عادي (أقل من 18pt / 14pt عريض)">Normal text (under 18pt / 14pt bold)</td><td>4.5:1</td><td>7:1</td></tr>
+                <tr><td data-ar="نص كبير (18pt+ / 14pt+ عريض)">Large text (18pt+ / 14pt+ bold)</td><td>3:1</td><td>4.5:1</td></tr>
+                <tr><td data-ar="مكونات الواجهة (الأزرار، الحقول، مخططات التركيز)">UI components (buttons, inputs, focus outlines)</td><td>3:1</td><td>—</td></tr>
+                <tr><td data-ar="نص زخرفي / مكونات غير نشطة">Decorative text / inactive components</td><td data-ar="لا يوجد متطلب">No requirement</td><td>—</td></tr>
             </tbody>
         </table>
         <div class="code-example">&lt;!-- ✅ Good contrast examples: --&gt;
@@ -797,7 +797,7 @@ Let's start by looking at the code.</div>
 &lt;!-- ❌ Poor contrast examples: --&gt;
 &lt;!-- Light gray (#aaaaaa) on white (#ffffff): ratio ~2.3:1 ❌ --&gt;
 &lt;!-- Yellow (#ffff00) on white: ratio 1.07:1 ❌ --&gt;</div>
-        <div class="tip">🛠️ <strong>Free contrast checking tools:</strong><br>
+        <div class="tip" data-ar="🛠️ <strong>أدوات مجانية للتحقق من التباين:</strong><br>• <strong>WebAIM Contrast Checker</strong> — webaim.org/resources/contrastchecker<br>• <strong>Colour Contrast Analyser</strong> — تطبيق سطح مكتب<br>• Chrome DevTools — لوحة إمكانية الوصول تعرض نسب التباين">🛠️ <strong>Free contrast checking tools:</strong><br>
         • <strong>WebAIM Contrast Checker</strong> — webaim.org/resources/contrastchecker<br>
         • <strong>Colour Contrast Analyser</strong> — desktop app<br>
         • Chrome DevTools — Accessibility panel shows contrast ratios
@@ -806,7 +806,7 @@ Let's start by looking at the code.</div>
 
     <div class="element-box">
         <div class="element-name">Never Use Color Alone</div>
-        <div class="element-description">About 8% of men and 0.5% of women have color blindness. Don't use color as the only way to convey information.</div>
+        <div class="element-description" data-ar="حوالي 8٪ من الرجال و 0.5٪ من النساء يعانون من عمى الألوان. لا تستخدم اللون كطريقة وحيدة لنقل المعلومات.">About 8% of men and 0.5% of women have color blindness. Don't use color as the only way to convey information.</div>
         <div class="code-example">&lt;!-- ❌ Color only: colorblind users can't tell which fields are required --&gt;
 &lt;style&gt;
   .required { color: red; }  /* only way to distinguish required */
