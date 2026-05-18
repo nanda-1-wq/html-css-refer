@@ -833,11 +833,11 @@ Let's start by looking at the code.</div>
 <!-- SECTION 14: ACCESSIBILITY CHECKLIST -->
 <!-- ============================================================ -->
 <section>
-    <h2>14. Accessibility Checklist</h2>
+    <h2 data-ar="14. قائمة مراجعة إمكانية الوصول">14. Accessibility Checklist</h2>
 
-    <h3>HTML Structure</h3>
+    <h3 data-ar="هيكل HTML">HTML Structure</h3>
     <div class="element-box">
-        <p style="color:#555; line-height: 2.2;">
+        <p style="color:#555; line-height: 2.2;" data-ar="✅ تم تعيين &lt;html lang=&quot;...&quot;&gt; بشكل صحيح<br>✅ عنوان &lt;h1&gt; واحد لكل صفحة، والعناوين بترتيب منطقي (دون تخطي مستويات)<br>✅ &lt;main&gt; يحيط بالمحتوى الرئيسي<br>✅ &lt;nav&gt; مستخدم للملاحة مع aria-label لتمييز عدة عناصر nav<br>✅ رابط التخطي إلى المحتوى الرئيسي هو أول عنصر قابل للتركيز<br>✅ عنوان الصفحة (&lt;title&gt;) وصفي وفريد">
             ✅ &lt;html lang="..."&gt; is set correctly<br>
             ✅ One &lt;h1&gt; per page, headings in logical order (no skipped levels)<br>
             ✅ &lt;main&gt; wraps the primary content<br>
@@ -847,9 +847,9 @@ Let's start by looking at the code.</div>
         </p>
     </div>
 
-    <h3>Images &amp; Media</h3>
+    <h3 data-ar="الصور والوسائط">Images &amp; Media</h3>
     <div class="element-box">
-        <p style="color:#555; line-height: 2.2;">
+        <p style="color:#555; line-height: 2.2;" data-ar="✅ جميع الصور ذات المعنى تحتوي على نص بديل وصفي<br>✅ الصور الزخرفية تحتوي على نص بديل فارغ (alt=&quot;&quot;)<br>✅ الفيديوهات تحتوي على تسميات توضيحية (وليس مجرد ترجمة)<br>✅ الصوت يحتوي على نص مكتوب<br>✅ &lt;iframe&gt; يحتوي على سمة title">
             ✅ All meaningful images have descriptive alt text<br>
             ✅ Decorative images have empty alt text (alt="")<br>
             ✅ Videos have captions (not just subtitles)<br>
@@ -858,9 +858,9 @@ Let's start by looking at the code.</div>
         </p>
     </div>
 
-    <h3>Forms</h3>
+    <h3 data-ar="النماذج">Forms</h3>
     <div class="element-box">
-        <p style="color:#555; line-height: 2.2;">
+        <p style="color:#555; line-height: 2.2;" data-ar="✅ كل حقل إدخال له &lt;label&gt; مرتبطة<br>✅ مجموعات الاختيار/المربعات تستخدم &lt;fieldset&gt; + &lt;legend&gt;<br>✅ رسائل الخطأ مربوطة بـ aria-describedby<br>✅ الحقول المطلوبة موضحة (وليس باللون فقط)<br>✅ أنواع الأزرار محددة صراحةً (type=&quot;submit&quot;، إلخ.)">
             ✅ Every input has an associated &lt;label&gt;<br>
             ✅ Radio/checkbox groups use &lt;fieldset&gt; + &lt;legend&gt;<br>
             ✅ Error messages are linked with aria-describedby<br>
@@ -869,9 +869,9 @@ Let's start by looking at the code.</div>
         </p>
     </div>
 
-    <h3>Tables</h3>
+    <h3 data-ar="الجداول">Tables</h3>
     <div class="element-box">
-        <p style="color:#555; line-height: 2.2;">
+        <p style="color:#555; line-height: 2.2;" data-ar="✅ الجدول يحتوي على &lt;caption&gt;<br>✅ رؤوس الأعمدة تستخدم &lt;th scope=&quot;col&quot;&gt;<br>✅ رؤوس الصفوف تستخدم &lt;th scope=&quot;row&quot;&gt;<br>✅ الجداول المعقدة تستخدم سمات id + headers">
             ✅ Table has a &lt;caption&gt;<br>
             ✅ Column headers use &lt;th scope="col"&gt;<br>
             ✅ Row headers use &lt;th scope="row"&gt;<br>
@@ -879,9 +879,9 @@ Let's start by looking at the code.</div>
         </p>
     </div>
 
-    <h3>Keyboard &amp; Interaction</h3>
+    <h3 data-ar="لوحة المفاتيح والتفاعل">Keyboard &amp; Interaction</h3>
     <div class="element-box">
-        <p style="color:#555; line-height: 2.2;">
+        <p style="color:#555; line-height: 2.2;" data-ar="✅ جميع العناصر التفاعلية متاحة عبر لوحة المفاتيح<br>✅ مؤشرات التركيز مرئية (وليس فقط :focus { outline: none })<br>✅ ترتيب Tab يتبع ترتيب القراءة المنطقي<br>✅ لا توجد مصائد لوحة مفاتيح (باستثناء حصر المربعات المشروطة المتعمّد)<br>✅ المربعات المشروطة: التركيز محاصر داخلها، Escape يغلقها، التركيز يعود">
             ✅ All interactive elements are keyboard accessible<br>
             ✅ Focus indicators are visible (not just :focus { outline: none })<br>
             ✅ Tab order follows logical reading order<br>
@@ -890,9 +890,9 @@ Let's start by looking at the code.</div>
         </p>
     </div>
 
-    <h3>Color &amp; Contrast</h3>
+    <h3 data-ar="اللون والتباين">Color &amp; Contrast</h3>
     <div class="element-box">
-        <p style="color:#555; line-height: 2.2;">
+        <p style="color:#555; line-height: 2.2;" data-ar="✅ نسبة تباين النص ≥ 4.5:1 (عادي) أو ≥ 3:1 (كبير)<br>✅ نسبة تباين مكونات الواجهة ≥ 3:1<br>✅ اللون ليس الطريقة الوحيدة لنقل المعلومات<br>✅ الروابط مميزة عن النص المحيط (وليس فقط باللون)">
             ✅ Text contrast ratio ≥ 4.5:1 (normal) or ≥ 3:1 (large)<br>
             ✅ UI components contrast ratio ≥ 3:1<br>
             ✅ Color is not the only way information is conveyed<br>
@@ -900,8 +900,8 @@ Let's start by looking at the code.</div>
         </p>
     </div>
 
-    <h3>Testing Tools</h3>
-    <div class="tip">
+    <h3 data-ar="أدوات الاختبار">Testing Tools</h3>
+    <div class="tip" data-ar="🛠️ <strong>أدوات اختبار إمكانية الوصول الموصى بها:</strong><br>• <strong>Google Lighthouse</strong> — مدمج في Chrome DevTools (يدقق تلقائياً)<br>• <strong>axe DevTools</strong> — إضافة للمتصفح (مجانية ومفصلة)<br>• <strong>WAVE</strong> — wave.webaim.org — تقرير إمكانية وصول مرئي<br>• <strong>NVDA</strong> — قارئ شاشة مجاني لـ Windows<br>• <strong>VoiceOver</strong> — قارئ شاشة مدمج في Mac (Cmd+F5 للتفعيل)<br>• <strong>WebAIM Contrast Checker</strong> — webaim.org/resources/contrastchecker<br>• <strong>اختبار لوحة المفاتيح</strong> — افصل الفأرة وتنقل في موقعك باستخدام Tab فقط">
         🛠️ <strong>Recommended accessibility testing tools:</strong><br>
         • <strong>Google Lighthouse</strong> — Built into Chrome DevTools (audits automatically)<br>
         • <strong>axe DevTools</strong> — Browser extension (free, detailed)<br>
@@ -913,34 +913,36 @@ Let's start by looking at the code.</div>
     </div>
 </section>
 
-<div id="google_translate_element" style="display:none"></div>
 <script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
-}
 function setLang(lang) {
-  var d = document.domain;
-  var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
   if (lang === 'ar') {
-    document.cookie = 'googtrans=/en/ar; path=/';
-    document.cookie = 'googtrans=/en/ar; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (!el.dataset.en) el.dataset.en = el.innerHTML;
+      el.innerHTML = el.dataset.ar;
+    });
+    document.body.setAttribute('dir', 'rtl');
+    document.body.setAttribute('lang', 'ar');
   } else {
-    document.cookie = 'googtrans=; ' + exp + '; path=/';
-    document.cookie = 'googtrans=; ' + exp + '; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (el.dataset.en) el.innerHTML = el.dataset.en;
+    });
+    document.body.setAttribute('dir', 'ltr');
+    document.body.setAttribute('lang', 'en');
   }
-  location.reload();
+  document.getElementById('btn-en').classList.toggle('active-lang', lang === 'en');
+  document.getElementById('btn-ar').classList.toggle('active-lang', lang === 'ar');
+  try { localStorage.setItem('preferredLang', lang); } catch(e) {}
 }
-(function () {
-  var m = document.cookie.match(/googtrans=\/en\/(\w+)/);
-  var lang = m ? m[1] : 'en';
-  document.getElementById(lang === 'ar' ? 'btn-ar' : 'btn-en').classList.add('active-lang');
-  document.querySelectorAll('.code-example, .element-name, .attribute-name, .tag, code').forEach(function (el) {
-    el.classList.add('notranslate');
-    el.setAttribute('translate', 'no');
-  });
+(function() {
+  try {
+    var lang = localStorage.getItem('preferredLang') || 'en';
+    if (lang === 'ar') setLang('ar');
+    else document.getElementById('btn-en').classList.add('active-lang');
+  } catch(e) {
+    document.getElementById('btn-en').classList.add('active-lang');
+  }
 })();
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
