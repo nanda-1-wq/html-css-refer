@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semantics Reference</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background: #f0f2f5; padding: 0 20px 40px; }
+        .nav-bar { background: #2c3e50; padding: 12px 20px; position: sticky; top: 0; z-index: 100; text-align: center; margin-bottom: 30px; }
+        .nav-bar a { color: #ecf0f1; text-decoration: none; margin: 0 8px; font-weight: 600; font-size: 0.85em; padding: 4px 8px; border-radius: 4px; }
+        .nav-bar a:hover { background: #3498db; }
+        .nav-bar a.active { background: #3498db; }
+        h1 { text-align: center; color: #2c3e50; margin: 30px auto 50px; font-size: 2.5em; border-bottom: 4px solid #3498db; padding-bottom: 20px; max-width: 1000px; }
+        h2 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; margin-top: 40px; margin-bottom: 20px; border-radius: 5px; font-size: 1.8em; }
+        h3 { color: #667eea; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em; border-left: 4px solid #667eea; padding-left: 15px; }
+        section { background: white; max-width: 1000px; margin: 20px auto; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .element-box { background: #f8f9fa; border: 2px solid #e9ecef; border-left: 5px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .element-name { font-weight: 700; color: #2c3e50; font-size: 1.1em; margin-bottom: 8px; font-family: 'Courier New', monospace; }
+        .element-description { color: #555; margin-bottom: 10px; }
+        .attributes { background: white; border: 1px solid #ddd; border-radius: 3px; padding: 12px; margin-top: 10px; font-size: 0.95em; }
+        .attribute { margin: 8px 0; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+        .attribute:last-child { border-bottom: none; }
+        .attribute-name { font-weight: 600; color: #e74c3c; font-family: 'Courier New', monospace; }
+        .attribute-desc { color: #666; margin-left: 20px; }
+        .code-example { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.9em; line-height: 1.6; white-space: pre; }
+        .important { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        .tip { background: #d4edda; border-left: 4px solid #28a745; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        table.reference { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        table.reference th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        table.reference td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        table.reference tr:nth-child(even) { background: #f9f9f9; }
+        .tag { background: #e8f4f8; color: #2c3e50; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; font-weight: 600; }
+        .attribute-value { color: #27ae60; font-weight: 600; }
+        @media (max-width: 768px) { h1 { font-size: 1.8em; } h2 { font-size: 1.3em; } section { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="1-html-basics.html">1 Basics</a>
+    <a href="2-html-semantics.html" class="active">2 Semantics</a>
+    <a href="3-html-forms-tables.html">3 Forms &amp; Tables</a>
+    <a href="4-html-accessibility.html">4 Accessibility</a>
+    <a href="all-html-reference.html">All-in-One</a>
+</div>
+
+<h1>HTML Semantics Reference</h1>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: WHY SEMANTICS MATTER -->
+<!-- ============================================================ -->
+<section>
+    <h2>1. Why Semantic HTML Matters</h2>
+    <p style="color:#555; margin-bottom:15px;"><strong>Semantic HTML</strong> means using elements that describe the <em>meaning</em> of the content, not just its appearance. A &lt;header&gt; tells browsers, screen readers, and search engines "this is a header" — a &lt;div&gt; tells them nothing.</p>
+
+    <table class="reference">
+        <thead><tr><th>Benefit</th><th>Explanation</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Accessibility</strong></td><td>Screen readers use semantic structure to help blind users navigate pages</td></tr>
+            <tr><td><strong>SEO</strong></td><td>Search engines understand page structure and rank content appropriately</td></tr>
+            <tr><td><strong>Maintainability</strong></td><td>Code is easier to read and understand for other developers</td></tr>
+            <tr><td><strong>Default styles</strong></td><td>Browsers apply appropriate default styles to semantic elements</td></tr>
+            <tr><td><strong>Portability</strong></td><td>Content degrades gracefully in environments without CSS</td></tr>
+        </tbody>
+    </table>
+
+    <div class="code-example">&lt;!-- Non-semantic: browser/reader doesn't know what these divs mean --&gt;
+&lt;div class="top"&gt;
+  &lt;div class="logo"&gt;My Site&lt;/div&gt;
+  &lt;div class="menu"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content"&gt;...&lt;/div&gt;
+&lt;div class="bottom"&gt;...&lt;/div&gt;
+
+&lt;!-- Semantic: structure is clear to everyone --&gt;
+&lt;header&gt;
+  &lt;h1&gt;My Site&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: DOCUMENT LANDMARK ELEMENTS -->
+<!-- ============================================================ -->
+<section>
+    <h2>2. Document Landmark Elements</h2>
+    <p style="color:#555; margin-bottom:15px;">Landmark elements define regions of the page. Screen readers use them as navigation landmarks.</p>
+
+    <div class="element-box">
+        <div class="element-name">&lt;header&gt;</div>
+        <div class="element-description">Represents introductory content or a header for its nearest sectioning ancestor. Can appear multiple times (once for page, once inside &lt;article&gt;, etc.). Usually contains: site logo, page title, primary navigation, search.</div>
+        <div class="code-example">&lt;!-- Page-level header --&gt;
+&lt;header&gt;
+  &lt;h1&gt;My Blog&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;!-- Article-level header --&gt;
+&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;Published: &lt;time datetime="2024-01-15"&gt;January 15, 2024&lt;/time&gt;&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Article content...&lt;/p&gt;
+&lt;/article&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;nav&gt;</div>
+        <div class="element-description">Represents a section with navigation links. Use for primary navigation, table of contents, breadcrumbs. Not every group of links needs a &lt;nav&gt; — only major navigation blocks.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">aria-label</span><div class="attribute-desc">Distinguish multiple nav elements: "Main navigation", "Breadcrumb", "Footer navigation"</div></div>
+        </div>
+        <div class="code-example">&lt;!-- Primary navigation --&gt;
+&lt;nav aria-label="Main navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/products"&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Breadcrumb navigation --&gt;
+&lt;nav aria-label="Breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/products"&gt;Products&lt;/a&gt;&lt;/li&gt;
+    &lt;li aria-current="page"&gt;Laptop&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;main&gt;</div>
+        <div class="element-description">Represents the dominant content of the page — the unique content that differs from page to page. There should be <strong>only one</strong> &lt;main&gt; per page, and it should not be nested inside &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;header&gt;, or &lt;nav&gt;.</div>
+        <div class="code-example">&lt;body&gt;
+  &lt;header&gt;...site header...&lt;/header&gt;
+  &lt;nav&gt;...navigation...&lt;/nav&gt;
+  &lt;main&gt;
+    &lt;!-- The unique content of this specific page --&gt;
+    &lt;h1&gt;Welcome to My Portfolio&lt;/h1&gt;
+    &lt;section&gt;...featured projects...&lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;...site footer...&lt;/footer&gt;
+&lt;/body&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;article&gt;</div>
+        <div class="element-description">Represents a self-contained, independently distributable piece of content. It makes sense on its own — you could share it without context. Use for: blog posts, news articles, forum posts, product cards, comments, social media posts.</div>
+        <div class="code-example">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h2&gt;10 Tips for Learning HTML&lt;/h2&gt;
+    &lt;p&gt;By &lt;a href="/author/jane"&gt;Jane Doe&lt;/a&gt;&lt;/p&gt;
+    &lt;time datetime="2024-03-15"&gt;March 15, 2024&lt;/time&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Learning HTML is the first step...&lt;/p&gt;
+  &lt;footer&gt;
+    &lt;p&gt;Tags: &lt;a href="/tag/html"&gt;HTML&lt;/a&gt;, &lt;a href="/tag/web"&gt;Web&lt;/a&gt;&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;section&gt;</div>
+        <div class="element-description">Represents a generic thematic section of content. Should have a heading. Use when content is logically grouped but doesn't qualify as an &lt;article&gt; or &lt;aside&gt;. If you'd put a heading on it, it's probably a &lt;section&gt;.</div>
+        <div class="code-example">&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p&gt;I'm a web developer...&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+    &lt;h2&gt;My Projects&lt;/h2&gt;
+    &lt;article&gt;...project 1...&lt;/article&gt;
+    &lt;article&gt;...project 2...&lt;/article&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+    &lt;h2&gt;Contact&lt;/h2&gt;
+    &lt;form&gt;...&lt;/form&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;aside&gt;</div>
+        <div class="element-description">Represents content that is tangentially related to the main content — a sidebar, pull quote, advertising, related links, author bio. Can appear inside &lt;article&gt; or at page level.</div>
+        <div class="code-example">&lt;!-- Page-level sidebar --&gt;
+&lt;aside&gt;
+  &lt;h2&gt;Related Articles&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;CSS Basics&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;JavaScript Intro&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;!-- Inside an article: additional information --&gt;
+&lt;article&gt;
+  &lt;p&gt;The ocean covers 71% of Earth's surface...&lt;/p&gt;
+  &lt;aside&gt;
+    &lt;p&gt;&lt;strong&gt;Fun fact:&lt;/strong&gt; We've explored less than 20% of Earth's oceans.&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/article&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;footer&gt;</div>
+        <div class="element-description">Represents the footer for its nearest sectioning ancestor. Can appear multiple times. Usually contains: copyright, contact info, links to terms/privacy, author info, related documents.</div>
+        <div class="code-example">&lt;!-- Page footer --&gt;
+&lt;footer&gt;
+  &lt;nav aria-label="Footer navigation"&gt;
+    &lt;a href="/privacy"&gt;Privacy Policy&lt;/a&gt;
+    &lt;a href="/terms"&gt;Terms of Service&lt;/a&gt;
+    &lt;a href="/sitemap"&gt;Sitemap&lt;/a&gt;
+  &lt;/nav&gt;
+  &lt;address&gt;
+    &lt;p&gt;Email: &lt;a href="mailto:info@example.com"&gt;info@example.com&lt;/a&gt;&lt;/p&gt;
+  &lt;/address&gt;
+  &lt;p&gt;&amp;copy; 2024 My Company. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;address&gt;</div>
+        <div class="element-description">Represents contact information for the nearest &lt;article&gt; or &lt;body&gt; ancestor. Can include physical address, email, phone, social links. Does NOT have to be a postal address.</div>
+        <div class="code-example">&lt;address&gt;
+  &lt;p&gt;Written by &lt;a href="/author/jane"&gt;Jane Doe&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;Email: &lt;a href="mailto:jane@example.com"&gt;jane@example.com&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Phone: &lt;a href="tel:+15555551234"&gt;(555) 555-1234&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;123 Main Street, New York, NY 10001&lt;/p&gt;
+&lt;/address&gt;</div>
+    </div>
+
+    <h3>Landmark Summary</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Landmark Role</th><th>How Many Per Page</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;header&gt;</span></td><td>banner (when at page level)</td><td>One per page (more inside sections/articles)</td></tr>
+            <tr><td><span class="tag">&lt;nav&gt;</span></td><td>navigation</td><td>Multiple allowed — use aria-label to distinguish</td></tr>
+            <tr><td><span class="tag">&lt;main&gt;</span></td><td>main</td><td><strong>Exactly one</strong> per page</td></tr>
+            <tr><td><span class="tag">&lt;article&gt;</span></td><td>article</td><td>Multiple allowed</td></tr>
+            <tr><td><span class="tag">&lt;section&gt;</span></td><td>region (only with aria-label/aria-labelledby)</td><td>Multiple allowed</td></tr>
+            <tr><td><span class="tag">&lt;aside&gt;</span></td><td>complementary</td><td>Multiple allowed</td></tr>
+            <tr><td><span class="tag">&lt;footer&gt;</span></td><td>contentinfo (when at page level)</td><td>One per page (more inside sections/articles)</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: TEXT-LEVEL SEMANTIC ELEMENTS -->
+<!-- ============================================================ -->
+<section>
+    <h2>3. Text-Level Semantic Elements</h2>
+
+    <h3>Emphasis &amp; Importance</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Meaning</th><th>Renders As</th><th>Example</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;strong&gt;</span></td><td>Strong importance, seriousness, urgency</td><td>Bold</td><td><code>&lt;strong&gt;Warning:&lt;/strong&gt; Hot surface!</code></td></tr>
+            <tr><td><span class="tag">&lt;em&gt;</span></td><td>Stress emphasis (changes meaning)</td><td>Italic</td><td><code>Never give up on &lt;em&gt;your&lt;/em&gt; dreams</code></td></tr>
+            <tr><td><span class="tag">&lt;b&gt;</span></td><td>Bring attention (no importance)</td><td>Bold</td><td><code>We tested the &lt;b&gt;SuperSound 3000&lt;/b&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;i&gt;</span></td><td>Alternate voice, idiom, technical term</td><td>Italic</td><td><code>A certain &lt;i lang="fr"&gt;je ne sais quoi&lt;/i&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;mark&gt;</span></td><td>Relevant/highlighted in current context</td><td>Yellow background</td><td><code>Search matched: &lt;mark&gt;HTML&lt;/mark&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;small&gt;</span></td><td>Side comments, fine print, legal</td><td>Smaller font</td><td><code>&lt;small&gt;&amp;copy; 2024 All rights reserved&lt;/small&gt;</code></td></tr>
+        </tbody>
+    </table>
+
+    <div class="important">⚠️ <strong>&lt;strong&gt; vs &lt;b&gt;:</strong> Use &lt;strong&gt; for genuinely important content. Use &lt;b&gt; to draw attention without importance (product names, keywords).<br>
+    <strong>&lt;em&gt; vs &lt;i&gt;:</strong> Use &lt;em&gt; for stress that changes meaning. Use &lt;i&gt; for technical terms, foreign words, thoughts, ship names.</div>
+
+    <h3>Inline Edits</h3>
+    <div class="element-box">
+        <div class="element-name">&lt;del&gt; and &lt;ins&gt;</div>
+        <div class="element-description">&lt;del&gt; marks deleted text. &lt;ins&gt; marks inserted text. Both have <span class="attribute-name">cite</span> (URL explaining the change) and <span class="attribute-name">datetime</span> attributes.</div>
+        <div class="code-example">&lt;!-- Price edit --&gt;
+&lt;p&gt;&lt;del&gt;$99&lt;/del&gt; &lt;ins&gt;$49&lt;/ins&gt;&lt;/p&gt;
+
+&lt;!-- Document edit with attribution --&gt;
+&lt;p&gt;
+  &lt;del datetime="2024-01-01" cite="/changelog"&gt;Old requirement&lt;/del&gt;
+  &lt;ins datetime="2024-03-15"&gt;New requirement&lt;/ins&gt;
+&lt;/p&gt;</div>
+    </div>
+
+    <h3>Code &amp; Technical Text</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th><th>Example</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;code&gt;</span></td><td>Inline code fragment</td><td>Use <code>&lt;code&gt;color: red;&lt;/code&gt;</code> in CSS</td></tr>
+            <tr><td><span class="tag">&lt;pre&gt;</span></td><td>Preformatted text block (preserves whitespace)</td><td>Used to wrap multi-line &lt;code&gt;</td></tr>
+            <tr><td><span class="tag">&lt;kbd&gt;</span></td><td>Keyboard input by the user</td><td>Press <code>&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;S&lt;/kbd&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;samp&gt;</span></td><td>Sample output from a program</td><td><code>&lt;samp&gt;Error: file not found&lt;/samp&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;var&gt;</span></td><td>Mathematical variable or placeholder</td><td>The variable <code>&lt;var&gt;n&lt;/var&gt;</code> represents count</td></tr>
+        </tbody>
+    </table>
+
+    <div class="code-example">&lt;!-- Inline code --&gt;
+&lt;p&gt;To change text color use &lt;code&gt;color: blue;&lt;/code&gt; in CSS.&lt;/p&gt;
+
+&lt;!-- Code block (multi-line) --&gt;
+&lt;pre&gt;
+  &lt;code&gt;
+function greet(name) {
+  return "Hello, " + name;
+}
+  &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;!-- Keyboard --&gt;
+&lt;p&gt;Press &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt; to copy.&lt;/p&gt;
+
+&lt;!-- Program output --&gt;
+&lt;p&gt;The terminal shows: &lt;samp&gt;$ npm install&lt;/samp&gt;&lt;/p&gt;
+
+&lt;!-- Variable --&gt;
+&lt;p&gt;Area = &lt;var&gt;width&lt;/var&gt; × &lt;var&gt;height&lt;/var&gt;&lt;/p&gt;</div>
+
+    <h3>Superscript, Subscript, and Strikethrough</h3>
+    <div class="element-box">
+        <div class="element-name">&lt;sup&gt; — Superscript</div>
+        <div class="element-description">Raised text. Use for: exponents, footnote markers, ordinal suffixes.</div>
+        <div class="code-example">&lt;p&gt;2&lt;sup&gt;10&lt;/sup&gt; = 1,024&lt;/p&gt;
+&lt;p&gt;Einstein&amp;apos;s equation: E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Monseigneur: M&lt;sup&gt;gr&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;1&lt;sup&gt;st&lt;/sup&gt;, 2&lt;sup&gt;nd&lt;/sup&gt;, 3&lt;sup&gt;rd&lt;/sup&gt;&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;sub&gt; — Subscript</div>
+        <div class="element-description">Lowered text. Use for: chemical formulas, footnotes, variable subscripts.</div>
+        <div class="code-example">&lt;p&gt;Water: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+&lt;p&gt;CO&lt;sub&gt;2&lt;/sub&gt; is carbon dioxide.&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;s&gt; — Strikethrough (no longer relevant)</div>
+        <div class="element-description">Text that is no longer accurate or relevant. Use for: old prices, canceled events. Different from &lt;del&gt; which marks edits to a document.</div>
+        <div class="code-example">&lt;p&gt;&lt;s&gt;Tomorrow's hike starts at noon.&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;The hike has been cancelled due to rain.&lt;/p&gt;
+
+&lt;p&gt;&lt;s&gt;$199&lt;/s&gt; Now only $99!&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;u&gt; — Unarticulated Annotation</div>
+        <div class="element-description">Inline text with a non-textual annotation — rendered as underline. Use for: spell-check errors, Chinese proper nouns. Do NOT use for styling (use CSS instead).</div>
+        <div class="code-example">&lt;p&gt;The document has &lt;u&gt;speling&lt;/u&gt; errors.&lt;/p&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: QUOTATIONS AND CITATIONS -->
+<!-- ============================================================ -->
+<section>
+    <h2>4. Quotations &amp; Citations</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;blockquote&gt;</div>
+        <div class="element-description">Block-level quotation from another source. Browsers visually indent it. Does NOT add quotation marks automatically.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">cite</span><div class="attribute-desc">URL of the source (not visible, used by browsers/search engines)</div></div>
+        </div>
+        <div class="code-example">&lt;blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/"&gt;
+  &lt;p&gt;Can you imagine what it would be like to be a successful developer?&lt;/p&gt;
+  &lt;p&gt;To have built software systems that people rely upon?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;mdash; Quincy Larson, &lt;cite&gt;How to Learn to Code and Get a Developer Job&lt;/cite&gt;&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;q&gt;</div>
+        <div class="element-description">Inline quotation. Browsers add quotation marks automatically (differs by language/locale).</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">cite</span><div class="attribute-desc">URL of the source</div></div>
+        </div>
+        <div class="code-example">&lt;p&gt;
+  As Quincy Larson said,
+  &lt;q cite="https://www.freecodecamp.org/news/learn-to-code-book/"&gt;
+    Momentum is everything.
+  &lt;/q&gt;
+&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;cite&gt;</div>
+        <div class="element-description">Marks the <em>title</em> of a creative work being referenced (book, article, movie, song, painting). Renders as italic. Does NOT mark the author's name — only the title.</div>
+        <div class="code-example">&lt;p&gt;I just finished reading &lt;cite&gt;The Pragmatic Programmer&lt;/cite&gt;.&lt;/p&gt;
+
+&lt;p&gt;The quote comes from &lt;cite&gt;How to Learn to Code and Get a Developer Job&lt;/cite&gt; by Quincy Larson.&lt;/p&gt;</div>
+    </div>
+
+    <div class="important">📌 <strong>Key distinction:</strong><br>
+    • &lt;q&gt; adds quotation marks automatically — use for short inline quotes<br>
+    • &lt;blockquote&gt; indents visually — use for longer block quotes<br>
+    • &lt;cite&gt; is for the <em>title</em> of the work, not the author's name</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: DESCRIPTION LISTS -->
+<!-- ============================================================ -->
+<section>
+    <h2>5. Description Lists</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</div>
+        <div class="element-description">A description list groups term-description pairs. Perfect for: glossaries, metadata, FAQ sections, dictionaries.</div>
+        <div class="code-example">&lt;!-- Basic description list (glossary) --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language — defines the structure of web pages.&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets — handles the visual presentation.&lt;/dd&gt;
+
+  &lt;dt&gt;JavaScript&lt;/dt&gt;
+  &lt;dd&gt;A programming language that adds interactivity to web pages.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;!-- One term, multiple descriptions --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Web Developer&lt;/dt&gt;
+  &lt;dd&gt;Someone who builds websites and web applications.&lt;/dd&gt;
+  &lt;dd&gt;Can specialize in front-end, back-end, or full-stack.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;!-- Multiple terms, one description --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dt&gt;HyperText Markup Language&lt;/dt&gt;
+  &lt;dd&gt;The standard language for creating web pages.&lt;/dd&gt;
+&lt;/dl&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: TIME AND DATE -->
+<!-- ============================================================ -->
+<section>
+    <h2>6. Time &amp; Date</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;time&gt;</div>
+        <div class="element-description">Represents a specific time (24-hour clock) or date. The <span class="attribute-name">datetime</span> attribute gives a machine-readable format while the content can be human-readable.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">datetime</span><div class="attribute-desc">Machine-readable format. Used by browsers, search engines, and calendar apps.</div></div>
+        </div>
+        <div class="code-example">&lt;!-- Date only --&gt;
+&lt;p&gt;Published: &lt;time datetime="2024-03-15"&gt;March 15, 2024&lt;/time&gt;&lt;/p&gt;
+
+&lt;!-- Time only --&gt;
+&lt;p&gt;Meeting at &lt;time datetime="14:30"&gt;2:30 PM&lt;/time&gt;.&lt;/p&gt;
+
+&lt;!-- Date and time --&gt;
+&lt;p&gt;Event: &lt;time datetime="2024-12-25T18:00:00"&gt;Christmas dinner at 6 PM&lt;/time&gt;&lt;/p&gt;
+
+&lt;!-- With timezone offset --&gt;
+&lt;time datetime="2024-12-25T18:00:00-05:00"&gt;Christmas 6 PM EST&lt;/time&gt;
+
+&lt;!-- Duration --&gt;
+&lt;p&gt;This video is &lt;time datetime="PT2H30M"&gt;2 hours 30 minutes&lt;/time&gt; long.&lt;/p&gt;
+
+&lt;!-- Datetime format reference:
+  YYYY-MM-DD           → 2024-03-15
+  hh:mm                → 14:30
+  YYYY-MM-DDThh:mm:ss  → 2024-03-15T14:30:00
+  PTxHxMxS             → PT2H30M (duration: 2 hours 30 min)
+--&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: ABBREVIATIONS AND DEFINITIONS -->
+<!-- ============================================================ -->
+<section>
+    <h2>7. Abbreviations &amp; Definitions</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;abbr&gt;</div>
+        <div class="element-description">Represents an abbreviation or acronym. The <span class="attribute-name">title</span> attribute provides the full expansion, shown as a tooltip.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc">The full form of the abbreviation (shown as tooltip)</div></div>
+        </div>
+        <div class="code-example">&lt;p&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; is the foundation of the web.&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="World Wide Web Consortium"&gt;W3C&lt;/abbr&gt; sets web standards.&lt;/p&gt;
+&lt;p&gt;We use &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; for styling.&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;dfn&gt;</div>
+        <div class="element-description">Marks the defining instance of a term — where the term is first defined/explained. Usually the &lt;dfn&gt; is inside a &lt;p&gt; or &lt;dl&gt; that contains the definition.</div>
+        <div class="code-example">&lt;p&gt;
+  &lt;dfn&gt;HTML&lt;/dfn&gt; (HyperText Markup Language) is the standard
+  language for creating web pages.
+&lt;/p&gt;
+
+&lt;!-- dfn with abbr --&gt;
+&lt;p&gt;
+  &lt;dfn&gt;&lt;abbr title="Application Programming Interface"&gt;API&lt;/abbr&gt;&lt;/dfn&gt;
+  is a way for programs to communicate with each other.
+&lt;/p&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 8: RUBY ANNOTATIONS -->
+<!-- ============================================================ -->
+<section>
+    <h2>8. Ruby Annotations</h2>
+    <p style="color:#555; margin-bottom:15px;">Ruby annotations add pronunciation or translation guides above or beside East Asian characters. Also used for educational content.</p>
+
+    <div class="element-box">
+        <div class="element-name">&lt;ruby&gt;, &lt;rt&gt;, &lt;rp&gt;</div>
+        <div class="element-description">
+            <strong>&lt;ruby&gt;</strong> wraps the base text and annotation together.<br>
+            <strong>&lt;rt&gt;</strong> contains the ruby text (pronunciation/meaning) — displayed above.<br>
+            <strong>&lt;rp&gt;</strong> provides fallback parentheses for browsers without ruby support.
+        </div>
+        <div class="code-example">&lt;!-- Japanese with pronunciation --&gt;
+&lt;ruby&gt;
+  明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;
+&lt;!-- Displays as: 明日 with "Ashita" above --&gt;
+&lt;!-- Fallback (no ruby support): 明日 (Ashita) --&gt;
+
+&lt;!-- Chinese --&gt;
+&lt;ruby&gt;
+  漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;hàn&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+  字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;zì&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;
+&lt;/ruby&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 9: FIGURE AND FIGCAPTION -->
+<!-- ============================================================ -->
+<section>
+    <h2>9. Figure &amp; Figcaption</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;figure&gt; and &lt;figcaption&gt;</div>
+        <div class="element-description">&lt;figure&gt; wraps self-contained content referenced from the main text — not just images! Can hold: images, illustrations, code blocks, poems, quotes, tables, diagrams. &lt;figcaption&gt; labels the figure (first or last child of &lt;figure&gt;).</div>
+        <div class="code-example">&lt;!-- Image figure --&gt;
+&lt;figure&gt;
+  &lt;img src="architecture.jpg" alt="Bird's eye view of a modern building"&gt;
+  &lt;figcaption&gt;Figure 1: The Guggenheim Museum in Bilbao, Spain.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Code figure --&gt;
+&lt;figure&gt;
+  &lt;pre&gt;&lt;code&gt;function add(a, b) {
+  return a + b;
+}&lt;/code&gt;&lt;/pre&gt;
+  &lt;figcaption&gt;Listing 1: A simple addition function in JavaScript.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Blockquote figure --&gt;
+&lt;figure&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;The best way to predict the future is to invent it.&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;figcaption&gt;&amp;mdash; Alan Kay&lt;/figcaption&gt;
+&lt;/figure&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 10: INTERACTIVE ELEMENTS -->
+<!-- ============================================================ -->
+<section>
+    <h2>10. Interactive Elements</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;details&gt; and &lt;summary&gt;</div>
+        <div class="element-description">&lt;details&gt; creates a collapsible disclosure widget. &lt;summary&gt; is the always-visible label/toggle. When clicked, the rest of &lt;details&gt; expands or collapses. No JavaScript needed.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">open</span><div class="attribute-desc">Boolean: the details are expanded by default when present</div></div>
+        </div>
+        <div class="code-example">&lt;details&gt;
+  &lt;summary&gt;What is HTML?&lt;/summary&gt;
+  &lt;p&gt;HTML stands for HyperText Markup Language. It's the standard language for creating web pages.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;!-- Open by default --&gt;
+&lt;details open&gt;
+  &lt;summary&gt;Installation Instructions&lt;/summary&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Download the installer&lt;/li&gt;
+    &lt;li&gt;Run the installer&lt;/li&gt;
+    &lt;li&gt;Follow the prompts&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/details&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;dialog&gt;</div>
+        <div class="element-description">Represents a dialog box or modal window. Use JavaScript to open it.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">open</span><div class="attribute-desc">Boolean: dialog is visible</div></div>
+        </div>
+        <div class="code-example">&lt;dialog id="myDialog"&gt;
+  &lt;h2&gt;Confirm Action&lt;/h2&gt;
+  &lt;p&gt;Are you sure you want to delete this item?&lt;/p&gt;
+  &lt;button onclick="document.getElementById('myDialog').close()"&gt;Cancel&lt;/button&gt;
+  &lt;button&gt;Delete&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;button onclick="document.getElementById('myDialog').showModal()"&gt;
+  Open Dialog
+&lt;/button&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 11: INTERNAL LINKS & SKIP NAVIGATION -->
+<!-- ============================================================ -->
+<section>
+    <h2>11. Internal Links &amp; Page Navigation</h2>
+
+    <div class="element-box">
+        <div class="element-name">Anchor Links (Jump-to-Section)</div>
+        <div class="element-description">Link to any element on the page by targeting its <span class="attribute-name">id</span>.</div>
+        <div class="code-example">&lt;!-- Table of Contents at top of page --&gt;
+&lt;nav aria-label="Table of contents"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href="#introduction"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#methods"&gt;Methods&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#results"&gt;Results&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#conclusion"&gt;Conclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;!-- Target sections --&gt;
+&lt;section id="introduction"&gt;
+  &lt;h2&gt;Introduction&lt;/h2&gt;
+  ...
+&lt;/section&gt;
+
+&lt;section id="methods"&gt;
+  &lt;h2&gt;Methods&lt;/h2&gt;
+  ...
+&lt;/section&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Skip Navigation Link</div>
+        <div class="element-description">A visually hidden link at the top of the page that lets keyboard/screen reader users skip directly to main content. Essential for accessibility.</div>
+        <div class="code-example">&lt;!-- Usually hidden with CSS until focused --&gt;
+&lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+
+&lt;!-- CSS for skip link (hidden until focused) --&gt;
+&lt;style&gt;
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+&lt;/style&gt;
+
+&lt;main id="main-content"&gt;
+  ...page content...
+&lt;/main&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 12: FULL PAGE STRUCTURE EXAMPLE -->
+<!-- ============================================================ -->
+<section>
+    <h2>12. Complete Semantic Page Structure</h2>
+
+    <div class="code-example">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;meta name="description" content="Mr. Whiskers' cat blog"&gt;
+  &lt;title&gt;Mr. Whiskers' Blog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- Skip link for keyboard users --&gt;
+  &lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;Mr. Whiskers' Blog&lt;/h1&gt;
+    &lt;figure&gt;
+      &lt;img src="cat.jpg" alt="Mr. Whiskers in the garden"&gt;
+      &lt;figcaption&gt;Mr. Whiskers at home&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;nav aria-label="Main navigation"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#posts"&gt;Posts&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main id="main-content"&gt;
+
+    &lt;section id="about"&gt;
+      &lt;h2&gt;About&lt;/h2&gt;
+      &lt;p&gt;Welcome to my blog about my cat Mr. Whiskers!&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="posts"&gt;
+      &lt;h2&gt;Recent Posts&lt;/h2&gt;
+
+      &lt;article&gt;
+        &lt;header&gt;
+          &lt;h3&gt;Mr. Whiskers' First Day Home&lt;/h3&gt;
+          &lt;time datetime="2024-03-01"&gt;March 1, 2024&lt;/time&gt;
+        &lt;/header&gt;
+        &lt;p&gt;What a day it was...&lt;/p&gt;
+      &lt;/article&gt;
+
+      &lt;article&gt;
+        &lt;header&gt;
+          &lt;h3&gt;Learning to Purr&lt;/h3&gt;
+          &lt;time datetime="2024-03-10"&gt;March 10, 2024&lt;/time&gt;
+        &lt;/header&gt;
+        &lt;p&gt;Mr. Whiskers mastered the art of purring...&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+
+    &lt;aside&gt;
+      &lt;h2&gt;Cat Facts&lt;/h2&gt;
+      &lt;p&gt;Cats sleep 12–16 hours a day on average.&lt;/p&gt;
+    &lt;/aside&gt;
+
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;section id="contact"&gt;
+      &lt;h2&gt;Contact&lt;/h2&gt;
+      &lt;address&gt;
+        &lt;p&gt;Phone: &lt;a href="tel:5555555555"&gt;555-555-5555&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Email: &lt;a href="mailto:jane@example.com"&gt;jane@example.com&lt;/a&gt;&lt;/p&gt;
+      &lt;/address&gt;
+    &lt;/section&gt;
+    &lt;p&gt;&amp;copy; 2024 Mr. Whiskers' Blog&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML Reference — All-in-One</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background: #f0f2f5; padding: 0 20px 40px; }
+        .nav-bar { background: #2c3e50; padding: 12px 20px; position: sticky; top: 0; z-index: 100; text-align: center; margin-bottom: 30px; }
+        .nav-bar a { color: #ecf0f1; text-decoration: none; margin: 0 8px; font-weight: 600; font-size: 0.85em; padding: 4px 8px; border-radius: 4px; }
+        .nav-bar a:hover { background: #3498db; }
+        .nav-bar a.active { background: #3498db; }
+        h1 { text-align: center; color: #2c3e50; margin: 30px auto 50px; font-size: 2.5em; border-bottom: 4px solid #3498db; padding-bottom: 20px; max-width: 1000px; }
+        h2 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; margin-top: 40px; margin-bottom: 20px; border-radius: 5px; font-size: 1.8em; }
+        h3 { color: #667eea; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em; border-left: 4px solid #667eea; padding-left: 15px; }
+        section { background: white; max-width: 1000px; margin: 20px auto; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .element-box { background: #f8f9fa; border: 2px solid #e9ecef; border-left: 5px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .element-name { font-weight: 700; color: #2c3e50; font-size: 1.1em; margin-bottom: 8px; font-family: 'Courier New', monospace; }
+        .element-description { color: #555; margin-bottom: 10px; }
+        .attributes { background: white; border: 1px solid #ddd; border-radius: 3px; padding: 12px; margin-top: 10px; font-size: 0.95em; }
+        .attribute { margin: 8px 0; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+        .attribute:last-child { border-bottom: none; }
+        .attribute-name { font-weight: 600; color: #e74c3c; font-family: 'Courier New', monospace; }
+        .attribute-desc { color: #666; margin-left: 20px; }
+        .code-example { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.9em; line-height: 1.6; white-space: pre; }
+        .important { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        .tip { background: #d4edda; border-left: 4px solid #28a745; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        table.reference { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        table.reference th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        table.reference td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        table.reference tr:nth-child(even) { background: #f9f9f9; }
+        .tag { background: #e8f4f8; color: #2c3e50; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; font-weight: 600; }
+        .attribute-value { color: #27ae60; font-weight: 600; }
+        .part-header { max-width: 1000px; margin: 50px auto 0; padding: 20px 30px; background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); color: white; border-radius: 8px 8px 0 0; font-size: 1.5em; font-weight: 700; }
+        @media (max-width: 768px) { h1 { font-size: 1.8em; } h2 { font-size: 1.3em; } section { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="1-html-basics.html">1 Basics</a>
+    <a href="2-html-semantics.html">2 Semantics</a>
+    <a href="3-html-forms-tables.html">3 Forms &amp; Tables</a>
+    <a href="4-html-accessibility.html">4 Accessibility</a>
+    <a href="all-html-reference.html" class="active">All-in-One</a>
+</div>
+
+<h1>Complete HTML Reference — All-in-One</h1>
+
+<!-- TABLE OF CONTENTS -->
+<section>
+    <h2>Table of Contents</h2>
+    <p style="color:#555; margin-bottom:15px;"><strong>Use Ctrl+F / Cmd+F</strong> to search this page for any topic. Or jump to a part:</p>
+    <table class="reference">
+        <thead><tr><th>Part</th><th>Topics Covered</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Part 1: Basics</strong></td><td>Document structure, headings, text, links, images, media, lists, global attributes, HTML entities, void elements</td></tr>
+            <tr><td><strong>Part 2: Semantics</strong></td><td>Landmark elements (header, nav, main, article, section, aside, footer), text semantics, quotations, description lists, time, figure, interactive elements</td></tr>
+            <tr><td><strong>Part 3: Forms &amp; Tables</strong></td><td>form, input (all types), label, button, textarea, select, datalist, fieldset/legend, form states, table, thead/tbody/tfoot, colspan/rowspan</td></tr>
+            <tr><td><strong>Part 4: Accessibility</strong></td><td>WCAG POUR, heading structure, alt text, link text, form accessibility, audio/video, keyboard navigation (tabindex, accesskey, skip links), ARIA attributes, ARIA roles, color contrast, checklist</td></tr>
+            <tr><td><strong>Part 5: Interview Q&amp;A</strong></td><td>25 common HTML interview questions with detailed answers — definitions, comparisons, best practices</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- WHAT IS HTML -->
+<section>
+    <h2>What Is HTML? — Definition &amp; Purpose</h2>
+
+    <div class="element-box">
+        <div class="element-name">HTML — HyperText Markup Language</div>
+        <div class="element-description"><strong>HTML</strong> is the standard language for creating web pages. It was created by <strong>Tim Berners-Lee</strong> in 1991 and is maintained by the <strong>W3C (World Wide Web Consortium)</strong> and <strong>WHATWG</strong>. The current version is <strong>HTML5</strong> (living standard).</div>
+        <p style="margin-top:12px; color:#555;">
+            <strong>HyperText</strong> = text that contains links to other documents (hyperlinks).<br>
+            <strong>Markup</strong> = a system of tags/annotations that describe how content should be structured.<br>
+            <strong>Language</strong> = a formal notation with defined rules and syntax.
+        </p>
+    </div>
+
+    <h3>What HTML Does (and Does Not Do)</h3>
+    <table class="reference">
+        <thead><tr><th>HTML Does</th><th>HTML Does NOT Do</th></tr></thead>
+        <tbody>
+            <tr><td>Defines the <strong>structure</strong> of a web page</td><td>Style/design (that's CSS)</td></tr>
+            <tr><td>Describes the <strong>meaning</strong> of content (semantics)</td><td>Interactivity or logic (that's JavaScript)</td></tr>
+            <tr><td>Creates headings, paragraphs, lists, tables, forms</td><td>Animate or add visual effects</td></tr>
+            <tr><td>Embeds images, audio, video</td><td>Communicate with databases directly</td></tr>
+            <tr><td>Provides links between pages</td><td>Handle user authentication</td></tr>
+            <tr><td>Adds metadata for browsers and search engines</td><td>Process payments or server-side logic</td></tr>
+        </tbody>
+    </table>
+
+    <h3>HTML's Role in the Web Stack</h3>
+    <div class="element-box">
+        <div class="element-name">The Three Layers of a Web Page</div>
+        <p style="color:#555; line-height:2.2; margin-top:8px;">
+            <strong>HTML</strong> — Structure &amp; Content: "What is on the page?" (headings, text, images, forms)<br>
+            <strong>CSS</strong> — Presentation &amp; Style: "How does it look?" (colors, fonts, layout, spacing)<br>
+            <strong>JavaScript</strong> — Behavior &amp; Interactivity: "What does it do?" (clicks, animations, data fetching)
+        </p>
+        <div class="code-example">&lt;!-- HTML: defines the content --&gt;
+&lt;button id="greet-btn"&gt;Say Hello&lt;/button&gt;
+
+&lt;!-- CSS: styles it --&gt;
+&lt;style&gt;
+  #greet-btn { background: #3498db; color: white; padding: 10px 20px; }
+&lt;/style&gt;
+
+&lt;!-- JavaScript: makes it interactive --&gt;
+&lt;script&gt;
+  document.getElementById("greet-btn").addEventListener("click", () =&gt; {
+    alert("Hello, World!");
+  });
+&lt;/script&gt;</div>
+    </div>
+
+    <h3>Brief History of HTML</h3>
+    <table class="reference">
+        <thead><tr><th>Year</th><th>Version</th><th>Key Changes</th></tr></thead>
+        <tbody>
+            <tr><td>1991</td><td>HTML 1.0</td><td>Tim Berners-Lee's original proposal. Basic text + links.</td></tr>
+            <tr><td>1995</td><td>HTML 2.0</td><td>First formal standard. Added forms.</td></tr>
+            <tr><td>1997</td><td>HTML 3.2</td><td>Tables, applets, text flow around images.</td></tr>
+            <tr><td>1997</td><td>HTML 4.0</td><td>Stylesheets, scripting, internationalization.</td></tr>
+            <tr><td>1999</td><td>HTML 4.01</td><td>Small cleanup of 4.0. Long-standing standard.</td></tr>
+            <tr><td>2008–2014</td><td>HTML5</td><td>Semantic elements, audio/video, canvas, local storage, form controls, ARIA. Became official standard in 2014.</td></tr>
+            <tr><td>2014–now</td><td>HTML5 Living Standard</td><td>Continuously updated by WHATWG. No version numbers — always evolving.</td></tr>
+        </tbody>
+    </table>
+
+    <h3>How a Browser Renders HTML</h3>
+    <div class="element-box">
+        <div class="element-name">Browser Rendering Pipeline</div>
+        <p style="color:#555; line-height:2.2; margin-top:8px;">
+            1. <strong>Parse HTML</strong> → Browser reads the HTML file top-to-bottom and builds the <strong>DOM</strong> (Document Object Model) — a tree of nodes.<br>
+            2. <strong>Parse CSS</strong> → Browser reads stylesheets and builds the <strong>CSSOM</strong> (CSS Object Model).<br>
+            3. <strong>Combine</strong> → DOM + CSSOM = <strong>Render Tree</strong>.<br>
+            4. <strong>Layout</strong> → Calculate exact position/size of every element on screen.<br>
+            5. <strong>Paint</strong> → Draw pixels to the screen.<br>
+            6. <strong>Composite</strong> → Layer and display the final result.
+        </p>
+        <div class="important">📌 This is why &lt;script&gt; without <em>defer</em> or <em>async</em> blocks parsing — the browser stops building the DOM until the script executes. Always add <strong>defer</strong> to your scripts in &lt;head&gt;.</div>
+    </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- PART 1: HTML BASICS -->
+<!-- ================================================================ -->
+
+<div class="part-header">Part 1 — HTML Basics</div>
+
+<section>
+    <h2>1. What Is HTML &amp; Syntax</h2>
+
+    <div class="element-box">
+        <div class="element-name">HTML Element Syntax</div>
+        <div class="element-description">HTML defines the content and structure of web pages. Most elements have an opening tag, content, and a closing tag. <strong>Void elements</strong> have no closing tag (img, br, hr, input, meta, link, etc.).</div>
+        <div class="code-example">&lt;!-- Regular element --&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;h1&gt;This is a heading.&lt;/h1&gt;
+
+&lt;!-- Void element (no closing tag) --&gt;
+&lt;img src="photo.jpg" alt="A photo"&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;input type="text"&gt;
+
+&lt;!-- Comment (not displayed in browser) --&gt;
+&lt;!-- This is a comment --&gt;</div>
+    </div>
+
+    <h3>All HTML5 Void Elements</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;img&gt;</span></td><td>Image</td></tr>
+            <tr><td><span class="tag">&lt;input&gt;</span></td><td>Form input</td></tr>
+            <tr><td><span class="tag">&lt;br&gt;</span></td><td>Line break</td></tr>
+            <tr><td><span class="tag">&lt;hr&gt;</span></td><td>Horizontal rule (thematic break)</td></tr>
+            <tr><td><span class="tag">&lt;meta&gt;</span></td><td>Metadata</td></tr>
+            <tr><td><span class="tag">&lt;link&gt;</span></td><td>External resource link</td></tr>
+            <tr><td><span class="tag">&lt;area&gt;</span></td><td>Image map area</td></tr>
+            <tr><td><span class="tag">&lt;base&gt;</span></td><td>Base URL for relative links</td></tr>
+            <tr><td><span class="tag">&lt;col&gt;</span></td><td>Table column properties</td></tr>
+            <tr><td><span class="tag">&lt;source&gt;</span></td><td>Media source (audio/video/picture)</td></tr>
+            <tr><td><span class="tag">&lt;track&gt;</span></td><td>Text track for media</td></tr>
+            <tr><td><span class="tag">&lt;wbr&gt;</span></td><td>Word break opportunity</td></tr>
+            <tr><td><span class="tag">&lt;embed&gt;</span></td><td>External content embed</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>2. Document Structure</h2>
+
+    <div class="code-example">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="Brief page description for SEO"&gt;
+    &lt;title&gt;Page Title — Site Name&lt;/title&gt;
+    &lt;link rel="icon" href="favicon.png" type="image/png"&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;script src="main.js" defer&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;Welcome to my page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</div>
+
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th><th>Key Attributes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;!DOCTYPE html&gt;</span></td><td>HTML5 declaration — must be first line</td><td>—</td></tr>
+            <tr><td><span class="tag">&lt;html&gt;</span></td><td>Root element</td><td>lang, dir</td></tr>
+            <tr><td><span class="tag">&lt;head&gt;</span></td><td>Metadata container (not displayed)</td><td>—</td></tr>
+            <tr><td><span class="tag">&lt;body&gt;</span></td><td>Visible page content</td><td>—</td></tr>
+            <tr><td><span class="tag">&lt;title&gt;</span></td><td>Browser tab title (exactly one per page)</td><td>—</td></tr>
+            <tr><td><span class="tag">&lt;meta&gt;</span></td><td>Metadata (charset, viewport, SEO, Open Graph)</td><td>charset, name, content, property</td></tr>
+            <tr><td><span class="tag">&lt;link&gt;</span></td><td>External resources (CSS, favicon, canonical)</td><td>rel, href, type, media</td></tr>
+            <tr><td><span class="tag">&lt;script&gt;</span></td><td>JavaScript (inline or external)</td><td>src, defer, async, type</td></tr>
+            <tr><td><span class="tag">&lt;style&gt;</span></td><td>Inline CSS</td><td>—</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Essential Meta Tags</h3>
+    <div class="code-example">&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="Page description (used in search results)"&gt;
+&lt;meta name="author" content="Jane Doe"&gt;
+&lt;meta name="keywords" content="HTML, CSS, web dev"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+
+&lt;!-- Open Graph (social media previews) --&gt;
+&lt;meta property="og:title" content="Page Title"&gt;
+&lt;meta property="og:description" content="Page description"&gt;
+&lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+&lt;meta property="og:url" content="https://example.com"&gt;
+
+&lt;!-- Twitter Card --&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;</div>
+</section>
+
+<section>
+    <h2>3. Text Content Elements</h2>
+
+    <h3>Headings</h3>
+    <div class="element-box">
+        <div class="element-name">&lt;h1&gt; to &lt;h6&gt;</div>
+        <div class="element-description">Six heading levels. One &lt;h1&gt; per page. Don't skip levels. Use for structure, not visual size.</div>
+        <div class="code-example">&lt;h1&gt;Main Page Title (one per page)&lt;/h1&gt;
+  &lt;h2&gt;Section Heading&lt;/h2&gt;
+    &lt;h3&gt;Subsection&lt;/h3&gt;
+    &lt;h3&gt;Another Subsection&lt;/h3&gt;
+  &lt;h2&gt;Next Section&lt;/h2&gt;</div>
+    </div>
+
+    <h3>Block Elements</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;p&gt;</span></td><td>Paragraph of text</td></tr>
+            <tr><td><span class="tag">&lt;div&gt;</span></td><td>Generic block container (no semantic meaning)</td></tr>
+            <tr><td><span class="tag">&lt;pre&gt;</span></td><td>Preformatted text — preserves whitespace, monospace font</td></tr>
+            <tr><td><span class="tag">&lt;br&gt;</span></td><td>Line break (void). Use sparingly.</td></tr>
+            <tr><td><span class="tag">&lt;hr&gt;</span></td><td>Horizontal rule — thematic break between content</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Inline Text Elements</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Meaning</th><th>Renders As</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;span&gt;</span></td><td>Generic inline container</td><td>No default style</td></tr>
+            <tr><td><span class="tag">&lt;strong&gt;</span></td><td>Strong importance / urgency</td><td>Bold</td></tr>
+            <tr><td><span class="tag">&lt;em&gt;</span></td><td>Stress emphasis (changes meaning)</td><td>Italic</td></tr>
+            <tr><td><span class="tag">&lt;b&gt;</span></td><td>Bring attention (no importance — product names)</td><td>Bold</td></tr>
+            <tr><td><span class="tag">&lt;i&gt;</span></td><td>Alternate voice, idiom, technical term, foreign word</td><td>Italic</td></tr>
+            <tr><td><span class="tag">&lt;mark&gt;</span></td><td>Highlighted in current context (search matches)</td><td>Yellow background</td></tr>
+            <tr><td><span class="tag">&lt;small&gt;</span></td><td>Fine print, side comments, legal text</td><td>Smaller font</td></tr>
+            <tr><td><span class="tag">&lt;del&gt;</span></td><td>Deleted text (document edit)</td><td>Strikethrough</td></tr>
+            <tr><td><span class="tag">&lt;ins&gt;</span></td><td>Inserted text (document edit)</td><td>Underline</td></tr>
+            <tr><td><span class="tag">&lt;sub&gt;</span></td><td>Subscript (H₂O, footnotes)</td><td>Lowered</td></tr>
+            <tr><td><span class="tag">&lt;sup&gt;</span></td><td>Superscript (x², footnote markers)</td><td>Raised</td></tr>
+            <tr><td><span class="tag">&lt;u&gt;</span></td><td>Unarticulated annotation (spell errors)</td><td>Underline</td></tr>
+            <tr><td><span class="tag">&lt;s&gt;</span></td><td>No longer relevant (old price, canceled event)</td><td>Strikethrough</td></tr>
+            <tr><td><span class="tag">&lt;code&gt;</span></td><td>Inline code snippet</td><td>Monospace</td></tr>
+            <tr><td><span class="tag">&lt;kbd&gt;</span></td><td>Keyboard input by user</td><td>Monospace box</td></tr>
+            <tr><td><span class="tag">&lt;samp&gt;</span></td><td>Program/computer output</td><td>Monospace</td></tr>
+            <tr><td><span class="tag">&lt;var&gt;</span></td><td>Mathematical variable or placeholder</td><td>Italic</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>4. Links — &lt;a&gt;</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;a&gt; — Anchor Element</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">href</span><div class="attribute-desc">Destination URL, anchor (#id), mailto:, tel:. Required for functional link.</div></div>
+            <div class="attribute"><span class="attribute-name">target</span><div class="attribute-desc">_self (default), _blank (new tab), _parent, _top</div></div>
+            <div class="attribute"><span class="attribute-name">rel</span><div class="attribute-desc">Use "noopener noreferrer" with target="_blank". Also: "nofollow", "canonical"</div></div>
+            <div class="attribute"><span class="attribute-name">download</span><div class="attribute-desc">Prompt download instead of navigate. Value = suggested filename.</div></div>
+            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc">Tooltip on hover</div></div>
+        </div>
+        <div class="code-example">&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;External link&lt;/a&gt;
+&lt;a href="about.html"&gt;Internal link&lt;/a&gt;
+&lt;a href="#section-id"&gt;Jump to section on same page&lt;/a&gt;
+&lt;a href="mailto:email@example.com"&gt;Send email&lt;/a&gt;
+&lt;a href="tel:+15555555555"&gt;Call us&lt;/a&gt;
+&lt;a href="resume.pdf" download="Jane_Resume.pdf"&gt;Download Resume&lt;/a&gt;</div>
+    </div>
+
+    <h3>Path Types</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Example</th><th>Meaning</th></tr></thead>
+        <tbody>
+            <tr><td>Absolute URL</td><td><code>https://example.com/page.html</code></td><td>Full URL</td></tr>
+            <tr><td>Same folder</td><td><code>page.html</code></td><td>Relative path</td></tr>
+            <tr><td>Parent folder</td><td><code>../index.html</code></td><td>Go up one level</td></tr>
+            <tr><td>Root relative</td><td><code>/images/photo.jpg</code></td><td>From site root</td></tr>
+            <tr><td>Anchor</td><td><code>#section-id</code></td><td>Same-page jump</td></tr>
+            <tr><td>Email</td><td><code>mailto:user@email.com</code></td><td>Open email client</td></tr>
+            <tr><td>Phone</td><td><code>tel:+15555555555</code></td><td>Phone call</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>5. Images &amp; Media</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;img&gt; (void element)</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">Path to image file (required)</div></div>
+            <div class="attribute"><span class="attribute-name">alt</span><div class="attribute-desc">Alternative text (required). Describe content + purpose. Use "" for decorative images.</div></div>
+            <div class="attribute"><span class="attribute-name">width / height</span><div class="attribute-desc">Set both to prevent layout shift (in pixels)</div></div>
+            <div class="attribute"><span class="attribute-name">loading</span><div class="attribute-desc">"lazy" (defer until near viewport) or "eager" (load immediately)</div></div>
+            <div class="attribute"><span class="attribute-name">srcset</span><div class="attribute-desc">Multiple sources for different screen sizes/densities</div></div>
+        </div>
+        <div class="code-example">&lt;img src="cat.jpg" alt="Orange tabby cat on a windowsill" width="400" height="300" loading="lazy"&gt;
+
+&lt;figure&gt;
+  &lt;img src="chart.png" alt="Bar chart showing 40% sales increase 2022–2024"&gt;
+  &lt;figcaption&gt;Figure 1: Annual Sales Growth&lt;/figcaption&gt;
+&lt;/figure&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;audio&gt; and &lt;video&gt;</div>
+        <div class="code-example">&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  Your browser does not support audio.
+&lt;/audio&gt;
+
+&lt;video controls width="640" height="360" poster="thumb.jpg"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track kind="captions" src="captions.vtt" srclang="en" label="English" default&gt;
+  Your browser does not support video.
+&lt;/video&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;iframe&gt;</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">src</span><div class="attribute-desc">URL to embed</div></div>
+            <div class="attribute"><span class="attribute-name">title</span><div class="attribute-desc">Accessible description (required)</div></div>
+            <div class="attribute"><span class="attribute-name">allowfullscreen</span><div class="attribute-desc">Allow fullscreen mode</div></div>
+            <div class="attribute"><span class="attribute-name">loading</span><div class="attribute-desc">"lazy" for deferred loading</div></div>
+        </div>
+        <div class="code-example">&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID"
+        title="Introduction to HTML" width="560" height="315"
+        allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;</div>
+    </div>
+</section>
+
+<section>
+    <h2>6. Lists</h2>
+
+    <div class="code-example">&lt;!-- Unordered list --&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered list (type: 1, A, a, I, i | start | reversed) --&gt;
+&lt;ol type="A" start="3"&gt;
+  &lt;li&gt;Step C&lt;/li&gt;
+  &lt;li&gt;Step D&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Nested list --&gt;
+&lt;ul&gt;
+  &lt;li&gt;Frontend
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Description list (glossary, FAQ) --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</div>
+</section>
+
+<section>
+    <h2>7. Global Attributes</h2>
+    <p style="color:#555; margin-bottom:15px;">Can be applied to <strong>any</strong> HTML element.</p>
+
+    <table class="reference">
+        <thead><tr><th>Attribute</th><th>Purpose</th><th>Example</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-name">id</span></td><td>Unique identifier per page. For CSS, JS, anchor links.</td><td><code>id="main-nav"</code></td></tr>
+            <tr><td><span class="attribute-name">class</span></td><td>CSS class names (space-separated, reusable)</td><td><code>class="card featured"</code></td></tr>
+            <tr><td><span class="attribute-name">style</span></td><td>Inline CSS (avoid overusing)</td><td><code>style="color: red;"</code></td></tr>
+            <tr><td><span class="attribute-name">title</span></td><td>Tooltip text on hover</td><td><code>title="More info"</code></td></tr>
+            <tr><td><span class="attribute-name">lang</span></td><td>Language of element's content</td><td><code>lang="fr"</code></td></tr>
+            <tr><td><span class="attribute-name">dir</span></td><td>Text direction: "ltr" or "rtl"</td><td><code>dir="rtl"</code></td></tr>
+            <tr><td><span class="attribute-name">hidden</span></td><td>Boolean: hides element (like display:none)</td><td><code>hidden</code></td></tr>
+            <tr><td><span class="attribute-name">tabindex</span></td><td>Keyboard focus order. Use 0 or -1 only.</td><td><code>tabindex="0"</code></td></tr>
+            <tr><td><span class="attribute-name">accesskey</span></td><td>Keyboard shortcut to focus/activate element</td><td><code>accesskey="s"</code></td></tr>
+            <tr><td><span class="attribute-name">contenteditable</span></td><td>"true" makes element editable in browser</td><td><code>contenteditable="true"</code></td></tr>
+            <tr><td><span class="attribute-name">draggable</span></td><td>"true"/"false" — HTML drag and drop</td><td><code>draggable="true"</code></td></tr>
+            <tr><td><span class="attribute-name">data-*</span></td><td>Custom data attributes for JavaScript</td><td><code>data-user-id="42"</code></td></tr>
+            <tr><td><span class="attribute-name">translate</span></td><td>"yes"/"no" — whether to translate content</td><td><code>translate="no"</code></td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>8. HTML Entities</h2>
+
+    <table class="reference">
+        <thead><tr><th>Character</th><th>Entity Name</th><th>Number</th><th>Use For</th></tr></thead>
+        <tbody>
+            <tr><td>&amp;</td><td><span class="attribute-value">&amp;amp;</span></td><td>&amp;#38;</td><td>Ampersand</td></tr>
+            <tr><td>&lt;</td><td><span class="attribute-value">&amp;lt;</span></td><td>&amp;#60;</td><td>Less-than (avoids starting a tag)</td></tr>
+            <tr><td>&gt;</td><td><span class="attribute-value">&amp;gt;</span></td><td>&amp;#62;</td><td>Greater-than</td></tr>
+            <tr><td>"</td><td><span class="attribute-value">&amp;quot;</span></td><td>&amp;#34;</td><td>Double quote in attributes</td></tr>
+            <tr><td>'</td><td><span class="attribute-value">&amp;apos;</span></td><td>&amp;#39;</td><td>Apostrophe</td></tr>
+            <tr><td>(space)</td><td><span class="attribute-value">&amp;nbsp;</span></td><td>&amp;#160;</td><td>Non-breaking space</td></tr>
+            <tr><td>©</td><td><span class="attribute-value">&amp;copy;</span></td><td>&amp;#169;</td><td>Copyright</td></tr>
+            <tr><td>®</td><td><span class="attribute-value">&amp;reg;</span></td><td>&amp;#174;</td><td>Registered trademark</td></tr>
+            <tr><td>™</td><td><span class="attribute-value">&amp;trade;</span></td><td>&amp;#8482;</td><td>Trademark</td></tr>
+            <tr><td>€</td><td><span class="attribute-value">&amp;euro;</span></td><td>&amp;#8364;</td><td>Euro</td></tr>
+            <tr><td>£</td><td><span class="attribute-value">&amp;pound;</span></td><td>&amp;#163;</td><td>Pound</td></tr>
+            <tr><td>→</td><td><span class="attribute-value">&amp;rarr;</span></td><td>&amp;#8594;</td><td>Right arrow</td></tr>
+            <tr><td>←</td><td><span class="attribute-value">&amp;larr;</span></td><td>&amp;#8592;</td><td>Left arrow</td></tr>
+            <tr><td>—</td><td><span class="attribute-value">&amp;mdash;</span></td><td>&amp;#8212;</td><td>Em dash</td></tr>
+            <tr><td>–</td><td><span class="attribute-value">&amp;ndash;</span></td><td>&amp;#8211;</td><td>En dash</td></tr>
+            <tr><td>×</td><td><span class="attribute-value">&amp;times;</span></td><td>&amp;#215;</td><td>Multiplication sign</td></tr>
+            <tr><td>÷</td><td><span class="attribute-value">&amp;divide;</span></td><td>&amp;#247;</td><td>Division sign</td></tr>
+            <tr><td>•</td><td><span class="attribute-value">&amp;bull;</span></td><td>&amp;#8226;</td><td>Bullet point</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ================================================================ -->
+<!-- PART 2: SEMANTICS -->
+<!-- ================================================================ -->
+
+<div class="part-header">Part 2 — HTML Semantics</div>
+
+<section>
+    <h2>9. Why Semantic HTML Matters</h2>
+    <p style="color:#555; margin-bottom:15px;"><strong>Semantic HTML</strong> uses elements that describe the <em>meaning</em> of content. Benefits: accessibility (screen readers), SEO (search engines), maintainability (readable code).</p>
+
+    <div class="code-example">&lt;!-- Non-semantic (meaningless structure) --&gt;
+&lt;div class="header"&gt;&lt;div class="nav"&gt;...&lt;/div&gt;&lt;/div&gt;
+&lt;div class="content"&gt;...&lt;/div&gt;
+&lt;div class="footer"&gt;...&lt;/div&gt;
+
+&lt;!-- Semantic (clear meaning) --&gt;
+&lt;header&gt;&lt;nav&gt;...&lt;/nav&gt;&lt;/header&gt;
+&lt;main&gt;...&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</div>
+</section>
+
+<section>
+    <h2>10. Document Landmark Elements</h2>
+
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th><th>How Many?</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;header&gt;</span></td><td>Introductory content, site logo, primary navigation</td><td>One page-level; more inside articles/sections</td></tr>
+            <tr><td><span class="tag">&lt;nav&gt;</span></td><td>Navigation links (main nav, breadcrumb, footer nav)</td><td>Multiple — use aria-label to distinguish</td></tr>
+            <tr><td><span class="tag">&lt;main&gt;</span></td><td>Primary, unique content of the page</td><td><strong>Exactly one</strong> per page</td></tr>
+            <tr><td><span class="tag">&lt;article&gt;</span></td><td>Self-contained, independently distributable content</td><td>Multiple — blog posts, news, forum posts</td></tr>
+            <tr><td><span class="tag">&lt;section&gt;</span></td><td>Thematic group of content with a heading</td><td>Multiple</td></tr>
+            <tr><td><span class="tag">&lt;aside&gt;</span></td><td>Tangentially related content — sidebar, pull quote, ads</td><td>Multiple</td></tr>
+            <tr><td><span class="tag">&lt;footer&gt;</span></td><td>Footer (copyright, contact info, links)</td><td>One page-level; more inside articles/sections</td></tr>
+            <tr><td><span class="tag">&lt;address&gt;</span></td><td>Contact info for article or page author</td><td>Multiple</td></tr>
+        </tbody>
+    </table>
+
+    <div class="code-example">&lt;body&gt;
+  &lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;Site Name&lt;/h1&gt;
+    &lt;nav aria-label="Main navigation"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/about" aria-current="page"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main id="main-content"&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Featured Projects&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;header&gt;
+          &lt;h3&gt;Project Alpha&lt;/h3&gt;
+          &lt;time datetime="2024-03-15"&gt;March 2024&lt;/time&gt;
+        &lt;/header&gt;
+        &lt;p&gt;Description...&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+      &lt;h2&gt;Related Links&lt;/h2&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;address&gt;
+      &lt;a href="mailto:jane@example.com"&gt;jane@example.com&lt;/a&gt;
+    &lt;/address&gt;
+    &lt;p&gt;&amp;copy; 2024 Jane Doe&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;</div>
+</section>
+
+<section>
+    <h2>11. Text Semantic Elements</h2>
+
+    <h3>Quotations</h3>
+    <div class="element-box">
+        <div class="element-name">&lt;blockquote&gt;, &lt;q&gt;, &lt;cite&gt;</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">blockquote</span><div class="attribute-desc">Block-level quote (indented). cite attribute = source URL. Does NOT add quotation marks.</div></div>
+            <div class="attribute"><span class="attribute-name">q</span><div class="attribute-desc">Inline quote. Browser adds quotation marks automatically.</div></div>
+            <div class="attribute"><span class="attribute-name">cite</span><div class="attribute-desc">Title of a referenced creative work (book, article, movie). Renders italic.</div></div>
+        </div>
+        <div class="code-example">&lt;blockquote cite="https://freecodecamp.org/"&gt;
+  &lt;p&gt;Can you imagine what it would be like to be a successful developer?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&amp;mdash; Quincy Larson, &lt;cite&gt;How to Learn to Code and Get a Developer Job&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;As he said, &lt;q&gt;Momentum is everything.&lt;/q&gt;&lt;/p&gt;</div>
+    </div>
+
+    <h3>Other Semantic Text Elements</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th><th>Example</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;abbr title="..."&gt;</span></td><td>Abbreviation with full form as tooltip</td><td><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;dfn&gt;</span></td><td>Defining instance of a term</td><td><code>&lt;dfn&gt;HTML&lt;/dfn&gt; is the markup language for the web.</code></td></tr>
+            <tr><td><span class="tag">&lt;time datetime="..."&gt;</span></td><td>Date/time (machine-readable datetime attr)</td><td><code>&lt;time datetime="2024-03-15"&gt;March 15, 2024&lt;/time&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;ruby&gt;&lt;rt&gt;&lt;rp&gt;</span></td><td>Ruby annotation for East Asian text</td><td><code>&lt;ruby&gt;明日&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code></td></tr>
+            <tr><td><span class="tag">&lt;details&gt;&lt;summary&gt;</span></td><td>Collapsible disclosure widget (no JS)</td><td>Click summary to expand/collapse content</td></tr>
+            <tr><td><span class="tag">&lt;dialog&gt;</span></td><td>Modal or non-modal dialog box</td><td>Use .showModal() / .close() in JS</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ================================================================ -->
+<!-- PART 3: FORMS & TABLES -->
+<!-- ================================================================ -->
+
+<div class="part-header">Part 3 — Forms &amp; Tables</div>
+
+<section>
+    <h2>12. Form Element</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;form&gt;</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">action</span><div class="attribute-desc">URL where form data is sent</div></div>
+            <div class="attribute"><span class="attribute-name">method</span><div class="attribute-desc">GET (data in URL, for search) or POST (data in body, for sensitive/mutating data)</div></div>
+            <div class="attribute"><span class="attribute-name">enctype</span><div class="attribute-desc">Encoding: "application/x-www-form-urlencoded" (default), "multipart/form-data" (file uploads), "text/plain"</div></div>
+            <div class="attribute"><span class="attribute-name">autocomplete</span><div class="attribute-desc">"on" or "off" for whole form</div></div>
+            <div class="attribute"><span class="attribute-name">novalidate</span><div class="attribute-desc">Boolean: skip browser validation</div></div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>13. Input Element — All Types &amp; Attributes</h2>
+
+    <h3>Common Input Attributes</h3>
+    <table class="reference">
+        <thead><tr><th>Attribute</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-name">type</span></td><td>Determines behavior (see type table below)</td></tr>
+            <tr><td><span class="attribute-name">id</span></td><td>Must match label's for attribute for accessibility</td></tr>
+            <tr><td><span class="attribute-name">name</span></td><td>Key sent to server. Required for data to submit.</td></tr>
+            <tr><td><span class="attribute-name">value</span></td><td>Default value or button label</td></tr>
+            <tr><td><span class="attribute-name">placeholder</span></td><td>Hint text in empty field. Not a label substitute!</td></tr>
+            <tr><td><span class="attribute-name">required</span></td><td>Boolean: must be filled to submit</td></tr>
+            <tr><td><span class="attribute-name">disabled</span></td><td>Boolean: non-interactive, not submitted</td></tr>
+            <tr><td><span class="attribute-name">readonly</span></td><td>Boolean: cannot edit, IS submitted</td></tr>
+            <tr><td><span class="attribute-name">checked</span></td><td>Boolean: pre-checked (checkbox/radio)</td></tr>
+            <tr><td><span class="attribute-name">multiple</span></td><td>Boolean: multiple files or emails</td></tr>
+            <tr><td><span class="attribute-name">autofocus</span></td><td>Boolean: gets focus on page load (use once)</td></tr>
+            <tr><td><span class="attribute-name">autocomplete</span></td><td>"on","off","name","email","username","current-password","new-password","tel","street-address"...</td></tr>
+            <tr><td><span class="attribute-name">minlength / maxlength</span></td><td>Min/max character count (text, email, password)</td></tr>
+            <tr><td><span class="attribute-name">min / max</span></td><td>Min/max value (number, range, date, time)</td></tr>
+            <tr><td><span class="attribute-name">step</span></td><td>Legal intervals for number/range/date</td></tr>
+            <tr><td><span class="attribute-name">size</span></td><td>Visual width in characters</td></tr>
+            <tr><td><span class="attribute-name">pattern</span></td><td>Regex pattern value must match</td></tr>
+            <tr><td><span class="attribute-name">list</span></td><td>ID of &lt;datalist&gt; for suggestions</td></tr>
+            <tr><td><span class="attribute-name">accept</span></td><td>File types for type="file": "image/*", ".pdf,.doc"</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Input Types — Complete List</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">text</span></td><td>Plain single-line text</td><td>Default type</td></tr>
+            <tr><td><span class="attribute-value">email</span></td><td>Email address with format validation</td><td>Numeric keypad on mobile</td></tr>
+            <tr><td><span class="attribute-value">password</span></td><td>Masked input</td><td>Characters hidden as user types</td></tr>
+            <tr><td><span class="attribute-value">search</span></td><td>Search field</td><td>Gets × clear button in some browsers</td></tr>
+            <tr><td><span class="attribute-value">url</span></td><td>URL with format validation</td><td>Requires http:// or https://</td></tr>
+            <tr><td><span class="attribute-value">tel</span></td><td>Telephone number</td><td>Numeric keypad on mobile; no format validation</td></tr>
+            <tr><td><span class="attribute-value">number</span></td><td>Numeric with spinner</td><td>Use min, max, step</td></tr>
+            <tr><td><span class="attribute-value">range</span></td><td>Slider (default 0–100)</td><td>Use min, max, step</td></tr>
+            <tr><td><span class="attribute-value">date</span></td><td>Date picker</td><td>Format: YYYY-MM-DD</td></tr>
+            <tr><td><span class="attribute-value">time</span></td><td>Time picker</td><td>Format: HH:MM</td></tr>
+            <tr><td><span class="attribute-value">datetime-local</span></td><td>Date + time, no timezone</td><td>Format: YYYY-MM-DDTHH:MM</td></tr>
+            <tr><td><span class="attribute-value">month</span></td><td>Month and year picker</td><td>Format: YYYY-MM</td></tr>
+            <tr><td><span class="attribute-value">week</span></td><td>Week picker</td><td>Format: YYYY-W##</td></tr>
+            <tr><td><span class="attribute-value">checkbox</span></td><td>Toggle — multiple can be checked</td><td>Same name = group</td></tr>
+            <tr><td><span class="attribute-value">radio</span></td><td>One option from group</td><td>Same name = group; only one selected</td></tr>
+            <tr><td><span class="attribute-value">color</span></td><td>Color picker</td><td>Returns #rrggbb hex value</td></tr>
+            <tr><td><span class="attribute-value">file</span></td><td>File upload</td><td>Use accept for file type filter; multiple for multi-file</td></tr>
+            <tr><td><span class="attribute-value">hidden</span></td><td>Not visible, submitted with form</td><td>Used for CSRF tokens, IDs</td></tr>
+            <tr><td><span class="attribute-value">submit</span></td><td>Submit the form</td><td>Use value for button text</td></tr>
+            <tr><td><span class="attribute-value">reset</span></td><td>Reset all form fields</td><td>Use carefully</td></tr>
+            <tr><td><span class="attribute-value">button</span></td><td>Generic button (no default)</td><td>Needs JavaScript to do anything</td></tr>
+            <tr><td><span class="attribute-value">image</span></td><td>Submit button as image</td><td>Requires src and alt</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>14. Labels, Buttons, Textarea, Select, Datalist, Fieldset</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;label&gt;</div>
+        <div class="element-description">Associates text with a form input. Clicking label focuses/activates input. Required for accessibility.</div>
+        <div class="code-example">&lt;!-- Explicit (recommended): for matches input id --&gt;
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+
+&lt;!-- Implicit: input nested inside label --&gt;
+&lt;label&gt;Full Name: &lt;input type="text" name="name"&gt;&lt;/label&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;button&gt;</div>
+        <div class="element-description">type="submit" (default in form, submits), type="reset" (clears form), type="button" (no action, use with JS)</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">formaction</span><div class="attribute-desc">Override form's action for this button</div></div>
+            <div class="attribute"><span class="attribute-name">formnovalidate</span><div class="attribute-desc">Skip validation when this button submits (for "Save Draft")</div></div>
+        </div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;textarea&gt;</div>
+        <div class="element-description">Multi-line text input. Default value goes between tags (not in value attribute).</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">rows / cols</span><div class="attribute-desc">Visible rows and columns. Control size with CSS width/height instead.</div></div>
+            <div class="attribute"><span class="attribute-name">wrap</span><div class="attribute-desc">"soft" (no line breaks submitted), "hard" (line breaks submitted)</div></div>
+        </div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;select&gt;, &lt;option&gt;, &lt;optgroup&gt;</div>
+        <div class="code-example">&lt;!-- Basic dropdown --&gt;
+&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country" required&gt;
+  &lt;option value=""&gt;-- Select --&lt;/option&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="uk" selected&gt;United Kingdom (default)&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Grouped options --&gt;
+&lt;select name="language"&gt;
+  &lt;optgroup label="Frontend"&gt;
+    &lt;option value="html"&gt;HTML&lt;/option&gt;
+    &lt;option value="css"&gt;CSS&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Backend"&gt;
+    &lt;option value="python"&gt;Python&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;!-- Multi-select (Ctrl+click) --&gt;
+&lt;select name="skills" multiple size="4"&gt;...&lt;/select&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;datalist&gt;</div>
+        <div class="element-description">Suggests autocomplete options for an input, but user can type anything. Link via list attribute.</div>
+        <div class="code-example">&lt;input type="text" id="browser" list="browsers"&gt;
+&lt;datalist id="browsers"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Safari"&gt;
+&lt;/datalist&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">&lt;fieldset&gt; and &lt;legend&gt;</div>
+        <div class="element-description">Groups related form controls. Legend is the group label — required for radio/checkbox groups for accessibility.</div>
+        <div class="code-example">&lt;fieldset&gt;
+  &lt;legend&gt;Preferred contact method:&lt;/legend&gt;
+  &lt;input type="radio" id="by-email" name="contact" value="email"&gt;
+  &lt;label for="by-email"&gt;Email&lt;/label&gt;
+  &lt;input type="radio" id="by-phone" name="contact" value="phone"&gt;
+  &lt;label for="by-phone"&gt;Phone&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;!-- Disable entire group at once --&gt;
+&lt;fieldset disabled&gt;
+  &lt;legend&gt;Payment (unavailable)&lt;/legend&gt;
+  ...all inputs disabled automatically...
+&lt;/fieldset&gt;</div>
+    </div>
+</section>
+
+<section>
+    <h2>15. HTML Tables</h2>
+    <div class="important">📌 Tables are for tabular data ONLY — never for page layout.</div>
+
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;table&gt;</span></td><td>Creates the table</td></tr>
+            <tr><td><span class="tag">&lt;caption&gt;</span></td><td>Table title — first child of &lt;table&gt;. Important for accessibility.</td></tr>
+            <tr><td><span class="tag">&lt;thead&gt;</span></td><td>Header rows group</td></tr>
+            <tr><td><span class="tag">&lt;tbody&gt;</span></td><td>Data rows group (main content)</td></tr>
+            <tr><td><span class="tag">&lt;tfoot&gt;</span></td><td>Footer rows group (totals, averages)</td></tr>
+            <tr><td><span class="tag">&lt;tr&gt;</span></td><td>Table row</td></tr>
+            <tr><td><span class="tag">&lt;th&gt;</span></td><td>Header cell — bold, centered. Use scope="col" or scope="row".</td></tr>
+            <tr><td><span class="tag">&lt;td&gt;</span></td><td>Data cell</td></tr>
+            <tr><td><span class="tag">&lt;colgroup&gt; / &lt;col&gt;</span></td><td>Style entire columns without repeating on each cell</td></tr>
+        </tbody>
+    </table>
+
+    <div class="element-box">
+        <div class="element-name">colspan and rowspan</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">colspan</span><div class="attribute-desc">Merge cells horizontally (number of columns to span)</div></div>
+            <div class="attribute"><span class="attribute-name">rowspan</span><div class="attribute-desc">Merge cells vertically (number of rows to span)</div></div>
+            <div class="attribute"><span class="attribute-name">scope</span><div class="attribute-desc">On &lt;th&gt;: "col" or "row" — helps screen readers link headers to data</div></div>
+        </div>
+    </div>
+
+    <div class="code-example">&lt;table&gt;
+  &lt;caption&gt;Calculus Final Exam Grades&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Last Name&lt;/th&gt;
+      &lt;th scope="col"&gt;First Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Grade&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Davis&lt;/td&gt;&lt;td&gt;Alex&lt;/td&gt;&lt;td&gt;54&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Doe&lt;/td&gt;&lt;td&gt;Samantha&lt;/td&gt;&lt;td&gt;92&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Rodriguez&lt;/td&gt;&lt;td&gt;Marcus&lt;/td&gt;&lt;td&gt;88&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;Class Average&lt;/td&gt;
+      &lt;td&gt;78&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- PART 4: ACCESSIBILITY -->
+<!-- ================================================================ -->
+
+<div class="part-header">Part 4 — Accessibility</div>
+
+<section>
+    <h2>16. WCAG POUR Principles</h2>
+
+    <div class="element-box">
+        <div class="element-name">P — Perceivable</div>
+        <p style="margin-top:8px; color:#555;">✓ Alt text for images &nbsp;✓ Captions for video &nbsp;✓ Transcripts for audio &nbsp;✓ Color contrast ≥ 4.5:1 (normal text) or 3:1 (large text) &nbsp;✓ Don't use color alone to convey information</p>
+    </div>
+    <div class="element-box">
+        <div class="element-name">O — Operable</div>
+        <p style="margin-top:8px; color:#555;">✓ All features keyboard accessible &nbsp;✓ Visible focus indicators &nbsp;✓ Skip navigation links &nbsp;✓ No content flashing &gt;3 times/second &nbsp;✓ Enough time to read content</p>
+    </div>
+    <div class="element-box">
+        <div class="element-name">U — Understandable</div>
+        <p style="margin-top:8px; color:#555;">✓ lang attribute on &lt;html&gt; &nbsp;✓ One logical h1, headings in order &nbsp;✓ Labels on form inputs &nbsp;✓ Descriptive error messages &nbsp;✓ Consistent navigation</p>
+    </div>
+    <div class="element-box">
+        <div class="element-name">R — Robust</div>
+        <p style="margin-top:8px; color:#555;">✓ Valid HTML &nbsp;✓ Semantic elements &nbsp;✓ ARIA when HTML isn't enough &nbsp;✓ Interactive elements have accessible names</p>
+    </div>
+</section>
+
+<section>
+    <h2>17. Keyboard Navigation</h2>
+
+    <div class="element-box">
+        <div class="element-name">tabindex</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">tabindex="0"</span><div class="attribute-desc">Makes element focusable in natural document order</div></div>
+            <div class="attribute"><span class="attribute-name">tabindex="-1"</span><div class="attribute-desc">Removes from tab order; programmable focus via JS (.focus())</div></div>
+            <div class="attribute"><span class="attribute-name">Positive values (AVOID)</span><div class="attribute-desc">Breaks natural tab order. Never use values greater than 0.</div></div>
+        </div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">accesskey</div>
+        <div class="element-description">Keyboard shortcut. Activation: Alt+key (Windows), Ctrl+Option+key (Mac). Document shortcuts visibly.</div>
+        <div class="code-example">&lt;button accesskey="s"&gt;Save (Alt+S)&lt;/button&gt;
+&lt;a href="/home" accesskey="h"&gt;Home (Alt+H)&lt;/a&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Skip Navigation Link</div>
+        <div class="code-example">&lt;!-- First element in body --&gt;
+&lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+...
+&lt;main id="main-content"&gt;...&lt;/main&gt;
+
+&lt;style&gt;
+.skip-link { position: absolute; top: -100px; left: 0;
+  background: #000; color: #fff; padding: 10px 20px; z-index: 999; }
+.skip-link:focus { top: 0; }
+&lt;/style&gt;</div>
+    </div>
+</section>
+
+<section>
+    <h2>18. ARIA Attributes — Complete Reference</h2>
+
+    <h3>Labeling</h3>
+    <table class="reference">
+        <thead><tr><th>Attribute</th><th>Purpose</th><th>When to Use</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-name">aria-label="text"</span></td><td>Provides accessible name via string</td><td>Icon buttons, elements with no visible text</td></tr>
+            <tr><td><span class="attribute-name">aria-labelledby="id"</span></td><td>Accessible name from another element's text</td><td>Modals, sections, when label text already exists on page</td></tr>
+            <tr><td><span class="attribute-name">aria-describedby="id"</span></td><td>Additional description from another element</td><td>Input hints, error messages, extra context</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Visibility &amp; Live Regions</h3>
+    <table class="reference">
+        <thead><tr><th>Attribute</th><th>Value</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-name">aria-hidden</span></td><td>"true"/"false"</td><td>"true" hides from screen readers (decorative icons, redundant content)</td></tr>
+            <tr><td><span class="attribute-name">aria-live</span></td><td>"off"/"polite"/"assertive"</td><td>Announces dynamic content changes. "polite" = when idle. "assertive" = immediately.</td></tr>
+            <tr><td><span class="attribute-name">aria-atomic</span></td><td>"true"/"false"</td><td>"true" reads entire region when any part changes</td></tr>
+        </tbody>
+    </table>
+
+    <h3>State &amp; Properties</h3>
+    <table class="reference">
+        <thead><tr><th>Attribute</th><th>Values</th><th>Use For</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-name">aria-expanded</span></td><td>"true"/"false"</td><td>Accordion, dropdown, collapsible sections</td></tr>
+            <tr><td><span class="attribute-name">aria-checked</span></td><td>"true"/"false"/"mixed"</td><td>Custom checkboxes, toggle switches</td></tr>
+            <tr><td><span class="attribute-name">aria-selected</span></td><td>"true"/"false"</td><td>Tabs, listbox options</td></tr>
+            <tr><td><span class="attribute-name">aria-current</span></td><td>"page"/"step"/"date"/etc.</td><td>Current item in navigation, wizard steps</td></tr>
+            <tr><td><span class="attribute-name">aria-required</span></td><td>"true"/"false"</td><td>Required form fields (supplement native required)</td></tr>
+            <tr><td><span class="attribute-name">aria-invalid</span></td><td>"true"/"false"/"grammar"/"spelling"</td><td>Form validation errors</td></tr>
+            <tr><td><span class="attribute-name">aria-disabled</span></td><td>"true"/"false"</td><td>Visually disabled but remains in DOM/tab order</td></tr>
+            <tr><td><span class="attribute-name">aria-controls</span></td><td>id reference</td><td>Links a control to the element it controls</td></tr>
+            <tr><td><span class="attribute-name">aria-haspopup</span></td><td>"menu"/"listbox"/"dialog"/etc.</td><td>Element opens a popup</td></tr>
+            <tr><td><span class="attribute-name">aria-modal</span></td><td>"true"/"false"</td><td>On role="dialog" — tells AT it's a modal</td></tr>
+            <tr><td><span class="attribute-name">aria-valuenow</span></td><td>number</td><td>Current value of range widget (progressbar, slider)</td></tr>
+            <tr><td><span class="attribute-name">aria-valuemin / max</span></td><td>number</td><td>Min/max value for range widget</td></tr>
+            <tr><td><span class="attribute-name">aria-valuetext</span></td><td>string</td><td>Human-readable value for range widget</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>19. ARIA Roles</h2>
+
+    <h3>Landmark Roles</h3>
+    <table class="reference">
+        <thead><tr><th>Role</th><th>Native HTML</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">banner</span></td><td><span class="tag">&lt;header&gt;</span> (page level)</td><td>Page header</td></tr>
+            <tr><td><span class="attribute-value">navigation</span></td><td><span class="tag">&lt;nav&gt;</span></td><td>Navigation region</td></tr>
+            <tr><td><span class="attribute-value">main</span></td><td><span class="tag">&lt;main&gt;</span></td><td>Primary content</td></tr>
+            <tr><td><span class="attribute-value">complementary</span></td><td><span class="tag">&lt;aside&gt;</span></td><td>Supporting content</td></tr>
+            <tr><td><span class="attribute-value">contentinfo</span></td><td><span class="tag">&lt;footer&gt;</span> (page level)</td><td>Footer</td></tr>
+            <tr><td><span class="attribute-value">search</span></td><td>(no native)</td><td>Search region</td></tr>
+            <tr><td><span class="attribute-value">region</span></td><td><span class="tag">&lt;section&gt;</span></td><td>Significant section — needs aria-label</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Common Widget Roles</h3>
+    <table class="reference">
+        <thead><tr><th>Role</th><th>Purpose</th><th>Use Native HTML Instead When Possible</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">alert</span></td><td>Urgent, auto-announced message</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">status</span></td><td>Non-urgent advisory message</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">dialog</span></td><td>Modal/non-modal dialog</td><td>&lt;dialog&gt; element</td></tr>
+            <tr><td><span class="attribute-value">tab / tablist / tabpanel</span></td><td>Tab widget</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">progressbar</span></td><td>Progress indicator</td><td>&lt;progress&gt; element</td></tr>
+            <tr><td><span class="attribute-value">img</span></td><td>Composite image (SVG, grouped elements)</td><td>&lt;img&gt; with alt</td></tr>
+            <tr><td><span class="attribute-value">button</span></td><td>Interactive button</td><td>&lt;button&gt; element</td></tr>
+            <tr><td><span class="attribute-value">checkbox</span></td><td>Two-state toggle</td><td>&lt;input type="checkbox"&gt;</td></tr>
+            <tr><td><span class="attribute-value">menu / menuitem</span></td><td>OS-style menu (NOT site nav)</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">tooltip</span></td><td>Contextual popup</td><td>title attribute (limited)</td></tr>
+            <tr><td><span class="attribute-value">presentation</span></td><td>Remove semantic meaning (decorative)</td><td>alt="" on images</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>20. Accessibility Checklist</h2>
+
+    <table class="reference">
+        <thead><tr><th>Category</th><th>Check</th><th>Status</th></tr></thead>
+        <tbody>
+            <tr><td>Language</td><td>&lt;html lang="..."&gt; is set correctly</td><td>✅ / ❌</td></tr>
+            <tr><td>Headings</td><td>One &lt;h1&gt;, logical order, no skipped levels</td><td>✅ / ❌</td></tr>
+            <tr><td>Landmarks</td><td>&lt;main&gt;, &lt;nav&gt;, &lt;header&gt;, &lt;footer&gt; used correctly</td><td>✅ / ❌</td></tr>
+            <tr><td>Skip link</td><td>Skip-to-main-content link is first focusable element</td><td>✅ / ❌</td></tr>
+            <tr><td>Page title</td><td>&lt;title&gt; is descriptive and unique per page</td><td>✅ / ❌</td></tr>
+            <tr><td>Images</td><td>All meaningful images have descriptive alt text</td><td>✅ / ❌</td></tr>
+            <tr><td>Decorative images</td><td>Decorative images have alt="" (empty)</td><td>✅ / ❌</td></tr>
+            <tr><td>Links</td><td>All links have meaningful text (not "click here")</td><td>✅ / ❌</td></tr>
+            <tr><td>Forms</td><td>Every input has a &lt;label&gt;</td><td>✅ / ❌</td></tr>
+            <tr><td>Form groups</td><td>Radio/checkbox groups use &lt;fieldset&gt; + &lt;legend&gt;</td><td>✅ / ❌</td></tr>
+            <tr><td>Errors</td><td>Error messages linked via aria-describedby</td><td>✅ / ❌</td></tr>
+            <tr><td>Tables</td><td>Tables have &lt;caption&gt; and &lt;th scope="..."&gt;</td><td>✅ / ❌</td></tr>
+            <tr><td>Video</td><td>Videos have captions (&lt;track kind="captions"&gt;)</td><td>✅ / ❌</td></tr>
+            <tr><td>Audio</td><td>Audio has a transcript</td><td>✅ / ❌</td></tr>
+            <tr><td>Keyboard</td><td>All interactive elements keyboard accessible</td><td>✅ / ❌</td></tr>
+            <tr><td>Focus</td><td>Focus indicators are visible (no outline: none)</td><td>✅ / ❌</td></tr>
+            <tr><td>Tab order</td><td>Tab order follows logical reading order</td><td>✅ / ❌</td></tr>
+            <tr><td>iframes</td><td>All &lt;iframe&gt; have title attributes</td><td>✅ / ❌</td></tr>
+            <tr><td>Contrast</td><td>Text ≥ 4.5:1 (normal) or ≥ 3:1 (large)</td><td>✅ / ❌</td></tr>
+            <tr><td>Color</td><td>Color is NOT the only way information is conveyed</td><td>✅ / ❌</td></tr>
+            <tr><td>Buttons</td><td>All buttons have explicit type attribute</td><td>✅ / ❌</td></tr>
+            <tr><td>lang attr</td><td>Foreign phrases have lang attribute (lang="fr")</td><td>✅ / ❌</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip">🛠️ <strong>Testing tools:</strong> Google Lighthouse (Chrome DevTools) • axe DevTools browser extension • WAVE (wave.webaim.org) • VoiceOver (Mac: Cmd+F5) • NVDA (Windows, free screen reader) • WebAIM Contrast Checker</div>
+</section>
+
+<!-- ================================================================ -->
+<!-- PART 5: INTERVIEW Q&A -->
+<!-- ================================================================ -->
+
+<div class="part-header">Part 5 — HTML Interview Questions &amp; Answers</div>
+
+<section>
+    <h2>21. Core Concepts</h2>
+
+    <div class="element-box">
+        <div class="element-name">Q1: What is HTML and what is its purpose?</div>
+        <div class="element-description"><strong>Answer:</strong> HTML (HyperText Markup Language) is the standard language for creating web pages. Its purpose is to define the <em>structure and content</em> of a web page using elements (tags). HTML tells the browser what is on the page — headings, paragraphs, images, links, forms — but not how it looks (CSS) or how it behaves (JavaScript). It was invented by Tim Berners-Lee in 1991 and the current version is HTML5.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q2: What is the purpose of &lt;!DOCTYPE html&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong> The DOCTYPE declaration tells the browser which version of HTML the document is written in. <code>&lt;!DOCTYPE html&gt;</code> (case-insensitive) activates <strong>standards mode</strong> (full HTML5). Without it, browsers may render in <strong>quirks mode</strong> — an older compatibility mode that mimics bugs from ancient browsers, causing inconsistent rendering. It must be the very first line of every HTML file — it is not an HTML element, just a declaration.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q3: What is the difference between HTML and HTML5?</div>
+        <div class="element-description"><strong>Answer:</strong> HTML5 is the fifth and current major version of HTML. Key additions over HTML4:<br><br>
+        • <strong>Semantic elements:</strong> &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;<br>
+        • <strong>Media elements:</strong> &lt;audio&gt;, &lt;video&gt;, &lt;source&gt;, &lt;track&gt;<br>
+        • <strong>New form input types:</strong> date, time, email, url, number, range, color<br>
+        • <strong>New APIs:</strong> localStorage, sessionStorage, Canvas, Geolocation, Web Workers<br>
+        • <strong>Removed:</strong> Presentational elements like &lt;font&gt;, &lt;center&gt;, &lt;big&gt; (moved to CSS)<br>
+        • HTML5 is now a <strong>living standard</strong> maintained by WHATWG — updated continuously with no discrete versions.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q4: What is the difference between block-level and inline elements?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>Block-level elements</strong> start on a new line and take the full available width. They can contain other block and inline elements. Examples: &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;–&lt;h6&gt;, &lt;ul&gt;, &lt;table&gt;, &lt;section&gt;, &lt;article&gt;<br><br>
+        <strong>Inline elements</strong> flow within text, taking only as much width as their content. They cannot contain block elements. Examples: &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;img&gt;, &lt;code&gt;<br><br>
+        In HTML5, this distinction became more nuanced — it's now called <strong>content categories</strong> (flow content, phrasing content, etc.), but the block/inline mental model is still useful and widely used.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q5: What is the difference between id and class attributes?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>id</strong> — Unique identifier. Must appear only <em>once</em> per page. Used for CSS targeting, JavaScript selection, and anchor links (<code>href="#section-id"</code>). High CSS specificity.<br><br>
+        <strong>class</strong> — Reusable label. The same class can be applied to <em>multiple</em> elements, and one element can have multiple classes (space-separated). Lower CSS specificity than id.<br><br>
+        <code>&lt;h2 id="about"&gt;...&lt;/h2&gt;</code> — unique, referenced by anchor link<br>
+        <code>&lt;p class="intro highlight"&gt;...&lt;/p&gt;</code> — reusable, two classes applied</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q6: What is the difference between &lt;div&gt; and &lt;span&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong> Both are generic containers with no semantic meaning, used purely for grouping/styling with CSS or targeting with JavaScript.<br><br>
+        <strong>&lt;div&gt;</strong> — block-level container. Creates a line break before and after. Used for layout sections.<br>
+        <strong>&lt;span&gt;</strong> — inline container. Flows within text. Used to style a portion of text.<br><br>
+        <strong>Rule of thumb:</strong> If you can use a semantic element instead (&lt;section&gt;, &lt;p&gt;, &lt;em&gt;, etc.), prefer it over &lt;div&gt;/&lt;span&gt;.</div>
+    </div>
+</section>
+
+<section>
+    <h2>22. Semantic HTML Questions</h2>
+
+    <div class="element-box">
+        <div class="element-name">Q7: What are semantic HTML elements and why do they matter?</div>
+        <div class="element-description"><strong>Answer:</strong> Semantic elements clearly describe their <em>meaning</em> to both the browser and the developer — unlike &lt;div&gt; and &lt;span&gt; which have no meaning.<br><br>
+        Examples: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;figure&gt;, &lt;time&gt;, &lt;strong&gt;, &lt;em&gt;<br><br>
+        <strong>Why they matter:</strong><br>
+        • <strong>Accessibility:</strong> Screen readers use landmarks to help users navigate<br>
+        • <strong>SEO:</strong> Search engines better understand page structure and rank relevant content<br>
+        • <strong>Maintainability:</strong> Code is easier to read and understand<br>
+        • <strong>Default browser styling:</strong> Appropriate styles applied without CSS</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q8: What is the difference between &lt;strong&gt; and &lt;b&gt;? Between &lt;em&gt; and &lt;i&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>&lt;strong&gt;</strong> — marks text as having <em>strong importance, seriousness, or urgency</em>. Has semantic meaning. Screen readers may announce it differently.<br>
+        <strong>&lt;b&gt;</strong> — draws attention to text (keywords, product names) without implying importance. No semantic weight.<br><br>
+        <strong>&lt;em&gt;</strong> — marks text with <em>stress emphasis</em> that changes the meaning of a sentence ("I <em>never</em> said that"). Screen readers change tone.<br>
+        <strong>&lt;i&gt;</strong> — marks text in an alternate voice: technical terms, foreign words, idiomatic phrases, thoughts. No emphasis on meaning.<br><br>
+        Both pairs render the same visually (bold/italic), but the semantic difference matters for accessibility and meaning.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q9: What is the difference between &lt;article&gt; and &lt;section&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>&lt;article&gt;</strong> — self-contained content that makes sense on its own and could be distributed independently (blog post, news article, forum post, product card, comment). Ask: "Can I take this and share it on another site?" If yes → &lt;article&gt;.<br><br>
+        <strong>&lt;section&gt;</strong> — thematic grouping of content that needs the page context to make full sense. Should have a heading. Used to divide a page into logical regions.<br><br>
+        Articles can contain sections, and sections can contain articles. The key test: can the content stand alone?</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q10: What are void (self-closing) elements?</div>
+        <div class="element-description"><strong>Answer:</strong> Void elements are HTML elements that cannot have any children (content) and therefore have no closing tag. They are complete as a single opening tag.<br><br>
+        Examples: &lt;img&gt;, &lt;input&gt;, &lt;br&gt;, &lt;hr&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;area&gt;, &lt;source&gt;, &lt;track&gt;, &lt;wbr&gt;, &lt;embed&gt;, &lt;col&gt;, &lt;base&gt;<br><br>
+        In HTML5, you write them without a slash: <code>&lt;img src="..."&gt;</code>. The XHTML-style <code>&lt;img /&gt;</code> slash is optional and harmless but not required.</div>
+    </div>
+</section>
+
+<section>
+    <h2>23. Forms &amp; Tables Questions</h2>
+
+    <div class="element-box">
+        <div class="element-name">Q11: What is the difference between GET and POST in forms?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>GET</strong> — Data is appended to the URL as query string (<code>/search?q=html&amp;page=2</code>). Visible in URL. Bookmarkable. Cached by browsers. Use for: search, filtering, non-sensitive queries. Limited URL length (~2000 chars).<br><br>
+        <strong>POST</strong> — Data is sent in the request body, not visible in URL. Not cached or bookmarked. Use for: login forms, registration, file uploads, any data that changes server state, sensitive data (passwords). No size limit.<br><br>
+        <strong>Rule:</strong> If the form <em>retrieves</em> data → GET. If it <em>creates/modifies/deletes</em> data or handles sensitive info → POST.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q12: What is the difference between disabled and readonly on form inputs?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>disabled</strong> — The input is completely non-interactive: greyed out, cannot be focused, cannot be tabbed to, and its value is <em>NOT submitted</em> with the form.<br><br>
+        <strong>readonly</strong> — The input is not editable, but the user <em>can</em> focus it, tab to it, and copy its value. Its value <em>IS submitted</em> with the form.<br><br>
+        Use <em>disabled</em> when the field shouldn't participate at all. Use <em>readonly</em> when you want to show a value that will be submitted but shouldn't be changed (e.g., a calculated total).</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q13: Why should you always use &lt;label&gt; with form inputs?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        1. <strong>Accessibility:</strong> Screen readers announce the label when the input is focused, so users know what to enter.<br>
+        2. <strong>Usability:</strong> Clicking the label focuses/activates the input — increases click target size, especially helpful for checkboxes and radio buttons.<br>
+        3. <strong>Programmatic association:</strong> The for/id link creates a semantic relationship understood by assistive technologies.<br><br>
+        Placeholder text alone is <em>not</em> a substitute — it disappears when the user starts typing, leaving them without context.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q14: What is the difference between colspan and rowspan?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>colspan</strong> — Merges cells <em>horizontally</em> across columns. <code>&lt;td colspan="3"&gt;</code> occupies 3 column widths in one row.<br><br>
+        <strong>rowspan</strong> — Merges cells <em>vertically</em> across rows. <code>&lt;td rowspan="2"&gt;</code> spans from its row down into the next row.<br><br>
+        When using rowspan, you must omit the spanned cell in the rows below — the spanning cell already occupies that space. Forgetting this shifts all subsequent cells to the right.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q15: What is the purpose of &lt;fieldset&gt; and &lt;legend&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong> &lt;fieldset&gt; groups related form controls together with a visible border. &lt;legend&gt; provides the group's title (must be its first child).<br><br>
+        <strong>Critical for accessibility:</strong> When a screen reader enters a fieldset, it reads the legend first — this is the only way users know what a group of radio buttons or checkboxes is asking. Without a fieldset + legend, a radio group with options "Yes / No" gives no context about what you're answering yes or no to.<br><br>
+        Bonus: adding <code>disabled</code> to &lt;fieldset&gt; disables all its inputs at once.</div>
+    </div>
+</section>
+
+<section>
+    <h2>24. Attributes &amp; Elements Questions</h2>
+
+    <div class="element-box">
+        <div class="element-name">Q16: What is the purpose of the alt attribute on &lt;img&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong> The alt attribute serves three purposes:<br><br>
+        1. <strong>Accessibility:</strong> Screen readers read alt text aloud to describe the image to blind users.<br>
+        2. <strong>Fallback:</strong> Displayed when the image fails to load (broken link, slow connection).<br>
+        3. <strong>SEO:</strong> Search engines index alt text to understand image content.<br><br>
+        <strong>Rules:</strong> Meaningful images need descriptive alt text. Decorative images should use <code>alt=""</code> (empty string — not missing!) so screen readers skip them. Never write alt="image" or alt="photo". Describe content AND purpose in context.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q17: What is the difference between &lt;script defer&gt; and &lt;script async&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong> Both allow the script to download in parallel with HTML parsing (non-blocking download). They differ in when execution happens:<br><br>
+        <strong>defer</strong> — Executes <em>after</em> the HTML is fully parsed, in document order. Scripts run in the order they appear. Best for most scripts that need the DOM.<br><br>
+        <strong>async</strong> — Executes <em>as soon as downloaded</em>, potentially interrupting HTML parsing. Order not guaranteed. Best for independent scripts (analytics, ads) that don't depend on DOM or other scripts.<br><br>
+        <strong>Neither attribute</strong> (inline script) — Blocks HTML parsing until the script executes. Avoid for external scripts.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q18: What are data-* attributes and how do you use them?</div>
+        <div class="element-description"><strong>Answer:</strong> Custom data attributes let you store extra information in HTML elements that doesn't need a visual representation. They follow the format <code>data-anything="value"</code>.<br><br>
+        <strong>In HTML:</strong> <code>&lt;button data-product-id="42" data-category="shoes"&gt;Buy&lt;/button&gt;</code><br><br>
+        <strong>In JavaScript:</strong> Access via the <code>dataset</code> property. Attribute names are converted to camelCase: <code>data-product-id</code> → <code>element.dataset.productId</code>.<br><br>
+        Common uses: storing IDs for AJAX requests, configuration for JavaScript components, tracking data for analytics.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q19: What is the viewport meta tag and why is it important?</div>
+        <div class="element-description"><strong>Answer:</strong> <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code><br><br>
+        Without it, mobile browsers render the page at a desktop width (~980px) and then scale it down — making text tiny and requiring zooming. The viewport meta tag tells mobile browsers to set the viewport width equal to the device's actual screen width, enabling proper responsive design with CSS media queries.<br><br>
+        <strong>width=device-width</strong> — Use the physical screen width.<br>
+        <strong>initial-scale=1.0</strong> — Don't zoom in or out on first load.<br><br>
+        It is required in every HTML page intended for mobile devices.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q20: What are HTML entities and when do you need them?</div>
+        <div class="element-description"><strong>Answer:</strong> HTML entities are special codes for characters that would otherwise be misinterpreted by the browser or are hard to type. Format: <code>&amp;name;</code> or <code>&amp;#number;</code><br><br>
+        <strong>Must use:</strong><br>
+        • <code>&amp;amp;</code> → &amp; (bare &amp; inside HTML can confuse the parser)<br>
+        • <code>&amp;lt;</code> → &lt; (would start a tag)<br>
+        • <code>&amp;gt;</code> → &gt; (would end a tag)<br>
+        • <code>&amp;quot;</code> → " (inside attribute values wrapped in double quotes)<br><br>
+        <strong>Useful for symbols:</strong> <code>&amp;copy;</code> → ©, <code>&amp;euro;</code> → €, <code>&amp;nbsp;</code> → non-breaking space, <code>&amp;mdash;</code> → — (em dash)</div>
+    </div>
+</section>
+
+<section>
+    <h2>25. Accessibility &amp; Best Practice Questions</h2>
+
+    <div class="element-box">
+        <div class="element-name">Q21: What is ARIA and when should you use it?</div>
+        <div class="element-description"><strong>Answer:</strong> ARIA (Accessible Rich Internet Applications) is a set of HTML attributes that add accessibility information that native HTML can't convey — especially for custom interactive widgets.<br><br>
+        <strong>The first rule of ARIA:</strong> Don't use ARIA if you can use a native HTML element or attribute with the same semantics. A &lt;button&gt; is always better than a &lt;div role="button"&gt;.<br><br>
+        <strong>Use ARIA when:</strong><br>
+        • Building custom widgets (tabs, modals, accordions, sliders)<br>
+        • Adding labels to icon buttons: <code>aria-label="Search"</code><br>
+        • Announcing dynamic content: <code>aria-live="polite"</code><br>
+        • Communicating state: <code>aria-expanded="false"</code>, <code>aria-invalid="true"</code><br>
+        • Linking descriptions: <code>aria-describedby="hint-id"</code></div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q22: What is tabindex and when should you use it?</div>
+        <div class="element-description"><strong>Answer:</strong> tabindex controls keyboard focus behavior:<br><br>
+        <strong>tabindex="0"</strong> — Makes a non-interactive element (like a &lt;div&gt;) focusable via Tab key in natural document order. Use when you can't use a native interactive element.<br><br>
+        <strong>tabindex="-1"</strong> — Removes element from Tab sequence but allows JavaScript to focus it (<code>element.focus()</code>). Use for modal dialogs and programmatic focus management.<br><br>
+        <strong>tabindex="1+" (NEVER use)</strong> — Creates a separate tab order that overrides natural flow, resulting in confusing navigation for keyboard users.<br><br>
+        <strong>Best practice:</strong> Native interactive elements (&lt;a&gt;, &lt;button&gt;, &lt;input&gt;, etc.) are naturally focusable — don't add tabindex="0" to them.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q23: What is the difference between &lt;del&gt; and &lt;s&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong> Both render as strikethrough text, but they have different semantic meanings:<br><br>
+        <strong>&lt;del&gt;</strong> — marks content that has been <em>deleted from a document</em> as part of an edit. Used with &lt;ins&gt; to show document changes. Has <code>cite</code> and <code>datetime</code> attributes for attribution. Screen readers may announce "deleted".<br><br>
+        <strong>&lt;s&gt;</strong> — marks content that is <em>no longer accurate or relevant</em> but hasn't been removed (e.g., an old price, a cancelled event). Not an edit marker — just outdated content.<br><br>
+        Use &lt;del&gt; for document diffs/track changes. Use &lt;s&gt; for "was $99, now $49" or a cancelled event announcement.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q24: What makes a web page accessible? Name at least five practices.</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        1. <strong>Set the lang attribute:</strong> <code>&lt;html lang="en"&gt;</code> — screen readers use this for correct pronunciation.<br>
+        2. <strong>Descriptive alt text:</strong> All meaningful images have alt text describing content and purpose.<br>
+        3. <strong>Proper heading structure:</strong> One h1, logical hierarchy, no skipped levels — screen reader users navigate by headings.<br>
+        4. <strong>Label all form inputs:</strong> Every input has an associated &lt;label&gt; via for/id or nesting.<br>
+        5. <strong>Keyboard accessibility:</strong> All functionality works with Tab, Enter, Space, and arrow keys — no mouse required.<br>
+        6. <strong>Visible focus indicators:</strong> Never set <code>outline: none</code> without a visible replacement.<br>
+        7. <strong>Sufficient color contrast:</strong> Normal text ≥ 4.5:1 ratio, large text ≥ 3:1.<br>
+        8. <strong>Video captions:</strong> &lt;track kind="captions"&gt; inside &lt;video&gt;.<br>
+        9. <strong>Skip navigation link:</strong> Lets keyboard users bypass repeated navigation.<br>
+        10. <strong>Semantic HTML:</strong> &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, etc. provide landmarks screen readers can navigate.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Q25: What is the difference between &lt;link&gt; and &lt;a&gt;?</div>
+        <div class="element-description"><strong>Answer:</strong><br><br>
+        <strong>&lt;link&gt;</strong> — Goes in &lt;head&gt;. Defines a relationship between the document and an external resource. Most commonly used to link CSS stylesheets. Void element — no closing tag. Not visible to the user. Also used for: favicon (<code>rel="icon"</code>), canonical URL (<code>rel="canonical"</code>), preloading resources.<br><br>
+        <strong>&lt;a&gt;</strong> — Goes in &lt;body&gt;. Creates a clickable hyperlink that the user sees and interacts with. Links to another page, a file, an email address, a phone number, or a section on the current page.<br><br>
+        In summary: &lt;link&gt; is for machine-to-machine resource relationships in the head. &lt;a&gt; is for user-facing navigation in the body.</div>
+    </div>
+</section>
+
+</body>
+</html>

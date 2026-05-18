@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms &amp; Tables Reference</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background: #f0f2f5; padding: 0 20px 40px; }
+        .nav-bar { background: #2c3e50; padding: 12px 20px; position: sticky; top: 0; z-index: 100; text-align: center; margin-bottom: 30px; }
+        .nav-bar a { color: #ecf0f1; text-decoration: none; margin: 0 8px; font-weight: 600; font-size: 0.85em; padding: 4px 8px; border-radius: 4px; }
+        .nav-bar a:hover { background: #3498db; }
+        .nav-bar a.active { background: #3498db; }
+        h1 { text-align: center; color: #2c3e50; margin: 30px auto 50px; font-size: 2.5em; border-bottom: 4px solid #3498db; padding-bottom: 20px; max-width: 1000px; }
+        h2 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; margin-top: 40px; margin-bottom: 20px; border-radius: 5px; font-size: 1.8em; }
+        h3 { color: #667eea; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em; border-left: 4px solid #667eea; padding-left: 15px; }
+        section { background: white; max-width: 1000px; margin: 20px auto; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .element-box { background: #f8f9fa; border: 2px solid #e9ecef; border-left: 5px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .element-name { font-weight: 700; color: #2c3e50; font-size: 1.1em; margin-bottom: 8px; font-family: 'Courier New', monospace; }
+        .element-description { color: #555; margin-bottom: 10px; }
+        .attributes { background: white; border: 1px solid #ddd; border-radius: 3px; padding: 12px; margin-top: 10px; font-size: 0.95em; }
+        .attribute { margin: 8px 0; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+        .attribute:last-child { border-bottom: none; }
+        .attribute-name { font-weight: 600; color: #e74c3c; font-family: 'Courier New', monospace; }
+        .attribute-desc { color: #666; margin-left: 20px; }
+        .code-example { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.9em; line-height: 1.6; white-space: pre; }
+        .important { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        .tip { background: #d4edda; border-left: 4px solid #28a745; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        table.reference { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        table.reference th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        table.reference td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        table.reference tr:nth-child(even) { background: #f9f9f9; }
+        .tag { background: #e8f4f8; color: #2c3e50; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; font-weight: 600; }
+        .attribute-value { color: #27ae60; font-weight: 600; }
+        @media (max-width: 768px) { h1 { font-size: 1.8em; } h2 { font-size: 1.3em; } section { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="1-html-basics.html">1 Basics</a>
+    <a href="2-html-semantics.html">2 Semantics</a>
+    <a href="3-html-forms-tables.html" class="active">3 Forms &amp; Tables</a>
+    <a href="4-html-accessibility.html">4 Accessibility</a>
+    <a href="all-html-reference.html">All-in-One</a>
+</div>
+
+<h1>HTML Forms &amp; Tables Reference</h1>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: FORM ELEMENT -->
+<!-- ============================================================ -->
+<section>
+    <h2>1. The &lt;form&gt; Element</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;form&gt;</div>
+        <div class="element-description">Creates an HTML form for collecting user input. All form controls go inside this element.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">action</span><div class="attribute-desc">URL where form data is sent on submission. Omit or use "" to send to current page.</div></div>
+            <div class="attribute"><span class="attribute-name">method</span><div class="attribute-desc"><strong>GET</strong> — appends data to URL (bookmarkable, for search/filtering). <strong>POST</strong> — sends data in request body (for sensitive data, file uploads, changes).</div></div>
+            <div class="attribute"><span class="attribute-name">enctype</span><div class="attribute-desc">Encoding type for POST: "application/x-www-form-urlencoded" (default), "multipart/form-data" (required for file uploads), "text/plain"</div></div>
+            <div class="attribute"><span class="attribute-name">autocomplete</span><div class="attribute-desc">"on" (default) or "off" — controls browser autocomplete for the whole form</div></div>
+            <div class="attribute"><span class="attribute-name">novalidate</span><div class="attribute-desc">Boolean: skips browser's built-in validation (useful when doing custom validation)</div></div>
+            <div class="attribute"><span class="attribute-name">target</span><div class="attribute-desc">Where to show the response: "_self" (default), "_blank" (new tab)</div></div>
+        </div>
+        <div class="code-example">&lt;!-- POST form (most common for forms that change data) --&gt;
+&lt;form method="POST" action="/submit"&gt;
+  ...inputs...
+&lt;/form&gt;
+
+&lt;!-- GET form (for search) --&gt;
+&lt;form method="GET" action="/search"&gt;
+  &lt;label for="q"&gt;Search:&lt;/label&gt;
+  &lt;input type="search" id="q" name="q"&gt;
+  &lt;button type="submit"&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+&lt;!-- Submitting goes to /search?q=your+query --&gt;
+
+&lt;!-- Form with file upload --&gt;
+&lt;form method="POST" action="/upload" enctype="multipart/form-data"&gt;
+  &lt;input type="file" name="document"&gt;
+  &lt;button type="submit"&gt;Upload&lt;/button&gt;
+&lt;/form&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: INPUT ELEMENT -->
+<!-- ============================================================ -->
+<section>
+    <h2>2. The &lt;input&gt; Element (Void)</h2>
+    <p style="color:#555; margin-bottom:15px;">The most versatile form element. Its behavior is entirely determined by the <strong>type</strong> attribute. No closing tag.</p>
+
+    <div class="element-box">
+        <div class="element-name">&lt;input&gt; — Common Attributes</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc">Determines input behavior (see full list below). Default: "text".</div></div>
+            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc">Unique ID — must match label's <em>for</em> attribute for accessibility.</div></div>
+            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc">Key sent to server with form data (e.g., name="email" → email=value@form). Required for data to be submitted.</div></div>
+            <div class="attribute"><span class="attribute-name">value</span><div class="attribute-desc">Default value, or button label for type="button/submit/reset".</div></div>
+            <div class="attribute"><span class="attribute-name">placeholder</span><div class="attribute-desc">Hint text shown inside empty input (disappears when typing). Not a substitute for &lt;label&gt;.</div></div>
+            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc">Boolean: form cannot be submitted if this field is empty.</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: input is non-interactive and greyed out. Value is NOT submitted with form.</div></div>
+            <div class="attribute"><span class="attribute-name">readonly</span><div class="attribute-desc">Boolean: user cannot change the value, but it IS submitted with form. Different from disabled.</div></div>
+            <div class="attribute"><span class="attribute-name">checked</span><div class="attribute-desc">Boolean: used with type="checkbox" and type="radio" — checked by default.</div></div>
+            <div class="attribute"><span class="attribute-name">multiple</span><div class="attribute-desc">Boolean: for file inputs (allow multiple files) and email inputs (allow multiple emails, comma-separated).</div></div>
+            <div class="attribute"><span class="attribute-name">autocomplete</span><div class="attribute-desc">Hint to browser: "on", "off", "name", "email", "username", "current-password", "new-password", "tel", "street-address", etc.</div></div>
+            <div class="attribute"><span class="attribute-name">autofocus</span><div class="attribute-desc">Boolean: this input gets focus when the page loads. Use only once per page.</div></div>
+            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc">ID of the &lt;form&gt; this input belongs to — allows placing input outside the &lt;form&gt; element.</div></div>
+        </div>
+    </div>
+
+    <h3>Text Validation Attributes</h3>
+    <div class="element-box">
+        <div class="element-name">Text &amp; Number Constraints</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">minlength</span><div class="attribute-desc">Minimum number of characters. For text, email, password, search, tel, url.</div></div>
+            <div class="attribute"><span class="attribute-name">maxlength</span><div class="attribute-desc">Maximum number of characters allowed.</div></div>
+            <div class="attribute"><span class="attribute-name">min</span><div class="attribute-desc">Minimum value for number, range, date, time, datetime-local, month, week inputs.</div></div>
+            <div class="attribute"><span class="attribute-name">max</span><div class="attribute-desc">Maximum value for numeric/date inputs.</div></div>
+            <div class="attribute"><span class="attribute-name">step</span><div class="attribute-desc">Legal intervals for number/range/date. "any" allows any value.</div></div>
+            <div class="attribute"><span class="attribute-name">size</span><div class="attribute-desc">Visual width in characters (not a validation rule — just affects displayed width).</div></div>
+            <div class="attribute"><span class="attribute-name">pattern</span><div class="attribute-desc">Regular expression the value must match. Add title attribute to explain the pattern.</div></div>
+        </div>
+        <div class="code-example">&lt;!-- Text with length limits --&gt;
+&lt;input type="text" name="username" minlength="3" maxlength="20" required&gt;
+
+&lt;!-- Number with range --&gt;
+&lt;input type="number" name="age" min="0" max="120" step="1"&gt;
+
+&lt;!-- Pattern validation --&gt;
+&lt;input
+  type="text"
+  name="zip"
+  pattern="[0-9]{5}"
+  title="Five-digit ZIP code"
+  placeholder="12345"
+&gt;
+
+&lt;!-- Password with minlength --&gt;
+&lt;input type="password" name="password" minlength="8" required&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: INPUT TYPES COMPLETE REFERENCE -->
+<!-- ============================================================ -->
+<section>
+    <h2>3. Input Types — Complete Reference</h2>
+
+    <h3>Text-Based Inputs</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">text</span></td><td>Plain single-line text input</td><td>Default type. Accepts any characters.</td></tr>
+            <tr><td><span class="attribute-value">email</span></td><td>Email address</td><td>Validates email format. Shows numeric keyboard on mobile.</td></tr>
+            <tr><td><span class="attribute-value">password</span></td><td>Masked password field</td><td>Text is hidden as asterisks/dots. Never store in plain text on server.</td></tr>
+            <tr><td><span class="attribute-value">search</span></td><td>Search field</td><td>Styled like text but has clear (×) button in some browsers.</td></tr>
+            <tr><td><span class="attribute-value">url</span></td><td>Web address (URL)</td><td>Validates URL format. Requires http:// or https://.</td></tr>
+            <tr><td><span class="attribute-value">tel</span></td><td>Telephone number</td><td>No strict format validation. Shows numeric keypad on mobile.</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Numeric Inputs</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Purpose</th><th>Key Attributes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">number</span></td><td>Numeric input with spinner</td><td>min, max, step</td></tr>
+            <tr><td><span class="attribute-value">range</span></td><td>Slider for selecting a range value</td><td>min, max, step. Default: 0–100.</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Date &amp; Time Inputs</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Purpose</th><th>Format</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">date</span></td><td>Date picker (year, month, day)</td><td>YYYY-MM-DD</td></tr>
+            <tr><td><span class="attribute-value">time</span></td><td>Time picker (hours, minutes)</td><td>HH:MM</td></tr>
+            <tr><td><span class="attribute-value">datetime-local</span></td><td>Date and time together (no timezone)</td><td>YYYY-MM-DDTHH:MM</td></tr>
+            <tr><td><span class="attribute-value">month</span></td><td>Month and year picker</td><td>YYYY-MM</td></tr>
+            <tr><td><span class="attribute-value">week</span></td><td>Week number and year picker</td><td>YYYY-W##</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Selection Inputs</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">checkbox</span></td><td>Toggle box — can select multiple</td><td>Use checked attribute for default. Same name = grouped checkboxes.</td></tr>
+            <tr><td><span class="attribute-value">radio</span></td><td>Round button — only one per group</td><td>Same name = radio group. Only one can be selected.</td></tr>
+            <tr><td><span class="attribute-value">color</span></td><td>Color picker</td><td>Returns hex value (#rrggbb).</td></tr>
+        </tbody>
+    </table>
+
+    <h3>File &amp; Hidden Inputs</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">file</span></td><td>File upload picker</td><td>Use accept attribute to filter types: accept="image/*", accept=".pdf,.doc"</td></tr>
+            <tr><td><span class="attribute-value">hidden</span></td><td>Not visible, but submitted with form</td><td>Used to pass data behind the scenes (e.g., CSRF tokens, user IDs).</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Button Inputs</h3>
+    <table class="reference">
+        <thead><tr><th>Type</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">submit</span></td><td>Submits the form</td><td>Use value attribute to set button label.</td></tr>
+            <tr><td><span class="attribute-value">reset</span></td><td>Resets all form fields to default values</td><td>Be careful — users may accidentally click it.</td></tr>
+            <tr><td><span class="attribute-value">button</span></td><td>Generic button with no default behavior</td><td>Requires JavaScript to do anything.</td></tr>
+            <tr><td><span class="attribute-value">image</span></td><td>Submit button displayed as an image</td><td>src and alt attributes required.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="code-example">&lt;!-- All key input types --&gt;
+&lt;form&gt;
+  &lt;!-- Text types --&gt;
+  &lt;input type="text" name="name" placeholder="Full name"&gt;
+  &lt;input type="email" name="email" placeholder="you@example.com"&gt;
+  &lt;input type="password" name="password" minlength="8"&gt;
+  &lt;input type="url" name="website" placeholder="https://example.com"&gt;
+  &lt;input type="tel" name="phone" placeholder="+1 555 555 5555"&gt;
+  &lt;input type="search" name="q" placeholder="Search..."&gt;
+
+  &lt;!-- Numeric --&gt;
+  &lt;input type="number" name="age" min="1" max="120"&gt;
+  &lt;input type="range" name="volume" min="0" max="100" step="10"&gt;
+
+  &lt;!-- Date/time --&gt;
+  &lt;input type="date" name="birthday"&gt;
+  &lt;input type="time" name="meeting"&gt;
+  &lt;input type="datetime-local" name="appointment"&gt;
+  &lt;input type="month" name="billing-month"&gt;
+
+  &lt;!-- Selection --&gt;
+  &lt;input type="checkbox" id="agree" name="agree" value="yes"&gt;
+  &lt;label for="agree"&gt;I agree to terms&lt;/label&gt;
+
+  &lt;input type="radio" id="male" name="gender" value="male"&gt;
+  &lt;label for="male"&gt;Male&lt;/label&gt;
+  &lt;input type="radio" id="female" name="gender" value="female"&gt;
+  &lt;label for="female"&gt;Female&lt;/label&gt;
+
+  &lt;input type="color" name="favorite-color" value="#3498db"&gt;
+
+  &lt;!-- File --&gt;
+  &lt;input type="file" name="avatar" accept="image/*"&gt;
+  &lt;input type="file" name="documents" accept=".pdf,.doc,.docx" multiple&gt;
+
+  &lt;!-- Hidden --&gt;
+  &lt;input type="hidden" name="csrf_token" value="abc123xyz"&gt;
+
+  &lt;!-- Buttons --&gt;
+  &lt;input type="submit" value="Submit Form"&gt;
+  &lt;input type="reset" value="Clear Form"&gt;
+  &lt;input type="button" value="Show Alert"&gt;
+&lt;/form&gt;</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: LABELS -->
+<!-- ============================================================ -->
+<section>
+    <h2>4. Labels — &lt;label&gt;</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;label&gt;</div>
+        <div class="element-description">Associates a text description with a form input. Clicking the label focuses/activates the input. Required for accessibility — screen readers read the label when the input is focused.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">for</span><div class="attribute-desc">ID of the associated input element (explicit association). Must match input's id attribute.</div></div>
+        </div>
+    </div>
+
+    <div class="code-example">&lt;!-- Explicit association: label "for" matches input "id" --&gt;
+&lt;label for="email"&gt;Email Address:&lt;/label&gt;
+&lt;input type="email" id="email" name="email"&gt;
+
+&lt;!-- Implicit association: input is nested inside label --&gt;
+&lt;label&gt;
+  Full Name:
+  &lt;input type="text" name="name"&gt;
+&lt;/label&gt;
+
+&lt;!-- Checkbox with label (explicit) --&gt;
+&lt;input type="checkbox" id="subscribe" name="subscribe" value="yes"&gt;
+&lt;label for="subscribe"&gt;Subscribe to newsletter&lt;/label&gt;
+
+&lt;!-- Radio group --&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Preferred contact method:&lt;/legend&gt;
+  &lt;input type="radio" id="contact-email" name="contact" value="email"&gt;
+  &lt;label for="contact-email"&gt;Email&lt;/label&gt;
+  &lt;input type="radio" id="contact-phone" name="contact" value="phone"&gt;
+  &lt;label for="contact-phone"&gt;Phone&lt;/label&gt;
+&lt;/fieldset&gt;</div>
+    <div class="important">⚠️ <strong>Never skip labels!</strong> Using only placeholder text is not accessible — placeholders disappear when the user starts typing. Always use &lt;label&gt;.</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: BUTTON ELEMENT -->
+<!-- ============================================================ -->
+<section>
+    <h2>5. Buttons — &lt;button&gt;</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;button&gt;</div>
+        <div class="element-description">Creates a clickable button. More flexible than &lt;input type="submit"&gt; because it can contain HTML (text, icons, images). Default type inside a form is "submit" — always specify type explicitly.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">type</span><div class="attribute-desc"><strong>submit</strong> — submits the form (default inside &lt;form&gt;). <strong>reset</strong> — resets all form fields. <strong>button</strong> — no default action; use with JavaScript.</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: prevents clicking. Visually greyed out.</div></div>
+            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc">ID of the form this button belongs to (allows button outside the &lt;form&gt; element).</div></div>
+            <div class="attribute"><span class="attribute-name">formaction</span><div class="attribute-desc">Overrides the form's action URL for this specific submit button.</div></div>
+            <div class="attribute"><span class="attribute-name">formmethod</span><div class="attribute-desc">Overrides the form's method (GET/POST) for this submit button.</div></div>
+            <div class="attribute"><span class="attribute-name">formnovalidate</span><div class="attribute-desc">Boolean: skips validation when this submit button is clicked (e.g., "Save as Draft").</div></div>
+        </div>
+        <div class="code-example">&lt;form method="POST" action="/submit"&gt;
+  &lt;input type="email" name="email" required&gt;
+
+  &lt;!-- Generic button (no form action) --&gt;
+  &lt;button type="button" onclick="showPreview()"&gt;Preview&lt;/button&gt;
+
+  &lt;!-- Reset form --&gt;
+  &lt;button type="reset"&gt;Clear Form&lt;/button&gt;
+
+  &lt;!-- Save as draft (skip validation, different action) --&gt;
+  &lt;button type="submit" formaction="/save-draft" formnovalidate&gt;Save Draft&lt;/button&gt;
+
+  &lt;!-- Submit --&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+
+  &lt;!-- Button with icon (more flexible than input type="submit") --&gt;
+  &lt;button type="submit"&gt;
+    &lt;span aria-hidden="true"&gt;✓&lt;/span&gt; Submit Form
+  &lt;/button&gt;
+&lt;/form&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: TEXTAREA -->
+<!-- ============================================================ -->
+<section>
+    <h2>6. Textarea — Multi-Line Text</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;textarea&gt;</div>
+        <div class="element-description">Multi-line text input. Unlike &lt;input&gt;, it has a closing tag and its default value goes between the tags (not in a value attribute). Usually resizable by the user.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">rows</span><div class="attribute-desc">Visible number of text rows (visual height). Default: 2.</div></div>
+            <div class="attribute"><span class="attribute-name">cols</span><div class="attribute-desc">Visible width in characters. Default: 20. Better controlled with CSS width.</div></div>
+            <div class="attribute"><span class="attribute-name">placeholder</span><div class="attribute-desc">Hint text shown when empty</div></div>
+            <div class="attribute"><span class="attribute-name">maxlength</span><div class="attribute-desc">Maximum character count</div></div>
+            <div class="attribute"><span class="attribute-name">minlength</span><div class="attribute-desc">Minimum character count</div></div>
+            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc">Boolean: must have content before submission</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: non-interactive, not submitted</div></div>
+            <div class="attribute"><span class="attribute-name">readonly</span><div class="attribute-desc">Boolean: user can read but not edit; value IS submitted</div></div>
+            <div class="attribute"><span class="attribute-name">wrap</span><div class="attribute-desc">"soft" (default: line breaks not sent to server), "hard" (line breaks are sent), "off" (no wrapping)</div></div>
+            <div class="attribute"><span class="attribute-name">spellcheck</span><div class="attribute-desc">"true" or "false"</div></div>
+        </div>
+        <div class="code-example">&lt;label for="bio"&gt;Biography:&lt;/label&gt;
+&lt;textarea
+  id="bio"
+  name="bio"
+  rows="5"
+  cols="50"
+  placeholder="Tell us about yourself..."
+  maxlength="500"
+  required
+&gt;&lt;/textarea&gt;
+
+&lt;!-- With default content --&gt;
+&lt;textarea name="notes"&gt;This is the default text content.&lt;/textarea&gt;
+
+&lt;!-- Do NOT add space between tags (it becomes the default value) --&gt;
+&lt;!-- Bad: &lt;textarea&gt; &lt;/textarea&gt; — has a space as default value --&gt;
+&lt;!-- Good: &lt;textarea&gt;&lt;/textarea&gt; --&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: SELECT / DROPDOWN -->
+<!-- ============================================================ -->
+<section>
+    <h2>7. Select &amp; Dropdown — &lt;select&gt;</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;select&gt;, &lt;option&gt;, &lt;optgroup&gt;</div>
+        <div class="element-description">Creates a dropdown list of options. &lt;option&gt; defines each choice. &lt;optgroup&gt; groups related options.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc">Key submitted with form (on &lt;select&gt;)</div></div>
+            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc">To associate with &lt;label&gt; (on &lt;select&gt;)</div></div>
+            <div class="attribute"><span class="attribute-name">multiple</span><div class="attribute-desc">Boolean (on &lt;select&gt;): allows selecting multiple options (Ctrl/Cmd+click)</div></div>
+            <div class="attribute"><span class="attribute-name">size</span><div class="attribute-desc">Number of visible options at once (on &lt;select&gt;). With size > 1, renders as a listbox, not dropdown.</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean: disables the entire select</div></div>
+            <div class="attribute"><span class="attribute-name">required</span><div class="attribute-desc">Boolean: user must select a non-empty option</div></div>
+            <div class="attribute"><span class="attribute-name">value</span><div class="attribute-desc">The value submitted when this option is selected (on &lt;option&gt;). If omitted, the text content is used.</div></div>
+            <div class="attribute"><span class="attribute-name">selected</span><div class="attribute-desc">Boolean (on &lt;option&gt;): this option is selected by default</div></div>
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean (on &lt;option&gt;): this option cannot be selected</div></div>
+            <div class="attribute"><span class="attribute-name">label</span><div class="attribute-desc">Short label for &lt;optgroup&gt; — the group heading text</div></div>
+        </div>
+        <div class="code-example">&lt;!-- Basic dropdown --&gt;
+&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country" required&gt;
+  &lt;option value=""&gt;-- Select a country --&lt;/option&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+  &lt;option value="ca" selected&gt;Canada (pre-selected)&lt;/option&gt;
+  &lt;option value="au"&gt;Australia&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Grouped options with optgroup --&gt;
+&lt;label for="language"&gt;Programming Language:&lt;/label&gt;
+&lt;select id="language" name="language"&gt;
+  &lt;optgroup label="Frontend"&gt;
+    &lt;option value="html"&gt;HTML&lt;/option&gt;
+    &lt;option value="css"&gt;CSS&lt;/option&gt;
+    &lt;option value="js"&gt;JavaScript&lt;/option&gt;
+  &lt;/optgroup&gt;
+  &lt;optgroup label="Backend"&gt;
+    &lt;option value="python"&gt;Python&lt;/option&gt;
+    &lt;option value="node"&gt;Node.js&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;!-- Multi-select listbox --&gt;
+&lt;label for="skills"&gt;Skills (Ctrl+click to select multiple):&lt;/label&gt;
+&lt;select id="skills" name="skills" multiple size="5"&gt;
+  &lt;option value="html"&gt;HTML&lt;/option&gt;
+  &lt;option value="css"&gt;CSS&lt;/option&gt;
+  &lt;option value="js"&gt;JavaScript&lt;/option&gt;
+  &lt;option value="react"&gt;React&lt;/option&gt;
+  &lt;option value="python"&gt;Python&lt;/option&gt;
+&lt;/select&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 8: DATALIST -->
+<!-- ============================================================ -->
+<section>
+    <h2>8. Datalist — Autocomplete Suggestions</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;datalist&gt;</div>
+        <div class="element-description">Provides a list of pre-defined autocomplete suggestions for an &lt;input&gt;. Unlike &lt;select&gt;, the user can also type anything — the suggestions are optional. Link with input via <strong>list</strong> attribute.</div>
+        <div class="code-example">&lt;label for="browser"&gt;Preferred browser:&lt;/label&gt;
+&lt;input type="text" id="browser" name="browser" list="browser-options"&gt;
+&lt;datalist id="browser-options"&gt;
+  &lt;option value="Chrome"&gt;
+  &lt;option value="Firefox"&gt;
+  &lt;option value="Safari"&gt;
+  &lt;option value="Edge"&gt;
+  &lt;option value="Opera"&gt;
+&lt;/datalist&gt;
+
+&lt;!-- Works with other input types too --&gt;
+&lt;label for="quantity"&gt;Quantity:&lt;/label&gt;
+&lt;input type="number" id="quantity" name="quantity" list="qty-suggestions"&gt;
+&lt;datalist id="qty-suggestions"&gt;
+  &lt;option value="1"&gt;
+  &lt;option value="5"&gt;
+  &lt;option value="10"&gt;
+  &lt;option value="25"&gt;
+  &lt;option value="100"&gt;
+&lt;/datalist&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 9: FIELDSET AND LEGEND -->
+<!-- ============================================================ -->
+<section>
+    <h2>9. Fieldset &amp; Legend</h2>
+
+    <div class="element-box">
+        <div class="element-name">&lt;fieldset&gt; and &lt;legend&gt;</div>
+        <div class="element-description">&lt;fieldset&gt; groups related form controls with a visible border. &lt;legend&gt; provides a caption/title for the group (must be the first child of fieldset). Essential for accessibility — screen readers announce the legend when entering the group.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">disabled</span><div class="attribute-desc">Boolean on &lt;fieldset&gt;: disables all form controls inside the group at once.</div></div>
+            <div class="attribute"><span class="attribute-name">form</span><div class="attribute-desc">Associates fieldset with a form by its ID</div></div>
+            <div class="attribute"><span class="attribute-name">name</span><div class="attribute-desc">Name for the fieldset element (for JavaScript use)</div></div>
+        </div>
+        <div class="code-example">&lt;form method="POST" action="/register"&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+    &lt;label for="full-name"&gt;Full Name:&lt;/label&gt;
+    &lt;input type="text" id="full-name" name="name" required&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+  &lt;/fieldset&gt;
+
+  &lt;!-- Radio group (ALWAYS use fieldset + legend for radio groups) --&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Preferred Contact Method&lt;/legend&gt;
+    &lt;input type="radio" id="by-email" name="contact" value="email"&gt;
+    &lt;label for="by-email"&gt;Email&lt;/label&gt;
+    &lt;input type="radio" id="by-phone" name="contact" value="phone"&gt;
+    &lt;label for="by-phone"&gt;Phone&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;!-- Checkbox group --&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Skills (check all that apply)&lt;/legend&gt;
+    &lt;input type="checkbox" id="html" name="skills" value="html"&gt;
+    &lt;label for="html"&gt;HTML&lt;/label&gt;
+    &lt;input type="checkbox" id="css" name="skills" value="css"&gt;
+    &lt;label for="css"&gt;CSS&lt;/label&gt;
+    &lt;input type="checkbox" id="js" name="skills" value="js"&gt;
+    &lt;label for="js"&gt;JavaScript&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;!-- Disable an entire group --&gt;
+  &lt;fieldset disabled&gt;
+    &lt;legend&gt;Payment (unavailable)&lt;/legend&gt;
+    &lt;input type="text" name="card"&gt;
+    &lt;input type="text" name="cvv"&gt;
+  &lt;/fieldset&gt;
+
+  &lt;button type="submit"&gt;Register&lt;/button&gt;
+&lt;/form&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 10: FORM STATES -->
+<!-- ============================================================ -->
+<section>
+    <h2>10. Form Input States</h2>
+
+    <table class="reference">
+        <thead><tr><th>State/Attribute</th><th>Effect</th><th>Submitted?</th><th>User Interaction</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-name">disabled</span></td><td>Greyed out, not interactive</td><td>❌ No</td><td>Cannot click, type, or tab to it</td></tr>
+            <tr><td><span class="attribute-name">readonly</span></td><td>Shows value, cannot edit</td><td>✅ Yes</td><td>Can click and tab to it, but not change</td></tr>
+            <tr><td><span class="attribute-name">required</span></td><td>Must be filled to submit</td><td>✅ Yes (if valid)</td><td>Shows error if empty on submit</td></tr>
+            <tr><td><span class="attribute-name">checked</span></td><td>Pre-checked checkbox/radio</td><td>✅ Yes (if checked)</td><td>User can uncheck</td></tr>
+            <tr><td><span class="attribute-name">selected</span></td><td>Pre-selected dropdown option</td><td>✅ Yes</td><td>User can change selection</td></tr>
+            <tr><td><span class="attribute-name">autofocus</span></td><td>Gets focus on page load</td><td>N/A</td><td>Cursor starts here</td></tr>
+            <tr><td><span class="attribute-name">hidden</span></td><td>Invisible to user</td><td>✅ Yes</td><td>Cannot interact with it</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 11: COMPLETE FORM EXAMPLE -->
+<!-- ============================================================ -->
+<section>
+    <h2>11. Complete Form Example</h2>
+
+    <div class="code-example">&lt;form method="POST" action="https://hotel-feedback.freecodecamp.org"&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+
+    &lt;label for="full-name"&gt;Name (required):&lt;/label&gt;
+    &lt;input type="text" id="full-name" name="name"
+           placeholder="e.g., John Doe" required size="20"&gt;
+
+    &lt;label for="email"&gt;Email (required):&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"
+           placeholder="example@email.com" required size="20"&gt;
+
+    &lt;label for="age"&gt;Age (optional):&lt;/label&gt;
+    &lt;input type="number" id="age" name="age" min="3" max="100"&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;First visit?&lt;/legend&gt;
+    &lt;input id="yes" type="radio" name="hotel-stay" value="yes"&gt;
+    &lt;label for="yes"&gt;Yes&lt;/label&gt;
+    &lt;input id="no" type="radio" name="hotel-stay" value="no"&gt;
+    &lt;label for="no"&gt;No&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Why did you choose us? (Check all that apply)&lt;/legend&gt;
+    &lt;input type="checkbox" id="ads" name="choice" value="ads"&gt;
+    &lt;label for="ads"&gt;Social Media Ads&lt;/label&gt;
+    &lt;input type="checkbox" id="rec" name="choice" value="recommendation"&gt;
+    &lt;label for="rec"&gt;Personal Recommendation&lt;/label&gt;
+    &lt;input type="checkbox" id="loc" name="choice" value="location"&gt;
+    &lt;label for="loc"&gt;Location&lt;/label&gt;
+    &lt;input type="checkbox" id="rep" name="choice" value="reputation" checked&gt;
+    &lt;label for="rep"&gt;Reputation&lt;/label&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Ratings&lt;/legend&gt;
+    &lt;label for="service"&gt;Service:&lt;/label&gt;
+    &lt;select name="service" id="service"&gt;
+      &lt;option value="poor"&gt;Poor&lt;/option&gt;
+      &lt;option value="good"&gt;Good&lt;/option&gt;
+      &lt;option value="excellent" selected&gt;Excellent&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/fieldset&gt;
+
+  &lt;label for="comments"&gt;Comments:&lt;/label&gt;
+  &lt;textarea id="comments" name="comments" rows="5" cols="30"&gt;&lt;/textarea&gt;
+
+  &lt;button type="reset"&gt;Clear Form&lt;/button&gt;
+  &lt;button type="submit"&gt;Submit Feedback&lt;/button&gt;
+
+&lt;/form&gt;</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 12: HTML TABLES -->
+<!-- ============================================================ -->
+<section>
+    <h2>12. HTML Tables</h2>
+    <div class="important">📌 Tables are for <strong>tabular data</strong> — data with rows and columns. Never use tables for page layout.</div>
+
+    <h3>Table Structure Elements</h3>
+    <table class="reference">
+        <thead><tr><th>Element</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="tag">&lt;table&gt;</span></td><td>Creates the table</td><td>Wrapper for all table elements</td></tr>
+            <tr><td><span class="tag">&lt;caption&gt;</span></td><td>Table title/description</td><td>First child of &lt;table&gt;. Important for accessibility.</td></tr>
+            <tr><td><span class="tag">&lt;thead&gt;</span></td><td>Groups header rows</td><td>Contains column header &lt;tr&gt; rows</td></tr>
+            <tr><td><span class="tag">&lt;tbody&gt;</span></td><td>Groups body rows (the data)</td><td>Main data content. Can have multiple &lt;tbody&gt; elements.</td></tr>
+            <tr><td><span class="tag">&lt;tfoot&gt;</span></td><td>Groups footer rows</td><td>Totals, averages, summaries. Renders last even if placed before &lt;tbody&gt;.</td></tr>
+            <tr><td><span class="tag">&lt;tr&gt;</span></td><td>Table row</td><td>Used inside thead, tbody, or tfoot</td></tr>
+            <tr><td><span class="tag">&lt;th&gt;</span></td><td>Table header cell</td><td>Bold and centered by default. Use for column and row headers.</td></tr>
+            <tr><td><span class="tag">&lt;td&gt;</span></td><td>Table data cell</td><td>Regular table cell with content</td></tr>
+            <tr><td><span class="tag">&lt;colgroup&gt;</span></td><td>Groups columns for styling</td><td>Contains &lt;col&gt; elements</td></tr>
+            <tr><td><span class="tag">&lt;col&gt;</span></td><td>Single column or span of columns</td><td>Void element. Apply styles to columns without repeating on each cell.</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Cell Spanning Attributes</h3>
+    <div class="element-box">
+        <div class="element-name">colspan and rowspan</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">colspan</span><div class="attribute-desc">Number of columns the cell spans (merges cells horizontally). Used on &lt;td&gt; or &lt;th&gt;.</div></div>
+            <div class="attribute"><span class="attribute-name">rowspan</span><div class="attribute-desc">Number of rows the cell spans (merges cells vertically). Used on &lt;td&gt; or &lt;th&gt;.</div></div>
+        </div>
+        <div class="code-example">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td colspan="2"&gt;Spans 2 columns&lt;/td&gt;   &lt;td&gt;Col 3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td rowspan="2"&gt;Spans 2 rows&lt;/td&gt;   &lt;td&gt;B&lt;/td&gt;   &lt;td&gt;C&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+                                          &lt;td&gt;E&lt;/td&gt;   &lt;td&gt;F&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</div>
+    </div>
+
+    <h3>Accessibility Attributes for Tables</h3>
+    <div class="element-box">
+        <div class="element-name">scope, headers, id (on &lt;th&gt; and &lt;td&gt;)</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">scope</span><div class="attribute-desc">On &lt;th&gt;: "col" (header for a column), "row" (header for a row), "colgroup", "rowgroup". Helps screen readers associate headers with data cells.</div></div>
+            <div class="attribute"><span class="attribute-name">id</span><div class="attribute-desc">On &lt;th&gt;: gives the header a unique ID so data cells can reference it with headers attribute.</div></div>
+            <div class="attribute"><span class="attribute-name">headers</span><div class="attribute-desc">On &lt;td&gt;: space-separated list of &lt;th&gt; id values that label this cell. Used in complex tables.</div></div>
+        </div>
+    </div>
+
+    <div class="code-example">&lt;!-- Complete table with all best practices --&gt;
+&lt;table&gt;
+  &lt;caption&gt;Calculus Final Exam Grades&lt;/caption&gt;
+
+  &lt;colgroup&gt;
+    &lt;col style="width: 30%"&gt;
+    &lt;col style="width: 30%"&gt;
+    &lt;col style="width: 40%"&gt;
+  &lt;/colgroup&gt;
+
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Last Name&lt;/th&gt;
+      &lt;th scope="col"&gt;First Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Grade&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Davis&lt;/td&gt;
+      &lt;td&gt;Alex&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Doe&lt;/td&gt;
+      &lt;td&gt;Samantha&lt;/td&gt;
+      &lt;td&gt;92&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Rodriguez&lt;/td&gt;
+      &lt;td&gt;Marcus&lt;/td&gt;
+      &lt;td&gt;88&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Thompson&lt;/td&gt;
+      &lt;td&gt;Jane&lt;/td&gt;
+      &lt;td&gt;77&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Williams&lt;/td&gt;
+      &lt;td&gt;Natalie&lt;/td&gt;
+      &lt;td&gt;83&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="2"&gt;Class Average&lt;/td&gt;
+      &lt;td&gt;78.8&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</div>
+
+    <h3>Table with colspan and rowspan Example</h3>
+    <div class="code-example">&lt;table border="1"&gt;
+  &lt;caption&gt;Weekly Schedule&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Time&lt;/th&gt;
+      &lt;th scope="col"&gt;Monday&lt;/th&gt;
+      &lt;th scope="col"&gt;Tuesday&lt;/th&gt;
+      &lt;th scope="col"&gt;Wednesday&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;9:00&lt;/th&gt;
+      &lt;td colspan="2"&gt;Math Class (spans Mon + Tue)&lt;/td&gt;
+      &lt;td&gt;Science&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;10:00&lt;/th&gt;
+      &lt;td rowspan="2"&gt;English (spans 10:00 + 11:00)&lt;/td&gt;
+      &lt;td&gt;Art&lt;/td&gt;
+      &lt;td&gt;History&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;11:00&lt;/th&gt;
+      &lt;!-- English cell already spans here --&gt;
+      &lt;td&gt;Music&lt;/td&gt;
+      &lt;td&gt;PE&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</div>
+</section>
+
+</body>
+</html>

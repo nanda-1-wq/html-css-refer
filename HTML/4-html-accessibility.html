@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Accessibility Reference</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background: #f0f2f5; padding: 0 20px 40px; }
+        .nav-bar { background: #2c3e50; padding: 12px 20px; position: sticky; top: 0; z-index: 100; text-align: center; margin-bottom: 30px; }
+        .nav-bar a { color: #ecf0f1; text-decoration: none; margin: 0 8px; font-weight: 600; font-size: 0.85em; padding: 4px 8px; border-radius: 4px; }
+        .nav-bar a:hover { background: #3498db; }
+        .nav-bar a.active { background: #3498db; }
+        h1 { text-align: center; color: #2c3e50; margin: 30px auto 50px; font-size: 2.5em; border-bottom: 4px solid #3498db; padding-bottom: 20px; max-width: 1000px; }
+        h2 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; margin-top: 40px; margin-bottom: 20px; border-radius: 5px; font-size: 1.8em; }
+        h3 { color: #667eea; margin-top: 25px; margin-bottom: 15px; font-size: 1.3em; border-left: 4px solid #667eea; padding-left: 15px; }
+        section { background: white; max-width: 1000px; margin: 20px auto; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .element-box { background: #f8f9fa; border: 2px solid #e9ecef; border-left: 5px solid #3498db; padding: 15px; margin: 15px 0; border-radius: 5px; }
+        .element-name { font-weight: 700; color: #2c3e50; font-size: 1.1em; margin-bottom: 8px; font-family: 'Courier New', monospace; }
+        .element-description { color: #555; margin-bottom: 10px; }
+        .attributes { background: white; border: 1px solid #ddd; border-radius: 3px; padding: 12px; margin-top: 10px; font-size: 0.95em; }
+        .attribute { margin: 8px 0; padding: 5px 0; border-bottom: 1px solid #f0f0f0; }
+        .attribute:last-child { border-bottom: none; }
+        .attribute-name { font-weight: 600; color: #e74c3c; font-family: 'Courier New', monospace; }
+        .attribute-desc { color: #666; margin-left: 20px; }
+        .code-example { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; margin: 15px 0; overflow-x: auto; font-family: 'Courier New', monospace; font-size: 0.9em; line-height: 1.6; white-space: pre; }
+        .important { background: #fff3cd; border-left: 4px solid #ffc107; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        .tip { background: #d4edda; border-left: 4px solid #28a745; padding: 12px 15px; margin: 15px 0; border-radius: 3px; }
+        table.reference { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        table.reference th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        table.reference td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
+        table.reference tr:nth-child(even) { background: #f9f9f9; }
+        .tag { background: #e8f4f8; color: #2c3e50; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', monospace; font-weight: 600; }
+        .attribute-value { color: #27ae60; font-weight: 600; }
+        @media (max-width: 768px) { h1 { font-size: 1.8em; } h2 { font-size: 1.3em; } section { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="1-html-basics.html">1 Basics</a>
+    <a href="2-html-semantics.html">2 Semantics</a>
+    <a href="3-html-forms-tables.html">3 Forms &amp; Tables</a>
+    <a href="4-html-accessibility.html" class="active">4 Accessibility</a>
+    <a href="all-html-reference.html">All-in-One</a>
+</div>
+
+<h1>HTML Accessibility Reference</h1>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: WHAT IS ACCESSIBILITY -->
+<!-- ============================================================ -->
+<section>
+    <h2>1. What Is Web Accessibility?</h2>
+
+    <p style="color:#555; margin-bottom:15px;"><strong>Web accessibility</strong> means creating websites that everyone can use — including people with disabilities. About 15% of the world's population lives with some form of disability.</p>
+
+    <h3>Types of Disabilities Affecting Web Use</h3>
+    <table class="reference">
+        <thead><tr><th>Disability Type</th><th>Examples</th><th>Common Assistive Tech</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Visual</strong></td><td>Blindness, low vision, color blindness</td><td>Screen readers (NVDA, JAWS, VoiceOver), braille displays, magnifiers</td></tr>
+            <tr><td><strong>Auditory</strong></td><td>Deafness, hard of hearing</td><td>Captions, transcripts, visual alerts</td></tr>
+            <tr><td><strong>Motor</strong></td><td>Paralysis, tremors, difficulty using mouse/touchscreen</td><td>Keyboard only, switch access, voice control</td></tr>
+            <tr><td><strong>Cognitive</strong></td><td>Attention disorders, memory issues, learning disabilities</td><td>Clear language, consistent navigation, reduced clutter</td></tr>
+            <tr><td><strong>Speech</strong></td><td>Difficulty speaking</td><td>Alternative input methods</td></tr>
+            <tr><td><strong>Photosensitive</strong></td><td>Sensitivity to flashing lights (seizures)</td><td>Avoiding flashing content (&lt;3Hz)</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: WCAG POUR PRINCIPLES -->
+<!-- ============================================================ -->
+<section>
+    <h2>2. WCAG &amp; POUR Principles</h2>
+
+    <p style="color:#555; margin-bottom:15px;">The <strong>Web Content Accessibility Guidelines (WCAG)</strong> are the international standard for web accessibility. They are organized around four principles, remembered as <strong>POUR</strong>.</p>
+
+    <div class="element-box">
+        <div class="element-name">P — Perceivable</div>
+        <div class="element-description">Information must be presentable in ways users can perceive. If you can only convey something visually, users who can't see are excluded.</div>
+        <p style="margin-top: 10px; color: #555;">
+            ✓ Provide <strong>alt text</strong> for all meaningful images<br>
+            ✓ Add <strong>captions</strong> for videos and <strong>transcripts</strong> for audio<br>
+            ✓ Ensure sufficient <strong>color contrast</strong> (4.5:1 for normal text, 3:1 for large text)<br>
+            ✓ Don't use color alone to convey information<br>
+            ✓ Text should be resizable up to 200% without loss of functionality
+        </p>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">O — Operable</div>
+        <div class="element-description">All UI and navigation must be operable. Not all users can use a mouse.</div>
+        <p style="margin-top: 10px; color: #555;">
+            ✓ All functionality available via <strong>keyboard</strong><br>
+            ✓ Visible <strong>focus indicators</strong> (don't remove outline: none without replacement)<br>
+            ✓ Users have enough time to read content (no auto-timeouts without warning)<br>
+            ✓ No content that flashes more than 3 times per second<br>
+            ✓ Provide <strong>skip navigation links</strong><br>
+            ✓ Descriptive page titles and headings
+        </p>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">U — Understandable</div>
+        <div class="element-description">Content and operation must be understandable by users.</div>
+        <p style="margin-top: 10px; color: #555;">
+            ✓ Set the <strong>lang attribute</strong> on &lt;html&gt;<br>
+            ✓ Use clear, simple language<br>
+            ✓ Consistent navigation across pages<br>
+            ✓ Associate <strong>labels with form controls</strong><br>
+            ✓ Provide <strong>error messages</strong> that explain what went wrong<br>
+            ✓ Use logical, hierarchical <strong>heading structure</strong>
+        </p>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">R — Robust</div>
+        <div class="element-description">Content must work with current and future assistive technologies.</div>
+        <p style="margin-top: 10px; color: #555;">
+            ✓ Use <strong>valid HTML</strong> (no duplicate IDs, proper nesting)<br>
+            ✓ Use <strong>semantic HTML</strong> elements where possible<br>
+            ✓ Use ARIA only when native HTML isn't sufficient<br>
+            ✓ Ensure interactive elements have accessible names
+        </p>
+    </div>
+
+    <h3>WCAG Conformance Levels</h3>
+    <table class="reference">
+        <thead><tr><th>Level</th><th>Meaning</th><th>Typical Use</th></tr></thead>
+        <tbody>
+            <tr><td><strong>A</strong></td><td>Minimum accessibility. Removes the most critical barriers.</td><td>Baseline — must meet</td></tr>
+            <tr><td><strong>AA</strong></td><td>Addresses most common barriers. The legal standard in most countries.</td><td>Required for most sites</td></tr>
+            <tr><td><strong>AAA</strong></td><td>Highest standard. Not always achievable for all content types.</td><td>Aim for where possible</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: HEADING STRUCTURE -->
+<!-- ============================================================ -->
+<section>
+    <h2>3. Heading Structure</h2>
+
+    <div class="element-box">
+        <div class="element-name">Proper Heading Hierarchy</div>
+        <div class="element-description">Screen reader users often navigate pages using headings as a table of contents. Follow these rules:</div>
+        <p style="margin-top: 10px; color: #555;">
+            ✓ Only <strong>one &lt;h1&gt;</strong> per page (the main page title)<br>
+            ✓ Don't skip heading levels (no jumping from h2 to h4)<br>
+            ✓ Use headings for document structure, not for visual styling<br>
+            ✓ Headings should clearly describe the content that follows
+        </p>
+        <div class="code-example">&lt;!-- Correct: logical hierarchy --&gt;
+&lt;h1&gt;My Web Development Tutorial&lt;/h1&gt;
+  &lt;h2&gt;HTML Basics&lt;/h2&gt;
+    &lt;h3&gt;Document Structure&lt;/h3&gt;
+    &lt;h3&gt;Elements and Tags&lt;/h3&gt;
+  &lt;h2&gt;CSS Styling&lt;/h2&gt;
+    &lt;h3&gt;Selectors&lt;/h3&gt;
+    &lt;h3&gt;Box Model&lt;/h3&gt;
+
+&lt;!-- Wrong: skips h2, uses heading for visual style --&gt;
+&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h4&gt;I just wanted smaller text...&lt;/h4&gt; &lt;!-- ❌ skipped h2 and h3 --&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: ALT TEXT FOR IMAGES -->
+<!-- ============================================================ -->
+<section>
+    <h2>4. Alt Text for Images</h2>
+
+    <div class="element-box">
+        <div class="element-name">alt attribute on &lt;img&gt;</div>
+        <div class="element-description">Screen readers read alt text aloud. Search engines use it for indexing. It also appears when images fail to load.</div>
+        <div class="code-example">&lt;!-- ✅ Good: descriptive, meaningful --&gt;
+&lt;img src="cats.jpg" alt="Two orange tabby kittens sleeping together on a gray couch"&gt;
+
+&lt;!-- ✅ Good: includes context/purpose --&gt;
+&lt;img src="chart.png" alt="Bar chart showing sales increased 40% from 2022 to 2024"&gt;
+
+&lt;!-- ✅ Functional image (link/button): describe the action --&gt;
+&lt;a href="home.html"&gt;
+  &lt;img src="home-icon.png" alt="Go to Home Page"&gt;
+&lt;/a&gt;
+
+&lt;!-- ✅ Decorative image: empty alt (screen readers skip it) --&gt;
+&lt;img src="decorative-divider.png" alt=""&gt;
+
+&lt;!-- ❌ Bad: too vague --&gt;
+&lt;img src="photo.jpg" alt="image"&gt;
+&lt;img src="photo.jpg" alt="photo"&gt;
+&lt;img src="photo.jpg" alt="photo of something"&gt;
+
+&lt;!-- ❌ Bad: redundant (don't say "image of" or "picture of") --&gt;
+&lt;img src="cat.jpg" alt="Image of a cat sitting on a mat"&gt;
+&lt;!-- ✅ Better --&gt;
+&lt;img src="cat.jpg" alt="A fluffy white cat sitting on a red mat"&gt;</div>
+        <div class="important">⚠️ <strong>Rule of thumb:</strong> Describe what the image shows AND why it matters in context. For decorative images, use alt="" (empty string) — NOT alt="decorative" or omitting alt entirely (missing alt is an error).</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: DESCRIPTIVE LINK TEXT -->
+<!-- ============================================================ -->
+<section>
+    <h2>5. Descriptive Link Text</h2>
+
+    <div class="element-box">
+        <div class="element-name">Meaningful Anchor Text</div>
+        <div class="element-description">Screen reader users often tab through links in isolation. Link text must make sense without surrounding context.</div>
+        <div class="code-example">&lt;!-- ✅ Good: describes destination clearly --&gt;
+&lt;a href="https://www.freecodecamp.org"&gt;Learn to code for free on freeCodeCamp&lt;/a&gt;
+
+&lt;a href="/privacy-policy"&gt;Read our Privacy Policy&lt;/a&gt;
+
+&lt;a href="resume.pdf" download&gt;Download Jane Doe's Resume (PDF)&lt;/a&gt;
+
+&lt;!-- ✅ Good: image link with alt text describing destination --&gt;
+&lt;a href="/"&gt;&lt;img src="logo.png" alt="Home — My Website"&gt;&lt;/a&gt;
+
+&lt;!-- ❌ Bad: vague, meaningless out of context --&gt;
+&lt;a href="https://www.freecodecamp.org"&gt;Click here&lt;/a&gt;
+&lt;a href="/privacy-policy"&gt;Read more&lt;/a&gt;
+&lt;a href="resume.pdf"&gt;Here&lt;/a&gt;
+
+&lt;!-- For icon-only links: use aria-label --&gt;
+&lt;a href="https://twitter.com/user" aria-label="Follow us on Twitter"&gt;
+  &lt;svg aria-hidden="true"&gt;...&lt;/svg&gt;
+&lt;/a&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 6: FORM ACCESSIBILITY -->
+<!-- ============================================================ -->
+<section>
+    <h2>6. Form Accessibility</h2>
+
+    <div class="element-box">
+        <div class="element-name">Always Associate Labels with Inputs</div>
+        <div class="element-description">When a screen reader focuses an input, it reads the associated label. Without a label, the user doesn't know what to enter.</div>
+        <div class="code-example">&lt;!-- ✅ Explicit association (recommended) --&gt;
+&lt;label for="user-email"&gt;Email Address:&lt;/label&gt;
+&lt;input type="email" id="user-email" name="email" required&gt;
+
+&lt;!-- ✅ Implicit association --&gt;
+&lt;label&gt;
+  Full Name:
+  &lt;input type="text" name="name"&gt;
+&lt;/label&gt;
+
+&lt;!-- ✅ Fieldset + legend for radio/checkbox groups --&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Preferred notification method:&lt;/legend&gt;
+  &lt;input type="radio" id="by-email" name="notify" value="email"&gt;
+  &lt;label for="by-email"&gt;Email&lt;/label&gt;
+  &lt;input type="radio" id="by-sms" name="notify" value="sms"&gt;
+  &lt;label for="by-sms"&gt;SMS&lt;/label&gt;
+&lt;/fieldset&gt;
+
+&lt;!-- ✅ Error messages linked to input --&gt;
+&lt;label for="password"&gt;Password:&lt;/label&gt;
+&lt;input
+  type="password"
+  id="password"
+  name="password"
+  aria-describedby="pwd-help pwd-error"
+  aria-invalid="true"
+&gt;
+&lt;p id="pwd-help"&gt;Must be at least 8 characters.&lt;/p&gt;
+&lt;p id="pwd-error" role="alert"&gt;Error: Password is too short.&lt;/p&gt;
+
+&lt;!-- ✅ Required field indication --&gt;
+&lt;label for="username"&gt;Username &lt;span aria-hidden="true"&gt;*&lt;/span&gt;:&lt;/label&gt;
+&lt;input type="text" id="username" name="username" required
+       aria-required="true"&gt;
+&lt;p&gt;&lt;span aria-hidden="true"&gt;*&lt;/span&gt; Required fields&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Table Accessibility in Forms</div>
+        <div class="element-description">When displaying form data or results in a table, always use caption, scope on th elements, and proper thead/tbody/tfoot.</div>
+        <div class="code-example">&lt;table&gt;
+  &lt;caption&gt;Employee Salary Information&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Employee Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Department&lt;/th&gt;
+      &lt;th scope="col"&gt;Annual Salary&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sarah Johnson&lt;/td&gt;
+      &lt;td&gt;Engineering&lt;/td&gt;
+      &lt;td&gt;$95,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 7: AUDIO & VIDEO ACCESSIBILITY -->
+<!-- ============================================================ -->
+<section>
+    <h2>7. Audio &amp; Video Accessibility</h2>
+
+    <div class="element-box">
+        <div class="element-name">Captions, Subtitles &amp; Transcripts</div>
+        <div class="element-description">
+            <strong>Captions:</strong> Time-synced text of all audio (speech + sound effects) for deaf/HoH users.<br>
+            <strong>Subtitles:</strong> Translation of speech into another language.<br>
+            <strong>Transcripts:</strong> Full text version of audio/video (can be read at own pace).
+        </div>
+        <div class="code-example">&lt;!-- Video with captions (WebVTT format) --&gt;
+&lt;video controls width="640" height="480"&gt;
+  &lt;source src="tutorial.mp4" type="video/mp4"&gt;
+  &lt;source src="tutorial.webm" type="video/webm"&gt;
+
+  &lt;!-- Captions (for deaf/HoH — includes speaker labels, sound effects) --&gt;
+  &lt;track kind="captions" src="captions-en.vtt" srclang="en"
+         label="English Captions" default&gt;
+
+  &lt;!-- Subtitles (translation) --&gt;
+  &lt;track kind="subtitles" src="subtitles-es.vtt" srclang="es"
+         label="Spanish"&gt;
+
+  &lt;!-- Audio descriptions (describe visual content for blind users) --&gt;
+  &lt;track kind="descriptions" src="descriptions-en.vtt" srclang="en"
+         label="Audio Descriptions"&gt;
+
+  Your browser doesn't support the video element.
+&lt;/video&gt;
+
+&lt;!-- Transcript below the video --&gt;
+&lt;details&gt;
+  &lt;summary&gt;Video Transcript&lt;/summary&gt;
+  &lt;p&gt;[Transcript text here...]&lt;/p&gt;
+&lt;/details&gt;</div>
+    </div>
+
+    <h3>WebVTT Caption File Format</h3>
+    <div class="code-example">&lt;!-- captions-en.vtt --&gt;
+WEBVTT
+
+00:00:01.000 --&gt; 00:00:04.000
+Hello and welcome to this tutorial.
+
+00:00:05.000 --&gt; 00:00:09.000
+Today we'll learn about HTML accessibility.
+
+00:00:10.000 --&gt; 00:00:14.000
+[keyboard typing sounds]
+Let's start by looking at the code.</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 8: KEYBOARD NAVIGATION -->
+<!-- ============================================================ -->
+<section>
+    <h2>8. Keyboard Navigation</h2>
+
+    <div class="element-box">
+        <div class="element-name">tabindex</div>
+        <div class="element-description">Controls whether and how an element participates in keyboard (Tab key) navigation.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">tabindex="0"</span><div class="attribute-desc">Makes element focusable in its natural document order. Use to make non-interactive elements (div, span) keyboard-accessible.</div></div>
+            <div class="attribute"><span class="attribute-name">tabindex="-1"</span><div class="attribute-desc">Removes element from tab order, but allows JavaScript to focus it programmatically with .focus().</div></div>
+            <div class="attribute"><span class="attribute-name">tabindex="1+" (AVOID)</span><div class="attribute-desc">Positive values override natural tab order. Creates confusing navigation. Never use values greater than 0.</div></div>
+        </div>
+        <div class="code-example">&lt;!-- Naturally focusable (no tabindex needed): --&gt;
+&lt;!-- a, button, input, select, textarea, details --&gt;
+
+&lt;!-- Make a div keyboard focusable --&gt;
+&lt;div tabindex="0" role="button" onclick="doSomething()"&gt;Click Me&lt;/div&gt;
+
+&lt;!-- Remove from tab order (accessible only via JS) --&gt;
+&lt;div id="modal" tabindex="-1"&gt;Modal content&lt;/div&gt;
+&lt;script&gt;
+  document.getElementById("modal").focus(); // Works!
+&lt;/script&gt;
+
+&lt;!-- Skip button: focusable with tabindex="0" --&gt;
+&lt;a href="#main-content" tabindex="0"&gt;Skip to main content&lt;/a&gt;
+
+&lt;!-- ❌ Never use positive tabindex --&gt;
+&lt;button tabindex="3"&gt;This breaks tab order&lt;/button&gt;</div>
+        <div class="important">⚠️ The default Tab order follows document order. Design your HTML so the natural reading order matches the logical flow of the page.</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">accesskey</div>
+        <div class="element-description">Defines a keyboard shortcut to activate or focus an element. The shortcut is the specified key combined with a modifier key that varies by OS and browser.</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">accesskey="letter"</span><div class="attribute-desc">Single character shortcut. Activation: Alt+key (Windows/Linux), Control+Option+key (Mac).</div></div>
+        </div>
+        <div class="code-example">&lt;button type="submit" accesskey="s"&gt;Save (Alt+S / Ctrl+Opt+S)&lt;/button&gt;
+&lt;button type="reset" accesskey="c"&gt;Cancel (Alt+C)&lt;/button&gt;
+&lt;a href="/home" accesskey="h"&gt;Home (Alt+H)&lt;/a&gt;
+
+&lt;!-- Always document the shortcuts visibly for users! --&gt;
+&lt;p&gt;Keyboard shortcuts: &lt;kbd&gt;Alt+S&lt;/kbd&gt; to save, &lt;kbd&gt;Alt+C&lt;/kbd&gt; to cancel.&lt;/p&gt;</div>
+        <div class="important">⚠️ <strong>Use sparingly.</strong> Accesskeys can conflict with browser or OS shortcuts. Document them prominently. Don't rely on them as the only way to perform actions.</div>
+    </div>
+
+    <h3>Skip Navigation Links</h3>
+    <div class="element-box">
+        <div class="element-name">Skip to Main Content</div>
+        <div class="element-description">A link at the top of the page (often visually hidden until focused) that allows keyboard users to jump past repetitive navigation to the main content. Critical for pages with long navbars.</div>
+        <div class="code-example">&lt;!-- First element in &lt;body&gt; --&gt;
+&lt;a href="#main-content" class="skip-link"&gt;Skip to main content&lt;/a&gt;
+
+&lt;header&gt;
+  &lt;nav&gt;...many navigation links...&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main id="main-content"&gt;
+  &lt;!-- Tab goes here when skip link is used --&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
+  ...
+&lt;/main&gt;
+
+&lt;!-- CSS: hidden until focused --&gt;
+&lt;style&gt;
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 999;
+  font-size: 1.1em;
+}
+.skip-link:focus {
+  top: 0;
+}
+&lt;/style&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 9: ARIA ATTRIBUTES -->
+<!-- ============================================================ -->
+<section>
+    <h2>9. ARIA Attributes</h2>
+    <p style="color:#555; margin-bottom:15px;"><strong>ARIA (Accessible Rich Internet Applications)</strong> attributes add accessibility information that HTML alone can't provide. The first rule of ARIA: <em>use native HTML elements instead whenever possible.</em></p>
+
+    <div class="element-box">
+        <div class="element-name">aria-label</div>
+        <div class="element-description">Provides an accessible name for an element that has no visible text label. The value is announced by screen readers instead of any visual content.</div>
+        <div class="code-example">&lt;!-- Icon-only button --&gt;
+&lt;button aria-label="Search the website"&gt;
+  🔍
+&lt;/button&gt;
+
+&lt;!-- Icon-only nav link --&gt;
+&lt;a href="https://twitter.com/user" aria-label="Follow us on Twitter"&gt;
+  &lt;svg aria-hidden="true" focusable="false"&gt;...twitter icon...&lt;/svg&gt;
+&lt;/a&gt;
+
+&lt;!-- Distinguish multiple navs --&gt;
+&lt;nav aria-label="Main navigation"&gt;...&lt;/nav&gt;
+&lt;nav aria-label="Breadcrumb"&gt;...&lt;/nav&gt;
+&lt;nav aria-label="Footer links"&gt;...&lt;/nav&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">aria-labelledby</div>
+        <div class="element-description">Associates an element with visible text elsewhere on the page (by ID). The referenced element's text becomes the accessible name. More robust than aria-label because it reuses existing visible text.</div>
+        <div class="code-example">&lt;!-- Input labeled by existing text --&gt;
+&lt;label id="search-label"&gt;Search Products:&lt;/label&gt;
+&lt;input type="text" aria-labelledby="search-label"&gt;
+
+&lt;!-- Modal labeled by its title --&gt;
+&lt;div role="dialog" aria-labelledby="dialog-title" aria-modal="true"&gt;
+  &lt;h2 id="dialog-title"&gt;Confirm Deletion&lt;/h2&gt;
+  &lt;p&gt;Are you sure you want to delete this item?&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Multiple IDs: combine labels --&gt;
+&lt;h2 id="billing"&gt;Billing&lt;/h2&gt;
+&lt;p id="billing-desc"&gt;Enter your billing address:&lt;/p&gt;
+&lt;input type="text" aria-labelledby="billing billing-desc"&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">aria-describedby</div>
+        <div class="element-description">Links an element to additional descriptive text (by ID). The description is read after the element's label. Use for instructions, hints, error messages, or additional context.</div>
+        <div class="code-example">&lt;!-- Password with requirements --&gt;
+&lt;label for="password"&gt;Password:&lt;/label&gt;
+&lt;input type="password" id="password" name="password"
+       aria-describedby="pwd-requirements"&gt;
+&lt;p id="pwd-requirements"&gt;
+  Must be 8+ characters, include a number and special character.
+&lt;/p&gt;
+
+&lt;!-- Input with hint AND error --&gt;
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username"
+       aria-describedby="username-hint username-error"&gt;
+&lt;p id="username-hint"&gt;Letters and numbers only, 3–20 characters.&lt;/p&gt;
+&lt;p id="username-error" role="alert"&gt;Error: Username is already taken.&lt;/p&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">aria-hidden</div>
+        <div class="element-description">When "true", removes an element from the accessibility tree — screen readers skip it completely. Use for decorative icons, emojis, and visually redundant content.</div>
+        <div class="code-example">&lt;!-- Decorative icon + visible text --&gt;
+&lt;button&gt;
+  &lt;span aria-hidden="true"&gt;⚙️&lt;/span&gt;
+  Settings
+&lt;/button&gt;
+&lt;!-- Screen reader announces: "Settings, button" (not "gear emoji Settings button") --&gt;
+
+&lt;!-- Decorative image alternative: use empty alt on &lt;img&gt; instead --&gt;
+&lt;img src="decorative-wave.svg" alt=""&gt;
+
+&lt;!-- Hide duplicated text --&gt;
+&lt;span aria-hidden="true"&gt;★★★★☆&lt;/span&gt;
+&lt;span class="sr-only"&gt;4 out of 5 stars&lt;/span&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">aria-live</div>
+        <div class="element-description">Marks a region as a "live region" — screen readers automatically announce content changes without user action. Essential for dynamic content (notifications, search results, chat).</div>
+        <div class="attributes">
+            <div class="attribute"><span class="attribute-name">"off"</span><div class="attribute-desc">Default. Changes are not announced.</div></div>
+            <div class="attribute"><span class="attribute-name">"polite"</span><div class="attribute-desc">Announced when the user is idle. Non-urgent updates (search results, status messages).</div></div>
+            <div class="attribute"><span class="attribute-name">"assertive"</span><div class="attribute-desc">Announced immediately, interrupting current speech. Use sparingly for urgent errors only.</div></div>
+        </div>
+        <div class="code-example">&lt;!-- Status messages (non-urgent) --&gt;
+&lt;div aria-live="polite" aria-atomic="true"&gt;
+  &lt;!-- JS updates this text; screen reader reads the change --&gt;
+  Showing 5 of 20 results.
+&lt;/div&gt;
+
+&lt;!-- Error/alert messages (urgent) --&gt;
+&lt;div aria-live="assertive" role="alert"&gt;
+  Error: Your session has expired. Please log in again.
+&lt;/div&gt;
+
+&lt;!-- Better: use role="status" for polite, role="alert" for assertive --&gt;
+&lt;div role="status"&gt;Form saved successfully.&lt;/div&gt;
+&lt;div role="alert"&gt;Error: Invalid credit card number.&lt;/div&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">aria-expanded, aria-checked, aria-selected</div>
+        <div class="element-description">Communicate interactive state to screen readers.</div>
+        <div class="code-example">&lt;!-- Expand/collapse button --&gt;
+&lt;button aria-expanded="false" aria-controls="menu"
+        onclick="toggleMenu()"&gt;
+  Menu
+&lt;/button&gt;
+&lt;ul id="menu" hidden&gt;
+  &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Custom checkbox --&gt;
+&lt;div role="checkbox" aria-checked="false" tabindex="0"&gt;
+  Subscribe to newsletter
+&lt;/div&gt;
+
+&lt;!-- Tab panel --&gt;
+&lt;button role="tab" aria-selected="true" aria-controls="panel1"&gt;Tab 1&lt;/button&gt;
+&lt;button role="tab" aria-selected="false" aria-controls="panel2"&gt;Tab 2&lt;/button&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">aria-required, aria-invalid, aria-disabled</div>
+        <div class="element-description">Communicate form validation states to assistive technologies.</div>
+        <div class="code-example">&lt;!-- Required field --&gt;
+&lt;input type="text" aria-required="true" required&gt;
+
+&lt;!-- Invalid input with error message --&gt;
+&lt;input type="email" id="email" aria-invalid="true"
+       aria-describedby="email-error"&gt;
+&lt;p id="email-error" role="alert"&gt;Please enter a valid email address.&lt;/p&gt;
+
+&lt;!-- Disabled element (prefer HTML disabled attribute instead) --&gt;
+&lt;button aria-disabled="true"&gt;Cannot click yet&lt;/button&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">aria-current</div>
+        <div class="element-description">Indicates the current item within a set — current page in navigation, current step in a wizard, current date in a calendar.</div>
+        <div class="code-example">&lt;!-- Current page in navigation --&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/about" aria-current="page"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;!-- Other values: "step", "date", "time", "location", "true" --&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 10: ARIA ROLES -->
+<!-- ============================================================ -->
+<section>
+    <h2>10. ARIA Roles</h2>
+    <p style="color:#555; margin-bottom:15px;">The <strong>role</strong> attribute tells assistive technologies what an element IS. Prefer native semantic HTML elements. Only use roles when HTML alone doesn't describe the element's purpose.</p>
+
+    <h3>Landmark Roles (Match Semantic Elements)</h3>
+    <table class="reference">
+        <thead><tr><th>ARIA Role</th><th>Native HTML Equivalent</th><th>Use When</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">role="banner"</span></td><td><span class="tag">&lt;header&gt;</span> (at page level)</td><td>Page-level header with logo/navigation</td></tr>
+            <tr><td><span class="attribute-value">role="navigation"</span></td><td><span class="tag">&lt;nav&gt;</span></td><td>Navigation links</td></tr>
+            <tr><td><span class="attribute-value">role="main"</span></td><td><span class="tag">&lt;main&gt;</span></td><td>Primary page content</td></tr>
+            <tr><td><span class="attribute-value">role="complementary"</span></td><td><span class="tag">&lt;aside&gt;</span></td><td>Sidebar, related content</td></tr>
+            <tr><td><span class="attribute-value">role="contentinfo"</span></td><td><span class="tag">&lt;footer&gt;</span> (at page level)</td><td>Footer with copyright, legal links</td></tr>
+            <tr><td><span class="attribute-value">role="search"</span></td><td>(No native equivalent)</td><td>Search form/region</td></tr>
+            <tr><td><span class="attribute-value">role="form"</span></td><td><span class="tag">&lt;form&gt;</span> (with aria-label/labelledby)</td><td>Important form not labeled by heading</td></tr>
+            <tr><td><span class="attribute-value">role="region"</span></td><td><span class="tag">&lt;section&gt;</span></td><td>Significant section — must have aria-label</td></tr>
+        </tbody>
+    </table>
+
+    <h3>Common Widget &amp; Document Roles</h3>
+    <table class="reference">
+        <thead><tr><th>Role</th><th>Purpose</th><th>Notes</th></tr></thead>
+        <tbody>
+            <tr><td><span class="attribute-value">role="button"</span></td><td>Interactive button</td><td>Prefer &lt;button&gt; element instead</td></tr>
+            <tr><td><span class="attribute-value">role="link"</span></td><td>Navigable link</td><td>Prefer &lt;a href&gt; instead</td></tr>
+            <tr><td><span class="attribute-value">role="checkbox"</span></td><td>Two-state toggle control</td><td>Prefer &lt;input type="checkbox"&gt; instead</td></tr>
+            <tr><td><span class="attribute-value">role="radio"</span></td><td>Radio button in a group</td><td>Prefer &lt;input type="radio"&gt; instead</td></tr>
+            <tr><td><span class="attribute-value">role="alert"</span></td><td>Important time-sensitive message</td><td>Implies aria-live="assertive"</td></tr>
+            <tr><td><span class="attribute-value">role="status"</span></td><td>Non-urgent advisory message</td><td>Implies aria-live="polite"</td></tr>
+            <tr><td><span class="attribute-value">role="dialog"</span></td><td>Modal or non-modal dialog box</td><td>Add aria-labelledby and aria-modal="true"</td></tr>
+            <tr><td><span class="attribute-value">role="tooltip"</span></td><td>Contextual popup description</td><td>Link with aria-describedby</td></tr>
+            <tr><td><span class="attribute-value">role="tab"</span></td><td>Tab in a tablist</td><td>Use with role="tablist" and role="tabpanel"</td></tr>
+            <tr><td><span class="attribute-value">role="tablist"</span></td><td>Container for tabs</td><td>Parent of role="tab" elements</td></tr>
+            <tr><td><span class="attribute-value">role="tabpanel"</span></td><td>Panel associated with a tab</td><td>Linked to tab via aria-controls/aria-labelledby</td></tr>
+            <tr><td><span class="attribute-value">role="menu"</span></td><td>Menu of choices (like OS menu)</td><td>NOT for site navigation menus</td></tr>
+            <tr><td><span class="attribute-value">role="menuitem"</span></td><td>Item inside a role="menu"</td><td>Use inside role="menu" or role="menubar"</td></tr>
+            <tr><td><span class="attribute-value">role="progressbar"</span></td><td>Progress indicator</td><td>Use with aria-valuenow, aria-valuemin, aria-valuemax</td></tr>
+            <tr><td><span class="attribute-value">role="img"</span></td><td>Composite image (SVG, group of elements)</td><td>Add aria-label to describe the image</td></tr>
+            <tr><td><span class="attribute-value">role="presentation"</span></td><td>Removes semantic meaning</td><td>For decorative elements; like aria-hidden</td></tr>
+        </tbody>
+    </table>
+
+    <div class="code-example">&lt;!-- Tab widget --&gt;
+&lt;div role="tablist"&gt;
+  &lt;button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1"&gt;
+    Details
+  &lt;/button&gt;
+  &lt;button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2"&gt;
+    Reviews
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;div role="tabpanel" id="panel-1" aria-labelledby="tab-1"&gt;
+  ...details content...
+&lt;/div&gt;
+&lt;div role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden&gt;
+  ...reviews content...
+&lt;/div&gt;
+
+&lt;!-- Progress bar --&gt;
+&lt;div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+     aria-label="Upload progress"&gt;
+  65%
+&lt;/div&gt;
+
+&lt;!-- SVG as image --&gt;
+&lt;svg role="img" aria-label="Bar chart showing 40% increase in sales"&gt;
+  ...chart shapes...
+&lt;/svg&gt;</div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 11: LANGUAGE ATTRIBUTE -->
+<!-- ============================================================ -->
+<section>
+    <h2>11. Language Attribute</h2>
+
+    <div class="element-box">
+        <div class="element-name">lang attribute</div>
+        <div class="element-description">Tells screen readers what language to use for pronunciation. Also affects browser spell-check and translation tools. Required on &lt;html&gt; for accessibility compliance.</div>
+        <div class="code-example">&lt;!-- Set page language --&gt;
+&lt;html lang="en"&gt;  &lt;!-- English --&gt;
+&lt;html lang="ar"&gt;  &lt;!-- Arabic --&gt;
+&lt;html lang="fr"&gt;  &lt;!-- French --&gt;
+&lt;html lang="zh"&gt;  &lt;!-- Chinese --&gt;
+&lt;html lang="es"&gt;  &lt;!-- Spanish --&gt;
+&lt;html lang="de"&gt;  &lt;!-- German --&gt;
+
+&lt;!-- Set language of a specific phrase (different from page language) --&gt;
+&lt;p&gt;
+  There is a certain &lt;i lang="fr"&gt;je ne sais quoi&lt;/i&gt; about this.
+&lt;/p&gt;
+
+&lt;!-- Language codes: ISO 639-1 (2 letters) or ISO 639-1 + region --&gt;
+&lt;html lang="en-US"&gt;  &lt;!-- American English --&gt;
+&lt;html lang="en-GB"&gt;  &lt;!-- British English --&gt;
+&lt;html lang="zh-CN"&gt;  &lt;!-- Simplified Chinese --&gt;
+&lt;html lang="pt-BR"&gt;  &lt;!-- Brazilian Portuguese --&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 12: FOCUS MANAGEMENT & VISIBLE FOCUS -->
+<!-- ============================================================ -->
+<section>
+    <h2>12. Focus Management &amp; Visible Focus</h2>
+
+    <div class="element-box">
+        <div class="element-name">Visible Focus Indicators</div>
+        <div class="element-description">Keyboard users need to see which element is focused. Never remove focus outlines without replacing them with a better alternative.</div>
+        <div class="code-example">&lt;!-- ❌ Never do this --&gt;
+&lt;style&gt;
+  * { outline: none; }        /* removes all focus indicators */
+  button:focus { outline: 0; } /* removes focus on buttons */
+&lt;/style&gt;
+
+&lt;!-- ✅ Custom focus style that's more visible --&gt;
+&lt;style&gt;
+  :focus {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+  }
+
+  /* Or using focus-visible (only shows for keyboard, not mouse) */
+  :focus-visible {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+&lt;/style&gt;</div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Focus Trapping in Modals</div>
+        <div class="element-description">When a modal dialog opens, Tab should cycle through modal elements only — not go to the background page. Focus should return to the trigger element when the modal closes.</div>
+        <div class="code-example">&lt;!-- When modal opens: --&gt;
+&lt;!-- 1. Move focus to first focusable element in modal --&gt;
+&lt;!-- 2. Trap Tab/Shift+Tab within modal --&gt;
+&lt;!-- 3. Close on Escape key --&gt;
+&lt;!-- 4. Return focus to the element that opened the modal --&gt;
+
+&lt;button id="open-modal"&gt;Open Modal&lt;/button&gt;
+
+&lt;div role="dialog"
+     aria-labelledby="modal-title"
+     aria-modal="true"
+     id="modal"
+     tabindex="-1"&gt;
+  &lt;h2 id="modal-title"&gt;Confirm Action&lt;/h2&gt;
+  &lt;p&gt;Are you sure?&lt;/p&gt;
+  &lt;button id="confirm"&gt;Confirm&lt;/button&gt;
+  &lt;button id="close-modal"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 13: COLOR AND CONTRAST -->
+<!-- ============================================================ -->
+<section>
+    <h2>13. Color Contrast</h2>
+
+    <div class="element-box">
+        <div class="element-name">Color Contrast Ratios (WCAG AA)</div>
+        <div class="element-description">Sufficient contrast ensures text is readable for users with low vision or color blindness.</div>
+        <table class="reference">
+            <thead><tr><th>Text Type</th><th>Minimum Ratio (AA)</th><th>Enhanced Ratio (AAA)</th></tr></thead>
+            <tbody>
+                <tr><td>Normal text (under 18pt / 14pt bold)</td><td>4.5:1</td><td>7:1</td></tr>
+                <tr><td>Large text (18pt+ / 14pt+ bold)</td><td>3:1</td><td>4.5:1</td></tr>
+                <tr><td>UI components (buttons, inputs, focus outlines)</td><td>3:1</td><td>—</td></tr>
+                <tr><td>Decorative text / inactive components</td><td>No requirement</td><td>—</td></tr>
+            </tbody>
+        </table>
+        <div class="code-example">&lt;!-- ✅ Good contrast examples: --&gt;
+&lt;!-- Black (#000000) on white (#ffffff): ratio 21:1 ✅ --&gt;
+&lt;!-- Dark blue (#2c3e50) on white (#ffffff): ratio ~8:1 ✅ --&gt;
+&lt;!-- White (#ffffff) on blue (#3498db): ratio ~3.6:1 ✅ (large text) --&gt;
+
+&lt;!-- ❌ Poor contrast examples: --&gt;
+&lt;!-- Light gray (#aaaaaa) on white (#ffffff): ratio ~2.3:1 ❌ --&gt;
+&lt;!-- Yellow (#ffff00) on white: ratio 1.07:1 ❌ --&gt;</div>
+        <div class="tip">🛠️ <strong>Free contrast checking tools:</strong><br>
+        • <strong>WebAIM Contrast Checker</strong> — webaim.org/resources/contrastchecker<br>
+        • <strong>Colour Contrast Analyser</strong> — desktop app<br>
+        • Chrome DevTools — Accessibility panel shows contrast ratios
+        </div>
+    </div>
+
+    <div class="element-box">
+        <div class="element-name">Never Use Color Alone</div>
+        <div class="element-description">About 8% of men and 0.5% of women have color blindness. Don't use color as the only way to convey information.</div>
+        <div class="code-example">&lt;!-- ❌ Color only: colorblind users can't tell which fields are required --&gt;
+&lt;style&gt;
+  .required { color: red; }  /* only way to distinguish required */
+&lt;/style&gt;
+&lt;input class="required" type="text" name="name"&gt;
+
+&lt;!-- ✅ Color + icon + text --&gt;
+&lt;label for="name"&gt;
+  Name &lt;span aria-hidden="true"&gt;*&lt;/span&gt;:
+&lt;/label&gt;
+&lt;input type="text" id="name" name="name" required aria-required="true"&gt;
+&lt;p&gt;&lt;span aria-hidden="true"&gt;*&lt;/span&gt; Required fields&lt;/p&gt;
+
+&lt;!-- ✅ Error: color + icon + text (not just red border) --&gt;
+&lt;input type="email" id="email" aria-invalid="true"
+       aria-describedby="email-err"&gt;
+&lt;p id="email-err" style="color: red;"&gt;
+  ❌ Please enter a valid email address.
+&lt;/p&gt;</div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 14: ACCESSIBILITY CHECKLIST -->
+<!-- ============================================================ -->
+<section>
+    <h2>14. Accessibility Checklist</h2>
+
+    <h3>HTML Structure</h3>
+    <div class="element-box">
+        <p style="color:#555; line-height: 2.2;">
+            ✅ &lt;html lang="..."&gt; is set correctly<br>
+            ✅ One &lt;h1&gt; per page, headings in logical order (no skipped levels)<br>
+            ✅ &lt;main&gt; wraps the primary content<br>
+            ✅ &lt;nav&gt; used for navigation with aria-label to distinguish multiple navs<br>
+            ✅ Skip-to-main-content link is the first focusable element<br>
+            ✅ Page title (&lt;title&gt;) is descriptive and unique
+        </p>
+    </div>
+
+    <h3>Images &amp; Media</h3>
+    <div class="element-box">
+        <p style="color:#555; line-height: 2.2;">
+            ✅ All meaningful images have descriptive alt text<br>
+            ✅ Decorative images have empty alt text (alt="")<br>
+            ✅ Videos have captions (not just subtitles)<br>
+            ✅ Audio has a transcript<br>
+            ✅ &lt;iframe&gt; has a title attribute
+        </p>
+    </div>
+
+    <h3>Forms</h3>
+    <div class="element-box">
+        <p style="color:#555; line-height: 2.2;">
+            ✅ Every input has an associated &lt;label&gt;<br>
+            ✅ Radio/checkbox groups use &lt;fieldset&gt; + &lt;legend&gt;<br>
+            ✅ Error messages are linked with aria-describedby<br>
+            ✅ Required fields are indicated (not just with color)<br>
+            ✅ Button types are explicitly set (type="submit", etc.)
+        </p>
+    </div>
+
+    <h3>Tables</h3>
+    <div class="element-box">
+        <p style="color:#555; line-height: 2.2;">
+            ✅ Table has a &lt;caption&gt;<br>
+            ✅ Column headers use &lt;th scope="col"&gt;<br>
+            ✅ Row headers use &lt;th scope="row"&gt;<br>
+            ✅ Complex tables use id + headers attributes
+        </p>
+    </div>
+
+    <h3>Keyboard &amp; Interaction</h3>
+    <div class="element-box">
+        <p style="color:#555; line-height: 2.2;">
+            ✅ All interactive elements are keyboard accessible<br>
+            ✅ Focus indicators are visible (not just :focus { outline: none })<br>
+            ✅ Tab order follows logical reading order<br>
+            ✅ No keyboard traps (except intentional modal trapping)<br>
+            ✅ Modals: focus trapped inside, Escape closes, focus returns
+        </p>
+    </div>
+
+    <h3>Color &amp; Contrast</h3>
+    <div class="element-box">
+        <p style="color:#555; line-height: 2.2;">
+            ✅ Text contrast ratio ≥ 4.5:1 (normal) or ≥ 3:1 (large)<br>
+            ✅ UI components contrast ratio ≥ 3:1<br>
+            ✅ Color is not the only way information is conveyed<br>
+            ✅ Links are distinguishable from surrounding text (not just by color)
+        </p>
+    </div>
+
+    <h3>Testing Tools</h3>
+    <div class="tip">
+        🛠️ <strong>Recommended accessibility testing tools:</strong><br>
+        • <strong>Google Lighthouse</strong> — Built into Chrome DevTools (audits automatically)<br>
+        • <strong>axe DevTools</strong> — Browser extension (free, detailed)<br>
+        • <strong>WAVE</strong> — wave.webaim.org — Visual accessibility report<br>
+        • <strong>NVDA</strong> — Free screen reader for Windows<br>
+        • <strong>VoiceOver</strong> — Built-in screen reader on Mac (Cmd+F5 to toggle)<br>
+        • <strong>WebAIM Contrast Checker</strong> — webaim.org/resources/contrastchecker<br>
+        • <strong>Keyboard test</strong> — Unplug mouse and navigate your site with Tab only
+    </div>
+</section>
+
+</body>
+</html>
