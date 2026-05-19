@@ -909,97 +909,97 @@
 </section>
 
 <section>
-    <h2>19. ARIA Roles</h2>
+    <h2 data-ar="19. أدوار ARIA">19. ARIA Roles</h2>
 
-    <h3>Landmark Roles</h3>
+    <h3 data-ar="أدوار المعالم">Landmark Roles</h3>
     <table class="reference">
-        <thead><tr><th>Role</th><th>Native HTML</th><th>Purpose</th></tr></thead>
+        <thead><tr><th data-ar="الدور">Role</th><th data-ar="HTML الأصلية">Native HTML</th><th data-ar="الغرض">Purpose</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">banner</span></td><td><span class="tag">&lt;header&gt;</span> (page level)</td><td>Page header</td></tr>
-            <tr><td><span class="attribute-value">navigation</span></td><td><span class="tag">&lt;nav&gt;</span></td><td>Navigation region</td></tr>
-            <tr><td><span class="attribute-value">main</span></td><td><span class="tag">&lt;main&gt;</span></td><td>Primary content</td></tr>
-            <tr><td><span class="attribute-value">complementary</span></td><td><span class="tag">&lt;aside&gt;</span></td><td>Supporting content</td></tr>
-            <tr><td><span class="attribute-value">contentinfo</span></td><td><span class="tag">&lt;footer&gt;</span> (page level)</td><td>Footer</td></tr>
-            <tr><td><span class="attribute-value">search</span></td><td>(no native)</td><td>Search region</td></tr>
-            <tr><td><span class="attribute-value">region</span></td><td><span class="tag">&lt;section&gt;</span></td><td>Significant section — needs aria-label</td></tr>
+            <tr><td><span class="attribute-value">banner</span></td><td><span class="tag">&lt;header&gt;</span> (page level)</td><td data-ar="رأس الصفحة">Page header</td></tr>
+            <tr><td><span class="attribute-value">navigation</span></td><td><span class="tag">&lt;nav&gt;</span></td><td data-ar="منطقة التنقل">Navigation region</td></tr>
+            <tr><td><span class="attribute-value">main</span></td><td><span class="tag">&lt;main&gt;</span></td><td data-ar="المحتوى الأساسي">Primary content</td></tr>
+            <tr><td><span class="attribute-value">complementary</span></td><td><span class="tag">&lt;aside&gt;</span></td><td data-ar="محتوى داعم">Supporting content</td></tr>
+            <tr><td><span class="attribute-value">contentinfo</span></td><td><span class="tag">&lt;footer&gt;</span> (page level)</td><td data-ar="تذييل الصفحة">Footer</td></tr>
+            <tr><td><span class="attribute-value">search</span></td><td>(no native)</td><td data-ar="منطقة البحث">Search region</td></tr>
+            <tr><td><span class="attribute-value">region</span></td><td><span class="tag">&lt;section&gt;</span></td><td data-ar="قسم مهم — يتطلب aria-label">Significant section — needs aria-label</td></tr>
         </tbody>
     </table>
 
-    <h3>Common Widget Roles</h3>
+    <h3 data-ar="أدوار الأدوات الشائعة">Common Widget Roles</h3>
     <table class="reference">
-        <thead><tr><th>Role</th><th>Purpose</th><th>Use Native HTML Instead When Possible</th></tr></thead>
+        <thead><tr><th data-ar="الدور">Role</th><th data-ar="الغرض">Purpose</th><th data-ar="استخدم HTML الأصلية بدلاً منها عند الإمكان">Use Native HTML Instead When Possible</th></tr></thead>
         <tbody>
-            <tr><td><span class="attribute-value">alert</span></td><td>Urgent, auto-announced message</td><td>—</td></tr>
-            <tr><td><span class="attribute-value">status</span></td><td>Non-urgent advisory message</td><td>—</td></tr>
-            <tr><td><span class="attribute-value">dialog</span></td><td>Modal/non-modal dialog</td><td>&lt;dialog&gt; element</td></tr>
-            <tr><td><span class="attribute-value">tab / tablist / tabpanel</span></td><td>Tab widget</td><td>—</td></tr>
-            <tr><td><span class="attribute-value">progressbar</span></td><td>Progress indicator</td><td>&lt;progress&gt; element</td></tr>
-            <tr><td><span class="attribute-value">img</span></td><td>Composite image (SVG, grouped elements)</td><td>&lt;img&gt; with alt</td></tr>
-            <tr><td><span class="attribute-value">button</span></td><td>Interactive button</td><td>&lt;button&gt; element</td></tr>
-            <tr><td><span class="attribute-value">checkbox</span></td><td>Two-state toggle</td><td>&lt;input type="checkbox"&gt;</td></tr>
-            <tr><td><span class="attribute-value">menu / menuitem</span></td><td>OS-style menu (NOT site nav)</td><td>—</td></tr>
-            <tr><td><span class="attribute-value">tooltip</span></td><td>Contextual popup</td><td>title attribute (limited)</td></tr>
-            <tr><td><span class="attribute-value">presentation</span></td><td>Remove semantic meaning (decorative)</td><td>alt="" on images</td></tr>
+            <tr><td><span class="attribute-value">alert</span></td><td data-ar="رسالة عاجلة تُعلَن تلقائياً">Urgent, auto-announced message</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">status</span></td><td data-ar="رسالة إرشادية غير عاجلة">Non-urgent advisory message</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">dialog</span></td><td data-ar="نافذة حوار شرطية/غير شرطية">Modal/non-modal dialog</td><td>&lt;dialog&gt; element</td></tr>
+            <tr><td><span class="attribute-value">tab / tablist / tabpanel</span></td><td data-ar="أداة التبويبات">Tab widget</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">progressbar</span></td><td data-ar="مؤشر التقدم">Progress indicator</td><td>&lt;progress&gt; element</td></tr>
+            <tr><td><span class="attribute-value">img</span></td><td data-ar="صورة مركبة (SVG، عناصر مجمعة)">Composite image (SVG, grouped elements)</td><td>&lt;img&gt; with alt</td></tr>
+            <tr><td><span class="attribute-value">button</span></td><td data-ar="زر تفاعلي">Interactive button</td><td>&lt;button&gt; element</td></tr>
+            <tr><td><span class="attribute-value">checkbox</span></td><td data-ar="تبديل ثنائي الحالة">Two-state toggle</td><td>&lt;input type="checkbox"&gt;</td></tr>
+            <tr><td><span class="attribute-value">menu / menuitem</span></td><td data-ar="قائمة بنمط نظام التشغيل (ليس تنقل الموقع)">OS-style menu (NOT site nav)</td><td>—</td></tr>
+            <tr><td><span class="attribute-value">tooltip</span></td><td data-ar="نافذة منبثقة سياقية">Contextual popup</td><td>title attribute (limited)</td></tr>
+            <tr><td><span class="attribute-value">presentation</span></td><td data-ar="إزالة المعنى الدلالي (زخرفي)">Remove semantic meaning (decorative)</td><td>alt="" on images</td></tr>
         </tbody>
     </table>
 </section>
 
 <section>
-    <h2>20. Accessibility Checklist</h2>
+    <h2 data-ar="20. قائمة التحقق من إمكانية الوصول">20. Accessibility Checklist</h2>
 
     <table class="reference">
-        <thead><tr><th>Category</th><th>Check</th><th>Status</th></tr></thead>
+        <thead><tr><th data-ar="الفئة">Category</th><th data-ar="التحقق">Check</th><th data-ar="الحالة">Status</th></tr></thead>
         <tbody>
-            <tr><td>Language</td><td>&lt;html lang="..."&gt; is set correctly</td><td>✅ / ❌</td></tr>
-            <tr><td>Headings</td><td>One &lt;h1&gt;, logical order, no skipped levels</td><td>✅ / ❌</td></tr>
-            <tr><td>Landmarks</td><td>&lt;main&gt;, &lt;nav&gt;, &lt;header&gt;, &lt;footer&gt; used correctly</td><td>✅ / ❌</td></tr>
-            <tr><td>Skip link</td><td>Skip-to-main-content link is first focusable element</td><td>✅ / ❌</td></tr>
-            <tr><td>Page title</td><td>&lt;title&gt; is descriptive and unique per page</td><td>✅ / ❌</td></tr>
-            <tr><td>Images</td><td>All meaningful images have descriptive alt text</td><td>✅ / ❌</td></tr>
-            <tr><td>Decorative images</td><td>Decorative images have alt="" (empty)</td><td>✅ / ❌</td></tr>
-            <tr><td>Links</td><td>All links have meaningful text (not "click here")</td><td>✅ / ❌</td></tr>
-            <tr><td>Forms</td><td>Every input has a &lt;label&gt;</td><td>✅ / ❌</td></tr>
-            <tr><td>Form groups</td><td>Radio/checkbox groups use &lt;fieldset&gt; + &lt;legend&gt;</td><td>✅ / ❌</td></tr>
-            <tr><td>Errors</td><td>Error messages linked via aria-describedby</td><td>✅ / ❌</td></tr>
-            <tr><td>Tables</td><td>Tables have &lt;caption&gt; and &lt;th scope="..."&gt;</td><td>✅ / ❌</td></tr>
-            <tr><td>Video</td><td>Videos have captions (&lt;track kind="captions"&gt;)</td><td>✅ / ❌</td></tr>
-            <tr><td>Audio</td><td>Audio has a transcript</td><td>✅ / ❌</td></tr>
-            <tr><td>Keyboard</td><td>All interactive elements keyboard accessible</td><td>✅ / ❌</td></tr>
-            <tr><td>Focus</td><td>Focus indicators are visible (no outline: none)</td><td>✅ / ❌</td></tr>
-            <tr><td>Tab order</td><td>Tab order follows logical reading order</td><td>✅ / ❌</td></tr>
-            <tr><td>iframes</td><td>All &lt;iframe&gt; have title attributes</td><td>✅ / ❌</td></tr>
-            <tr><td>Contrast</td><td>Text ≥ 4.5:1 (normal) or ≥ 3:1 (large)</td><td>✅ / ❌</td></tr>
-            <tr><td>Color</td><td>Color is NOT the only way information is conveyed</td><td>✅ / ❌</td></tr>
-            <tr><td>Buttons</td><td>All buttons have explicit type attribute</td><td>✅ / ❌</td></tr>
-            <tr><td>lang attr</td><td>Foreign phrases have lang attribute (lang="fr")</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="اللغة">Language</td><td data-ar="تم ضبط &lt;html lang=&quot;...&quot;&gt; بشكل صحيح">&lt;html lang="..."&gt; is set correctly</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="العناوين">Headings</td><td data-ar="عنصر &lt;h1&gt; واحد، ترتيب منطقي، بدون تخطي مستويات">One &lt;h1&gt;, logical order, no skipped levels</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="المعالم">Landmarks</td><td data-ar="استخدام &lt;main&gt; و&lt;nav&gt; و&lt;header&gt; و&lt;footer&gt; بشكل صحيح">&lt;main&gt;, &lt;nav&gt;, &lt;header&gt;, &lt;footer&gt; used correctly</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="رابط التخطي">Skip link</td><td data-ar="رابط التخطي إلى المحتوى الرئيسي هو أول عنصر قابل للتركيز">Skip-to-main-content link is first focusable element</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="عنوان الصفحة">Page title</td><td data-ar="&lt;title&gt; وصفي وفريد لكل صفحة">&lt;title&gt; is descriptive and unique per page</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الصور">Images</td><td data-ar="جميع الصور ذات المعنى لها نص بديل وصفي">All meaningful images have descriptive alt text</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الصور الزخرفية">Decorative images</td><td data-ar="الصور الزخرفية لها alt=&quot;&quot; (فارغ)">Decorative images have alt="" (empty)</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الروابط">Links</td><td data-ar="جميع الروابط لها نص ذو معنى (ليس «اضغط هنا»)">All links have meaningful text (not "click here")</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="النماذج">Forms</td><td data-ar="كل حقل إدخال له &lt;label&gt;">Every input has a &lt;label&gt;</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="مجموعات النموذج">Form groups</td><td data-ar="مجموعات radio/checkbox تستخدم &lt;fieldset&gt; + &lt;legend&gt;">Radio/checkbox groups use &lt;fieldset&gt; + &lt;legend&gt;</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الأخطاء">Errors</td><td data-ar="رسائل الخطأ مرتبطة عبر aria-describedby">Error messages linked via aria-describedby</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الجداول">Tables</td><td data-ar="الجداول لها &lt;caption&gt; و&lt;th scope=&quot;...&quot;&gt;">Tables have &lt;caption&gt; and &lt;th scope="..."&gt;</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الفيديو">Video</td><td data-ar="الفيديو لديه ترجمات (&lt;track kind=&quot;captions&quot;&gt;)">Videos have captions (&lt;track kind="captions"&gt;)</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الصوت">Audio</td><td data-ar="الصوت لديه نص مكتوب">Audio has a transcript</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="لوحة المفاتيح">Keyboard</td><td data-ar="جميع العناصر التفاعلية قابلة للوصول بلوحة المفاتيح">All interactive elements keyboard accessible</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="التركيز">Focus</td><td data-ar="مؤشرات التركيز مرئية (بدون outline: none)">Focus indicators are visible (no outline: none)</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="ترتيب التبويب">Tab order</td><td data-ar="ترتيب التبويب يتبع ترتيب القراءة المنطقي">Tab order follows logical reading order</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="iframes">iframes</td><td data-ar="جميع عناصر &lt;iframe&gt; لها سمات title">All &lt;iframe&gt; have title attributes</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="التباين">Contrast</td><td data-ar="النص ≥ 4.5:1 (عادي) أو ≥ 3:1 (كبير)">Text ≥ 4.5:1 (normal) or ≥ 3:1 (large)</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="اللون">Color</td><td data-ar="اللون ليس الطريقة الوحيدة لنقل المعلومات">Color is NOT the only way information is conveyed</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="الأزرار">Buttons</td><td data-ar="جميع الأزرار لها سمة type صريحة">All buttons have explicit type attribute</td><td>✅ / ❌</td></tr>
+            <tr><td data-ar="سمة lang">lang attr</td><td data-ar="العبارات الأجنبية لها سمة lang (مثل lang=&quot;fr&quot;)">Foreign phrases have lang attribute (lang="fr")</td><td>✅ / ❌</td></tr>
         </tbody>
     </table>
 
-    <div class="tip">🛠️ <strong>Testing tools:</strong> Google Lighthouse (Chrome DevTools) • axe DevTools browser extension • WAVE (wave.webaim.org) • VoiceOver (Mac: Cmd+F5) • NVDA (Windows, free screen reader) • WebAIM Contrast Checker</div>
+    <div class="tip" data-ar="🛠️ <strong>أدوات الاختبار:</strong> Google Lighthouse (أدوات مطوري Chrome) • إضافة axe DevTools للمتصفح • WAVE (wave.webaim.org) • VoiceOver (Mac: Cmd+F5) • NVDA (ويندوز، قارئ شاشة مجاني) • WebAIM Contrast Checker">🛠️ <strong>Testing tools:</strong> Google Lighthouse (Chrome DevTools) • axe DevTools browser extension • WAVE (wave.webaim.org) • VoiceOver (Mac: Cmd+F5) • NVDA (Windows, free screen reader) • WebAIM Contrast Checker</div>
 </section>
 
 <!-- ================================================================ -->
 <!-- PART 5: INTERVIEW Q&A -->
 <!-- ================================================================ -->
 
-<div class="part-header">Part 5 — HTML Interview Questions &amp; Answers</div>
+<div class="part-header" data-ar="الجزء 5 — أسئلة وأجوبة مقابلات HTML">Part 5 — HTML Interview Questions &amp; Answers</div>
 
 <section>
-    <h2>21. Core Concepts</h2>
+    <h2 data-ar="21. المفاهيم الأساسية">21. Core Concepts</h2>
 
     <div class="element-box">
-        <div class="element-name">Q1: What is HTML and what is its purpose?</div>
-        <div class="element-description"><strong>Answer:</strong> HTML (HyperText Markup Language) is the standard language for creating web pages. Its purpose is to define the <em>structure and content</em> of a web page using elements (tags). HTML tells the browser what is on the page — headings, paragraphs, images, links, forms — but not how it looks (CSS) or how it behaves (JavaScript). It was invented by Tim Berners-Lee in 1991 and the current version is HTML5.</div>
+        <div class="element-name" data-ar="س1: ما هي HTML وما غرضها؟">Q1: What is HTML and what is its purpose?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> HTML (لغة ترميز النص التشعبي) هي اللغة المعيارية لإنشاء صفحات الويب. غرضها تحديد <em>بنية ومحتوى</em> صفحة الويب باستخدام العناصر (الوسوم). تُخبر HTML المتصفح بما يوجد على الصفحة — العناوين والفقرات والصور والروابط والنماذج — لكن ليس كيف تبدو (CSS) أو كيف تتصرف (JavaScript). اخترعها تيم بيرنرز-لي عام 1991 والإصدار الحالي هو HTML5."><strong>Answer:</strong> HTML (HyperText Markup Language) is the standard language for creating web pages. Its purpose is to define the <em>structure and content</em> of a web page using elements (tags). HTML tells the browser what is on the page — headings, paragraphs, images, links, forms — but not how it looks (CSS) or how it behaves (JavaScript). It was invented by Tim Berners-Lee in 1991 and the current version is HTML5.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q2: What is the purpose of &lt;!DOCTYPE html&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong> The DOCTYPE declaration tells the browser which version of HTML the document is written in. <code>&lt;!DOCTYPE html&gt;</code> (case-insensitive) activates <strong>standards mode</strong> (full HTML5). Without it, browsers may render in <strong>quirks mode</strong> — an older compatibility mode that mimics bugs from ancient browsers, causing inconsistent rendering. It must be the very first line of every HTML file — it is not an HTML element, just a declaration.</div>
+        <div class="element-name" data-ar="س2: ما غرض &lt;!DOCTYPE html&gt;؟">Q2: What is the purpose of &lt;!DOCTYPE html&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> إعلان DOCTYPE يُخبر المتصفح بإصدار HTML المكتوب به المستند. &lt;!DOCTYPE html&gt; (غير حساس لحالة الأحرف) يُفعّل <strong>وضع المعايير</strong> (HTML5 الكامل). بدونه قد يعرض المتصفح في <strong>وضع التوافق</strong> — وضع قديم يحاكي أخطاء المتصفحات القديمة. يجب أن يكون السطر الأول في كل ملف HTML."><strong>Answer:</strong> The DOCTYPE declaration tells the browser which version of HTML the document is written in. <code>&lt;!DOCTYPE html&gt;</code> (case-insensitive) activates <strong>standards mode</strong> (full HTML5). Without it, browsers may render in <strong>quirks mode</strong> — an older compatibility mode that mimics bugs from ancient browsers, causing inconsistent rendering. It must be the very first line of every HTML file — it is not an HTML element, just a declaration.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q3: What is the difference between HTML and HTML5?</div>
-        <div class="element-description"><strong>Answer:</strong> HTML5 is the fifth and current major version of HTML. Key additions over HTML4:<br><br>
+        <div class="element-name" data-ar="س3: ما الفرق بين HTML و HTML5؟">Q3: What is the difference between HTML and HTML5?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> HTML5 هو الإصدار الخامس والحالي من HTML. الإضافات الرئيسية مقارنةً بـ HTML4:<br><br>• <strong>عناصر دلالية:</strong> &lt;header&gt;، &lt;nav&gt;، &lt;main&gt;، &lt;article&gt;، &lt;section&gt;، &lt;aside&gt;، &lt;footer&gt;<br>• <strong>عناصر وسائط:</strong> &lt;audio&gt;، &lt;video&gt;، &lt;source&gt;، &lt;track&gt;<br>• <strong>أنواع إدخال جديدة:</strong> date، time، email، url، number، range، color<br>• <strong>واجهات برمجية جديدة:</strong> localStorage، sessionStorage، Canvas، Geolocation، Web Workers<br>• <strong>تم إزالة:</strong> عناصر التقديم مثل &lt;font&gt; و&lt;center&gt; و&lt;big&gt; (نُقلت إلى CSS)<br>• HTML5 الآن <strong>معيار حي</strong> تديره WHATWG — يُحدَّث باستمرار."><strong>Answer:</strong> HTML5 is the fifth and current major version of HTML. Key additions over HTML4:<br><br>
         • <strong>Semantic elements:</strong> &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;<br>
         • <strong>Media elements:</strong> &lt;audio&gt;, &lt;video&gt;, &lt;source&gt;, &lt;track&gt;<br>
         • <strong>New form input types:</strong> date, time, email, url, number, range, color<br>
@@ -1009,16 +1009,16 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q4: What is the difference between block-level and inline elements?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س4: ما الفرق بين عناصر الكتلة والعناصر المضمنة؟">Q4: What is the difference between block-level and inline elements?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>عناصر الكتلة</strong> تبدأ في سطر جديد وتأخذ العرض الكامل المتاح. يمكنها احتواء عناصر كتلة ومضمنة أخرى. أمثلة: &lt;div&gt;، &lt;p&gt;، &lt;h1&gt;-&lt;h6&gt;، &lt;ul&gt;، &lt;table&gt;، &lt;section&gt;، &lt;article&gt;<br><br><strong>العناصر المضمنة</strong> تتدفق داخل النص، تأخذ فقط عرض محتواها. لا يمكنها احتواء عناصر كتلة. أمثلة: &lt;span&gt;، &lt;a&gt;، &lt;strong&gt;، &lt;em&gt;، &lt;img&gt;، &lt;code&gt;<br><br>في HTML5 أصبح هذا التمييز أكثر دقة — يُسمى الآن <strong>فئات المحتوى</strong>، لكن النموذج الذهني للكتلة/المضمن لا يزال مفيداً."><strong>Answer:</strong><br><br>
         <strong>Block-level elements</strong> start on a new line and take the full available width. They can contain other block and inline elements. Examples: &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;–&lt;h6&gt;, &lt;ul&gt;, &lt;table&gt;, &lt;section&gt;, &lt;article&gt;<br><br>
         <strong>Inline elements</strong> flow within text, taking only as much width as their content. They cannot contain block elements. Examples: &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;img&gt;, &lt;code&gt;<br><br>
         In HTML5, this distinction became more nuanced — it's now called <strong>content categories</strong> (flow content, phrasing content, etc.), but the block/inline mental model is still useful and widely used.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q5: What is the difference between id and class attributes?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س5: ما الفرق بين سمتَي id و class؟">Q5: What is the difference between id and class attributes?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>id</strong> — معرف فريد. يجب أن يظهر مرة واحدة فقط في الصفحة. يُستخدم لاستهداف CSS وتحديد JavaScript وروابط المرساة. تحديد CSS عالٍ.<br><br><strong>class</strong> — تسمية قابلة لإعادة الاستخدام. يمكن تطبيق نفس الفئة على عناصر متعددة، ويمكن أن يكون للعنصر الواحد فئات متعددة (مفصولة بمسافة). تحديد CSS أقل من id."><strong>Answer:</strong><br><br>
         <strong>id</strong> — Unique identifier. Must appear only <em>once</em> per page. Used for CSS targeting, JavaScript selection, and anchor links (<code>href="#section-id"</code>). High CSS specificity.<br><br>
         <strong>class</strong> — Reusable label. The same class can be applied to <em>multiple</em> elements, and one element can have multiple classes (space-separated). Lower CSS specificity than id.<br><br>
         <code>&lt;h2 id="about"&gt;...&lt;/h2&gt;</code> — unique, referenced by anchor link<br>
@@ -1026,8 +1026,8 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q6: What is the difference between &lt;div&gt; and &lt;span&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong> Both are generic containers with no semantic meaning, used purely for grouping/styling with CSS or targeting with JavaScript.<br><br>
+        <div class="element-name" data-ar="س6: ما الفرق بين &lt;div&gt; و&lt;span&gt;؟">Q6: What is the difference between &lt;div&gt; and &lt;span&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> كلاهما حاويات عامة بدون معنى دلالي، تُستخدم للتجميع/التنسيق مع CSS أو الاستهداف بـ JavaScript.<br><br><strong>&lt;div&gt;</strong> — حاوية كتلة. تنشئ فاصل سطر قبلها وبعدها. تُستخدم لأقسام التخطيط.<br><strong>&lt;span&gt;</strong> — حاوية مضمنة. تتدفق داخل النص. تُستخدم لتنسيق جزء من النص.<br><br><strong>القاعدة:</strong> إذا كان بإمكانك استخدام عنصر دلالي بدلاً منها (&lt;section&gt;، &lt;p&gt;، &lt;em&gt;، إلخ) فضّله على &lt;div&gt;/&lt;span&gt;."><strong>Answer:</strong> Both are generic containers with no semantic meaning, used purely for grouping/styling with CSS or targeting with JavaScript.<br><br>
         <strong>&lt;div&gt;</strong> — block-level container. Creates a line break before and after. Used for layout sections.<br>
         <strong>&lt;span&gt;</strong> — inline container. Flows within text. Used to style a portion of text.<br><br>
         <strong>Rule of thumb:</strong> If you can use a semantic element instead (&lt;section&gt;, &lt;p&gt;, &lt;em&gt;, etc.), prefer it over &lt;div&gt;/&lt;span&gt;.</div>
@@ -1035,11 +1035,11 @@
 </section>
 
 <section>
-    <h2>22. Semantic HTML Questions</h2>
+    <h2 data-ar="22. أسئلة HTML الدلالية">22. Semantic HTML Questions</h2>
 
     <div class="element-box">
-        <div class="element-name">Q7: What are semantic HTML elements and why do they matter?</div>
-        <div class="element-description"><strong>Answer:</strong> Semantic elements clearly describe their <em>meaning</em> to both the browser and the developer — unlike &lt;div&gt; and &lt;span&gt; which have no meaning.<br><br>
+        <div class="element-name" data-ar="س7: ما هي عناصر HTML الدلالية ولماذا تهم؟">Q7: What are semantic HTML elements and why do they matter?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> العناصر الدلالية تصف بوضوح <em>معناها</em> للمتصفح والمطور — على عكس &lt;div&gt; و&lt;span&gt; التي لا معنى لها.<br><br>أمثلة: &lt;header&gt;، &lt;nav&gt;، &lt;main&gt;، &lt;article&gt;، &lt;section&gt;، &lt;aside&gt;، &lt;footer&gt;، &lt;figure&gt;، &lt;time&gt;، &lt;strong&gt;، &lt;em&gt;<br><br><strong>لماذا تهم:</strong><br>• <strong>إمكانية الوصول:</strong> قارئات الشاشة تستخدم المعالم لمساعدة المستخدمين على التنقل<br>• <strong>SEO:</strong> محركات البحث تفهم بنية الصفحة بشكل أفضل<br>• <strong>قابلية الصيانة:</strong> الكود أسهل في القراءة والفهم<br>• <strong>التنسيق الافتراضي:</strong> المتصفح يُطبق أنماطاً افتراضية مناسبة"><strong>Answer:</strong> Semantic elements clearly describe their <em>meaning</em> to both the browser and the developer — unlike &lt;div&gt; and &lt;span&gt; which have no meaning.<br><br>
         Examples: &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;figure&gt;, &lt;time&gt;, &lt;strong&gt;, &lt;em&gt;<br><br>
         <strong>Why they matter:</strong><br>
         • <strong>Accessibility:</strong> Screen readers use landmarks to help users navigate<br>
@@ -1049,8 +1049,8 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q8: What is the difference between &lt;strong&gt; and &lt;b&gt;? Between &lt;em&gt; and &lt;i&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س8: ما الفرق بين &lt;strong&gt; و&lt;b&gt;؟ وبين &lt;em&gt; و&lt;i&gt;؟">Q8: What is the difference between &lt;strong&gt; and &lt;b&gt;? Between &lt;em&gt; and &lt;i&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>&lt;strong&gt;</strong> — يُشير إلى نص ذو <em>أهمية قوية أو خطورة أو إلحاح</em>. له معنى دلالي. قارئات الشاشة قد تُعلنه بشكل مختلف.<br><strong>&lt;b&gt;</strong> — يلفت الانتباه إلى النص (كلمات مفتاحية، أسماء المنتجات) دون الإيحاء بالأهمية. لا وزن دلالي.<br><br><strong>&lt;em&gt;</strong> — يُشير إلى نص ذو <em>تأكيد إجهاد</em> يغير معنى الجملة. قارئات الشاشة تغير النبرة.<br><strong>&lt;i&gt;</strong> — يُشير إلى نص بصوت بديل: مصطلحات تقنية، كلمات أجنبية، عبارات اصطلاحية. لا تأكيد على المعنى.<br><br>كلا الزوجين يُعرضان بنفس الشكل بصرياً (غامق/مائل) لكن الفرق الدلالي مهم لإمكانية الوصول."><strong>Answer:</strong><br><br>
         <strong>&lt;strong&gt;</strong> — marks text as having <em>strong importance, seriousness, or urgency</em>. Has semantic meaning. Screen readers may announce it differently.<br>
         <strong>&lt;b&gt;</strong> — draws attention to text (keywords, product names) without implying importance. No semantic weight.<br><br>
         <strong>&lt;em&gt;</strong> — marks text with <em>stress emphasis</em> that changes the meaning of a sentence ("I <em>never</em> said that"). Screen readers change tone.<br>
@@ -1059,43 +1059,43 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q9: What is the difference between &lt;article&gt; and &lt;section&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س9: ما الفرق بين &lt;article&gt; و&lt;section&gt;؟">Q9: What is the difference between &lt;article&gt; and &lt;section&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>&lt;article&gt;</strong> — محتوى مستقل يفهم بذاته ويمكن توزيعه بشكل مستقل (مقالة مدونة، خبر، منشور منتدى، بطاقة منتج، تعليق). اسأل: 'هل يمكن أخذه ومشاركته في موقع آخر؟' إذا نعم → &lt;article&gt;.<br><br><strong>&lt;section&gt;</strong> — تجميع موضوعي للمحتوى يحتاج سياق الصفحة ليُفهم كاملاً. يجب أن يكون له عنوان. يُستخدم لتقسيم الصفحة إلى مناطق منطقية.<br><br>المقالات يمكن أن تحتوي أقساماً، والأقسام يمكن أن تحتوي مقالات. الاختبار الرئيسي: هل يمكن للمحتوى الوقوف بمفرده؟"><strong>Answer:</strong><br><br>
         <strong>&lt;article&gt;</strong> — self-contained content that makes sense on its own and could be distributed independently (blog post, news article, forum post, product card, comment). Ask: "Can I take this and share it on another site?" If yes → &lt;article&gt;.<br><br>
         <strong>&lt;section&gt;</strong> — thematic grouping of content that needs the page context to make full sense. Should have a heading. Used to divide a page into logical regions.<br><br>
         Articles can contain sections, and sections can contain articles. The key test: can the content stand alone?</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q10: What are void (self-closing) elements?</div>
-        <div class="element-description"><strong>Answer:</strong> Void elements are HTML elements that cannot have any children (content) and therefore have no closing tag. They are complete as a single opening tag.<br><br>
+        <div class="element-name" data-ar="س10: ما هي العناصر الفارغة (ذاتية الإغلاق)؟">Q10: What are void (self-closing) elements?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> العناصر الفارغة هي عناصر HTML لا يمكنها امتلاك أبناء (محتوى) ولذلك ليس لها وسم إغلاق. تكتمل بوسم افتتاح واحد فقط.<br><br>أمثلة: &lt;img&gt;، &lt;input&gt;، &lt;br&gt;، &lt;hr&gt;، &lt;meta&gt;، &lt;link&gt;، &lt;area&gt;، &lt;source&gt;، &lt;track&gt;، &lt;wbr&gt;، &lt;embed&gt;، &lt;col&gt;، &lt;base&gt;<br><br>في HTML5 تُكتب بدون شرطة مائلة: &lt;img src=&quot;...&quot;&gt;. الشرطة المائلة بنمط XHTML اختيارية وغير ضرورية."><strong>Answer:</strong> Void elements are HTML elements that cannot have any children (content) and therefore have no closing tag. They are complete as a single opening tag.<br><br>
         Examples: &lt;img&gt;, &lt;input&gt;, &lt;br&gt;, &lt;hr&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;area&gt;, &lt;source&gt;, &lt;track&gt;, &lt;wbr&gt;, &lt;embed&gt;, &lt;col&gt;, &lt;base&gt;<br><br>
         In HTML5, you write them without a slash: <code>&lt;img src="..."&gt;</code>. The XHTML-style <code>&lt;img /&gt;</code> slash is optional and harmless but not required.</div>
     </div>
 </section>
 
 <section>
-    <h2>23. Forms &amp; Tables Questions</h2>
+    <h2 data-ar="23. أسئلة النماذج والجداول">23. Forms &amp; Tables Questions</h2>
 
     <div class="element-box">
-        <div class="element-name">Q11: What is the difference between GET and POST in forms?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س11: ما الفرق بين GET و POST في النماذج؟">Q11: What is the difference between GET and POST in forms?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>GET</strong> — تُضاف البيانات إلى URL كسلسلة استعلام. مرئية في URL. قابلة للحفظ كإشارة مرجعية. تُخزنها المتصفحات. استخدمها لـ: البحث، التصفية، الاستعلامات غير الحساسة. طول URL محدود (~2000 حرف).<br><br><strong>POST</strong> — تُرسَل البيانات في جسم الطلب، غير مرئية في URL. لا تُخزَّن أو تُحفظ. استخدمها لـ: نماذج تسجيل الدخول، التسجيل، رفع الملفات، أي بيانات تُغير حالة الخادم، البيانات الحساسة. لا حد للحجم.<br><br><strong>القاعدة:</strong> إذا كان النموذج <em>يسترجع</em> بيانات → GET. إذا <em>أنشأ/عدّل/حذف</em> بيانات أو تعامل مع معلومات حساسة → POST."><strong>Answer:</strong><br><br>
         <strong>GET</strong> — Data is appended to the URL as query string (<code>/search?q=html&amp;page=2</code>). Visible in URL. Bookmarkable. Cached by browsers. Use for: search, filtering, non-sensitive queries. Limited URL length (~2000 chars).<br><br>
         <strong>POST</strong> — Data is sent in the request body, not visible in URL. Not cached or bookmarked. Use for: login forms, registration, file uploads, any data that changes server state, sensitive data (passwords). No size limit.<br><br>
         <strong>Rule:</strong> If the form <em>retrieves</em> data → GET. If it <em>creates/modifies/deletes</em> data or handles sensitive info → POST.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q12: What is the difference between disabled and readonly on form inputs?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س12: ما الفرق بين disabled و readonly على حقول الإدخال؟">Q12: What is the difference between disabled and readonly on form inputs?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>disabled</strong> — الحقل غير تفاعلي تماماً: رمادي اللون، لا يمكن التركيز عليه أو التبويب إليه، وقيمته <em>لا تُرسَل</em> مع النموذج.<br><br><strong>readonly</strong> — الحقل غير قابل للتحرير، لكن يمكن للمستخدم التركيز عليه والتبويب إليه ونسخ قيمته. وقيمته <em>تُرسَل</em> مع النموذج.<br><br>استخدم <em>disabled</em> عندما لا ينبغي للحقل المشاركة إطلاقاً. استخدم <em>readonly</em> عندما تريد إظهار قيمة ستُرسَل لكن لا ينبغي تغييرها."><strong>Answer:</strong><br><br>
         <strong>disabled</strong> — The input is completely non-interactive: greyed out, cannot be focused, cannot be tabbed to, and its value is <em>NOT submitted</em> with the form.<br><br>
         <strong>readonly</strong> — The input is not editable, but the user <em>can</em> focus it, tab to it, and copy its value. Its value <em>IS submitted</em> with the form.<br><br>
         Use <em>disabled</em> when the field shouldn't participate at all. Use <em>readonly</em> when you want to show a value that will be submitted but shouldn't be changed (e.g., a calculated total).</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q13: Why should you always use &lt;label&gt; with form inputs?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س13: لماذا يجب دائماً استخدام &lt;label&gt; مع حقول الإدخال؟">Q13: Why should you always use &lt;label&gt; with form inputs?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br>1. <strong>إمكانية الوصول:</strong> قارئات الشاشة تُعلن التسمية عند التركيز على الحقل، حتى يعرف المستخدمون ما يُدخلون.<br>2. <strong>سهولة الاستخدام:</strong> النقر على التسمية يُركّز/يُنشط الحقل — يزيد حجم هدف النقر، مفيد بشكل خاص لمربعات الاختيار وأزرار الراديو.<br>3. <strong>الربط البرمجي:</strong> رابط for/id ينشئ علاقة دلالية تفهمها التقنيات المساعدة.<br><br>نص placeholder وحده <em>ليس</em> بديلاً — يختفي عندما يبدأ المستخدم في الكتابة."><strong>Answer:</strong><br><br>
         1. <strong>Accessibility:</strong> Screen readers announce the label when the input is focused, so users know what to enter.<br>
         2. <strong>Usability:</strong> Clicking the label focuses/activates the input — increases click target size, especially helpful for checkboxes and radio buttons.<br>
         3. <strong>Programmatic association:</strong> The for/id link creates a semantic relationship understood by assistive technologies.<br><br>
@@ -1103,27 +1103,27 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q14: What is the difference between colspan and rowspan?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س14: ما الفرق بين colspan و rowspan؟">Q14: What is the difference between colspan and rowspan?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>colspan</strong> — يدمج الخلايا <em>أفقياً</em> عبر الأعمدة. &lt;td colspan=&quot;3&quot;&gt; يشغل 3 أعراض أعمدة في صف واحد.<br><br><strong>rowspan</strong> — يدمج الخلايا <em>عمودياً</em> عبر الصفوف. &lt;td rowspan=&quot;2&quot;&gt; يمتد من صفه إلى الصف التالي.<br><br>عند استخدام rowspan، يجب حذف الخلية الممتدة في الصفوف التالية — الخلية الممتدة تشغل ذلك المكان بالفعل. نسيان ذلك يُزيح جميع الخلايا اللاحقة إلى اليمين."><strong>Answer:</strong><br><br>
         <strong>colspan</strong> — Merges cells <em>horizontally</em> across columns. <code>&lt;td colspan="3"&gt;</code> occupies 3 column widths in one row.<br><br>
         <strong>rowspan</strong> — Merges cells <em>vertically</em> across rows. <code>&lt;td rowspan="2"&gt;</code> spans from its row down into the next row.<br><br>
         When using rowspan, you must omit the spanned cell in the rows below — the spanning cell already occupies that space. Forgetting this shifts all subsequent cells to the right.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q15: What is the purpose of &lt;fieldset&gt; and &lt;legend&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong> &lt;fieldset&gt; groups related form controls together with a visible border. &lt;legend&gt; provides the group's title (must be its first child).<br><br>
+        <div class="element-name" data-ar="س15: ما غرض &lt;fieldset&gt; و&lt;legend&gt;؟">Q15: What is the purpose of &lt;fieldset&gt; and &lt;legend&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> &lt;fieldset&gt; يجمع عناصر التحكم في النموذج المرتبطة مع حد مرئي. &lt;legend&gt; يوفر عنوان المجموعة (يجب أن يكون أول أبنائها).<br><br><strong>مهم لإمكانية الوصول:</strong> عندما يدخل قارئ الشاشة fieldset، يقرأ legend أولاً — هذه الطريقة الوحيدة لمعرفة ما تسأله مجموعة أزرار الراديو. بدون fieldset + legend، مجموعة راديو بخيارات 'نعم / لا' لا توفر سياقاً لما تجيب عنه.<br><br>إضافة disabled على &lt;fieldset&gt; تُعطّل جميع حقوله دفعةً واحدة."><strong>Answer:</strong> &lt;fieldset&gt; groups related form controls together with a visible border. &lt;legend&gt; provides the group's title (must be its first child).<br><br>
         <strong>Critical for accessibility:</strong> When a screen reader enters a fieldset, it reads the legend first — this is the only way users know what a group of radio buttons or checkboxes is asking. Without a fieldset + legend, a radio group with options "Yes / No" gives no context about what you're answering yes or no to.<br><br>
         Bonus: adding <code>disabled</code> to &lt;fieldset&gt; disables all its inputs at once.</div>
     </div>
 </section>
 
 <section>
-    <h2>24. Attributes &amp; Elements Questions</h2>
+    <h2 data-ar="24. أسئلة السمات والعناصر">24. Attributes &amp; Elements Questions</h2>
 
     <div class="element-box">
-        <div class="element-name">Q16: What is the purpose of the alt attribute on &lt;img&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong> The alt attribute serves three purposes:<br><br>
+        <div class="element-name" data-ar="س16: ما غرض سمة alt على &lt;img&gt;؟">Q16: What is the purpose of the alt attribute on &lt;img&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> سمة alt تخدم ثلاثة أغراض:<br><br>1. <strong>إمكانية الوصول:</strong> قارئات الشاشة تقرأ النص البديل بصوت عالٍ لوصف الصورة للمستخدمين المكفوفين.<br>2. <strong>البديل:</strong> يُعرض عند فشل تحميل الصورة (رابط معطل، اتصال بطيء).<br>3. <strong>SEO:</strong> محركات البحث تُفهرس النص البديل لفهم محتوى الصورة.<br><br><strong>القواعد:</strong> الصور ذات المعنى تحتاج نصاً بديلاً وصفياً. الصور الزخرفية يجب أن تستخدم alt=&quot;&quot; (فارغ) حتى تتخطاها قارئات الشاشة. لا تكتب alt=&quot;image&quot; أو alt=&quot;photo&quot;."><strong>Answer:</strong> The alt attribute serves three purposes:<br><br>
         1. <strong>Accessibility:</strong> Screen readers read alt text aloud to describe the image to blind users.<br>
         2. <strong>Fallback:</strong> Displayed when the image fails to load (broken link, slow connection).<br>
         3. <strong>SEO:</strong> Search engines index alt text to understand image content.<br><br>
@@ -1131,24 +1131,24 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q17: What is the difference between &lt;script defer&gt; and &lt;script async&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong> Both allow the script to download in parallel with HTML parsing (non-blocking download). They differ in when execution happens:<br><br>
+        <div class="element-name" data-ar="س17: ما الفرق بين &lt;script defer&gt; و&lt;script async&gt;؟">Q17: What is the difference between &lt;script defer&gt; and &lt;script async&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> كلاهما يسمح للسكريبت بالتنزيل بالتوازي مع تحليل HTML. يختلفان في وقت التنفيذ:<br><br><strong>defer</strong> — يُنفَّذ <em>بعد</em> تحليل HTML بالكامل، بترتيب المستند. مثالي لمعظم السكريبتات التي تحتاج DOM.<br><br><strong>async</strong> — يُنفَّذ <em>فور الانتهاء من التنزيل</em>، قد يقطع تحليل HTML. الترتيب غير مضمون. مثالي للسكريبتات المستقلة (تحليلات، إعلانات).<br><br><strong>بدون أي سمة</strong> — يُعيق تحليل HTML حتى يُنفَّذ السكريبت. تجنبه للسكريبتات الخارجية."><strong>Answer:</strong> Both allow the script to download in parallel with HTML parsing (non-blocking download). They differ in when execution happens:<br><br>
         <strong>defer</strong> — Executes <em>after</em> the HTML is fully parsed, in document order. Scripts run in the order they appear. Best for most scripts that need the DOM.<br><br>
         <strong>async</strong> — Executes <em>as soon as downloaded</em>, potentially interrupting HTML parsing. Order not guaranteed. Best for independent scripts (analytics, ads) that don't depend on DOM or other scripts.<br><br>
         <strong>Neither attribute</strong> (inline script) — Blocks HTML parsing until the script executes. Avoid for external scripts.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q18: What are data-* attributes and how do you use them?</div>
-        <div class="element-description"><strong>Answer:</strong> Custom data attributes let you store extra information in HTML elements that doesn't need a visual representation. They follow the format <code>data-anything="value"</code>.<br><br>
+        <div class="element-name" data-ar="س18: ما هي سمات data-* وكيف تستخدمها؟">Q18: What are data-* attributes and how do you use them?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> سمات البيانات المخصصة تتيح تخزين معلومات إضافية في عناصر HTML لا تحتاج تمثيلاً بصرياً. تتبع التنسيق data-anything=&quot;value&quot;.<br><br><strong>في HTML:</strong> &lt;button data-product-id=&quot;42&quot; data-category=&quot;shoes&quot;&gt;اشتري&lt;/button&gt;<br><br><strong>في JavaScript:</strong> الوصول عبر خاصية dataset. أسماء السمات تتحول إلى camelCase: data-product-id → element.dataset.productId.<br><br>الاستخدامات الشائعة: تخزين المعرفات لطلبات AJAX، إعداد مكونات JavaScript، بيانات التتبع للتحليلات."><strong>Answer:</strong> Custom data attributes let you store extra information in HTML elements that doesn't need a visual representation. They follow the format <code>data-anything="value"</code>.<br><br>
         <strong>In HTML:</strong> <code>&lt;button data-product-id="42" data-category="shoes"&gt;Buy&lt;/button&gt;</code><br><br>
         <strong>In JavaScript:</strong> Access via the <code>dataset</code> property. Attribute names are converted to camelCase: <code>data-product-id</code> → <code>element.dataset.productId</code>.<br><br>
         Common uses: storing IDs for AJAX requests, configuration for JavaScript components, tracking data for analytics.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q19: What is the viewport meta tag and why is it important?</div>
-        <div class="element-description"><strong>Answer:</strong> <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code><br><br>
+        <div class="element-name" data-ar="س19: ما وسم viewport Meta ولماذا هو مهم؟">Q19: What is the viewport meta tag and why is it important?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br><br>بدونه، تعرض متصفحات الجوال الصفحة بعرض سطح المكتب (~980px) ثم تُصغّرها — مما يجعل النص صغيراً ويتطلب التكبير. وسم viewport يُخبر متصفحات الجوال بضبط عرض إطار العرض ليساوي عرض الشاشة الفعلي.<br><br><strong>width=device-width</strong> — استخدم عرض الشاشة المادي.<br><strong>initial-scale=1.0</strong> — لا تُكبّر أو تُصغّر عند التحميل الأول.<br><br>مطلوب في كل صفحة HTML مخصصة للأجهزة المحمولة."><strong>Answer:</strong> <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code><br><br>
         Without it, mobile browsers render the page at a desktop width (~980px) and then scale it down — making text tiny and requiring zooming. The viewport meta tag tells mobile browsers to set the viewport width equal to the device's actual screen width, enabling proper responsive design with CSS media queries.<br><br>
         <strong>width=device-width</strong> — Use the physical screen width.<br>
         <strong>initial-scale=1.0</strong> — Don't zoom in or out on first load.<br><br>
@@ -1156,8 +1156,8 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q20: What are HTML entities and when do you need them?</div>
-        <div class="element-description"><strong>Answer:</strong> HTML entities are special codes for characters that would otherwise be misinterpreted by the browser or are hard to type. Format: <code>&amp;name;</code> or <code>&amp;#number;</code><br><br>
+        <div class="element-name" data-ar="س20: ما هي كيانات HTML ومتى تحتاجها؟">Q20: What are HTML entities and when do you need them?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> كيانات HTML هي رموز خاصة للأحرف التي قد يُسيء المتصفح تفسيرها. التنسيق: &amp;amp;name; أو &amp;amp;#number;<br><br><strong>يجب استخدامها:</strong><br>• &amp;amp;amp; → &amp; (علامة العطف الحرة قد تُربك المُحلل)<br>• &amp;amp;lt; → &lt; (ستبدأ وسماً)<br>• &amp;amp;gt; → &gt; (ستنهي وسماً)<br>• &amp;amp;quot; → &quot; (داخل قيم السمات المحاطة بعلامات اقتباس مزدوجة)<br><br><strong>مفيدة للرموز:</strong> &amp;amp;copy; → ©، &amp;amp;euro; → €، &amp;amp;nbsp; → مسافة غير قابلة للكسر، &amp;amp;mdash; → — (شرطة طويلة)"><strong>Answer:</strong> HTML entities are special codes for characters that would otherwise be misinterpreted by the browser or are hard to type. Format: <code>&amp;name;</code> or <code>&amp;#number;</code><br><br>
         <strong>Must use:</strong><br>
         • <code>&amp;amp;</code> → &amp; (bare &amp; inside HTML can confuse the parser)<br>
         • <code>&amp;lt;</code> → &lt; (would start a tag)<br>
@@ -1168,11 +1168,11 @@
 </section>
 
 <section>
-    <h2>25. Accessibility &amp; Best Practice Questions</h2>
+    <h2 data-ar="25. أسئلة إمكانية الوصول وأفضل الممارسات">25. Accessibility &amp; Best Practice Questions</h2>
 
     <div class="element-box">
-        <div class="element-name">Q21: What is ARIA and when should you use it?</div>
-        <div class="element-description"><strong>Answer:</strong> ARIA (Accessible Rich Internet Applications) is a set of HTML attributes that add accessibility information that native HTML can't convey — especially for custom interactive widgets.<br><br>
+        <div class="element-name" data-ar="س21: ما هي ARIA ومتى يجب استخدامها؟">Q21: What is ARIA and when should you use it?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> ARIA (تطبيقات الإنترنت الغنية الميسّرة) هي مجموعة سمات HTML تضيف معلومات إمكانية الوصول التي لا تستطيع HTML الأصلية نقلها — خاصةً للأدوات التفاعلية المخصصة.<br><br><strong>القاعدة الأولى لـ ARIA:</strong> لا تستخدم ARIA إذا كان بإمكانك استخدام عنصر HTML أصلي بنفس الدلالة. &lt;button&gt; دائماً أفضل من &lt;div role=&quot;button&quot;&gt;.<br><br><strong>استخدم ARIA عندما:</strong><br>• بناء أدوات مخصصة (تبويبات، نوافذ شرطية، أكورديون، شرائح)<br>• إضافة تسميات لأزرار الأيقونات: aria-label=&quot;بحث&quot;<br>• الإعلان عن محتوى ديناميكي: aria-live=&quot;polite&quot;<br>• توصيل الحالة: aria-expanded=&quot;false&quot;، aria-invalid=&quot;true&quot;"><strong>Answer:</strong> ARIA (Accessible Rich Internet Applications) is a set of HTML attributes that add accessibility information that native HTML can't convey — especially for custom interactive widgets.<br><br>
         <strong>The first rule of ARIA:</strong> Don't use ARIA if you can use a native HTML element or attribute with the same semantics. A &lt;button&gt; is always better than a &lt;div role="button"&gt;.<br><br>
         <strong>Use ARIA when:</strong><br>
         • Building custom widgets (tabs, modals, accordions, sliders)<br>
@@ -1183,8 +1183,8 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q22: What is tabindex and when should you use it?</div>
-        <div class="element-description"><strong>Answer:</strong> tabindex controls keyboard focus behavior:<br><br>
+        <div class="element-name" data-ar="س22: ما هو tabindex ومتى يجب استخدامه؟">Q22: What is tabindex and when should you use it?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> tabindex يتحكم في سلوك التركيز بلوحة المفاتيح:<br><br><strong>tabindex=&quot;0&quot;</strong> — يجعل عنصراً غير تفاعلي (مثل &lt;div&gt;) قابلاً للتركيز بمفتاح Tab بالترتيب الطبيعي للمستند. استخدمه عندما لا تستطيع استخدام عنصر تفاعلي أصلي.<br><br><strong>tabindex=&quot;-1&quot;</strong> — يُزيل العنصر من تسلسل Tab لكن يسمح لـ JavaScript بالتركيز عليه. استخدمه للنوافذ الشرطية وإدارة التركيز البرمجي.<br><br><strong>tabindex=&quot;1+&quot; (لا تستخدمها أبداً)</strong> — ينشئ ترتيب تبويب منفصل يتجاوز التدفق الطبيعي.<br><br><strong>أفضل ممارسة:</strong> العناصر التفاعلية الأصلية (&lt;a&gt;، &lt;button&gt;، &lt;input&gt;، إلخ) قابلة للتركيز بطبيعتها — لا تضف tabindex=&quot;0&quot; إليها."><strong>Answer:</strong> tabindex controls keyboard focus behavior:<br><br>
         <strong>tabindex="0"</strong> — Makes a non-interactive element (like a &lt;div&gt;) focusable via Tab key in natural document order. Use when you can't use a native interactive element.<br><br>
         <strong>tabindex="-1"</strong> — Removes element from Tab sequence but allows JavaScript to focus it (<code>element.focus()</code>). Use for modal dialogs and programmatic focus management.<br><br>
         <strong>tabindex="1+" (NEVER use)</strong> — Creates a separate tab order that overrides natural flow, resulting in confusing navigation for keyboard users.<br><br>
@@ -1192,16 +1192,16 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q23: What is the difference between &lt;del&gt; and &lt;s&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong> Both render as strikethrough text, but they have different semantic meanings:<br><br>
+        <div class="element-name" data-ar="س23: ما الفرق بين &lt;del&gt; و&lt;s&gt;؟">Q23: What is the difference between &lt;del&gt; and &lt;s&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong> كلاهما يُعرض كنص مشطوب، لكن لهما معانٍ دلالية مختلفة:<br><br><strong>&lt;del&gt;</strong> — يُشير إلى محتوى <em>محذوف من المستند</em> كجزء من تعديل. يُستخدم مع &lt;ins&gt; لإظهار تغييرات المستند. له سمتا cite و datetime للإسناد. قارئات الشاشة قد تُعلن 'محذوف'.<br><br><strong>&lt;s&gt;</strong> — يُشير إلى محتوى <em>لم يعد دقيقاً أو ذا صلة</em> لكن لم يُزَل (سعر قديم، حدث ملغى). ليس علامة تعديل — مجرد محتوى قديم.<br><br>استخدم &lt;del&gt; لتتبع التغييرات في المستندات. استخدم &lt;s&gt; لـ 'كان 99$، الآن 49$' أو إعلان حدث ملغى."><strong>Answer:</strong> Both render as strikethrough text, but they have different semantic meanings:<br><br>
         <strong>&lt;del&gt;</strong> — marks content that has been <em>deleted from a document</em> as part of an edit. Used with &lt;ins&gt; to show document changes. Has <code>cite</code> and <code>datetime</code> attributes for attribution. Screen readers may announce "deleted".<br><br>
         <strong>&lt;s&gt;</strong> — marks content that is <em>no longer accurate or relevant</em> but hasn't been removed (e.g., an old price, a cancelled event). Not an edit marker — just outdated content.<br><br>
         Use &lt;del&gt; for document diffs/track changes. Use &lt;s&gt; for "was $99, now $49" or a cancelled event announcement.</div>
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q24: What makes a web page accessible? Name at least five practices.</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س24: ما الذي يجعل صفحة الويب ميسّرة؟ اذكر خمس ممارسات على الأقل.">Q24: What makes a web page accessible? Name at least five practices.</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br>1. <strong>ضبط سمة lang:</strong> &lt;html lang=&quot;ar&quot;&gt; — قارئات الشاشة تستخدمها للنطق الصحيح.<br>2. <strong>النص البديل الوصفي:</strong> جميع الصور ذات المعنى لها نص بديل.<br>3. <strong>بنية العناوين الصحيحة:</strong> h1 واحد، تسلسل منطقي، بدون تخطي مستويات.<br>4. <strong>تسمية جميع حقول الإدخال:</strong> كل حقل له &lt;label&gt; مرتبط.<br>5. <strong>إمكانية الوصول بلوحة المفاتيح:</strong> جميع الوظائف تعمل بـ Tab و Enter و Space والأسهم.<br>6. <strong>مؤشرات التركيز المرئية:</strong> لا تضبط outline: none بدون بديل مرئي.<br>7. <strong>تباين الألوان الكافي:</strong> النص العادي ≥ 4.5:1، النص الكبير ≥ 3:1.<br>8. <strong>ترجمات الفيديو:</strong> &lt;track kind=&quot;captions&quot;&gt; داخل &lt;video&gt;.<br>9. <strong>رابط التخطي:</strong> يتيح لمستخدمي لوحة المفاتيح تجاوز التنقل المتكرر.<br>10. <strong>HTML الدلالية:</strong> &lt;nav&gt; و&lt;main&gt; و&lt;article&gt;، إلخ توفر معالم يمكن التنقل بها."><strong>Answer:</strong><br><br>
         1. <strong>Set the lang attribute:</strong> <code>&lt;html lang="en"&gt;</code> — screen readers use this for correct pronunciation.<br>
         2. <strong>Descriptive alt text:</strong> All meaningful images have alt text describing content and purpose.<br>
         3. <strong>Proper heading structure:</strong> One h1, logical hierarchy, no skipped levels — screen reader users navigate by headings.<br>
@@ -1215,42 +1215,44 @@
     </div>
 
     <div class="element-box">
-        <div class="element-name">Q25: What is the difference between &lt;link&gt; and &lt;a&gt;?</div>
-        <div class="element-description"><strong>Answer:</strong><br><br>
+        <div class="element-name" data-ar="س25: ما الفرق بين &lt;link&gt; و&lt;a&gt;؟">Q25: What is the difference between &lt;link&gt; and &lt;a&gt;?</div>
+        <div class="element-description" data-ar="<strong>الإجابة:</strong><br><br><strong>&lt;link&gt;</strong> — يوجد في &lt;head&gt;. يُعرّف علاقة بين المستند ومورد خارجي. الأكثر استخداماً لربط أوراق أنماط CSS. عنصر فارغ — لا وسم إغلاق. غير مرئي للمستخدم. يُستخدم أيضاً لـ: favicon (rel=&quot;icon&quot;)، عنوان URL الأساسي (rel=&quot;canonical&quot;)، التحميل المسبق.<br><br><strong>&lt;a&gt;</strong> — يوجد في &lt;body&gt;. ينشئ رابطاً قابلاً للنقر يراه المستخدم ويتفاعل معه. يرتبط بصفحة أخرى أو ملف أو عنوان بريد إلكتروني أو رقم هاتف أو قسم في الصفحة الحالية.<br><br>باختصار: &lt;link&gt; للعلاقات بين الموارد في الرأس. &lt;a&gt; للتنقل المرئي للمستخدم في الجسم."><strong>Answer:</strong><br><br>
         <strong>&lt;link&gt;</strong> — Goes in &lt;head&gt;. Defines a relationship between the document and an external resource. Most commonly used to link CSS stylesheets. Void element — no closing tag. Not visible to the user. Also used for: favicon (<code>rel="icon"</code>), canonical URL (<code>rel="canonical"</code>), preloading resources.<br><br>
         <strong>&lt;a&gt;</strong> — Goes in &lt;body&gt;. Creates a clickable hyperlink that the user sees and interacts with. Links to another page, a file, an email address, a phone number, or a section on the current page.<br><br>
         In summary: &lt;link&gt; is for machine-to-machine resource relationships in the head. &lt;a&gt; is for user-facing navigation in the body.</div>
     </div>
 </section>
 
-<div id="google_translate_element" style="display:none"></div>
 <script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
-}
 function setLang(lang) {
-  var d = document.domain;
-  var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
   if (lang === 'ar') {
-    document.cookie = 'googtrans=/en/ar; path=/';
-    document.cookie = 'googtrans=/en/ar; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (!el.dataset.en) el.dataset.en = el.innerHTML;
+      el.innerHTML = el.dataset.ar;
+    });
+    document.body.setAttribute('dir', 'rtl');
+    document.body.setAttribute('lang', 'ar');
   } else {
-    document.cookie = 'googtrans=; ' + exp + '; path=/';
-    document.cookie = 'googtrans=; ' + exp + '; path=/; domain=' + d;
+    document.querySelectorAll('[data-ar]').forEach(function(el) {
+      if (el.dataset.en) el.innerHTML = el.dataset.en;
+    });
+    document.body.setAttribute('dir', 'ltr');
+    document.body.setAttribute('lang', 'en');
   }
-  location.reload();
+  document.getElementById('btn-en').classList.toggle('active-lang', lang === 'en');
+  document.getElementById('btn-ar').classList.toggle('active-lang', lang === 'ar');
+  try { localStorage.setItem('preferredLang', lang); } catch(e) {}
 }
-(function () {
-  var m = document.cookie.match(/googtrans=\/en\/(\w+)/);
-  var lang = m ? m[1] : 'en';
-  document.getElementById(lang === 'ar' ? 'btn-ar' : 'btn-en').classList.add('active-lang');
-  document.querySelectorAll('.code-example, .element-name, .attribute-name, .tag, code').forEach(function (el) {
-    el.classList.add('notranslate');
-    el.setAttribute('translate', 'no');
-  });
+(function() {
+  try {
+    var lang = localStorage.getItem('preferredLang') || 'en';
+    if (lang === 'ar') setLang('ar');
+    else document.getElementById('btn-en').classList.add('active-lang');
+  } catch(e) {
+    document.getElementById('btn-en').classList.add('active-lang');
+  }
 })();
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
