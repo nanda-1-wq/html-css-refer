@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,5 +7,501 @@
 </head>
 <body>
   <p>Redirecting… <a href="Full-HTML/HTML/all-html-reference.html">Click here if not redirected</a></p>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Fundamentals Review</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+    }
+
+    h2 {
+      background-color: #0d47a1;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      color: #1565c0;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #1565c0;
+      color: white;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .highlight {
+      background-color: #fff3cd;
+      padding: 10px;
+      border-left: 5px solid orange;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Fundamentals Review</h1>
+
+  <div class="card">
+    <h2>CSS Basics</h2>
+
+    <h3>What is CSS?</h3>
+    <p>
+      CSS stands for Cascading Style Sheets.
+      It is used to style HTML elements with colors, layouts,
+      spacing, fonts, backgrounds, and more.
+    </p>
+
+    <h3>Basic CSS Syntax</h3>
+
+<pre>
+selector {
+  property: value;
+}
+</pre>
+
+    <h3>Viewport Meta Tag</h3>
+
+<pre>
+&lt;meta name="viewport"
+content="width=device-width, initial-scale=1.0"&gt;
+</pre>
+
+    <p>
+      Helps pages scale correctly on phones and tablets.
+    </p>
+
+    <h3>Default Browser Styles</h3>
+    <p>
+      Browsers automatically apply default styles like margins,
+      padding, and font sizes.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Inline, Internal, and External CSS</h2>
+
+    <h3>Inline CSS</h3>
+
+<pre>
+&lt;p style="color:red;"&gt;Hello&lt;/p&gt;
+</pre>
+
+    <p>
+      Written directly inside the element.
+    </p>
+
+    <h3>Internal CSS</h3>
+
+<pre>
+&lt;style&gt;
+p {
+  color: blue;
+}
+&lt;/style&gt;
+</pre>
+
+    <p>
+      Written inside the HTML file.
+    </p>
+
+    <h3>External CSS</h3>
+
+<pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+</pre>
+
+    <p>
+      Best choice for large projects.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Width and Height</h2>
+
+    <ul>
+      <li><code>width</code> sets width</li>
+      <li><code>min-width</code> sets minimum width</li>
+      <li><code>max-width</code> sets maximum width</li>
+      <li><code>height</code> sets height</li>
+      <li><code>min-height</code> sets minimum height</li>
+      <li><code>max-height</code> sets maximum height</li>
+    </ul>
+
+<pre>
+div {
+  width: 300px;
+  min-height: 200px;
+}
+</pre>
+
+  </div>
+
+  <div class="card">
+    <h2>CSS Combinators</h2>
+
+    <h3>Descendant Combinator</h3>
+
+<pre>
+ul li {
+  color: red;
+}
+</pre>
+
+    <p>
+      Targets all li elements inside ul.
+    </p>
+
+    <h3>Child Combinator ></h3>
+
+<pre>
+.container > p {
+  color: blue;
+}
+</pre>
+
+    <p>
+      Targets direct children only.
+    </p>
+
+    <h3>Next-sibling Combinator +</h3>
+
+<pre>
+h2 + p {
+  background: yellow;
+}
+</pre>
+
+    <p>
+      Targets the first paragraph after h2.
+    </p>
+
+    <h3>Subsequent-sibling Combinator ~</h3>
+
+<pre>
+ul ~ p {
+  color: green;
+}
+</pre>
+
+    <p>
+      Targets all matching siblings after ul.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Display Types</h2>
+
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>Inline</td>
+        <td>Takes only needed width</td>
+      </tr>
+
+      <tr>
+        <td>Block</td>
+        <td>Takes full width</td>
+      </tr>
+
+      <tr>
+        <td>Inline-block</td>
+        <td>Inline but accepts width and height</td>
+      </tr>
+    </table>
+
+<pre>
+display: inline;
+display: block;
+display: inline-block;
+</pre>
+
+  </div>
+
+
+<div class="card">
+  <h2>Margin and Padding</h2>
+
+  <h3>Margin</h3>
+  <p>
+    Margin creates space outside the border of an element.
+  </p>
+
+  <h3>Individual Margin Properties</h3>
+
+  <ul>
+    <li><code>margin-top</code> → space above the element</li>
+    <li><code>margin-right</code> → space on the right side</li>
+    <li><code>margin-bottom</code> → space below the element</li>
+    <li><code>margin-left</code> → space on the left side</li>
+  </ul>
+
+<pre>
+div {
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+</pre>
+
+  <h3>Padding</h3>
+
+  <p>
+    Padding creates space inside the border,
+    between the content and the border.
+  </p>
+
+  <h3>Individual Padding Properties</h3>
+
+  <ul>
+    <li><code>padding-top</code> → space above content</li>
+    <li><code>padding-right</code> → space on the right side</li>
+    <li><code>padding-bottom</code> → space below content</li>
+    <li><code>padding-left</code> → space on the left side</li>
+  </ul>
+
+<pre>
+div {
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+</pre>
+
+  <h3>Shorthand Margin</h3>
+
+<pre>
+margin: 20px;
+</pre>
+
+  <p>
+    Applies 20px to all sides.
+  </p>
+
+<pre>
+margin: 10px 20px;
+</pre>
+
+  <p>
+    Top and bottom = 10px.
+    Right and left = 20px.
+  </p>
+
+<pre>
+margin: 10px 20px 30px;
+</pre>
+
+  <p>
+    Top = 10px.
+    Right and left = 20px.
+    Bottom = 30px.
+  </p>
+
+<pre>
+margin: 10px 20px 30px 40px;
+</pre>
+
+  <p>
+    Top, right, bottom, left.
+  </p>
+
+  <h3>Shorthand Padding</h3>
+
+<pre>
+padding: 20px;
+padding: 10px 20px;
+padding: 10px 20px 30px;
+padding: 10px 20px 30px 40px;
+</pre>
+
+  <div class="highlight">
+    Order in shorthand always goes:
+    top → right → bottom → left
+  </div>
+
+</div>
+
+
+  <div class="card">
+    <h2>CSS Specificity</h2>
+
+    <table>
+      <tr>
+        <th>Selector</th>
+        <th>Specificity</th>
+      </tr>
+
+      <tr>
+        <td>Inline Style</td>
+        <td>(1,0,0,0)</td>
+      </tr>
+
+      <tr>
+        <td>ID Selector</td>
+        <td>(0,1,0,0)</td>
+      </tr>
+
+      <tr>
+        <td>Class Selector</td>
+        <td>(0,0,1,0)</td>
+      </tr>
+
+      <tr>
+        <td>Type Selector</td>
+        <td>(0,0,0,1)</td>
+      </tr>
+
+      <tr>
+        <td>Universal Selector *</td>
+        <td>(0,0,0,0)</td>
+      </tr>
+    </table>
+
+<pre>
+#title {
+  color: red;
+}
+
+.text {
+  color: blue;
+}
+
+p {
+  color: green;
+}
+</pre>
+
+  </div>
+
+  <div class="card">
+    <h2>!important</h2>
+
+<pre>
+p {
+  color: red !important;
+}
+</pre>
+
+    <p>
+      Overrides almost all other styles.
+    </p>
+
+    <div class="highlight">
+      Use carefully because it makes CSS harder to maintain.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Cascade Algorithm</h2>
+
+    <p>
+      Browser decides which CSS rule wins using:
+    </p>
+
+    <ol>
+      <li>Relevance</li>
+      <li>Origin and Importance</li>
+      <li>Specificity</li>
+      <li>Order of Appearance</li>
+    </ol>
+
+<pre>
+p {
+  color: blue;
+}
+
+p {
+  color: green;
+}
+</pre>
+
+    <p>
+      Green wins because it appears later.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>CSS Inheritance</h2>
+
+    <p>
+      Some styles pass from parent elements to children.
+    </p>
+
+<pre>
+body {
+  color: blue;
+}
+</pre>
+
+    <p>
+      Child text elements inherit the blue color.
+    </p>
+  </div>
+
 </body>
 </html>
