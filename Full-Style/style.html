@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Fundamentals Review</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 40px;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    .nav-bar {
+      background: #2c3e50;
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      margin: -40px -40px 30px -40px;
+    }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+    .nav-bar a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin: 0 4px;
+      font-weight: 600;
+      font-size: 0.85em;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .nav-bar a:hover { background: #3498db; }
+    .nav-bar a.active { background: #9b59b6; }
+
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+    }
+
+    h2 {
+      background-color: #0d47a1;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      color: #1565c0;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 6px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #1565c0;
+      color: white;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .highlight {
+      background-color: #fff3cd;
+      padding: 10px;
+      border-left: 5px solid orange;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="nav-bar">
+  <div class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="../Full-HTML/HTML/all-html-reference.html">Full HTML</a>
+    <a href="style.html" class="active">Full Style</a>
+  </div>
+</div>
+
+  <h1>CSS Fundamentals Review</h1>
+
+  <div class="card">
+    <h2>CSS Basics</h2>
+
+    <h3>What is CSS?</h3>
+    <p>
+      CSS stands for Cascading Style Sheets.
+      It is used to style HTML elements with colors, layouts,
+      spacing, fonts, backgrounds, and more.
+    </p>
+
+    <h3>Basic CSS Syntax</h3>
+
+<pre>
+selector {
+  property: value;
+}
+</pre>
+
+    <h3>Viewport Meta Tag</h3>
+
+<pre>
+&lt;meta name="viewport"
+content="width=device-width, initial-scale=1.0"&gt;
+</pre>
+
+    <p>
+      Helps pages scale correctly on phones and tablets.
+    </p>
+
+    <h3>Default Browser Styles</h3>
+    <p>
+      Browsers automatically apply default styles like margins,
+      padding, and font sizes.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Inline, Internal, and External CSS</h2>
+
+    <h3>Inline CSS</h3>
+
+<pre>
+&lt;p style="color:red;"&gt;Hello&lt;/p&gt;
+</pre>
+
+    <p>
+      Written directly inside the element.
+    </p>
+
+    <h3>Internal CSS</h3>
+
+<pre>
+&lt;style&gt;
+p {
+  color: blue;
+}
+&lt;/style&gt;
+</pre>
+
+    <p>
+      Written inside the HTML file.
+    </p>
+
+    <h3>External CSS</h3>
+
+<pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+</pre>
+
+    <p>
+      Best choice for large projects.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Width and Height</h2>
+
+    <ul>
+      <li><code>width</code> sets width</li>
+      <li><code>min-width</code> sets minimum width</li>
+      <li><code>max-width</code> sets maximum width</li>
+      <li><code>height</code> sets height</li>
+      <li><code>min-height</code> sets minimum height</li>
+      <li><code>max-height</code> sets maximum height</li>
+    </ul>
+
+<pre>
+div {
+  width: 300px;
+  min-height: 200px;
+}
+</pre>
+
+  </div>
+
+  <div class="card">
+    <h2>CSS Combinators</h2>
+
+    <h3>Descendant Combinator</h3>
+
+<pre>
+ul li {
+  color: red;
+}
+</pre>
+
+    <p>
+      Targets all li elements inside ul.
+    </p>
+
+    <h3>Child Combinator ></h3>
+
+<pre>
+.container > p {
+  color: blue;
+}
+</pre>
+
+    <p>
+      Targets direct children only.
+    </p>
+
+    <h3>Next-sibling Combinator +</h3>
+
+<pre>
+h2 + p {
+  background: yellow;
+}
+</pre>
+
+    <p>
+      Targets the first paragraph after h2.
+    </p>
+
+    <h3>Subsequent-sibling Combinator ~</h3>
+
+<pre>
+ul ~ p {
+  color: green;
+}
+</pre>
+
+    <p>
+      Targets all matching siblings after ul.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Display Types</h2>
+
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>Inline</td>
+        <td>Takes only needed width</td>
+      </tr>
+
+      <tr>
+        <td>Block</td>
+        <td>Takes full width</td>
+      </tr>
+
+      <tr>
+        <td>Inline-block</td>
+        <td>Inline but accepts width and height</td>
+      </tr>
+    </table>
+
+<pre>
+display: inline;
+display: block;
+display: inline-block;
+</pre>
+
+  </div>
+
+
+<div class="card">
+  <h2>Margin and Padding</h2>
+
+  <h3>Margin</h3>
+  <p>
+    Margin creates space outside the border of an element.
+  </p>
+
+  <h3>Individual Margin Properties</h3>
+
+  <ul>
+    <li><code>margin-top</code> → space above the element</li>
+    <li><code>margin-right</code> → space on the right side</li>
+    <li><code>margin-bottom</code> → space below the element</li>
+    <li><code>margin-left</code> → space on the left side</li>
+  </ul>
+
+<pre>
+div {
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+</pre>
+
+  <h3>Padding</h3>
+
+  <p>
+    Padding creates space inside the border,
+    between the content and the border.
+  </p>
+
+  <h3>Individual Padding Properties</h3>
+
+  <ul>
+    <li><code>padding-top</code> → space above content</li>
+    <li><code>padding-right</code> → space on the right side</li>
+    <li><code>padding-bottom</code> → space below content</li>
+    <li><code>padding-left</code> → space on the left side</li>
+  </ul>
+
+<pre>
+div {
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+}
+</pre>
+
+  <h3>Shorthand Margin</h3>
+
+<pre>
+margin: 20px;
+</pre>
+
+  <p>
+    Applies 20px to all sides.
+  </p>
+
+<pre>
+margin: 10px 20px;
+</pre>
+
+  <p>
+    Top and bottom = 10px.
+    Right and left = 20px.
+  </p>
+
+<pre>
+margin: 10px 20px 30px;
+</pre>
+
+  <p>
+    Top = 10px.
+    Right and left = 20px.
+    Bottom = 30px.
+  </p>
+
+<pre>
+margin: 10px 20px 30px 40px;
+</pre>
+
+  <p>
+    Top, right, bottom, left.
+  </p>
+
+  <h3>Shorthand Padding</h3>
+
+<pre>
+padding: 20px;
+padding: 10px 20px;
+padding: 10px 20px 30px;
+padding: 10px 20px 30px 40px;
+</pre>
+
+  <div class="highlight">
+    Order in shorthand always goes:
+    top → right → bottom → left
+  </div>
+
+</div>
+
+
+  <div class="card">
+    <h2>CSS Specificity</h2>
+
+    <table>
+      <tr>
+        <th>Selector</th>
+        <th>Specificity</th>
+      </tr>
+
+      <tr>
+        <td>Inline Style</td>
+        <td>(1,0,0,0)</td>
+      </tr>
+
+      <tr>
+        <td>ID Selector</td>
+        <td>(0,1,0,0)</td>
+      </tr>
+
+      <tr>
+        <td>Class Selector</td>
+        <td>(0,0,1,0)</td>
+      </tr>
+
+      <tr>
+        <td>Type Selector</td>
+        <td>(0,0,0,1)</td>
+      </tr>
+
+      <tr>
+        <td>Universal Selector *</td>
+        <td>(0,0,0,0)</td>
+      </tr>
+    </table>
+
+<pre>
+#title {
+  color: red;
+}
+
+.text {
+  color: blue;
+}
+
+p {
+  color: green;
+}
+</pre>
+
+  </div>
+
+  <div class="card">
+    <h2>!important</h2>
+
+<pre>
+p {
+  color: red !important;
+}
+</pre>
+
+    <p>
+      Overrides almost all other styles.
+    </p>
+
+    <div class="highlight">
+      Use carefully because it makes CSS harder to maintain.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Cascade Algorithm</h2>
+
+    <p>
+      Browser decides which CSS rule wins using:
+    </p>
+
+    <ol>
+      <li>Relevance</li>
+      <li>Origin and Importance</li>
+      <li>Specificity</li>
+      <li>Order of Appearance</li>
+    </ol>
+
+<pre>
+p {
+  color: blue;
+}
+
+p {
+  color: green;
+}
+</pre>
+
+    <p>
+      Green wins because it appears later.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>CSS Inheritance</h2>
+
+    <p>
+      Some styles pass from parent elements to children.
+    </p>
+
+<pre>
+body {
+  color: blue;
+}
+</pre>
+
+    <p>
+      Child text elements inherit the blue color.
+    </p>
+  </div>
+
+
+
+<!-- test -->
+ <div class="card">
+  <h2>CSS Fundamentals Practice Quiz</h2>
+
+  <ol>
+
+    <li>
+      <p><strong>What does CSS stand for?</strong></p>
+      <ul>
+        <li>Cascading Style Script</li>
+        <li>Castor Sage Style</li>
+        <li>Concatenating Style Script</li>
+        <li>Cascading Style Sheets</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which of the following is a correct CSS rule?</strong></p>
+      <ul>
+        <li>p {color: red;}</li>
+        <li>p (color: red)</li>
+        <li>p=red</li>
+        <li>{p color: red;}</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>What does &lt;meta name="viewport"&gt; do?</strong></p>
+      <ul>
+        <li>It controls the shape and size of a web page on different screen sizes.</li>
+        <li>It specifies the metadata used by search engines to index a webpage.</li>
+        <li>It links external stylesheets to a webpage for responsive design.</li>
+        <li>It specifies the character encoding used on the webpage.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which syntax is correct to use inline CSS?</strong></p>
+      <ul>
+        <li>&lt;p style="color: blue;"&gt;&lt;/p&gt;</li>
+        <li>&lt;p color="blue"&gt;&lt;/p&gt;</li>
+        <li>p {color: blue;}</li>
+        <li>&lt;p&gt;&lt;style=blue&gt;&lt;/p&gt;</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>When using internal CSS, where is the style element placed within the HTML?</strong></p>
+      <ul>
+        <li>In the meta element.</li>
+        <li>In the body element.</li>
+        <li>In the script element.</li>
+        <li>In the head element.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which rule is correct for setting the width and height in CSS?</strong></p>
+      <ul>
+        <li>flex-width: 50px; flex-height: 50px;</li>
+        <li>width: 50px; height: 50px;</li>
+        <li>width-and-height: 50px;</li>
+        <li>height-width: 50px;</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which selector correctly targets h1 elements only when inside a div?</strong></p>
+      <ul>
+        <li>div ~ h1 {}</li>
+        <li>div, h1 {}</li>
+        <li>div + h1 {}</li>
+        <li>div h1 {}</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which selector is correct to target direct children of a footer?</strong></p>
+      <ul>
+        <li>footer ~ ul {}</li>
+        <li>footer + ul {}</li>
+        <li>footer > ul {}</li>
+        <li>footer ul {}</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which selector is correct to target the next sibling of an img?</strong></p>
+      <ul>
+        <li>img ~ h1 {}</li>
+        <li>img + h1 {}</li>
+        <li>img h1 {}</li>
+        <li>img > h1 {}</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which selector is correct to target all siblings preceded by an img element?</strong></p>
+      <ul>
+        <li>img ~ caption {}</li>
+        <li>img > caption {}</li>
+        <li>img + caption {}</li>
+        <li>img caption {}</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>What statement is TRUE about block-level elements?</strong></p>
+      <ul>
+        <li>Block-level elements cannot contain inline elements inside them.</li>
+        <li>Block-level elements start on a new line and take up the full width of their container.</li>
+        <li>Block-level elements stack horizontally by default.</li>
+        <li>Width and height properties usually do not apply to block-level elements.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>What statement is TRUE when using the inline-block value?</strong></p>
+      <ul>
+        <li>Elements align horizontally but cannot apply vertical padding or margin.</li>
+        <li>Elements stack vertically, taking the full width.</li>
+        <li>Elements retain inline flow but allow setting width and height.</li>
+        <li>Elements respect width and height but cannot contain other elements.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Given the following selectors, which has the highest specificity?</strong></p>
+      <ul>
+        <li>h1</li>
+        <li>#id</li>
+        <li>div</li>
+        <li>p</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Given the following selectors, which has the lowest specificity?</strong></p>
+      <ul>
+        <li>h1</li>
+        <li>div h1</li>
+        <li>#id</li>
+        <li>.class</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>What does the * selector do?</strong></p>
+      <ul>
+        <li>Targets some elements on the page.</li>
+        <li>Targets all p elements on the page.</li>
+        <li>Targets elements that have children on the page.</li>
+        <li>Targets all elements on the page.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>What does !important do in CSS?</strong></p>
+      <ul>
+        <li>It disables all other CSS properties.</li>
+        <li>It applies only to certain selectors.</li>
+        <li>It overrides any other values applied to the property.</li>
+        <li>It works only for inline styles.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>How does the CSS Cascade Algorithm work?</strong></p>
+      <ul>
+        <li>It determines styles based only on order of declaration.</li>
+        <li>It applies styles based solely on source order.</li>
+        <li>It applies styles prioritizing specificity only.</li>
+        <li>It determines styles based on specificity and order of declaration.</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which rule applies 32px of margin to all sides?</strong></p>
+      <ul>
+        <li>margin: 32px 0;</li>
+        <li>margin: 0 32px;</li>
+        <li>margin-top: 32px;</li>
+        <li>margin: 32px;</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>Which rule applies 24px padding to the top and bottom?</strong></p>
+      <ul>
+        <li>padding: 24px;</li>
+        <li>padding: 24px 0;</li>
+        <li>padding: 0 24px;</li>
+        <li>padding-top-bottom: 24px;</li>
+      </ul>
+    </li>
+
+    <li>
+      <p><strong>For padding: 10px 20px 30px 40px, what is the correct order of values?</strong></p>
+      <ul>
+        <li>Top, Right, Bottom, Left</li>
+        <li>Top, Bottom, Right, Left</li>
+        <li>Right, Top, Left, Bottom</li>
+        <li>Top, Left, Bottom, Right</li>
+      </ul>
+    </li>
+
+  </ol>
+</div>
+
+
+
+</body>
+</html>
